@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class LoginMetodos : Conexion
+    class RecetaMetodos : Conexion
     {
         public DataTable ConsultarLogin(string user, string pass)
         {
@@ -28,23 +28,23 @@ namespace SistemaGestion
         }
         public long ultimoId()
         {
-                var selMax = "select max(id) + 1 from Usuarios";
+                var selMax = "select max(id) + 1 from Recetas";
                 //********************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)(long)com.ExecuteScalar();
          }
                
-        public Boolean grabarUsuario(Usuario usu)
+        public Boolean grabarReceta(Receta receta)
         {
             try
             {
                 //var idMax = ultimoId();
 
-                var sel = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
+                //var sel = "INSERT INTO Recetas(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                //SqlCommand com = new SqlCommand(sel, conectar());
 
-                com.ExecuteNonQuery();
+                //com.ExecuteNonQuery();
 
                 return true;
             }

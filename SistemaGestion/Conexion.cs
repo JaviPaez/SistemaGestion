@@ -24,7 +24,7 @@ namespace SistemaGestion
                     sCon.Close();
                 }
 
-                else sCon.Close();
+                else sCon.Open();
             }
             catch(Exception ex)
             {

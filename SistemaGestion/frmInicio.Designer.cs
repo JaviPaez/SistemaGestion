@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaGestion
 {
-    partial class Inicio
+    partial class frmInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SistemaGestion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

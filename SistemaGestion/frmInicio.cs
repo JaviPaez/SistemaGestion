@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SistemaGestion
 {
-    public partial class Productos : Form
+    public partial class frmInicio : Form
     {
-        public Productos()
+        public frmInicio()
         {
             InitializeComponent();
         }

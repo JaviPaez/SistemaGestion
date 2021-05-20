@@ -8,13 +8,14 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
+        //BOTON INGRESAR
         private void btnLogin_Click(object sender, EventArgs e)
         {
         //    var ds = new DataSet();
@@ -27,19 +28,20 @@ namespace SistemaGestion
             if (dt.Rows.Count == 1)
             {
                 MessageBox.Show("Ingreso correcto");
-                var frm = new Menu();
+                var frm = new frmMenu();
                 this.Hide();
                 frm.Show();
             }
             else
             {
-                MessageBox.Show("No hay registros en la seleccion");
+                MessageBox.Show("No se ha encontrado el usuario ingresado");
             }
         }
 
+        //NUEVO USUARIO
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var frm = new Usuarios();
+            var frm = new frmUsuarios();
            // this.Hide();
             frm.Show();
         }

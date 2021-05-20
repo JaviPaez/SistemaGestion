@@ -1,6 +1,6 @@
 ﻿namespace SistemaGestion
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -50,11 +50,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 12);
+            this.label1.Location = new System.Drawing.Point(99, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(37, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "DNI";
             // 
             // label2
             // 
@@ -80,7 +80,7 @@
             this.txtPas.Name = "txtPas";
             this.txtPas.PasswordChar = '*';
             this.txtPas.Size = new System.Drawing.Size(135, 20);
-            this.txtPas.TabIndex = 2;
+            this.txtPas.TabIndex = 1;
             // 
             // linkLabel1
             // 
@@ -93,7 +93,7 @@
             this.linkLabel1.Text = "Nuevo Usuario";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +104,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
