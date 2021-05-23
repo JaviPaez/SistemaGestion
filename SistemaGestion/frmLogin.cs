@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace SistemaGestion
 {
@@ -38,6 +39,13 @@ namespace SistemaGestion
             }
         }
 
+        //the hell goes here?
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
         //NUEVO USUARIO
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -46,9 +54,21 @@ namespace SistemaGestion
             frm.Show();
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        //BOTONES DE BARRA DE TITULO
+        private void pbxMinimizar_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }   
 
+        private void pbxCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

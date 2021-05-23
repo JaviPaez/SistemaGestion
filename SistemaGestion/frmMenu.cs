@@ -101,8 +101,9 @@ namespace SistemaGestion
         }
 
         private void btnGrabarRecetas_Click(object sender, EventArgs e)
-        {
+        {            
             CerrarSubpaneles();
+            AbrirFormHijo(new frmRecetas_Medicos());
         }
 
         private void btnConsultarRecetas_Click(object sender, EventArgs e)
@@ -183,12 +184,10 @@ namespace SistemaGestion
 
         #region METODOS
         //METODOS
-        private void AbrirFormHijo(object formHijo)
+        private void AbrirFormHijo(Form fh)
         {
             if (this.PanelContenedor.Controls.Count > 0)
                 this.PanelContenedor.Controls.RemoveAt(0);
-
-            Form fh = formHijo as Form;
 
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
@@ -205,6 +204,16 @@ namespace SistemaGestion
             panelSubmenuProductos.Visible = false;
             panelSubmenuRecetas.Visible = false;
             panelSubmenuPresupuestos.Visible = false;
+        }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Está seguro que quiere salir?", "Alerta", MessageBoxButtons.YesNo);
+
+            if (resultado == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
         #endregion
     }
