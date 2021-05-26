@@ -12,9 +12,7 @@ namespace SistemaGestion
         public Boolean grabarPaciente(Paciente paciente)
         {
             try
-            {
-                //var idMax = ultimoId();
-                
+            {     
                 var sel = "set dateformat dmy INSERT INTO Pacientes(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
 
                 SqlCommand com = new SqlCommand(sel, conectar());

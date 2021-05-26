@@ -76,6 +76,7 @@
       <DependentUpon>frmRecetas_Medicos.cs</DependentUpon>
     </Compile>
     <Compile Include="MedicoMetodos.cs" />
+    <Compile Include="ProductoMetodos.cs" />
     <Compile Include="PresupuestoMetodos.cs" />
     <Compile Include="RecetaMetodos.cs" />
     <Compile Include="Medico.cs" />

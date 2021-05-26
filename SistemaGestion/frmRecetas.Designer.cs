@@ -48,18 +48,24 @@ namespace SistemaGestion
             // 
             // txtObserv
             // 
+            this.txtObserv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObserv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtObserv.Location = new System.Drawing.Point(555, 371);
+            this.txtObserv.Location = new System.Drawing.Point(558, 366);
             this.txtObserv.Name = "txtObserv";
             this.txtObserv.Size = new System.Drawing.Size(200, 31);
             this.txtObserv.TabIndex = 5;
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(299, 371);
+            this.label7.Location = new System.Drawing.Point(302, 366);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(192, 25);
             this.label7.TabIndex = 28;
@@ -67,6 +73,7 @@ namespace SistemaGestion
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -78,18 +85,24 @@ namespace SistemaGestion
             // 
             // txtOD
             // 
+            this.txtOD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtOD.Location = new System.Drawing.Point(555, 238);
+            this.txtOD.Location = new System.Drawing.Point(558, 233);
             this.txtOD.Name = "txtOD";
             this.txtOD.Size = new System.Drawing.Size(200, 31);
             this.txtOD.TabIndex = 2;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(299, 238);
+            this.label3.Location = new System.Drawing.Point(302, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 21;
@@ -97,10 +110,13 @@ namespace SistemaGestion
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(299, 197);
+            this.label2.Location = new System.Drawing.Point(302, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 25);
             this.label2.TabIndex = 19;
@@ -108,12 +124,13 @@ namespace SistemaGestion
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancelar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(287, 444);
+            this.btnCancelar.Location = new System.Drawing.Point(290, 439);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 6;
@@ -123,12 +140,13 @@ namespace SistemaGestion
             // 
             // btnGrabar
             // 
+            this.btnGrabar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrabar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(591, 444);
+            this.btnGrabar.Location = new System.Drawing.Point(594, 439);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 7;
@@ -138,10 +156,13 @@ namespace SistemaGestion
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(299, 153);
+            this.label1.Location = new System.Drawing.Point(302, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 15;
@@ -149,10 +170,13 @@ namespace SistemaGestion
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(299, 325);
+            this.label5.Location = new System.Drawing.Point(302, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 25);
             this.label5.TabIndex = 32;
@@ -160,18 +184,24 @@ namespace SistemaGestion
             // 
             // txtOI
             // 
+            this.txtOI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtOI.Location = new System.Drawing.Point(555, 284);
+            this.txtOI.Location = new System.Drawing.Point(558, 279);
             this.txtOI.Name = "txtOI";
             this.txtOI.Size = new System.Drawing.Size(200, 31);
             this.txtOI.TabIndex = 3;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(299, 284);
+            this.label6.Location = new System.Drawing.Point(302, 279);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 25);
             this.label6.TabIndex = 30;
@@ -179,30 +209,39 @@ namespace SistemaGestion
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.dtpFecha.Location = new System.Drawing.Point(555, 325);
+            this.dtpFecha.Location = new System.Drawing.Point(558, 320);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 31);
             this.dtpFecha.TabIndex = 4;
             // 
             // cboMedico
             // 
+            this.cboMedico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboMedico.FormattingEnabled = true;
             this.cboMedico.Items.AddRange(new object[] {
             "Seleccione"});
-            this.cboMedico.Location = new System.Drawing.Point(555, 150);
+            this.cboMedico.Location = new System.Drawing.Point(558, 145);
             this.cboMedico.Name = "cboMedico";
             this.cboMedico.Size = new System.Drawing.Size(200, 33);
             this.cboMedico.TabIndex = 0;
             // 
             // cboDni
             // 
+            this.cboDni.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboDni.FormattingEnabled = true;
             this.cboDni.Items.AddRange(new object[] {
             "Seleccione"});
-            this.cboDni.Location = new System.Drawing.Point(555, 194);
+            this.cboDni.Location = new System.Drawing.Point(558, 189);
             this.cboDni.Name = "cboDni";
             this.cboDni.Size = new System.Drawing.Size(200, 33);
             this.cboDni.TabIndex = 1;

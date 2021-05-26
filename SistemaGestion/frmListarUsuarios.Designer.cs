@@ -38,6 +38,9 @@ namespace SistemaGestion
             // 
             this.dgvLista.AllowUserToAddRows = false;
             this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.Location = new System.Drawing.Point(252, 100);
             this.dgvLista.Name = "dgvLista";
@@ -47,6 +50,7 @@ namespace SistemaGestion
             // 
             // btnGrilla
             // 
+            this.btnGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

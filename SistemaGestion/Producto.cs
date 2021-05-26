@@ -7,9 +7,9 @@ namespace SistemaGestion
 {
     class Producto
     {
-        int Id { get; set; }
-        string Descripcion { get; set; }
-        double Precio { get; set; }
-        int Cantidad { get; set; }
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+        public string Precio { get; set; }
+        public int Cantidad { get; set; }
     }
 }
