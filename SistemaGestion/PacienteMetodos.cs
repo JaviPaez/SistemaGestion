@@ -45,5 +45,20 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
+
+        public DataTable cargarComboPacientes()
+        {
+
+            string sqlStr = "select Dni from Pacientes";
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
     }
 }

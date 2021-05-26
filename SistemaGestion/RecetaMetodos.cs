@@ -8,43 +8,33 @@ using System.Data.SqlClient;
 namespace SistemaGestion
 {
     class RecetaMetodos : Conexion
-    {
-        public DataTable ConsultarLogin(string user, string pass)
+    {    
+        public int ultimoId()
         {
-            string sqlStr = "select dni, contraseña from Usuarios where dni = '" + user + "' and contraseña = '" +
-                            pass + "'";
-                 
-            //var c = AbrirConexion();
-
-
-            //********************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
-            var ds = new DataSet();
-            da.Fill(ds);
-            DataTable dt = ds.Tables[0];
-
-            return dt;
-            //*****************************************************
-        }
-        public long ultimoId()
-        {
-                var selMax = "select max(id) + 1 from Recetas";
+            try
+            {
+                var selMax = "select max(ID) + 1 from Recetas";
                 //********************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
-                return (int)(long)com.ExecuteScalar();
-         }
-               
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
         public Boolean grabarReceta(Receta receta)
         {
             try
             {
-                //var idMax = ultimoId();
+                var idMax = ultimoId();
 
-                //var sel = "INSERT INTO Recetas(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
+                var sel = "set dateformat dmy INSERT INTO Recetas(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + "," + receta.OI + "," + receta.OD + ",'" + receta.Fecha + "','" + receta.Observaciones + "')";
 
-                //SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(sel, conectar());
 
-                //com.ExecuteNonQuery();
+                com.ExecuteNonQuery();
 
                 return true;
             }
@@ -56,7 +46,7 @@ namespace SistemaGestion
 
         public DataTable Consultar()
         {
-            string sqlStr = "select * from Usuarios";
+            string sqlStr = "select * from Recetas";
             //var c = AbrirConexion();
 
 

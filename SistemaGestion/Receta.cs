@@ -7,12 +7,12 @@ namespace SistemaGestion
 {
     class Receta
     {
-        int Id { get; set; }
-        int IdMedico { get; set; }
-        int Dni { get; set; }      
-        double OD { get; set; }
-        double OI { get; set; }
-        DateTime Fecha { get; set; }
-        string Observaciones { get; set; }
+        public int Id { get; set; }
+        public int IdMedico { get; set; }
+        public int Dni { get; set; }
+        public double OD { get; set; }
+        public double OI { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Observaciones { get; set; }
     }
 }
