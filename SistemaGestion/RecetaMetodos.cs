@@ -30,7 +30,7 @@ namespace SistemaGestion
             {
                 var idMax = ultimoId();
 
-                var sel = "set dateformat dmy INSERT INTO Recetas(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + "," + receta.OI + "," + receta.OD + ",'" + receta.Fecha + "','" + receta.Observaciones + "')";
+                var sel = "set dateformat dmy INSERT INTO Recetas(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.OI + "','" + receta.OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
