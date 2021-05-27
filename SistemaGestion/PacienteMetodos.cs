@@ -44,6 +44,21 @@ namespace SistemaGestion
             //*****************************************************
         }
 
+        public DataTable buscarPaciente(int Dni)
+        {
+            string sqlStr = "select * from PACIENTES where Dni = " + Dni;            
+
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
         public DataTable cargarComboPacientes()
         {
 
