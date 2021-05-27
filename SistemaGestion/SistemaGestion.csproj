@@ -45,17 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="frmListarMedicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListarMedicos.Designer.cs">
-      <DependentUpon>frmListarMedicos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmListarPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListarPacientes.Designer.cs">
       <DependentUpon>frmListarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarProductos.Designer.cs">
+      <DependentUpon>frmListarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListarUsuarios.cs">
       <SubType>Form</SubType>
@@ -148,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarPacientes.resx">
       <DependentUpon>frmListarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarProductos.resx">
+      <DependentUpon>frmListarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarUsuarios.resx">
       <DependentUpon>frmListarUsuarios.cs</DependentUpon>

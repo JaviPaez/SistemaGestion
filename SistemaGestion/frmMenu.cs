@@ -127,6 +127,7 @@ namespace SistemaGestion
         private void btnConsultarProductos_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmListarProductos());
         }
 
         //Usuarios

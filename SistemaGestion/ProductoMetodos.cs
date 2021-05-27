@@ -44,10 +44,26 @@ namespace SistemaGestion
             }            
         }
 
-        public DataTable Consultar()
+        //CONSULTAR PRODUCTOS
+        public DataTable consultarProductos()
         {
             string sqlStr = "select * from Productos";
             //var c = AbrirConexion();
+
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
+        public DataTable buscarProducto(string sel)
+        {
+            string sqlStr = "select * from PRODUCTOS where Descripcion like '%" + sel + "%'";
 
 
             //********************************************************
