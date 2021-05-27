@@ -18,9 +18,9 @@ namespace SistemaGestion
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtCantidad.Text = "";
-            txtPrecio.Text = "";
-            txtDescripcion.Text = "";
+            txtCantidad.Clear();
+            txtPrecio.Clear();
+            txtDescripcion.Clear();
         }
 
         //BOTON GRABAR
@@ -54,6 +54,8 @@ namespace SistemaGestion
             {
                 MessageBox.Show(ex.Message);
             }
+
+            btnCancelar_Click(sender, e);
         }
     }
 }

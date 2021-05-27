@@ -57,6 +57,8 @@ namespace SistemaGestion
             {
                 MessageBox.Show(ex.Message);
             }
+
+            btnCancelar_Click(sender, e);
         }
 
         //BOTON CANCELAR
