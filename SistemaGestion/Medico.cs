@@ -7,9 +7,9 @@ namespace SistemaGestion
 {
     class Medico
     {
-        int Id { get; set; }
-        string Apellido { get; set; }
-        string Nombre { get; set; }
-        string Matricula { get; set; }
+        public int Id { get; set; }
+        public string Apellido { get; set; }
+        public string Nombre { get; set; }
+        public string Matricula { get; set; }
     }
 }

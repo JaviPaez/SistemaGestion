@@ -23,7 +23,7 @@ namespace SistemaGestion
 
         private void medicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            AbrirFormHijo(new frmMedicos());
         }
 
         private void AbrirFormHijo(Form fh)

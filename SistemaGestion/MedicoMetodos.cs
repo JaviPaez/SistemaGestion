@@ -9,6 +9,40 @@ namespace SistemaGestion
 {
     class MedicoMetodos : Conexion
     {
+        public int ultimoId()
+        {
+            try
+            {
+                var selMax = "select max(ID) + 1 from Medicos";
+                //********************************************************
+                SqlCommand com = new SqlCommand(selMax, conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+        public Boolean grabarMedico(Medico medico)
+        {
+            try
+            {
+                var idMax = ultimoId();
+
+                var sel = "INSERT INTO Medicos(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
+
+                SqlCommand com = new SqlCommand(sel, conectar());
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public DataTable cargarComboMedicos()
         {
 
