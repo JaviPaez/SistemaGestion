@@ -147,11 +147,13 @@ namespace SistemaGestion
         private void btnGrabarPresupuestos_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmPresupuestos());
         }
 
         private void btnConsultarPresupuestos_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmListarPresupuestos());
         }
 
         //Reportes

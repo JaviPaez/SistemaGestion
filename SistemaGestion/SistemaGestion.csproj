@@ -51,6 +51,12 @@
     <Compile Include="frmListarPacientes.Designer.cs">
       <DependentUpon>frmListarPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListarPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarPresupuestos.Designer.cs">
+      <DependentUpon>frmListarPresupuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPresupuestos.Designer.cs">
+      <DependentUpon>frmPresupuestos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRecetas.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,9 @@
     <EmbeddedResource Include="frmListarPacientes.resx">
       <DependentUpon>frmListarPacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListarPresupuestos.resx">
+      <DependentUpon>frmListarPresupuestos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListarProductos.resx">
       <DependentUpon>frmListarProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPresupuestos.resx">
+      <DependentUpon>frmPresupuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
