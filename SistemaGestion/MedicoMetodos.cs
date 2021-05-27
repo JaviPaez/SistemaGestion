@@ -43,6 +43,23 @@ namespace SistemaGestion
             }
         }
 
+        //CONSULTAR PACIENTES
+        public DataTable consultarMedicos()
+        {
+            string sqlStr = "select * from MEDICOS order by ID";
+            //var c = AbrirConexion();
+
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
         public DataTable cargarComboMedicos()
         {
 

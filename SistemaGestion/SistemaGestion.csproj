@@ -45,6 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="frmListarMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarMedicos.Designer.cs">
+      <DependentUpon>frmListarMedicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListarPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
