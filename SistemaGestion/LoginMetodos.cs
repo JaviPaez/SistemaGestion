@@ -25,21 +25,12 @@ namespace SistemaGestion
 
             return dt;
             //*****************************************************
-        }
-        public long ultimoId()
-        {
-                var selMax = "select max(id) + 1 from Usuarios";
-                //********************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
-                return (int)(long)com.ExecuteScalar();
-         }
+        }      
                
         public Boolean grabarUsuario(Usuario usu)
         {
             try
-            {
-                //var idMax = ultimoId();
-
+            {  
                 var sel = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
@@ -56,7 +47,7 @@ namespace SistemaGestion
 
         public DataTable Consultar()
         {
-            string sqlStr = "select * from Usuarios";
+            string sqlStr = "select * from Usuarios order by Dni";
             //var c = AbrirConexion();
 
 

@@ -30,8 +30,8 @@ namespace SistemaGestion
             dt = al.Consultar();
             if (dt.Rows.Count != 0)
             {
-                dgvLista.DataSource = dt; //ds.Tables[0];
-
+                dgvLista.DataSource = dt;
+                dgvLista.Columns["Contraseña"].Visible = false;
             }
             else
             {

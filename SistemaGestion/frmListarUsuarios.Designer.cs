@@ -45,6 +45,7 @@ namespace SistemaGestion
             this.dgvLista.Location = new System.Drawing.Point(252, 100);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
+            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLista.Size = new System.Drawing.Size(548, 228);
             this.dgvLista.TabIndex = 0;
             // 
@@ -52,6 +53,7 @@ namespace SistemaGestion
             // 
             this.btnGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);

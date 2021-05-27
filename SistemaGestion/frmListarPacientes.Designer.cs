@@ -39,26 +39,28 @@ namespace SistemaGestion
             this.dgvLista.AllowUserToAddRows = false;
             this.dgvLista.AllowUserToDeleteRows = false;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(236, 122);
+            this.dgvLista.Location = new System.Drawing.Point(230, 125);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(647, 228);
+            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLista.Size = new System.Drawing.Size(642, 228);
             this.dgvLista.TabIndex = 2;
             // 
             // btnGrilla
             // 
             this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(453, 432);
+            this.btnGrilla.Location = new System.Drawing.Point(459, 433);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
             this.btnGrilla.TabIndex = 3;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
-            this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click_1);
+            this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
             // 
             // frmListarPacientes
             // 

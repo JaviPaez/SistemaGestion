@@ -28,26 +28,7 @@ namespace SistemaGestion
                 if (resp == DialogResult.Yes)
                 {
                     user.Dni = Convert.ToInt32(txtDni.Text);
-
-                    switch (cboRol.SelectedItem)
-                    {
-                        case "Administrador":
-                            user.IdRol = 1;
-                            break;
-
-                        case "Vendedor":
-                            user.IdRol = 2;
-                            break;
-
-                        case "Gerente":
-                            user.IdRol = 3;
-                            break;
-
-                        default:
-                            user.IdRol = 0;
-                            break;
-                    }
-
+                    user.IdRol = Convert.ToInt32(cboRol.SelectedValue);
                     user.Apellido = txtApellido.Text;
                     user.Nombre = txtNombre.Text;
                     user.Contraseña = txtContraseña.Text;
@@ -79,11 +60,20 @@ namespace SistemaGestion
             txtApellido.Clear();
             txtNombre.Clear();
             txtContraseña.Clear();
-            cboRol.SelectedIndex = 0;
+            cboRol.Text = "Seleccione";
         }
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            cboRol.SelectedIndex = 0;
+            //Cargar Combo Roles
+            var dt = new DataTable();
+            var rol = new RolMetodos();
+            dt = rol.cargarComboRoles();
+
+            cboRol.DataSource = dt;
+            cboRol.DisplayMember = "NombreRol";
+            cboRol.ValueMember = "ID";
+
+            cboRol.Text = "Seleccione";
         }
 
 

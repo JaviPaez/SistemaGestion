@@ -39,8 +39,8 @@ namespace SistemaGestion
             cboDni.DisplayMember = "Dni";
             cboDni.ValueMember = "Dni";
 
-            cboDni.Text = "";
-            cboMedico.Text = "";           
+            cboDni.Text = "Seleccione";
+            cboMedico.Text = "Seleccione";           
         }
 
         //BOTON GRABAR
@@ -84,12 +84,12 @@ namespace SistemaGestion
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cboDni.Text = "";
-            cboMedico.Text = "";
-            txtOD.Text = "";
-            txtOI.Text = "";
+            cboDni.Text = "Seleccione";
+            cboMedico.Text = "Seleccione";
+            txtOD.Clear();
+            txtOI.Clear();
             dtpFecha.Value = DateTime.Today;
-            txtObserv.Text = "";
+            txtObserv.Clear();
         }       
     }
 }

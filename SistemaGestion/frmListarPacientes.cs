@@ -17,7 +17,7 @@ namespace SistemaGestion
         }
 
         //BOTON ARMAR LISTA 
-        private void btnGrilla_Click_1(object sender, EventArgs e)
+        private void btnGrilla_Click(object sender, EventArgs e)
         {
             var ds = new DataSet();
             var dt = new DataTable();

@@ -78,6 +78,7 @@
     <Compile Include="MedicoMetodos.cs" />
     <Compile Include="ProductoMetodos.cs" />
     <Compile Include="PresupuestoMetodos.cs" />
+    <Compile Include="RolMetodos.cs" />
     <Compile Include="RecetaMetodos.cs" />
     <Compile Include="Medico.cs" />
     <Compile Include="PacienteMetodos.cs" />

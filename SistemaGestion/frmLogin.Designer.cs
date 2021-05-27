@@ -46,6 +46,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);

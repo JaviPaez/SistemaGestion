@@ -111,6 +111,7 @@ namespace SistemaGestion
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,6 +128,7 @@ namespace SistemaGestion
             // btnGrabar
             // 
             this.btnGrabar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabar.FlatAppearance.BorderSize = 0;
             this.btnGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
