@@ -47,8 +47,23 @@ namespace SistemaGestion
 
         public DataTable Consultar()
         {
-            string sqlStr = "select * from Usuarios order by Dni";
+            string sqlStr = "select * from USUARIOS order by Dni";
             //var c = AbrirConexion();
+
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
+        public DataTable buscarUsuario(int Dni)
+        {
+            string sqlStr = "select * from USUARIOS where Dni = " + Dni;
 
 
             //********************************************************

@@ -31,6 +31,9 @@ namespace SistemaGestion
         {
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.btnGrilla = new System.Windows.Forms.Button();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +45,7 @@ namespace SistemaGestion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(252, 100);
+            this.dgvLista.Location = new System.Drawing.Point(248, 181);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -58,13 +61,48 @@ namespace SistemaGestion
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(445, 403);
+            this.btnGrilla.Location = new System.Drawing.Point(441, 484);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
-            this.btnGrilla.TabIndex = 1;
+            this.btnGrilla.TabIndex = 2;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
+            // 
+            // txtDni
+            // 
+            this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtDni.Location = new System.Drawing.Point(441, 70);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(200, 31);
+            this.txtDni.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(207, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "DNI";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(749, 66);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(110, 38);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmListarUsuarios
             // 
@@ -72,6 +110,9 @@ namespace SistemaGestion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.Controls.Add(this.txtDni);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGrilla);
             this.Controls.Add(this.dgvLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -80,6 +121,7 @@ namespace SistemaGestion
             this.Load += new System.EventHandler(this.frmListarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -87,5 +129,8 @@ namespace SistemaGestion
 
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Button btnGrilla;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

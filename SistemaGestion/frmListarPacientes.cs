@@ -44,8 +44,7 @@ namespace SistemaGestion
                 dt = al.buscarPaciente(Convert.ToInt32(txtDni.Text));
                 if (dt.Rows.Count != 0)
                 {
-                    dgvLista.DataSource = dt; //ds.Tables[0];
-
+                    dgvLista.DataSource = dt;
                 }
                 else
                 {

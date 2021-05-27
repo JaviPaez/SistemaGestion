@@ -38,5 +38,28 @@ namespace SistemaGestion
                 MessageBox.Show("No hay registros en la seleccion");
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new LoginMetodos();
+                dt = al.buscarUsuario(Convert.ToInt32(txtDni.Text));
+                if (dt.Rows.Count != 0)
+                {
+                    dgvLista.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No hay registros en la seleccion");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese el Dni");
+            }
+        }
     }
 }
