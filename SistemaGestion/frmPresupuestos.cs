@@ -19,7 +19,7 @@ namespace SistemaGestion
         //LOAD
         private void frmPresupuestos_Load(object sender, EventArgs e)
         {
-            cboObraSocial.SelectedIndex = 0;
+            cboIdReceta.SelectedIndex = 0;
             dtpFecha.Format = DateTimePickerFormat.Short;
         }
 
@@ -38,8 +38,8 @@ namespace SistemaGestion
                     paciente.Apellido = txtApellido.Text;
                     paciente.Nombre = txtNombre.Text;
                     paciente.FechaNac = dtpFecha.Value;
-                    paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
-                    paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
+                    paciente.ObraSocial = cboIdReceta.SelectedItem.ToString();
+                    paciente.NroAfiliado = Convert.ToInt32(txtValidez.Text);
 
                     var pacienteMetodo = new PacienteMetodos();
                     Boolean grabo = pacienteMetodo.grabarPaciente(paciente);
@@ -64,12 +64,12 @@ namespace SistemaGestion
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtDni.Text = "";
-            txtApellido.Text = "";
-            txtNombre.Text = "";
-            txtNroAfiliado.Text = "";
+            txtDni.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtValidez.Clear();
             dtpFecha.Value = DateTime.Now;
-            cboObraSocial.SelectedIndex = 0;
+            cboIdReceta.SelectedIndex = 0;
         }
     }
 }

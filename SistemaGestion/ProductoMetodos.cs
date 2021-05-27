@@ -13,7 +13,7 @@ namespace SistemaGestion
         {
             try
             {
-                var selMax = "select max(ID) + 1 from Productos";
+                var selMax = "select max(ID) + 1 from PRODUCTOS";
                 //********************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
@@ -30,7 +30,7 @@ namespace SistemaGestion
             {
                 var idMax = ultimoId();
 
-                var sel = "INSERT INTO Productos(ID,Descripcion,Precio,Cantidad)" + " VALUES(" + idMax + ",'" + producto.Descripcion + "','" + producto.Precio + "'," + producto.Cantidad +  ")";
+                var sel = "INSERT INTO PRODUCTOS(ID,Descripcion,Precio,Cantidad)" + " VALUES(" + idMax + ",'" + producto.Descripcion + "','" + producto.Precio + "'," + producto.Cantidad +  ")";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
@@ -47,7 +47,7 @@ namespace SistemaGestion
         //CONSULTAR PRODUCTOS
         public DataTable consultarProductos()
         {
-            string sqlStr = "select * from Productos";
+            string sqlStr = "select * from PRODUCTOS";
             //var c = AbrirConexion();
 
 

@@ -9,12 +9,44 @@ namespace SistemaGestion
 {
     class PresupuestoMetodos : Conexion
     {
-        public DataTable ConsultarLogin(string user, string pass)
+        public int ultimoId()
         {
-            string sqlStr = "select dni, contraseña from Usuarios where dni = '" + user + "' and contraseña = '" +
-                            pass + "'";
-                 
-            //var c = AbrirConexion();
+            try
+            {
+                var selMax = "select max(Nro) + 1 from PRESUPUESTOS";
+                //********************************************************
+                SqlCommand com = new SqlCommand(selMax, conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
+        public Boolean grabarPresupuesto(Presupuesto presupuesto)
+        {
+            try
+            {
+                var idMax = ultimoId();
+
+                var sel = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro,DniUsuario,DniPaciente,IdReceta,Fecha,Validez,Total)" + " VALUES(" + idMax + "," + presupuesto.DniUsuario + "," + presupuesto.DniPaciente + "," + presupuesto.IdReceta + ",'" + presupuesto.Fecha + "','" + presupuesto.Validez + "','" + presupuesto.Total + "')";
+
+                SqlCommand com = new SqlCommand(sel, conectar());
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;              
+            }            
+        }
+
+        public DataTable consultar()
+        {
+            string sqlStr = "select * from PRESUPUESTOS";    
 
 
             //********************************************************
@@ -26,38 +58,10 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
-        public long ultimoId()
+
+        public DataTable buscarPresupuesto(int Nro)
         {
-                var selMax = "select max(id) + 1 from Presupuestos";
-                //********************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
-                return (int)(long)com.ExecuteScalar();
-         }
-               
-        public Boolean grabarPresupuesto(Presupuesto presupuesto)
-        {
-            try
-            {
-                var idMax = ultimoId();
-
-                //var sel = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
-
-                //SqlCommand com = new SqlCommand(sel, conectar());
-
-                //com.ExecuteNonQuery();
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;              
-            }            
-        }
-
-        public DataTable Consultar()
-        {
-            string sqlStr = "select * from Usuarios";
-            //var c = AbrirConexion();
+            string sqlStr = "select * from PRESUPUESTOS where Nro = " + Nro;
 
 
             //********************************************************

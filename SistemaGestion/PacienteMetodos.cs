@@ -13,7 +13,7 @@ namespace SistemaGestion
         {
             try
             {     
-                var sel = "set dateformat dmy INSERT INTO Pacientes(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
+                var sel = "set dateformat dmy INSERT INTO PACIENTES(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
@@ -62,7 +62,7 @@ namespace SistemaGestion
         public DataTable cargarComboPacientes()
         {
 
-            string sqlStr = "select Dni from Pacientes";
+            string sqlStr = "select Dni from PACIENTES";
 
             //********************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());

@@ -13,7 +13,7 @@ namespace SistemaGestion
         {
             try
             {
-                var selMax = "select max(ID) + 1 from Recetas";
+                var selMax = "select max(ID) + 1 from RECETAS";
                 //********************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
@@ -30,7 +30,7 @@ namespace SistemaGestion
             {
                 var idMax = ultimoId();
 
-                var sel = "set dateformat dmy INSERT INTO Recetas(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.OI + "','" + receta.OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
+                var sel = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.OI + "','" + receta.OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
@@ -46,7 +46,7 @@ namespace SistemaGestion
 
         public DataTable Consultar()
         {
-            string sqlStr = "select * from Recetas";
+            string sqlStr = "select * from RECETAS";
             //var c = AbrirConexion();
 
 

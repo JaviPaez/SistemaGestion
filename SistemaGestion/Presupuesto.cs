@@ -7,12 +7,12 @@ namespace SistemaGestion
 {
     class Presupuesto
     {
-        int Nro { get; set; }
-        int DniUsuario { get; set; }    
-        int DniPaciente { get; set; }
-        int IdReceta { get; set; }        
-        DateTime Fecha { get; set; }       
-        string Validez { get; set; }
-        double Total { get; set; }
+        public int Nro { get; set; }
+        public int DniUsuario { get; set; }
+        public int DniPaciente { get; set; }
+        public int IdReceta { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Validez { get; set; }
+        public double Total { get; set; }
     }
 }

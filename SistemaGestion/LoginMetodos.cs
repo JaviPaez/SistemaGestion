@@ -14,9 +14,6 @@ namespace SistemaGestion
             string sqlStr = "select dni, contraseña from Usuarios where dni = '" + user + "' and contraseña = '" +
                             pass + "'";
                  
-            //var c = AbrirConexion();
-
-
             //********************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();

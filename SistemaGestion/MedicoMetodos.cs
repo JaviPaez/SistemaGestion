@@ -13,7 +13,7 @@ namespace SistemaGestion
         {
             try
             {
-                var selMax = "select max(ID) + 1 from Medicos";
+                var selMax = "select max(ID) + 1 from MEDICOS";
                 //********************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
@@ -29,7 +29,7 @@ namespace SistemaGestion
             {
                 var idMax = ultimoId();
 
-                var sel = "INSERT INTO Medicos(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
+                var sel = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
@@ -63,7 +63,7 @@ namespace SistemaGestion
         public DataTable cargarComboMedicos()
         {
 
-            string sqlStr = "select ID, Apellido + ', ' + Nombre as ApeNom from Medicos order by ApeNom";
+            string sqlStr = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
 
             //********************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());

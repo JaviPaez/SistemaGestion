@@ -25,8 +25,7 @@ namespace SistemaGestion
             dt = al.ConsultarPacientes();
             if (dt.Rows.Count != 0)
             {
-                dgvLista.DataSource = dt; //ds.Tables[0];
-
+                dgvLista.DataSource = dt;
             }
             else
             {
@@ -40,8 +39,8 @@ namespace SistemaGestion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new PacienteMetodos();
-                dt = al.buscarPaciente(Convert.ToInt32(txtDni.Text));
+                var al = new PresupuestoMetodos();
+                dt = al.buscarPresupuesto(Convert.ToInt32(txtNro.Text));
                 if (dt.Rows.Count != 0)
                 {
                     dgvLista.DataSource = dt;
@@ -53,7 +52,7 @@ namespace SistemaGestion
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Ingrese el Dni");
+                MessageBox.Show("Ingrese el Nro de Presupuesto");
             }
         }
     }

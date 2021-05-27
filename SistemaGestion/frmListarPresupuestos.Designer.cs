@@ -31,7 +31,7 @@
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.btnGrilla = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDni = new System.Windows.Forms.TextBox();
+            this.txtNro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
@@ -81,13 +81,13 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtDni
+            // txtNro
             // 
-            this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtDni.Location = new System.Drawing.Point(462, 52);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(200, 31);
-            this.txtDni.TabIndex = 0;
+            this.txtNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtNro.Location = new System.Drawing.Point(462, 52);
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(200, 31);
+            this.txtNro.TabIndex = 0;
             // 
             // label1
             // 
@@ -96,9 +96,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(228, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 25);
+            this.label1.Size = new System.Drawing.Size(58, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "DNI";
+            this.label1.Text = "NRO";
             // 
             // frmListarPresupuestos
             // 
@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1100, 612);
-            this.Controls.Add(this.txtDni);
+            this.Controls.Add(this.txtNro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGrilla);
@@ -124,7 +124,7 @@
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Button btnGrilla;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.TextBox txtNro;
         private System.Windows.Forms.Label label1;
     }
 }
