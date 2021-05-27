@@ -72,13 +72,22 @@ namespace SistemaGestion
             this.Hide();
         }
 
+        //BOTON CANCELAR
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtDni.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtContraseña.Clear();
+            cboRol.SelectedIndex = 0;
+        }
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             cboRol.SelectedIndex = 0;
         }
 
 
-        //the hell goes here?
+        //Desplazar desde barra de titulo
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -99,6 +108,7 @@ namespace SistemaGestion
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }       
+        }
+
     }
 }

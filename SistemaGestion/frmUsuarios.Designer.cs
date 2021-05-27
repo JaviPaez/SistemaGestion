@@ -44,6 +44,7 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -215,12 +216,28 @@
             this.pbxCerrar.TabStop = false;
             this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(202, 353);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(188, 53);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(698, 418);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
@@ -263,5 +280,6 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox pbxMinimizar;
         private System.Windows.Forms.PictureBox pbxCerrar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

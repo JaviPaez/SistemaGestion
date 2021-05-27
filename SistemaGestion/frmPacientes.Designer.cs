@@ -67,7 +67,7 @@ namespace SistemaGestion
             this.btnGrabar.Location = new System.Drawing.Point(594, 442);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 1;
+            this.btnGrabar.TabIndex = 7;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -78,7 +78,7 @@ namespace SistemaGestion
             this.txtDni.Location = new System.Drawing.Point(558, 151);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(200, 31);
-            this.txtDni.TabIndex = 2;
+            this.txtDni.TabIndex = 0;
             // 
             // btnCancelar
             // 
@@ -90,7 +90,7 @@ namespace SistemaGestion
             this.btnCancelar.Location = new System.Drawing.Point(290, 442);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -101,7 +101,7 @@ namespace SistemaGestion
             this.txtApellido.Location = new System.Drawing.Point(558, 195);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 31);
-            this.txtApellido.TabIndex = 5;
+            this.txtApellido.TabIndex = 1;
             // 
             // label2
             // 
@@ -120,7 +120,7 @@ namespace SistemaGestion
             this.txtNombre.Location = new System.Drawing.Point(558, 236);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 31);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -161,7 +161,7 @@ namespace SistemaGestion
             this.dtpFecha.Location = new System.Drawing.Point(558, 280);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 31);
-            this.dtpFecha.TabIndex = 10;
+            this.dtpFecha.TabIndex = 3;
             // 
             // label6
             // 
@@ -187,7 +187,7 @@ namespace SistemaGestion
             this.cboObraSocial.Location = new System.Drawing.Point(558, 324);
             this.cboObraSocial.Name = "cboObraSocial";
             this.cboObraSocial.Size = new System.Drawing.Size(200, 33);
-            this.cboObraSocial.TabIndex = 12;
+            this.cboObraSocial.TabIndex = 4;
             // 
             // txtNroAfiliado
             // 
@@ -195,7 +195,7 @@ namespace SistemaGestion
             this.txtNroAfiliado.Location = new System.Drawing.Point(558, 369);
             this.txtNroAfiliado.Name = "txtNroAfiliado";
             this.txtNroAfiliado.Size = new System.Drawing.Size(200, 31);
-            this.txtNroAfiliado.TabIndex = 14;
+            this.txtNroAfiliado.TabIndex = 5;
             // 
             // label7
             // 

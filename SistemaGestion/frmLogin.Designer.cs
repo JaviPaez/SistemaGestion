@@ -108,7 +108,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(227, 152);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(154, 25);
-            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Nuevo Usuario";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

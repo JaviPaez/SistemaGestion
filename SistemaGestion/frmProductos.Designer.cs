@@ -68,7 +68,7 @@ namespace SistemaGestion
             this.txtDescripcion.Location = new System.Drawing.Point(452, 173);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(327, 31);
-            this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.TabIndex = 0;
             // 
             // txtPrecio
             // 
@@ -76,7 +76,7 @@ namespace SistemaGestion
             this.txtPrecio.Location = new System.Drawing.Point(452, 231);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(327, 31);
-            this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.TabIndex = 1;
             // 
             // label3
             // 
@@ -95,7 +95,7 @@ namespace SistemaGestion
             this.txtCantidad.Location = new System.Drawing.Point(452, 291);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(327, 31);
-            this.txtCantidad.TabIndex = 6;
+            this.txtCantidad.TabIndex = 2;
             // 
             // label4
             // 
@@ -119,7 +119,7 @@ namespace SistemaGestion
             this.btnCancelar.Location = new System.Drawing.Point(254, 473);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -135,7 +135,7 @@ namespace SistemaGestion
             this.btnGrabar.Location = new System.Drawing.Point(565, 473);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 8;
+            this.btnGrabar.TabIndex = 4;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);

@@ -40,7 +40,7 @@ namespace SistemaGestion
             cboDni.ValueMember = "Dni";
 
             cboDni.Text = "";
-            cboMedico.Text = "";
+            cboMedico.Text = "";           
         }
 
         //BOTON GRABAR
