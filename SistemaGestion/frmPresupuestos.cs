@@ -18,9 +18,39 @@ namespace SistemaGestion
 
         //LOAD
         private void frmPresupuestos_Load(object sender, EventArgs e)
-        {
-            cboIdReceta.SelectedIndex = 0;
+        {            
             dtpFecha.Format = DateTimePickerFormat.Short;
+
+            //Cargar Combo Usuarios
+            var dt = new DataTable();
+            var user = new LoginMetodos();
+            dt = user.cargarComboUsuarios();
+
+            cboUsuario.DataSource = dt;
+            cboUsuario.DisplayMember = "ApeNom";
+            cboUsuario.ValueMember = "Dni";
+
+            //Cargar Combo Pacientes
+            var dt2 = new DataTable();
+            var pac = new PacienteMetodos();
+            dt = pac.cargarComboPacientes();
+
+            cboDniPaciente.DataSource = dt;
+            cboDniPaciente.DisplayMember = "Dni";
+            cboDniPaciente.ValueMember = "Dni";
+
+            //Cargar Combo Receta
+            var dt3 = new DataTable();
+            var rec = new RecetaMetodos();
+            dt = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
+
+            cboIdReceta.DataSource = dt;
+            cboIdReceta.DisplayMember = "Id";
+            cboIdReceta.ValueMember = "Id";
+
+            cboIdReceta.Text = "Seleccione";
+            cboUsuario.Text = "Seleccione";
+            cboDniPaciente.Text = "Seleccione";
         }
 
         //BOTON GRABAR
@@ -29,20 +59,20 @@ namespace SistemaGestion
             DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
-            var paciente = new Paciente();
+            var presupuesto = new Presupuesto();
             try
             {
                 if (resp == DialogResult.Yes)
                 {
-                    paciente.Dni = Convert.ToInt32(txtDni.Text);
-                    paciente.Apellido = txtApellido.Text;
-                    paciente.Nombre = txtNombre.Text;
-                    paciente.FechaNac = dtpFecha.Value;
-                    paciente.ObraSocial = cboIdReceta.SelectedItem.ToString();
-                    paciente.NroAfiliado = Convert.ToInt32(txtValidez.Text);
+                    presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
+                    presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
+                    presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
+                    presupuesto.Fecha = dtpFecha.Value;
+                    presupuesto.Validez = txtValidez.Text;
+                    presupuesto.Total = txtTotal.Text;
 
-                    var pacienteMetodo = new PacienteMetodos();
-                    Boolean grabo = pacienteMetodo.grabarPaciente(paciente);
+                    var presupuestoMetodo = new PresupuestoMetodos();
+                    Boolean grabo = presupuestoMetodo.grabarPresupuesto(presupuesto);
                     if (grabo == false)
                     {
                         MessageBox.Show("Error en Grabacion", "ERROR");
@@ -64,12 +94,12 @@ namespace SistemaGestion
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtDni.Clear();
-            txtApellido.Clear();
-            txtNombre.Clear();
+            cboDniPaciente.Text = "Seleccione";
+            cboUsuario.Text = "Seleccione";
+            cboIdReceta.Text = "Seleccione";            
             txtValidez.Clear();
-            dtpFecha.Value = DateTime.Now;
-            cboIdReceta.SelectedIndex = 0;
+            txtTotal.Clear();
+            dtpFecha.Value = DateTime.Now;            
         }
     }
 }

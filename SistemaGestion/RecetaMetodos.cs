@@ -59,5 +59,19 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
+
+        public DataTable cargarComboRecetas(int DniPaciente)
+        {
+            string sqlStr = "select Id from RECETAS where Dni = " + DniPaciente;
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
     }
 }

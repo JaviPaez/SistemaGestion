@@ -72,5 +72,19 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
+
+        public DataTable cargarComboUsuarios()
+        {
+            string sqlStr = "select Dni, Apellido + ', ' + Nombre as ApeNom from USUARIOS order by ApeNom";
+
+            //********************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
     }
 }

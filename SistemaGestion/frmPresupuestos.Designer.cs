@@ -42,7 +42,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboDniPaciente = new System.Windows.Forms.ComboBox();
-            this.cboDniUsuario = new System.Windows.Forms.ComboBox();
+            this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnGrabar
@@ -84,9 +84,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(309, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "DNI USUARIO";
+            this.label2.Text = "USUARIO";
             // 
             // label3
             // 
@@ -208,20 +208,20 @@
             this.cboDniPaciente.Size = new System.Drawing.Size(200, 33);
             this.cboDniPaciente.TabIndex = 1;
             // 
-            // cboDniUsuario
+            // cboUsuario
             // 
-            this.cboDniUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.cboDniUsuario.FormattingEnabled = true;
-            this.cboDniUsuario.Items.AddRange(new object[] {
+            this.cboUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.cboUsuario.FormattingEnabled = true;
+            this.cboUsuario.Items.AddRange(new object[] {
             "Seleccione",
             "Apross",
             "OSDE",
             "Prevencion Salud",
             "SIPSSA"});
-            this.cboDniUsuario.Location = new System.Drawing.Point(565, 147);
-            this.cboDniUsuario.Name = "cboDniUsuario";
-            this.cboDniUsuario.Size = new System.Drawing.Size(200, 33);
-            this.cboDniUsuario.TabIndex = 0;
+            this.cboUsuario.Location = new System.Drawing.Point(565, 147);
+            this.cboUsuario.Name = "cboUsuario";
+            this.cboUsuario.Size = new System.Drawing.Size(200, 33);
+            this.cboUsuario.TabIndex = 0;
             // 
             // frmPresupuestos
             // 
@@ -229,7 +229,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1100, 612);
-            this.Controls.Add(this.cboDniUsuario);
+            this.Controls.Add(this.cboUsuario);
             this.Controls.Add(this.cboDniPaciente);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label8);
@@ -268,6 +268,6 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboDniPaciente;
-        private System.Windows.Forms.ComboBox cboDniUsuario;
+        private System.Windows.Forms.ComboBox cboUsuario;
     }
 }

@@ -13,6 +13,6 @@ namespace SistemaGestion
         public int IdReceta { get; set; }
         public DateTime Fecha { get; set; }
         public string Validez { get; set; }
-        public double Total { get; set; }
+        public string Total { get; set; }
     }
 }

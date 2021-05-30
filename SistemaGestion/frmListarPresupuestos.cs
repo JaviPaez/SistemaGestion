@@ -21,8 +21,8 @@ namespace SistemaGestion
         {
             var ds = new DataSet();
             var dt = new DataTable();
-            var al = new PacienteMetodos();
-            dt = al.ConsultarPacientes();
+            var al = new PresupuestoMetodos();
+            dt = al.consultar();
             if (dt.Rows.Count != 0)
             {
                 dgvLista.DataSource = dt;

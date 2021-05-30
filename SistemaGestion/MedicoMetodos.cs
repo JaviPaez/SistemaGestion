@@ -62,7 +62,6 @@ namespace SistemaGestion
 
         public DataTable cargarComboMedicos()
         {
-
             string sqlStr = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
 
             //********************************************************

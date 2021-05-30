@@ -56,8 +56,6 @@ namespace SistemaGestion
                 {
                     receta.IdMedico = Convert.ToInt32(cboMedico.SelectedValue);
                     receta.Dni = Convert.ToInt32(cboDni.SelectedValue);
-                    //receta.OD = Convert.ToDouble(txtOD.Text);
-                    //receta.OI = Convert.ToDouble(txtOI.Text);
                     receta.OI = txtOI.Text;
                     receta.OD = txtOD.Text;
                     receta.Fecha = dtpFecha.Value;
