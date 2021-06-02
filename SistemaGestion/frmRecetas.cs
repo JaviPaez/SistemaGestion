@@ -20,6 +20,8 @@ namespace SistemaGestion
         private void frmRecetas_Load(object sender, EventArgs e)
         {            
             dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.MinDate = new DateTime(1900, 1, 1);
+            dtpFecha.MaxDate = DateTime.Today;
 
             //Cargar Combo Medicos
             var dt = new DataTable();

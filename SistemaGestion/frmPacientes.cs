@@ -21,6 +21,8 @@ namespace SistemaGestion
         {
             cboObraSocial.SelectedIndex = 0;
             dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.MinDate = new DateTime(1900, 1, 1);
+            dtpFecha.MaxDate = DateTime.Today;
         }
 
         //BOTON GRABAR

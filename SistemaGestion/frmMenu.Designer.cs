@@ -82,6 +82,7 @@ namespace SistemaGestion
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
@@ -100,6 +101,7 @@ namespace SistemaGestion
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BarraTitulo.Controls.Add(this.label4);
             this.BarraTitulo.Controls.Add(this.pbxRestaurar);
             this.BarraTitulo.Controls.Add(this.pbxMinimizar);
             this.BarraTitulo.Controls.Add(this.pbxMaximizar);
@@ -765,6 +767,17 @@ namespace SistemaGestion
             this.PanelContenedor.Size = new System.Drawing.Size(1100, 612);
             this.PanelContenedor.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(339, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(511, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "SISTEMA DE GESTIÓN - ÓPTICA LARA";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -779,6 +792,7 @@ namespace SistemaGestion
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).EndInit();
@@ -848,6 +862,7 @@ namespace SistemaGestion
         private System.Windows.Forms.Button btnConsultarProductos;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label4;
     }
 }
 
