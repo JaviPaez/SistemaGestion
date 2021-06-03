@@ -37,8 +37,6 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.cboIdReceta = new System.Windows.Forms.ComboBox();
-            this.txtValidez = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboDniPaciente = new System.Windows.Forms.ComboBox();
@@ -155,29 +153,10 @@
             this.cboIdReceta.Size = new System.Drawing.Size(200, 33);
             this.cboIdReceta.TabIndex = 2;
             // 
-            // txtValidez
-            // 
-            this.txtValidez.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtValidez.Location = new System.Drawing.Point(565, 327);
-            this.txtValidez.Name = "txtValidez";
-            this.txtValidez.Size = new System.Drawing.Size(200, 31);
-            this.txtValidez.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(309, 327);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 25);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "VALIDEZ";
-            // 
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtTotal.Location = new System.Drawing.Point(565, 373);
+            this.txtTotal.Location = new System.Drawing.Point(565, 329);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(200, 31);
             this.txtTotal.TabIndex = 5;
@@ -187,7 +166,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(309, 373);
+            this.label8.Location = new System.Drawing.Point(309, 329);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 25);
             this.label8.TabIndex = 15;
@@ -233,8 +212,6 @@
             this.Controls.Add(this.cboDniPaciente);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtValidez);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.cboIdReceta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpFecha);
@@ -263,8 +240,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboIdReceta;
-        private System.Windows.Forms.TextBox txtValidez;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboDniPaciente;
