@@ -60,7 +60,7 @@
             this.btnGrilla.Location = new System.Drawing.Point(462, 478);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
-            this.btnGrilla.TabIndex = 2;
+            this.btnGrilla.TabIndex = 3;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
@@ -76,7 +76,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(770, 48);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
-            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -84,17 +84,17 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtDescripcion.Location = new System.Drawing.Point(462, 52);
+            this.txtDescripcion.Location = new System.Drawing.Point(491, 52);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(200, 31);
-            this.txtDescripcion.TabIndex = 0;
+            this.txtDescripcion.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(228, 55);
+            this.label1.Location = new System.Drawing.Point(257, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 6;

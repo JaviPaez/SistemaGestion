@@ -69,8 +69,7 @@ namespace SistemaGestion
                     presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
                     presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
-                    presupuesto.Fecha = dtpFecha.Value;
-                    presupuesto.Validez = txtValidez.Text;
+                    presupuesto.Fecha = dtpFecha.Value; 
                     presupuesto.Total = txtTotal.Text;
 
                     var presupuestoMetodo = new PresupuestoMetodos();
@@ -98,8 +97,7 @@ namespace SistemaGestion
         {
             cboDniPaciente.Text = "Seleccione";
             cboUsuario.Text = "Seleccione";
-            cboIdReceta.Text = "Seleccione";            
-            txtValidez.Clear();
+            cboIdReceta.Text = "Seleccione";    
             txtTotal.Clear();
             dtpFecha.Value = DateTime.Now;            
         }

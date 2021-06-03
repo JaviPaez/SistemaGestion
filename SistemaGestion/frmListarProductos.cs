@@ -40,6 +40,7 @@ namespace SistemaGestion
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new ProductoMetodos();
+
                 dt = al.buscarProducto(txtDescripcion.Text);
                 if (dt.Rows.Count != 0)
                 {
@@ -48,7 +49,7 @@ namespace SistemaGestion
                 else
                 {
                     MessageBox.Show("No hay registros en la seleccion");
-                }
+                }                
             }
             catch(Exception ex)
             {
