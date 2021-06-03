@@ -35,11 +35,16 @@ namespace SistemaGestion
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
             var pac = new PacienteMetodos();
-            dt = pac.cargarComboPacientes();
+            dt2 = pac.cargarComboPacientes();
 
-            cboDni.DataSource = dt;
+            cboDni.DataSource = dt2;
             cboDni.DisplayMember = "Dni";
             cboDni.ValueMember = "Dni";
+
+            //if (dt2.Rows.Count != 0)
+            //{
+            //    lblNombrePaciente.Text = dt2.
+            //}
 
             cboDni.Text = "Seleccione";
             cboMedico.Text = "Seleccione";           

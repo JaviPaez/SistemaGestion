@@ -26,6 +26,7 @@ namespace SistemaGestion
             if (dt.Rows.Count != 0)
             {
                 dgvLista.DataSource = dt;
+                dgvLista.Columns["ID"].Visible = false;
             }
             else
             {

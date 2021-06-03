@@ -70,7 +70,7 @@ namespace SistemaGestion
             txtApellido.Text = "";
             txtNombre.Text = "";
             txtNroAfiliado.Text = "";
-            dtpFecha.Value = DateTime.Now;
+            dtpFecha.Value = DateTime.Today;
             cboObraSocial.SelectedIndex = 0;
         }
     }

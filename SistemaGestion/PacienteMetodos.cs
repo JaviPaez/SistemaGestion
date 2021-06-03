@@ -62,7 +62,7 @@ namespace SistemaGestion
         public DataTable cargarComboPacientes()
         {
 
-            string sqlStr = "select Dni from PACIENTES";
+            string sqlStr = "select Dni,Apellido,Nombre from PACIENTES";
 
             //********************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());

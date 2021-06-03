@@ -44,6 +44,7 @@ namespace SistemaGestion
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboMedico = new System.Windows.Forms.ComboBox();
             this.cboDni = new System.Windows.Forms.ComboBox();
+            this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtObserv
@@ -248,12 +249,24 @@ namespace SistemaGestion
             this.cboDni.Size = new System.Drawing.Size(200, 33);
             this.cboDni.TabIndex = 1;
             // 
+            // lblNombrePaciente
+            // 
+            this.lblNombrePaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNombrePaciente.AutoSize = true;
+            this.lblNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.lblNombrePaciente.ForeColor = System.Drawing.Color.White;
+            this.lblNombrePaciente.Location = new System.Drawing.Point(776, 192);
+            this.lblNombrePaciente.Name = "lblNombrePaciente";
+            this.lblNombrePaciente.Size = new System.Drawing.Size(0, 31);
+            this.lblNombrePaciente.TabIndex = 33;
+            // 
             // frmRecetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.Controls.Add(this.lblNombrePaciente);
             this.Controls.Add(this.cboDni);
             this.Controls.Add(this.cboMedico);
             this.Controls.Add(this.dtpFecha);
@@ -295,5 +308,6 @@ namespace SistemaGestion
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cboMedico;
         private System.Windows.Forms.ComboBox cboDni;
+        private System.Windows.Forms.Label lblNombrePaciente;
     }
 }
