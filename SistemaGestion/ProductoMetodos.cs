@@ -48,10 +48,8 @@ namespace SistemaGestion
         public DataTable consultarProductos()
         {
             string sqlStr = "select * from PRODUCTOS";
-            //var c = AbrirConexion();
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -65,8 +63,7 @@ namespace SistemaGestion
         {
             string sqlStr = "select * from PRODUCTOS where Descripcion like '%" + sel + "%'";
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);

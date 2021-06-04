@@ -29,8 +29,11 @@ namespace SistemaGestion
                 dgvLista.Columns["ID"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la seleccion");
+
+            txtDescripcion.Clear();
         }
 
+        //BOTON BUSCAR POR DESCRIPCION
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if(txtDescripcion.Text != string.Empty)
@@ -43,8 +46,12 @@ namespace SistemaGestion
 
                     dt = al.buscarProducto(txtDescripcion.Text);
 
-                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
-                    else  MessageBox.Show("No hay registros en la seleccion");
+                    if (dt.Rows.Count != 0)
+                    {
+                        dgvLista.DataSource = dt;
+                        dgvLista.Columns["ID"].Visible = false;
+                    }
+                    else MessageBox.Show("No hay registros en la seleccion");
                 }
                 catch (Exception ex)
                 {

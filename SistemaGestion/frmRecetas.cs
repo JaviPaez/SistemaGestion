@@ -94,6 +94,7 @@ namespace SistemaGestion
             txtAstig_OD.Clear();
             dtpFecha.Value = DateTime.Today;
             txtObserv.Clear();
+            lblNombrePaciente.Text = "";
         }
 
         private void cboDni_SelectedValueChanged(object sender, EventArgs e)

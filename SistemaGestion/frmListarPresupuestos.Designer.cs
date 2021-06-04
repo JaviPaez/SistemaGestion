@@ -33,6 +33,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.dgvLista.AllowUserToDeleteRows = false;
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(233, 170);
+            this.dgvLista.Location = new System.Drawing.Point(222, 204);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -73,7 +74,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(770, 48);
+            this.btnBuscar.Location = new System.Drawing.Point(759, 129);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
             this.btnBuscar.TabIndex = 1;
@@ -84,7 +85,7 @@
             // txtNro
             // 
             this.txtNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtNro.Location = new System.Drawing.Point(462, 52);
+            this.txtNro.Location = new System.Drawing.Point(451, 133);
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(200, 31);
             this.txtNro.TabIndex = 0;
@@ -94,11 +95,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(228, 55);
+            this.label1.Location = new System.Drawing.Point(217, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "NRO";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(435, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(238, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "PRESUPUESTOS";
             // 
             // frmListarPresupuestos
             // 
@@ -106,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

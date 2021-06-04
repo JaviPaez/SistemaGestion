@@ -22,44 +22,49 @@ namespace SistemaGestion
             var al = new LoginMetodos();
         }
 
+        //BOTON ARMAR LISTA
         private void btnGrilla_Click(object sender, EventArgs e)
         {
             var ds = new DataSet();
             var dt = new DataTable();
             var al = new LoginMetodos();
             dt = al.Consultar();
+
             if (dt.Rows.Count != 0)
             {
                 dgvLista.DataSource = dt;
                 dgvLista.Columns["Contraseña"].Visible = false;
             }
-            else
-            {
-                MessageBox.Show("No hay registros en la seleccion");
-            }
+            else MessageBox.Show("No hay registros en la seleccion");
+
+            txtBuscar.Clear();
         }
 
+        //BOTON BUSCAR POR DNI O APELLIDO Y NOMBRE
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if(txtBuscar.Text != string.Empty)
             {
-                var ds = new DataSet();
-                var dt = new DataTable();
-                var al = new LoginMetodos();
-                dt = al.buscarUsuario(Convert.ToInt32(txtDni.Text));
-                if (dt.Rows.Count != 0)
+                try
                 {
-                    dgvLista.DataSource = dt;
+                    var ds = new DataSet();
+                    var dt = new DataTable();
+                    var al = new LoginMetodos();                
+
+                    int dni;
+                    if (!int.TryParse(txtBuscar.Text, out dni))
+                        dt = al.buscarUsuarioApeNom(txtBuscar.Text);
+                    else dt = al.buscarUsuarioDni(dni);                  
+
+                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+                    else MessageBox.Show("No hay registros en la seleccion");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No hay registros en la seleccion");
+                    MessageBox.Show("Ingrese el Dni o Apellido y Nombre");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ingrese el Dni");
-            }
+            else MessageBox.Show("Ingrese el Dni o Apellido y Nombre");
         }
     }
 }
