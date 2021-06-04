@@ -30,7 +30,7 @@ namespace SistemaGestion
             {
                 var idMax = ultimoId();
 
-                var sel = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,OI,OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.OI + "','" + receta.OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
+                var sel = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,Miop_OI,Miop_OD,Astig_OI,Astig_OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.Miop_OI + "','" + receta.Miop_OD + "','" + receta.Astig_OI + "','" + receta.Astig_OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
 
                 SqlCommand com = new SqlCommand(sel, conectar());
 
@@ -62,7 +62,7 @@ namespace SistemaGestion
 
         public DataTable cargarComboRecetas(int DniPaciente)
         {
-            string sqlStr = "select Id from RECETAS where Dni = " + DniPaciente;
+            string sqlStr = "select ID from RECETAS where Dni = " + DniPaciente;
 
             //********************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());

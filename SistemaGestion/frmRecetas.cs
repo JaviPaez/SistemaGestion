@@ -61,24 +61,21 @@ namespace SistemaGestion
                 {
                     receta.IdMedico = Convert.ToInt32(cboMedico.SelectedValue);
                     receta.Dni = Convert.ToInt32(cboDni.SelectedValue);
-                    receta.OI = txtOI.Text;
-                    receta.OD = txtOD.Text;
+                    receta.Miop_OI = txtMiop_OI.Text;
+                    receta.Miop_OD = txtMiop_OD.Text;
+                    receta.Astig_OI = txtAstig_OI.Text;
+                    receta.Astig_OD = txtAstig_OD.Text;
                     receta.Fecha = dtpFecha.Value;
                     receta.Observaciones = txtObserv.Text;                    
 
                     var recetaMetodo = new RecetaMetodos();
                     Boolean grabo = recetaMetodo.grabarReceta(receta);
-                    if (grabo == false)
-                    {
-                        MessageBox.Show("Error en Grabacion", "ERROR");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Grabacion Correcta", "Grabar");
-                    }
+                    if (grabo == false) MessageBox.Show("Error en Grabacion", "ERROR");
+
+                    else MessageBox.Show("Grabacion Correcta", "Grabar");                  
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             }
@@ -90,9 +87,11 @@ namespace SistemaGestion
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             cboDni.Text = "Seleccione";
-            cboMedico.Text = "Seleccione";
-            txtOD.Clear();
-            txtOI.Clear();
+            cboMedico.Text = "Seleccione"; 
+            txtMiop_OI.Clear();
+            txtMiop_OD.Clear();
+            txtAstig_OI.Clear();
+            txtAstig_OD.Clear();
             dtpFecha.Value = DateTime.Today;
             txtObserv.Clear();
         }
