@@ -28,34 +28,30 @@ namespace SistemaGestion
                 dgvLista.DataSource = dt;
                 dgvLista.Columns["ID"].Visible = false;
             }
-            else
-            {
-                MessageBox.Show("No hay registros en la seleccion");
-            }
+            else MessageBox.Show("No hay registros en la seleccion");
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if(txtDescripcion.Text != string.Empty)
             {
-                var ds = new DataSet();
-                var dt = new DataTable();
-                var al = new ProductoMetodos();
+                try
+                {
+                    var ds = new DataSet();
+                    var dt = new DataTable();
+                    var al = new ProductoMetodos();
 
-                dt = al.buscarProducto(txtDescripcion.Text);
-                if (dt.Rows.Count != 0)
-                {
-                    dgvLista.DataSource = dt;
+                    dt = al.buscarProducto(txtDescripcion.Text);
+
+                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
+                    else  MessageBox.Show("No hay registros en la seleccion");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No hay registros en la seleccion");
-                }                
+                    MessageBox.Show("Ingrese una descripción");
+                }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Ingrese una descripción");
-            }
+            else MessageBox.Show("Ingrese una descripción");
         }
     }
 }

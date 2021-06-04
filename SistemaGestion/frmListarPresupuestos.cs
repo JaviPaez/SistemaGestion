@@ -23,37 +23,31 @@ namespace SistemaGestion
             var dt = new DataTable();
             var al = new PresupuestoMetodos();
             dt = al.consultar();
-            if (dt.Rows.Count != 0)
-            {
-                dgvLista.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("No hay registros en la seleccion");
-            }
+
+            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;       
+            else MessageBox.Show("No hay registros en la seleccion");
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtNro.Text != string.Empty)
             {
-                var ds = new DataSet();
-                var dt = new DataTable();
-                var al = new PresupuestoMetodos();
-                dt = al.buscarPresupuesto(Convert.ToInt32(txtNro.Text));
-                if (dt.Rows.Count != 0)
+                try
                 {
-                    dgvLista.DataSource = dt;
+                    var ds = new DataSet();
+                    var dt = new DataTable();
+                    var al = new PresupuestoMetodos();
+                    dt = al.buscarPresupuesto(Convert.ToInt32(txtNro.Text));
+
+                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
+                    else MessageBox.Show("No hay registros en la seleccion");                    
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No hay registros en la seleccion");
+                    MessageBox.Show("Ingrese el Nro de Presupuesto");
                 }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Ingrese el Nro de Presupuesto");
-            }
+            else MessageBox.Show("Ingrese el Nro de Presupuesto");
         }
     }
 }

@@ -33,8 +33,10 @@ namespace SistemaGestion
         //BOTON BUSCAR POR DNI O APELLIDO Y NOMBRE
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if(txtBuscar.Text != string.Empty)
             {
+                try
+                {
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new PacienteMetodos();
@@ -54,11 +56,13 @@ namespace SistemaGestion
                 {
                     MessageBox.Show("No hay registros en la seleccion");
                 }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Ingrese Dni o Apellido y Nombre");
+                }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Ingrese Dni o Apellido y Nombre");
-            }
+            else MessageBox.Show("Ingrese Dni o Apellido y Nombre");
         }
     }
 }
