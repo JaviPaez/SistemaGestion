@@ -28,13 +28,11 @@ namespace SistemaGestion
         }
 
         //CONSULTAR PACIENTES
-        public DataTable ConsultarPacientes()
+        public DataTable consultarPacientes()
         {
             string sqlStr = "select * from PACIENTES";
-            //var c = AbrirConexion();
-
-
-            //********************************************************
+          
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -44,12 +42,25 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarPaciente(int Dni)
+        public DataTable buscarPacienteDni(int Dni)
         {
-            string sqlStr = "select * from PACIENTES where Dni = " + Dni;            
+            string sqlStr = "select * from PACIENTES where Dni = " + Dni;
 
+            //*****************************************************
+            var da = new SqlDataAdapter(sqlStr, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
 
-            //********************************************************
+            return dt;
+            //*****************************************************
+        }
+
+        public DataTable buscarPacienteApeNom(string ApeNom)
+        {
+            string sqlStr = "select * from PACIENTES where Apellido + ' ' + Nombre like '" + ApeNom + "'";
+
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -61,10 +72,9 @@ namespace SistemaGestion
 
         public DataTable cargarComboPacientes()
         {
-
             string sqlStr = "select Dni,Apellido,Nombre from PACIENTES";
 
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -76,10 +86,9 @@ namespace SistemaGestion
 
         public SqlDataReader cargarLabelNomPac(int Dni)
         {
-
             string sqlStr = "select Dni,Apellido,Nombre from PACIENTES where Dni = " + Dni;
 
-            //********************************************************
+            //*****************************************************
             var comando = new SqlCommand(sqlStr, conectar());
 
             SqlDataReader registro = comando.ExecuteReader();

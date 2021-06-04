@@ -35,18 +35,18 @@ namespace SistemaGestion
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
             var pac = new PacienteMetodos();
-            dt = pac.cargarComboPacientes();
+            dt2 = pac.cargarComboPacientes();
 
-            cboDniPaciente.DataSource = dt;
+            cboDniPaciente.DataSource = dt2;
             cboDniPaciente.DisplayMember = "Dni";
             cboDniPaciente.ValueMember = "Dni";
 
             //Cargar Combo Receta
             var dt3 = new DataTable();
             var rec = new RecetaMetodos();
-            dt = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
+            dt3 = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
 
-            cboIdReceta.DataSource = dt;
+            cboIdReceta.DataSource = dt3;
             cboIdReceta.DisplayMember = "Id";
             cboIdReceta.ValueMember = "Id";
 

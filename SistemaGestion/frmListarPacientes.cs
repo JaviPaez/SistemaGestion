@@ -22,18 +22,15 @@ namespace SistemaGestion
             var ds = new DataSet();
             var dt = new DataTable();
             var al = new PacienteMetodos();
-            dt = al.ConsultarPacientes();
-            if (dt.Rows.Count != 0)
-            {
-                dgvLista.DataSource = dt; //ds.Tables[0];
+            dt = al.consultarPacientes();
 
-            }
-            else
-            {
-                MessageBox.Show("No hay registros en la seleccion");
-            }
+            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;          
+            else MessageBox.Show("No hay registros en la seleccion");    
+
+            txtBuscar.Clear();
         }
 
+        //BOTON BUSCAR POR DNI O APELLIDO Y NOMBRE
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -41,7 +38,14 @@ namespace SistemaGestion
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new PacienteMetodos();
-                dt = al.buscarPaciente(Convert.ToInt32(txtDni.Text));
+
+                int dni;
+                if (!int.TryParse(txtBuscar.Text, out dni))
+                {
+                    dt = al.buscarPacienteApeNom(txtBuscar.Text);
+                }
+                else dt = al.buscarPacienteDni(dni);
+
                 if (dt.Rows.Count != 0)
                 {
                     dgvLista.DataSource = dt;
@@ -53,7 +57,7 @@ namespace SistemaGestion
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Ingrese el Dni");
+                MessageBox.Show("Ingrese Dni o Apellido y Nombre");
             }
         }
     }
