@@ -58,7 +58,7 @@ namespace SistemaGestion
 
         public DataTable buscarPacienteApeNom(string ApeNom)
         {
-            string sqlStr = "select * from PACIENTES where Apellido + ' ' + Nombre like '" + ApeNom + "'";
+            string sqlStr = "select * from PACIENTES where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
 
             //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
