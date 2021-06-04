@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
@@ -41,13 +42,10 @@ namespace SistemaGestion
             cboDni.DisplayMember = "Dni";
             cboDni.ValueMember = "Dni";
 
-            //if (dt2.Rows.Count != 0)
-            //{
-            //    lblNombrePaciente.Text = dt2.
-            //}
 
+            lblNombrePaciente.Text = "";
             cboDni.Text = "Seleccione";
-            cboMedico.Text = "Seleccione";           
+            cboMedico.Text = "Seleccione";
         }
 
         //BOTON GRABAR
@@ -97,6 +95,23 @@ namespace SistemaGestion
             txtOI.Clear();
             dtpFecha.Value = DateTime.Today;
             txtObserv.Clear();
-        }       
+        }
+
+        private void cboDni_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //Cargar label Nombre Paciente
+            try
+            {
+                var reg = new PacienteMetodos();
+                var registro = reg.cargarLabelNomPac(Convert.ToInt32(cboDni.SelectedValue));
+                if (registro.Read())
+                {
+                    lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
+                }                
+            }
+            catch(Exception ex)
+            {                
+            }
+        }
     }
 }

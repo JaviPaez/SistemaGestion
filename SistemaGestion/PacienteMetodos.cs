@@ -73,5 +73,19 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
+
+        public SqlDataReader cargarLabelNomPac(int Dni)
+        {
+
+            string sqlStr = "select Dni,Apellido,Nombre from PACIENTES where Dni = " + Dni;
+
+            //********************************************************
+            var comando = new SqlCommand(sqlStr, conectar());
+
+            SqlDataReader registro = comando.ExecuteReader();
+                       
+            return registro;
+            //*****************************************************
+        }
     }
 }
