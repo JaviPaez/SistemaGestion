@@ -74,14 +74,9 @@ namespace SistemaGestion
 
                     var presupuestoMetodo = new PresupuestoMetodos();
                     Boolean grabo = presupuestoMetodo.grabarPresupuesto(presupuesto);
-                    if (grabo == false)
-                    {
-                        MessageBox.Show("Error en Grabacion", "ERROR");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Grabacion Correcta", "Grabar");
-                    }
+
+                    if (grabo == false) MessageBox.Show("Error en Grabacion", "ERROR");
+                    else MessageBox.Show("Grabacion Correcta", "Grabar");
                 }
             }     
             catch (Exception ex)
@@ -99,7 +94,7 @@ namespace SistemaGestion
             cboUsuario.Text = "Seleccione";
             cboIdReceta.Text = "Seleccione";    
             txtTotal.Clear();
-            dtpFecha.Value = DateTime.Now;            
+            dtpFecha.Value = DateTime.Today;            
         }
     }
 }
