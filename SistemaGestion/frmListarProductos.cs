@@ -28,7 +28,7 @@ namespace SistemaGestion
                 dgvLista.DataSource = dt;
                 dgvLista.Columns["ID"].Visible = false;
             }
-            else MessageBox.Show("No hay registros en la seleccion");
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtDescripcion.Clear();
         }
@@ -51,14 +51,14 @@ namespace SistemaGestion
                         dgvLista.DataSource = dt;
                         dgvLista.Columns["ID"].Visible = false;
                     }
-                    else MessageBox.Show("No hay registros en la seleccion");
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
-                {
-                    MessageBox.Show("Ingrese una descripción");
+                {    
+                    MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else MessageBox.Show("Ingrese una descripción");
+            else MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

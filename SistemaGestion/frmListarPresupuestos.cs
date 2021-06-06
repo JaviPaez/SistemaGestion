@@ -24,8 +24,8 @@ namespace SistemaGestion
             var al = new PresupuestoMetodos();
             dt = al.consultar();
 
-            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;       
-            else MessageBox.Show("No hay registros en la seleccion");
+            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -40,14 +40,14 @@ namespace SistemaGestion
                     dt = al.buscarPresupuesto(Convert.ToInt32(txtNro.Text));
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
-                    else MessageBox.Show("No hay registros en la seleccion");                    
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                 }
                 catch (Exception ex)
-                {
-                    MessageBox.Show("Ingrese el Nro de Presupuesto");
+                {                    
+                    MessageBox.Show("Ingrese el número de presupuesto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else MessageBox.Show("Ingrese el Nro de Presupuesto");
+            else MessageBox.Show("Ingrese el número de presupuesto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

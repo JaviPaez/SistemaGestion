@@ -35,7 +35,7 @@ namespace SistemaGestion
                 dgvLista.DataSource = dt;
                 dgvLista.Columns["Contraseña"].Visible = false;
             }
-            else MessageBox.Show("No hay registros en la seleccion");
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtBuscar.Clear();
         }
@@ -57,14 +57,14 @@ namespace SistemaGestion
                     else dt = al.buscarUsuarioDni(dni);                  
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
-                    else MessageBox.Show("No hay registros en la seleccion");
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
-                {
-                    MessageBox.Show("Ingrese el Dni o Apellido y Nombre");
+                {                    
+                    MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else MessageBox.Show("Ingrese el Dni o Apellido y Nombre");
+            else MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

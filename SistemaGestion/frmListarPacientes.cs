@@ -25,7 +25,7 @@ namespace SistemaGestion
             dt = al.consultarPacientes();
 
             if (dt.Rows.Count != 0) dgvLista.DataSource = dt;          
-            else MessageBox.Show("No hay registros en la seleccion");    
+            else MessageBox.Show("No hay registros en la selección","",MessageBoxButtons.OK,MessageBoxIcon.Information);    
 
             txtBuscar.Clear();
         }
@@ -49,14 +49,14 @@ namespace SistemaGestion
                 else dt = al.buscarPacienteDni(dni);
 
                 if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
-                else MessageBox.Show("No hay registros en la seleccion");
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Ingrese Dni o Apellido y Nombre");
+                    MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else MessageBox.Show("Ingrese Dni o Apellido y Nombre");
+            else MessageBox.Show("Ingrese Dni o apellido y nombre","Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
