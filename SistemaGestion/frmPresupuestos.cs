@@ -47,8 +47,8 @@ namespace SistemaGestion
             dt3 = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
 
             cboIdReceta.DataSource = dt3;
-            cboIdReceta.DisplayMember = "Id";
-            cboIdReceta.ValueMember = "Id";
+            cboIdReceta.DisplayMember = "ID";
+            cboIdReceta.ValueMember = "ID";
 
             cboIdReceta.Text = "Seleccione";
             cboUsuario.Text = "Seleccione";
@@ -75,8 +75,8 @@ namespace SistemaGestion
                     var presupuestoMetodo = new PresupuestoMetodos();
                     Boolean grabo = presupuestoMetodo.grabarPresupuesto(presupuesto);
 
-                    if (grabo == false) MessageBox.Show("Error en Grabacion", "ERROR");
-                    else MessageBox.Show("Grabacion Correcta", "Grabar");
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }     
             catch (Exception ex)

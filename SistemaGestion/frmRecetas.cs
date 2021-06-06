@@ -70,9 +70,9 @@ namespace SistemaGestion
 
                     var recetaMetodo = new RecetaMetodos();
                     Boolean grabo = recetaMetodo.grabarReceta(receta);
-                    if (grabo == false) MessageBox.Show("Error en Grabacion", "ERROR");
 
-                    else MessageBox.Show("Grabacion Correcta", "Grabar");                  
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                  
                 }
             }
             catch (Exception ex) 

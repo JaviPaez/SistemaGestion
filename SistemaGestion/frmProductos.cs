@@ -40,14 +40,9 @@ namespace SistemaGestion
 
                     var productoMetodo = new ProductoMetodos();
                     Boolean grabo = productoMetodo.grabarProducto(producto);
-                    if (grabo == false)
-                    {
-                        MessageBox.Show("Error en Grabacion", "ERROR");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Grabacion Correcta", "Grabar");
-                    }
+
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
                 }
             }
             catch (Exception ex)

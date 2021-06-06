@@ -35,14 +35,9 @@ namespace SistemaGestion
 
                     var usuMetodo = new LoginMetodos();
                     Boolean grabo = usuMetodo.grabarUsuario(user);
-                    if (grabo == false)
-                    {
-                        MessageBox.Show("Error en Grabacion", "ERROR");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Grabacion Correcta", "Grabar");
-                    }
+
+                    if (grabo == false)  MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
+                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
                 }
             }
             catch(Exception ex)
@@ -62,6 +57,8 @@ namespace SistemaGestion
             txtContraseña.Clear();
             cboRol.Text = "Seleccione";
         }
+
+        //LOAD
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             //Cargar Combo Roles
@@ -76,12 +73,13 @@ namespace SistemaGestion
             cboRol.Text = "Seleccione";
         }
 
-
         //Desplazar desde barra de titulo
+        #region //
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
 
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -99,6 +97,5 @@ namespace SistemaGestion
         {
             this.Close();
         }
-
     }
 }

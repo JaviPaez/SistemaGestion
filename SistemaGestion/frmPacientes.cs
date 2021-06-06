@@ -45,14 +45,9 @@ namespace SistemaGestion
 
                     var pacienteMetodo = new PacienteMetodos();
                     Boolean grabo = pacienteMetodo.grabarPaciente(paciente);
-                    if (grabo == false)
-                    {
-                        MessageBox.Show("Error en Grabacion", "ERROR");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Grabacion Correcta", "Grabar");
-                    }
+
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }     
             catch (Exception ex)
@@ -66,10 +61,10 @@ namespace SistemaGestion
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtDni.Text = "";
-            txtApellido.Text = "";
-            txtNombre.Text = "";
-            txtNroAfiliado.Text = "";
+            txtDni.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtNroAfiliado.Clear();
             dtpFecha.Value = DateTime.Today;
             cboObraSocial.SelectedIndex = 0;
         }
