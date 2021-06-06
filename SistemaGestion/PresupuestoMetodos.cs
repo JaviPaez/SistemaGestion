@@ -14,7 +14,7 @@ namespace SistemaGestion
             try
             {
                 var selMax = "select max(Nro) + 1 from PRESUPUESTOS";
-                //********************************************************
+                //***************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
             }
@@ -48,8 +48,7 @@ namespace SistemaGestion
         {
             string sqlStr = "select * from PRESUPUESTOS";    
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -63,8 +62,7 @@ namespace SistemaGestion
         {
             string sqlStr = "select * from PRESUPUESTOS where Nro = " + Nro;
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);

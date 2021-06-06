@@ -48,14 +48,8 @@ namespace SistemaGestion
                 }
                 else dt = al.buscarPacienteDni(dni);
 
-                if (dt.Rows.Count != 0)
-                {
-                    dgvLista.DataSource = dt;
-                }
-                else
-                {
-                    MessageBox.Show("No hay registros en la seleccion");
-                }
+                if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
+                else MessageBox.Show("No hay registros en la seleccion");
                 }
                 catch(Exception ex)
                 {

@@ -14,7 +14,7 @@ namespace SistemaGestion
             try
             {
                 var selMax = "select max(ID) + 1 from RECETAS";
-                //********************************************************
+                //***************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
             }
@@ -47,10 +47,8 @@ namespace SistemaGestion
         public DataTable Consultar()
         {
             string sqlStr = "select * from RECETAS";
-            //var c = AbrirConexion();
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -64,7 +62,7 @@ namespace SistemaGestion
         {
             string sqlStr = "select ID from RECETAS where Dni = " + DniPaciente;
 
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);

@@ -12,9 +12,9 @@ namespace SistemaGestion
         //Cargar ComboRoles
         public DataTable cargarComboRoles()
         {
-            string sqlStr = "select ID, NombreRol from ROLES order by Id";
+            string sqlStr = "select ID, NombreRol from ROLES order by ID";
 
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -29,7 +29,7 @@ namespace SistemaGestion
             try
             {
                 var selMax = "select max(ID) + 1 from ROLES";
-                //********************************************************
+                //****************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
             }

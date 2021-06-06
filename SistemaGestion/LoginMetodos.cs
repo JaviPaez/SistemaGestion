@@ -9,10 +9,9 @@ namespace SistemaGestion
 {
     class LoginMetodos : Conexion
     {
-        public DataTable ConsultarLogin(string user, string pass)
+        public DataTable ConsultarLogin(string dni, string pass)
         {
-            string sqlStr = "select dni, contraseña from Usuarios where dni = '" + user + "' and contraseña = '" +
-                            pass + "'";                 
+            string sqlStr = "select Dni, Contraseña from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + pass + "'";      
 
             //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());

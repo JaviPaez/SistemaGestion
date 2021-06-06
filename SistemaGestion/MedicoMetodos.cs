@@ -14,7 +14,7 @@ namespace SistemaGestion
             try
             {
                 var selMax = "select max(ID) + 1 from MEDICOS";
-                //********************************************************
+                //**************************************************
                 SqlCommand com = new SqlCommand(selMax, conectar());
                 return (int)com.ExecuteScalar();
             }
@@ -47,10 +47,8 @@ namespace SistemaGestion
         public DataTable consultarMedicos()
         {
             string sqlStr = "select * from MEDICOS order by ID";
-            //var c = AbrirConexion();
 
-
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
@@ -64,7 +62,7 @@ namespace SistemaGestion
         {
             string sqlStr = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
 
-            //********************************************************
+            //*****************************************************
             var da = new SqlDataAdapter(sqlStr, conectar());
             var ds = new DataSet();
             da.Fill(ds);
