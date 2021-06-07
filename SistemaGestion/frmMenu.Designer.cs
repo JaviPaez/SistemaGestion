@@ -29,14 +29,13 @@ namespace SistemaGestion
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pbxRestaurar = new System.Windows.Forms.PictureBox();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxMaximizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PanelVertical = new System.Windows.Forms.Panel();
             this.panelSubmenuProductos = new System.Windows.Forms.Panel();
             this.btnGrabarProductos = new System.Windows.Forms.Button();
@@ -82,7 +81,6 @@ namespace SistemaGestion
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
@@ -112,6 +110,17 @@ namespace SistemaGestion
             this.BarraTitulo.Size = new System.Drawing.Size(1300, 38);
             this.BarraTitulo.TabIndex = 0;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(339, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(511, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "SISTEMA DE GESTIÓN - ÓPTICA LARA";
             // 
             // pbxRestaurar
             // 
@@ -767,17 +776,6 @@ namespace SistemaGestion
             this.PanelContenedor.Size = new System.Drawing.Size(1100, 612);
             this.PanelContenedor.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(339, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(511, 31);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "SISTEMA DE GESTIÓN - ÓPTICA LARA";
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -812,7 +810,6 @@ namespace SistemaGestion
         #endregion
 
         private System.Windows.Forms.Panel BarraTitulo;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel PanelVertical;
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox pbxCerrar;

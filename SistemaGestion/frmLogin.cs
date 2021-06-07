@@ -27,7 +27,7 @@ namespace SistemaGestion
 
             if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Ingreso correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                MessageBox.Show("Ingreso correcto", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);  
                 var frm = new frmMenu();
                 this.Hide();
                 frm.Show();

@@ -211,12 +211,9 @@ namespace SistemaGestion
 
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que quiere salir?", "Alerta", MessageBoxButtons.YesNo);
+            DialogResult resultado = MessageBox.Show("¿Está seguro que quiere salir?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (resultado == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+            if (resultado == DialogResult.No) e.Cancel = true; 
         }
         #endregion
     }
