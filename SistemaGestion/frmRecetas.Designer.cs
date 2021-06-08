@@ -59,7 +59,7 @@ namespace SistemaGestion
             this.txtObserv.Location = new System.Drawing.Point(558, 366);
             this.txtObserv.Multiline = true;
             this.txtObserv.Name = "txtObserv";
-            this.txtObserv.Size = new System.Drawing.Size(200, 100);
+            this.txtObserv.Size = new System.Drawing.Size(628, 100);
             this.txtObserv.TabIndex = 7;
             // 
             // label7
@@ -82,7 +82,7 @@ namespace SistemaGestion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(426, 58);
+            this.label4.Location = new System.Drawing.Point(736, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 31);
             this.label4.TabIndex = 23;
@@ -93,7 +93,7 @@ namespace SistemaGestion
             this.txtMiop_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMiop_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtMiop_OD.Location = new System.Drawing.Point(492, 276);
+            this.txtMiop_OD.Location = new System.Drawing.Point(558, 276);
             this.txtMiop_OD.Name = "txtMiop_OD";
             this.txtMiop_OD.Size = new System.Drawing.Size(77, 31);
             this.txtMiop_OD.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace SistemaGestion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(236, 276);
+            this.label3.Location = new System.Drawing.Point(302, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 25);
             this.label3.TabIndex = 21;
@@ -134,7 +134,7 @@ namespace SistemaGestion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(284, 494);
+            this.btnCancelar.Location = new System.Drawing.Point(594, 494);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 8;
@@ -151,7 +151,7 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(588, 494);
+            this.btnGrabar.Location = new System.Drawing.Point(898, 494);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 9;
@@ -192,7 +192,7 @@ namespace SistemaGestion
             this.txtMiop_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMiop_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtMiop_OI.Location = new System.Drawing.Point(492, 233);
+            this.txtMiop_OI.Location = new System.Drawing.Point(558, 233);
             this.txtMiop_OI.Name = "txtMiop_OI";
             this.txtMiop_OI.Size = new System.Drawing.Size(77, 31);
             this.txtMiop_OI.TabIndex = 2;
@@ -204,7 +204,7 @@ namespace SistemaGestion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(236, 233);
+            this.label6.Location = new System.Drawing.Point(302, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 25);
             this.label6.TabIndex = 30;
@@ -218,7 +218,7 @@ namespace SistemaGestion
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dtpFecha.Location = new System.Drawing.Point(558, 320);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 31);
+            this.dtpFecha.Size = new System.Drawing.Size(628, 31);
             this.dtpFecha.TabIndex = 6;
             // 
             // cboMedico
@@ -232,7 +232,7 @@ namespace SistemaGestion
             "Seleccione"});
             this.cboMedico.Location = new System.Drawing.Point(558, 145);
             this.cboMedico.Name = "cboMedico";
-            this.cboMedico.Size = new System.Drawing.Size(200, 33);
+            this.cboMedico.Size = new System.Drawing.Size(628, 33);
             this.cboMedico.TabIndex = 0;
             // 
             // cboDni
@@ -246,7 +246,7 @@ namespace SistemaGestion
             "Seleccione"});
             this.cboDni.Location = new System.Drawing.Point(558, 189);
             this.cboDni.Name = "cboDni";
-            this.cboDni.Size = new System.Drawing.Size(200, 33);
+            this.cboDni.Size = new System.Drawing.Size(628, 33);
             this.cboDni.TabIndex = 1;
             this.cboDni.SelectedValueChanged += new System.EventHandler(this.cboDni_SelectedValueChanged);
             // 
@@ -256,7 +256,7 @@ namespace SistemaGestion
             this.lblNombrePaciente.AutoSize = true;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.lblNombrePaciente.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePaciente.Location = new System.Drawing.Point(776, 192);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(1212, 191);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.Size = new System.Drawing.Size(0, 31);
             this.lblNombrePaciente.TabIndex = 33;
@@ -266,7 +266,7 @@ namespace SistemaGestion
             this.txtAstig_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAstig_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtAstig_OI.Location = new System.Drawing.Point(878, 233);
+            this.txtAstig_OI.Location = new System.Drawing.Point(1111, 236);
             this.txtAstig_OI.Name = "txtAstig_OI";
             this.txtAstig_OI.Size = new System.Drawing.Size(77, 31);
             this.txtAstig_OI.TabIndex = 4;
@@ -278,7 +278,7 @@ namespace SistemaGestion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(622, 233);
+            this.label8.Location = new System.Drawing.Point(855, 236);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(211, 25);
             this.label8.TabIndex = 37;
@@ -289,7 +289,7 @@ namespace SistemaGestion
             this.txtAstig_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAstig_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtAstig_OD.Location = new System.Drawing.Point(878, 276);
+            this.txtAstig_OD.Location = new System.Drawing.Point(1111, 279);
             this.txtAstig_OD.Name = "txtAstig_OD";
             this.txtAstig_OD.Size = new System.Drawing.Size(77, 31);
             this.txtAstig_OD.TabIndex = 5;
@@ -301,7 +301,7 @@ namespace SistemaGestion
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(622, 276);
+            this.label9.Location = new System.Drawing.Point(855, 279);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(221, 25);
             this.label9.TabIndex = 36;
@@ -312,7 +312,7 @@ namespace SistemaGestion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1720, 1042);
             this.Controls.Add(this.txtAstig_OI);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAstig_OD);

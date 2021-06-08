@@ -50,7 +50,7 @@ namespace SistemaGestion
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(548, 228);
+            this.dgvLista.Size = new System.Drawing.Size(1168, 228);
             this.dgvLista.TabIndex = 0;
             // 
             // btnGrilla
@@ -62,7 +62,7 @@ namespace SistemaGestion
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(441, 484);
+            this.btnGrilla.Location = new System.Drawing.Point(751, 484);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
             this.btnGrilla.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace SistemaGestion
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscar.Location = new System.Drawing.Point(462, 106);
+            this.txtBuscar.Location = new System.Drawing.Point(784, 111);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(258, 31);
             this.txtBuscar.TabIndex = 0;
@@ -86,7 +86,7 @@ namespace SistemaGestion
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(770, 102);
+            this.btnBuscar.Location = new System.Drawing.Point(1092, 107);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
             this.btnBuscar.TabIndex = 1;
@@ -99,7 +99,7 @@ namespace SistemaGestion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(435, 33);
+            this.label2.Location = new System.Drawing.Point(757, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 31);
             this.label2.TabIndex = 10;
@@ -110,7 +110,7 @@ namespace SistemaGestion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(114, 109);
+            this.label3.Location = new System.Drawing.Point(436, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 25);
             this.label3.TabIndex = 11;
@@ -121,7 +121,7 @@ namespace SistemaGestion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1720, 1042);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscar);

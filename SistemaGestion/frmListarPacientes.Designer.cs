@@ -44,7 +44,7 @@ namespace SistemaGestion
             this.dgvLista.AllowUserToDeleteRows = false;
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(224, 208);
+            this.dgvLista.Location = new System.Drawing.Point(493, 262);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -59,7 +59,7 @@ namespace SistemaGestion
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(449, 499);
+            this.btnGrilla.Location = new System.Drawing.Point(718, 553);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
             this.btnGrilla.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace SistemaGestion
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(777, 108);
+            this.btnBuscar.Location = new System.Drawing.Point(1046, 162);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
             this.btnBuscar.TabIndex = 1;
@@ -86,7 +86,7 @@ namespace SistemaGestion
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscar.Location = new System.Drawing.Point(469, 112);
+            this.txtBuscar.Location = new System.Drawing.Point(738, 166);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(259, 31);
             this.txtBuscar.TabIndex = 0;
@@ -96,7 +96,7 @@ namespace SistemaGestion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(157, 115);
+            this.label1.Location = new System.Drawing.Point(426, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(292, 25);
             this.label1.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace SistemaGestion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(463, 27);
+            this.label4.Location = new System.Drawing.Point(732, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 31);
             this.label4.TabIndex = 9;
@@ -118,7 +118,7 @@ namespace SistemaGestion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1720, 1042);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
