@@ -49,6 +49,8 @@ namespace SistemaGestion
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGrilla = new System.Windows.Forms.Button();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(926, 441);
+            this.btnGrabar.Location = new System.Drawing.Point(1181, 441);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 7;
@@ -271,14 +273,50 @@ namespace SistemaGestion
             // 
             this.dgvLista.AllowUserToAddRows = false;
             this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.AllowUserToResizeColumns = false;
+            this.dgvLista.AllowUserToResizeRows = false;
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.Location = new System.Drawing.Point(567, 652);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
+            this.dgvLista.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLista.Size = new System.Drawing.Size(647, 228);
             this.dgvLista.TabIndex = 17;
+            this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(902, 441);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(188, 53);
+            this.btnModificar.TabIndex = 20;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(1181, 213);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(188, 53);
+            this.btnNuevo.TabIndex = 19;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmPacientes
             // 
@@ -286,6 +324,8 @@ namespace SistemaGestion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscar);
@@ -338,5 +378,7 @@ namespace SistemaGestion
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnGrilla;
         private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

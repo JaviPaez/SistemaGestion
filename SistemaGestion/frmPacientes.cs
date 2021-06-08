@@ -23,6 +23,8 @@ namespace SistemaGestion
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
+
+            btnGrilla_Click(sender, e);
         }
 
         //BOTON GRABAR
@@ -54,7 +56,13 @@ namespace SistemaGestion
             {
                 MessageBox.Show(ex.Message);
             }
+            
+            btnGrilla_Click(sender, e);
+        }
 
+        //BOTON NUEVO
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
             btnCancelar_Click(sender, e);
         }
 
@@ -67,6 +75,7 @@ namespace SistemaGestion
             txtNroAfiliado.Clear();
             dtpFecha.Value = DateTime.Today;
             cboObraSocial.SelectedIndex = 0;
+            txtDni.Focus();
         }
 
         //BOTON ARMAR LISTA
@@ -110,6 +119,56 @@ namespace SistemaGestion
                 }
             }
             else MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //CLICK EN CONTENIDO DE CELDA DGV
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtDni.Text = dgvLista.CurrentRow.Cells[0].Value.ToString();
+                txtApellido.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+                dtpFecha.Value = Convert.ToDateTime(dgvLista.CurrentRow.Cells[3].Value);
+                cboObraSocial.SelectedItem = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                txtNroAfiliado.Text= dgvLista.CurrentRow.Cells[5].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+            }
+        }
+
+        //BOTON MODIFICAR
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            DialogResult resp = MessageBox.Show("¿Confirma la modificación?", "Modificar", MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Question);
+
+            var paciente = new Paciente();
+            try
+            {
+                if (resp == DialogResult.Yes)
+                {
+                    paciente.Dni = Convert.ToInt32(txtDni.Text);
+                    paciente.Apellido = txtApellido.Text;
+                    paciente.Nombre = txtNombre.Text;
+                    paciente.FechaNac = dtpFecha.Value;
+                    paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
+                    paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
+
+                    var pacienteMetodo = new PacienteMetodos();
+                    Boolean modifico = pacienteMetodo.modificarPaciente(paciente);
+
+                    if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en modificación" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+            btnGrilla_Click(sender, e);
         }
     }
 }

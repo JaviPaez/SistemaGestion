@@ -27,6 +27,31 @@ namespace SistemaGestion
             }
         }
 
+        public Boolean modificarPaciente(Paciente paciente)
+        {
+            try
+            {    
+                var actualizar = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";                
+
+                SqlCommand com = new SqlCommand(actualizar, conectar());
+
+                com.Parameters.AddWithValue("@Dni", paciente.Dni);
+                com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
+                com.Parameters.AddWithValue("@Nombre", paciente.Nombre);
+                com.Parameters.AddWithValue("@FechaNac", paciente.FechaNac);
+                com.Parameters.AddWithValue("@ObraSocial", paciente.ObraSocial); 
+                com.Parameters.AddWithValue("@NroAfiliado", paciente.NroAfiliado);
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         //CONSULTAR PACIENTES
         public DataTable consultarPacientes()
         {
