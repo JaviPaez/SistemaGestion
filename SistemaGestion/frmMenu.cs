@@ -71,21 +71,9 @@ namespace SistemaGestion
         //Pacientes
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            CerrarSubpaneles();
-            panelSubmenuPacientes.Visible = true;
-        }
-
-        private void btnGrabarPacientes_Click(object sender, EventArgs e)
-        {
-            CerrarSubpaneles();
+            CerrarSubpaneles();            
             AbrirFormHijo(new frmPacientes());
-        }
-
-        private void btnConsultarPacientes_Click(object sender, EventArgs e)
-        {
-            CerrarSubpaneles();
-            AbrirFormHijo(new frmListarPacientes());
-        }
+        }  
 
         //Ventas
         private void btnVentas_Click(object sender, EventArgs e)
@@ -97,38 +85,15 @@ namespace SistemaGestion
         private void btnRecetas_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
-            panelSubmenuRecetas.Visible = true;
-        }
-
-        private void btnGrabarRecetas_Click(object sender, EventArgs e)
-        {            
-            CerrarSubpaneles();
             AbrirFormHijo(new frmRecetas_Medicos());
-        }
-
-        private void btnConsultarRecetas_Click(object sender, EventArgs e)
-        {
-            CerrarSubpaneles();
         }
 
         //Productos
         private void btnProductos_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
-            panelSubmenuProductos.Visible = true;
-        }
-
-        private void btnGrabarProductos_Click(object sender, EventArgs e)
-        {
-            CerrarSubpaneles();
-            AbrirFormHijo(new frmProductos());            
-        }
-
-        private void btnConsultarProductos_Click(object sender, EventArgs e)
-        {
-            CerrarSubpaneles();
-            AbrirFormHijo(new frmListarProductos());
-        }
+            AbrirFormHijo(new frmProductos());
+        }               
 
         //Usuarios
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -203,9 +168,6 @@ namespace SistemaGestion
         private void CerrarSubpaneles()
         {
             panelSubmenuReportes.Visible = false;
-            panelSubmenuPacientes.Visible = false;
-            panelSubmenuProductos.Visible = false;
-            panelSubmenuRecetas.Visible = false;
             panelSubmenuPresupuestos.Visible = false;
         }
 

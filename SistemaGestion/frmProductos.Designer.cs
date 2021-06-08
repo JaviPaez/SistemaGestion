@@ -38,6 +38,12 @@ namespace SistemaGestion
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.txtBuscarDescr = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGrilla = new System.Windows.Forms.Button();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +123,7 @@ namespace SistemaGestion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(550, 535);
+            this.btnCancelar.Location = new System.Drawing.Point(533, 434);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 3;
@@ -134,7 +140,7 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(861, 535);
+            this.btnGrabar.Location = new System.Drawing.Point(844, 434);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 4;
@@ -142,12 +148,81 @@ namespace SistemaGestion
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // txtBuscarDescr
+            // 
+            this.txtBuscarDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtBuscarDescr.Location = new System.Drawing.Point(717, 575);
+            this.txtBuscarDescr.Name = "txtBuscarDescr";
+            this.txtBuscarDescr.Size = new System.Drawing.Size(200, 31);
+            this.txtBuscarDescr.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(483, 578);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "DESCRIPCIÓN";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(996, 571);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(110, 38);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnGrilla
+            // 
+            this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnGrilla.ForeColor = System.Drawing.Color.White;
+            this.btnGrilla.Location = new System.Drawing.Point(719, 934);
+            this.btnGrilla.Name = "btnGrilla";
+            this.btnGrilla.Size = new System.Drawing.Size(188, 53);
+            this.btnGrilla.TabIndex = 10;
+            this.btnGrilla.Text = "Armar Lista";
+            this.btnGrilla.UseVisualStyleBackColor = false;
+            this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
+            // 
+            // dgvLista
+            // 
+            this.dgvLista.AllowUserToAddRows = false;
+            this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Location = new System.Drawing.Point(479, 669);
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.ReadOnly = true;
+            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLista.Size = new System.Drawing.Size(647, 228);
+            this.dgvLista.TabIndex = 9;
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.txtBuscarDescr);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnGrilla);
+            this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtCantidad);
@@ -160,6 +235,7 @@ namespace SistemaGestion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProductos";
             this.Text = "Productos";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +252,10 @@ namespace SistemaGestion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.TextBox txtBuscarDescr;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnGrilla;
+        private System.Windows.Forms.DataGridView dgvLista;
     }
 }

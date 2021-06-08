@@ -52,5 +52,50 @@ namespace SistemaGestion
 
             btnCancelar_Click(sender, e);
         }
+
+        //BOTON BUSCAR POR DESCRIPCION
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarDescr.Text != string.Empty)
+            {
+                try
+                {
+                    var ds = new DataSet();
+                    var dt = new DataTable();
+                    var al = new ProductoMetodos();
+
+                    dt = al.buscarProducto(txtBuscarDescr.Text);
+
+                    if (dt.Rows.Count != 0)
+                    {
+                        dgvLista.DataSource = dt;
+                        dgvLista.Columns["ID"].Visible = false;
+                    }
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //BOTON ARMAR LISTA
+        private void btnGrilla_Click(object sender, EventArgs e)
+        {
+            var ds = new DataSet();
+            var dt = new DataTable();
+            var al = new ProductoMetodos();
+            dt = al.consultarProductos();
+            if (dt.Rows.Count != 0)
+            {
+                dgvLista.DataSource = dt;
+                dgvLista.Columns["ID"].Visible = false;
+            }
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtBuscarDescr.Clear();
+        }
     }
 }

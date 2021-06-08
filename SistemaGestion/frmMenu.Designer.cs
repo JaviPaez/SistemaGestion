@@ -37,26 +37,11 @@ namespace SistemaGestion
             this.pbxMaximizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
             this.PanelVertical = new System.Windows.Forms.Panel();
-            this.panelSubmenuProductos = new System.Windows.Forms.Panel();
-            this.btnGrabarProductos = new System.Windows.Forms.Button();
-            this.btnConsultarProductos = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panelSubmenuRecetas = new System.Windows.Forms.Panel();
-            this.btnGrabarRecetas = new System.Windows.Forms.Button();
-            this.btnConsultarRecetas = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
             this.panelSubmenuPresupuestos = new System.Windows.Forms.Panel();
             this.btnGrabarPresupuestos = new System.Windows.Forms.Button();
             this.btnConsultarPresupuestos = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.panelSubmenuPacientes = new System.Windows.Forms.Panel();
-            this.btnGrabarPacientes = new System.Windows.Forms.Button();
-            this.btnConsultarPacientes = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.pbxSalir = new System.Windows.Forms.PictureBox();
             this.panelSubmenuReportes = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -87,10 +72,7 @@ namespace SistemaGestion
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
             this.PanelVertical.SuspendLayout();
-            this.panelSubmenuProductos.SuspendLayout();
-            this.panelSubmenuRecetas.SuspendLayout();
             this.panelSubmenuPresupuestos.SuspendLayout();
-            this.panelSubmenuPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).BeginInit();
             this.panelSubmenuReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
@@ -178,10 +160,7 @@ namespace SistemaGestion
             // PanelVertical
             // 
             this.PanelVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.PanelVertical.Controls.Add(this.panelSubmenuProductos);
-            this.PanelVertical.Controls.Add(this.panelSubmenuRecetas);
             this.PanelVertical.Controls.Add(this.panelSubmenuPresupuestos);
-            this.PanelVertical.Controls.Add(this.panelSubmenuPacientes);
             this.PanelVertical.Controls.Add(this.pbxSalir);
             this.PanelVertical.Controls.Add(this.panelSubmenuReportes);
             this.PanelVertical.Controls.Add(this.panel7);
@@ -204,134 +183,6 @@ namespace SistemaGestion
             this.PanelVertical.Name = "PanelVertical";
             this.PanelVertical.Size = new System.Drawing.Size(200, 1042);
             this.PanelVertical.TabIndex = 1;
-            // 
-            // panelSubmenuProductos
-            // 
-            this.panelSubmenuProductos.Controls.Add(this.btnGrabarProductos);
-            this.panelSubmenuProductos.Controls.Add(this.btnConsultarProductos);
-            this.panelSubmenuProductos.Controls.Add(this.panel18);
-            this.panelSubmenuProductos.Controls.Add(this.panel19);
-            this.panelSubmenuProductos.Location = new System.Drawing.Point(57, 311);
-            this.panelSubmenuProductos.Name = "panelSubmenuProductos";
-            this.panelSubmenuProductos.Size = new System.Drawing.Size(143, 54);
-            this.panelSubmenuProductos.TabIndex = 2;
-            this.panelSubmenuProductos.Visible = false;
-            // 
-            // btnGrabarProductos
-            // 
-            this.btnGrabarProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGrabarProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrabarProductos.FlatAppearance.BorderSize = 0;
-            this.btnGrabarProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnGrabarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabarProductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabarProductos.ForeColor = System.Drawing.Color.White;
-            this.btnGrabarProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabarProductos.Location = new System.Drawing.Point(19, 0);
-            this.btnGrabarProductos.Name = "btnGrabarProductos";
-            this.btnGrabarProductos.Size = new System.Drawing.Size(124, 28);
-            this.btnGrabarProductos.TabIndex = 7;
-            this.btnGrabarProductos.Text = "Grabar";
-            this.btnGrabarProductos.UseVisualStyleBackColor = false;
-            this.btnGrabarProductos.Click += new System.EventHandler(this.btnGrabarProductos_Click);
-            // 
-            // btnConsultarProductos
-            // 
-            this.btnConsultarProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarProductos.FlatAppearance.BorderSize = 0;
-            this.btnConsultarProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnConsultarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarProductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarProductos.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarProductos.Location = new System.Drawing.Point(19, 24);
-            this.btnConsultarProductos.Name = "btnConsultarProductos";
-            this.btnConsultarProductos.Size = new System.Drawing.Size(124, 28);
-            this.btnConsultarProductos.TabIndex = 8;
-            this.btnConsultarProductos.Text = "Consultar";
-            this.btnConsultarProductos.UseVisualStyleBackColor = false;
-            this.btnConsultarProductos.Click += new System.EventHandler(this.btnConsultarProductos_Click);
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel18.Location = new System.Drawing.Point(7, 24);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(10, 28);
-            this.panel18.TabIndex = 15;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel19.Location = new System.Drawing.Point(7, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(10, 28);
-            this.panel19.TabIndex = 13;
-            // 
-            // panelSubmenuRecetas
-            // 
-            this.panelSubmenuRecetas.Controls.Add(this.btnGrabarRecetas);
-            this.panelSubmenuRecetas.Controls.Add(this.btnConsultarRecetas);
-            this.panelSubmenuRecetas.Controls.Add(this.panel12);
-            this.panelSubmenuRecetas.Controls.Add(this.panel15);
-            this.panelSubmenuRecetas.Location = new System.Drawing.Point(57, 253);
-            this.panelSubmenuRecetas.Name = "panelSubmenuRecetas";
-            this.panelSubmenuRecetas.Size = new System.Drawing.Size(143, 54);
-            this.panelSubmenuRecetas.TabIndex = 4;
-            this.panelSubmenuRecetas.Visible = false;
-            // 
-            // btnGrabarRecetas
-            // 
-            this.btnGrabarRecetas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGrabarRecetas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrabarRecetas.FlatAppearance.BorderSize = 0;
-            this.btnGrabarRecetas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnGrabarRecetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabarRecetas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabarRecetas.ForeColor = System.Drawing.Color.White;
-            this.btnGrabarRecetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabarRecetas.Location = new System.Drawing.Point(19, 0);
-            this.btnGrabarRecetas.Name = "btnGrabarRecetas";
-            this.btnGrabarRecetas.Size = new System.Drawing.Size(124, 28);
-            this.btnGrabarRecetas.TabIndex = 7;
-            this.btnGrabarRecetas.Text = "Grabar";
-            this.btnGrabarRecetas.UseVisualStyleBackColor = false;
-            this.btnGrabarRecetas.Click += new System.EventHandler(this.btnGrabarRecetas_Click);
-            // 
-            // btnConsultarRecetas
-            // 
-            this.btnConsultarRecetas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarRecetas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarRecetas.FlatAppearance.BorderSize = 0;
-            this.btnConsultarRecetas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnConsultarRecetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarRecetas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarRecetas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarRecetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarRecetas.Location = new System.Drawing.Point(19, 24);
-            this.btnConsultarRecetas.Name = "btnConsultarRecetas";
-            this.btnConsultarRecetas.Size = new System.Drawing.Size(124, 28);
-            this.btnConsultarRecetas.TabIndex = 8;
-            this.btnConsultarRecetas.Text = "Consultar";
-            this.btnConsultarRecetas.UseVisualStyleBackColor = false;
-            this.btnConsultarRecetas.Click += new System.EventHandler(this.btnConsultarRecetas_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel12.Location = new System.Drawing.Point(7, 24);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 28);
-            this.panel12.TabIndex = 15;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel15.Location = new System.Drawing.Point(7, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(10, 28);
-            this.panel15.TabIndex = 13;
             // 
             // panelSubmenuPresupuestos
             // 
@@ -396,70 +247,6 @@ namespace SistemaGestion
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(10, 28);
             this.panel17.TabIndex = 13;
-            // 
-            // panelSubmenuPacientes
-            // 
-            this.panelSubmenuPacientes.Controls.Add(this.btnGrabarPacientes);
-            this.panelSubmenuPacientes.Controls.Add(this.btnConsultarPacientes);
-            this.panelSubmenuPacientes.Controls.Add(this.panel13);
-            this.panelSubmenuPacientes.Controls.Add(this.panel14);
-            this.panelSubmenuPacientes.Location = new System.Drawing.Point(57, 151);
-            this.panelSubmenuPacientes.Name = "panelSubmenuPacientes";
-            this.panelSubmenuPacientes.Size = new System.Drawing.Size(143, 54);
-            this.panelSubmenuPacientes.TabIndex = 1;
-            this.panelSubmenuPacientes.Visible = false;
-            // 
-            // btnGrabarPacientes
-            // 
-            this.btnGrabarPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGrabarPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrabarPacientes.FlatAppearance.BorderSize = 0;
-            this.btnGrabarPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnGrabarPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabarPacientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabarPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnGrabarPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabarPacientes.Location = new System.Drawing.Point(19, 0);
-            this.btnGrabarPacientes.Name = "btnGrabarPacientes";
-            this.btnGrabarPacientes.Size = new System.Drawing.Size(124, 28);
-            this.btnGrabarPacientes.TabIndex = 7;
-            this.btnGrabarPacientes.Text = "Grabar";
-            this.btnGrabarPacientes.UseVisualStyleBackColor = false;
-            this.btnGrabarPacientes.Click += new System.EventHandler(this.btnGrabarPacientes_Click);
-            // 
-            // btnConsultarPacientes
-            // 
-            this.btnConsultarPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarPacientes.FlatAppearance.BorderSize = 0;
-            this.btnConsultarPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnConsultarPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarPacientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarPacientes.Location = new System.Drawing.Point(19, 24);
-            this.btnConsultarPacientes.Name = "btnConsultarPacientes";
-            this.btnConsultarPacientes.Size = new System.Drawing.Size(124, 28);
-            this.btnConsultarPacientes.TabIndex = 8;
-            this.btnConsultarPacientes.Text = "Consultar";
-            this.btnConsultarPacientes.UseVisualStyleBackColor = false;
-            this.btnConsultarPacientes.Click += new System.EventHandler(this.btnConsultarPacientes_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel13.Location = new System.Drawing.Point(7, 24);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 28);
-            this.panel13.TabIndex = 15;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel14.Location = new System.Drawing.Point(7, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 28);
-            this.panel14.TabIndex = 13;
             // 
             // pbxSalir
             // 
@@ -797,10 +584,7 @@ namespace SistemaGestion
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.PanelVertical.ResumeLayout(false);
-            this.panelSubmenuProductos.ResumeLayout(false);
-            this.panelSubmenuRecetas.ResumeLayout(false);
             this.panelSubmenuPresupuestos.ResumeLayout(false);
-            this.panelSubmenuPacientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).EndInit();
             this.panelSubmenuReportes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
@@ -840,26 +624,11 @@ namespace SistemaGestion
         private System.Windows.Forms.Button btnRptEstadisticas;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pbxSalir;
-        private System.Windows.Forms.Panel panelSubmenuPacientes;
-        private System.Windows.Forms.Button btnGrabarPacientes;
-        private System.Windows.Forms.Button btnConsultarPacientes;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panelSubmenuPresupuestos;
         private System.Windows.Forms.Button btnGrabarPresupuestos;
         private System.Windows.Forms.Button btnConsultarPresupuestos;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panelSubmenuRecetas;
-        private System.Windows.Forms.Button btnGrabarRecetas;
-        private System.Windows.Forms.Button btnConsultarRecetas;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panelSubmenuProductos;
-        private System.Windows.Forms.Button btnGrabarProductos;
-        private System.Windows.Forms.Button btnConsultarProductos;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label label4;
     }
 }
