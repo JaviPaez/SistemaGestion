@@ -32,7 +32,7 @@ namespace SistemaGestion
             this.label1 = new System.Windows.Forms.Label();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.txtDni = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -50,7 +50,6 @@ namespace SistemaGestion
             this.btnGrilla = new System.Windows.Forms.Button();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,21 +88,21 @@ namespace SistemaGestion
             this.txtDni.Size = new System.Drawing.Size(200, 31);
             this.txtDni.TabIndex = 0;
             // 
-            // btnCancelar
+            // btnNuevo
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(622, 441);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(188, 53);
-            this.btnCancelar.TabIndex = 6;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnNuevo.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(622, 441);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(188, 53);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // txtApellido
             // 
@@ -302,22 +301,6 @@ namespace SistemaGestion
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(1181, 213);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(188, 53);
-            this.btnNuevo.TabIndex = 19;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +308,6 @@ namespace SistemaGestion
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscar);
@@ -342,7 +324,7 @@ namespace SistemaGestion
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.label1);
@@ -361,7 +343,6 @@ namespace SistemaGestion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtDni;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;
