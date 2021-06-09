@@ -43,6 +43,29 @@ namespace SistemaGestion
             }
         }
 
+        public Boolean modificarMedico(Medico medico)
+        {
+            try
+            {
+                var actualizar = "set dateformat dmy UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
+
+                SqlCommand com = new SqlCommand(actualizar, conectar());
+
+                com.Parameters.AddWithValue("@Id", medico.Id);
+                com.Parameters.AddWithValue("@Matricula", medico.Matricula);
+                com.Parameters.AddWithValue("@Apellido", medico.Apellido);
+                com.Parameters.AddWithValue("@Nombre", medico.Nombre);  
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         //CONSULTAR PACIENTES
         public DataTable consultarMedicos()
         {

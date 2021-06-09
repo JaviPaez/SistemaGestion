@@ -18,8 +18,7 @@ namespace SistemaGestion
 
         //LOAD
         private void frmPacientes_Load(object sender, EventArgs e)
-        {
-            cboObraSocial.SelectedIndex = 0;
+        {            
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
@@ -55,7 +54,7 @@ namespace SistemaGestion
             }     
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error en grabación: " + ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             btnGrilla_Click(sender, e);
@@ -88,7 +87,7 @@ namespace SistemaGestion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en modificación" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             btnGrilla_Click(sender, e);

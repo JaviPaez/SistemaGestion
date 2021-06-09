@@ -58,7 +58,7 @@ namespace SistemaGestion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(634, 150);
+            this.label1.Location = new System.Drawing.Point(602, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 25);
             this.label1.TabIndex = 0;
@@ -72,10 +72,10 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(1181, 441);
+            this.btnGrabar.Location = new System.Drawing.Point(1067, 450);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 7;
+            this.btnGrabar.TabIndex = 8;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -83,7 +83,7 @@ namespace SistemaGestion
             // txtDni
             // 
             this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtDni.Location = new System.Drawing.Point(890, 150);
+            this.txtDni.Location = new System.Drawing.Point(858, 159);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(200, 31);
             this.txtDni.TabIndex = 0;
@@ -96,7 +96,7 @@ namespace SistemaGestion
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(622, 441);
+            this.btnNuevo.Location = new System.Drawing.Point(500, 450);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(188, 53);
             this.btnNuevo.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace SistemaGestion
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtApellido.Location = new System.Drawing.Point(890, 194);
+            this.txtApellido.Location = new System.Drawing.Point(858, 203);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 31);
             this.txtApellido.TabIndex = 1;
@@ -117,7 +117,7 @@ namespace SistemaGestion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(634, 194);
+            this.label2.Location = new System.Drawing.Point(602, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 4;
@@ -126,7 +126,7 @@ namespace SistemaGestion
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtNombre.Location = new System.Drawing.Point(890, 235);
+            this.txtNombre.Location = new System.Drawing.Point(858, 244);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 31);
             this.txtNombre.TabIndex = 2;
@@ -136,7 +136,7 @@ namespace SistemaGestion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(634, 235);
+            this.label3.Location = new System.Drawing.Point(602, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 6;
@@ -147,7 +147,7 @@ namespace SistemaGestion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(761, 55);
+            this.label4.Location = new System.Drawing.Point(729, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 31);
             this.label4.TabIndex = 8;
@@ -158,7 +158,7 @@ namespace SistemaGestion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(634, 276);
+            this.label5.Location = new System.Drawing.Point(602, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(254, 25);
             this.label5.TabIndex = 9;
@@ -167,7 +167,7 @@ namespace SistemaGestion
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.dtpFecha.Location = new System.Drawing.Point(890, 279);
+            this.dtpFecha.Location = new System.Drawing.Point(858, 288);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 31);
             this.dtpFecha.TabIndex = 3;
@@ -177,7 +177,7 @@ namespace SistemaGestion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(634, 320);
+            this.label6.Location = new System.Drawing.Point(602, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 25);
             this.label6.TabIndex = 11;
@@ -193,7 +193,7 @@ namespace SistemaGestion
             "OSDE",
             "Prevencion Salud",
             "SIPSSA"});
-            this.cboObraSocial.Location = new System.Drawing.Point(890, 323);
+            this.cboObraSocial.Location = new System.Drawing.Point(858, 332);
             this.cboObraSocial.Name = "cboObraSocial";
             this.cboObraSocial.Size = new System.Drawing.Size(200, 33);
             this.cboObraSocial.TabIndex = 4;
@@ -201,7 +201,7 @@ namespace SistemaGestion
             // txtNroAfiliado
             // 
             this.txtNroAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtNroAfiliado.Location = new System.Drawing.Point(890, 368);
+            this.txtNroAfiliado.Location = new System.Drawing.Point(858, 377);
             this.txtNroAfiliado.Name = "txtNroAfiliado";
             this.txtNroAfiliado.Size = new System.Drawing.Size(200, 31);
             this.txtNroAfiliado.TabIndex = 5;
@@ -211,7 +211,7 @@ namespace SistemaGestion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(634, 368);
+            this.label7.Location = new System.Drawing.Point(602, 377);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 25);
             this.label7.TabIndex = 13;
@@ -220,17 +220,17 @@ namespace SistemaGestion
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscar.Location = new System.Drawing.Point(812, 556);
+            this.txtBuscar.Location = new System.Drawing.Point(780, 565);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(259, 31);
-            this.txtBuscar.TabIndex = 14;
+            this.txtBuscar.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(500, 559);
+            this.label8.Location = new System.Drawing.Point(468, 568);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(292, 25);
             this.label8.TabIndex = 18;
@@ -244,10 +244,10 @@ namespace SistemaGestion
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1120, 552);
+            this.btnBuscar.Location = new System.Drawing.Point(1088, 561);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
-            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -260,10 +260,10 @@ namespace SistemaGestion
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(792, 943);
+            this.btnGrilla.Location = new System.Drawing.Point(760, 952);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
-            this.btnGrilla.TabIndex = 16;
+            this.btnGrilla.TabIndex = 11;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
@@ -276,7 +276,7 @@ namespace SistemaGestion
             this.dgvLista.AllowUserToResizeRows = false;
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(567, 652);
+            this.dgvLista.Location = new System.Drawing.Point(535, 661);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -293,10 +293,10 @@ namespace SistemaGestion
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(902, 441);
+            this.btnModificar.Location = new System.Drawing.Point(780, 450);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(188, 53);
-            this.btnModificar.TabIndex = 20;
+            this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
