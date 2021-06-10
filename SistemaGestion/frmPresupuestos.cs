@@ -25,7 +25,7 @@ namespace SistemaGestion
 
             //Cargar Combo Usuarios
             var dt = new DataTable();
-            var user = new LoginMetodos();
+            var user = new UsuarioMetodos();
             dt = user.CargarComboUsuarios();
 
             cboUsuario.DataSource = dt;

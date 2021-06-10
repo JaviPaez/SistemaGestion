@@ -19,27 +19,13 @@ namespace SistemaGestion
         //LOAD
         private void frmListarUsuarios_Load(object sender, EventArgs e)
         {
-            var dt = new DataTable();
-            var al = new LoginMetodos();
-            txtBuscar.Focus();
+            ArmarGrilla();
         }
 
         //BOTON ARMAR LISTA
         private void btnGrilla_Click(object sender, EventArgs e)
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new LoginMetodos();
-            dt = al.ConsultarUsuarios();
-
-            if (dt.Rows.Count != 0)
-            {
-                dgvLista.DataSource = dt;
-                dgvLista.Columns["Contraseña"].Visible = false;
-            }
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            txtBuscar.Clear();
+            ArmarGrilla();            
         }
 
         //BOTON BUSCAR POR DNI O APELLIDO Y NOMBRE
@@ -51,12 +37,12 @@ namespace SistemaGestion
                 {
                     var ds = new DataSet();
                     var dt = new DataTable();
-                    var al = new LoginMetodos();                
+                    var usuarioMetodo = new UsuarioMetodos();                
 
                     int dni;
                     if (!int.TryParse(txtBuscar.Text, out dni))
-                        dt = al.BuscarUsuarioApeNom(txtBuscar.Text);
-                    else dt = al.BuscarUsuarioDni(dni);                  
+                        dt = usuarioMetodo.BuscarUsuarioApeNom(txtBuscar.Text);
+                    else dt = usuarioMetodo.BuscarUsuarioDni(dni);                  
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -67,6 +53,25 @@ namespace SistemaGestion
                 }
             }
             else MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //Armar grilla
+        private void ArmarGrilla()
+        {
+            var ds = new DataSet();
+            var dt = new DataTable();
+            var al = new UsuarioMetodos();
+            dt = al.ConsultarUsuarios();
+
+            if (dt.Rows.Count != 0)
+            {
+                dgvLista.DataSource = dt;
+                dgvLista.Columns["Contraseña"].Visible = false;
+            }
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtBuscar.Clear();
+            txtBuscar.Focus();
         }
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Rol_Permiso
+    class PresupuestoProducto
     {
-        int IdRol { get; set; }
-        int IdPermiso { get; set; }
+        int IdProd { get; set; }
+        int NroPresup { get; set; }
     }
 }

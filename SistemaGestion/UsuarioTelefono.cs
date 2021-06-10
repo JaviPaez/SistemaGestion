@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Paciente_Telefono
+    class UsuarioTelefono
     {
         int Id { get; set; }
-        int Dni { get; set; }     
+        int Dni { get; set; }        
         Int64 NroTelefono { get; set; }
     }
 }

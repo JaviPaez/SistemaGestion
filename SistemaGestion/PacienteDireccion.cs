@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Usuario_Direccion
+    class PacienteDireccion
     {
         int Id { get; set; }
-        int Dni { get; set; }      
+        int Dni { get; set; }        
         string Provincia { get; set; }
         string Localidad { get; set; }
         string Calle { get; set; }

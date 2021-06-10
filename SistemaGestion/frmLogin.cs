@@ -26,7 +26,7 @@ namespace SistemaGestion
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var dt = new DataTable();
-            var usuario = new LoginMetodos();
+            var usuario = new UsuarioMetodos();
             var dni = txtUsuario.Text;
             var contraseña = txtPas.Text;
             dt = usuario.ConsultarLogin(dni, contraseña);

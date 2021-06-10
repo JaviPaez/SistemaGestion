@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Usuario_Telefono
+    class UsuarioeMail
     {
         int Id { get; set; }
-        int Dni { get; set; }        
-        Int64 NroTelefono { get; set; }
+        int Dni { get; set; }      
+        string eMail { get; set; }
     }
 }

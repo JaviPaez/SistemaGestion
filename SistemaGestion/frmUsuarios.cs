@@ -34,7 +34,7 @@ namespace SistemaGestion
                     usuario.Nombre = txtNombre.Text;
                     usuario.Contraseña = txtContraseña.Text;
 
-                    var usuarioMetodo = new LoginMetodos();
+                    var usuarioMetodo = new UsuarioMetodos();
                     Boolean grabo = usuarioMetodo.GrabarUsuario(usuario);
 
                     if (grabo == false)  MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
