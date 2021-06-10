@@ -248,7 +248,7 @@ namespace SistemaGestion
             this.cboDni.Name = "cboDni";
             this.cboDni.Size = new System.Drawing.Size(528, 33);
             this.cboDni.TabIndex = 1;
-            this.cboDni.SelectedValueChanged += new System.EventHandler(this.cboDni_SelectedValueChanged);
+            this.cboDni.SelectionChangeCommitted += new System.EventHandler(this.cboDni_SelectionChangeCommitted);
             // 
             // lblNombrePaciente
             // 

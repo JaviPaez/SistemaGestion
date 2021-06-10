@@ -41,18 +41,7 @@ namespace SistemaGestion
             cboDniPaciente.DisplayMember = "Dni";
             cboDniPaciente.ValueMember = "Dni";
 
-            //Cargar Combo Receta
-            var dt3 = new DataTable();
-            var rec = new RecetaMetodos();
-            dt3 = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
-
-            cboIdReceta.DataSource = dt3;
-            cboIdReceta.DisplayMember = "ID";
-            cboIdReceta.ValueMember = "ID";
-
-            cboIdReceta.Text = "Seleccione";
-            cboUsuario.Text = "Seleccione";
-            cboDniPaciente.Text = "Seleccione";
+            btnCancelar_Click(sender, e);
         }
 
         //BOTON GRABAR
@@ -69,19 +58,18 @@ namespace SistemaGestion
                     presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
                     presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
-                    presupuesto.Fecha = dtpFecha.Value; 
-                    presupuesto.Total = txtTotal.Text;
+                    presupuesto.Fecha = dtpFecha.Value;    
 
                     var presupuestoMetodo = new PresupuestoMetodos();
                     Boolean grabo = presupuestoMetodo.grabarPresupuesto(presupuesto);
 
-                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }     
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             btnCancelar_Click(sender, e);
@@ -92,9 +80,69 @@ namespace SistemaGestion
         {
             cboDniPaciente.Text = "Seleccione";
             cboUsuario.Text = "Seleccione";
-            cboIdReceta.Text = "Seleccione";    
-            txtTotal.Clear();
-            dtpFecha.Value = DateTime.Today;            
+            cboIdReceta.Text = "Seleccione";   
+            dtpFecha.Value = DateTime.Today;   
+            cboProducto.Text = "Seleccione";            
+            cboDniPaciente.Focus();
+
+            lblNombrePaciente.Text = "";
+            lblFecha.Text = "";
+            lblMiopOI.Text = "";
+            lblMiopOD.Text = "";
+            lblAstigOI.Text = "";
+            lblAstigOD.Text = "";
+            lblObservaciones.Text = "";
+        }
+
+        //Cargar datos a partir del DNI
+        private void cboDniPaciente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                //Label Nombre
+                var reg = new PacienteMetodos();
+                var registro = reg.cargarLabelNomPac(Convert.ToInt32(cboDniPaciente.SelectedValue));
+                if (registro.Read())
+                {
+                    lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
+                }
+
+                //Combo Receta
+                var dt3 = new DataTable();
+                var rec = new RecetaMetodos();
+                dt3 = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
+
+                cboIdReceta.DataSource = dt3;
+                cboIdReceta.DisplayMember = "ID";
+                cboIdReceta.ValueMember = "ID";
+
+                cboIdReceta.Text = "Seleccione";
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        //Cargar datos de Receta
+        private void cboIdReceta_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                var reg = new RecetaMetodos();
+                var registro = reg.cargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
+                if (registro.Read())
+                {
+                    lblFecha.Text = registro["Fecha"].ToString();
+                    lblMiopOI.Text = registro["Miop_OI"].ToString();
+                    lblMiopOD.Text = registro["Miop_OD"].ToString();
+                    lblAstigOI.Text = registro["Astig_OI"].ToString();
+                    lblAstigOD.Text = registro["Astig_OD"].ToString();
+                    lblObservaciones.Text = registro["Observaciones"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

@@ -71,5 +71,18 @@ namespace SistemaGestion
             return dt;
             //*****************************************************
         }
+
+        public SqlDataReader cargarLabelReceta (int IdReceta)
+        {
+            string sqlStr = "select * from RECETAS where ID = " + IdReceta;
+
+            //*****************************************************
+            var comando = new SqlCommand(sqlStr, conectar());
+
+            SqlDataReader registro = comando.ExecuteReader();
+
+            return registro;
+            //*****************************************************
+        }
     }
 }

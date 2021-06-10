@@ -86,9 +86,9 @@ namespace SistemaGestion
 
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            cboDni.Text = "Seleccione";
+        {           
             cboMedico.Text = "Seleccione"; 
+            cboDni.Text = "Seleccione";
             txtMiop_OI.Clear();
             txtMiop_OD.Clear();
             txtAstig_OI.Clear();
@@ -99,9 +99,9 @@ namespace SistemaGestion
             cboMedico.Focus();
         }
 
-        private void cboDni_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Cargar label Nombre Paciente
+        //Cargar label Nombre Paciente
+        private void cboDni_SelectionChangeCommitted(object sender, EventArgs e)
+        {            
             try
             {
                 var reg = new PacienteMetodos();
@@ -109,10 +109,10 @@ namespace SistemaGestion
                 if (registro.Read())
                 {
                     lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
-                }                
+                }
             }
-            catch(Exception ex)
-            {                
+            catch (Exception ex)
+            {
             }
         }
     }
