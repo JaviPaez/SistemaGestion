@@ -44,6 +44,29 @@ namespace SistemaGestion
             }            
         }
 
+        public Boolean modificarProducto(Producto producto)
+        {
+            try
+            {
+                var actualizar = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where Id=@Id";
+
+                SqlCommand com = new SqlCommand(actualizar, conectar());
+
+                com.Parameters.AddWithValue("@Id", producto.Id);
+                com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                com.Parameters.AddWithValue("@Precio", producto.Precio);
+                com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         //CONSULTAR PRODUCTOS
         public DataTable consultarProductos()
         {
