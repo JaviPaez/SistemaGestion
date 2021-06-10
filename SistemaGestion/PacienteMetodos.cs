@@ -9,13 +9,13 @@ namespace SistemaGestion
 {
     class PacienteMetodos : Conexion
     {
-        public Boolean grabarPaciente(Paciente paciente)
+        public Boolean GrabarPaciente(Paciente paciente)
         {
             try
             {     
-                var sel = "set dateformat dmy INSERT INTO PACIENTES(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
+                var grabarPaciente = "set dateformat dmy INSERT INTO PACIENTES(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -27,13 +27,13 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean modificarPaciente(Paciente paciente)
+        public Boolean ModificarPaciente(Paciente paciente)
         {
             try
             {    
-                var actualizar = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";                
+                var modificarPaciente = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";                
 
-                SqlCommand com = new SqlCommand(actualizar, conectar());
+                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
 
                 com.Parameters.AddWithValue("@Dni", paciente.Dni);
                 com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
@@ -53,12 +53,12 @@ namespace SistemaGestion
         }
 
         //CONSULTAR PACIENTES
-        public DataTable consultarPacientes()
+        public DataTable ConsultarPacientes()
         {
-            string sqlStr = "select * from PACIENTES";
+            string pacientes = "select * from PACIENTES";
           
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(pacientes, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -67,12 +67,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarPacienteDni(int Dni)
+        public DataTable BuscarPacienteDni(int dni)
         {
-            string sqlStr = "select * from PACIENTES where Dni = " + Dni;
+            string paciente = "select * from PACIENTES where Dni = " + dni;
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(paciente, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -81,12 +81,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarPacienteApeNom(string ApeNom)
+        public DataTable BuscarPacienteApeNom(string apeNom)
         {
-            string sqlStr = "select * from PACIENTES where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
+            string paciente = "select * from PACIENTES where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(paciente, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -95,12 +95,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable cargarComboPacientes()
+        public DataTable CargarComboPacientes()
         {
-            string sqlStr = "select Dni,Apellido,Nombre from PACIENTES";
+            string pacientes = "select Dni,Apellido,Nombre from PACIENTES";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(pacientes, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -109,12 +109,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public SqlDataReader cargarLabelNomPac(int Dni)
+        public SqlDataReader CargarLabelNomPac(int Dni)
         {
-            string sqlStr = "select Dni,Apellido,Nombre from PACIENTES where Dni = " + Dni;
+            string paciente = "select Dni,Apellido,Nombre from PACIENTES where Dni = " + Dni;
 
             //*****************************************************
-            var comando = new SqlCommand(sqlStr, conectar());
+            var comando = new SqlCommand(paciente, conectar());
 
             SqlDataReader registro = comando.ExecuteReader();
                        

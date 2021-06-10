@@ -9,12 +9,12 @@ namespace SistemaGestion
 {
     class LoginMetodos : Conexion
     {
-        public DataTable ConsultarLogin(string dni, string pass)
+        public DataTable ConsultarLogin(string dni, string contraseña)
         {
-            string sqlStr = "select Dni, Contraseña from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + pass + "'";      
+            string login = "select Dni, Contraseña from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";      
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(login, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -23,13 +23,13 @@ namespace SistemaGestion
             //*****************************************************
         }      
                
-        public Boolean grabarUsuario(Usuario usu)
+        public Boolean GrabarUsuario(Usuario usu)
         {
             try
             {  
-                var sel = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
+                var grabarUsuario = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarUsuario, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -41,12 +41,12 @@ namespace SistemaGestion
             }            
         }
 
-        public DataTable Consultar()
+        public DataTable ConsultarUsuarios()
         {
-            string sqlStr = "select * from USUARIOS order by Dni";
+            string usuarios = "select * from USUARIOS order by Dni";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(usuarios, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -55,12 +55,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarUsuarioDni(int Dni)
+        public DataTable BuscarUsuarioDni(int dni)
         {
-            string sqlStr = "select * from USUARIOS where Dni = " + Dni;
+            string usuario = "select * from USUARIOS where Dni = " + dni;
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(usuario, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -69,12 +69,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarUsuarioApeNom(string ApeNom)
+        public DataTable BuscarUsuarioApeNom(string ApeNom)
         {
-            string sqlStr = "select * from USUARIOS where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
+            string usuario = "select * from USUARIOS where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(usuario, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -83,12 +83,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable cargarComboUsuarios()
+        public DataTable CargarComboUsuarios()
         {
-            string sqlStr = "select Dni, Apellido + ', ' + Nombre as ApeNom from USUARIOS order by ApeNom";
+            string usuarios = "select Dni, Apellido + ', ' + Nombre as ApeNom from USUARIOS order by ApeNom";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(usuarios, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

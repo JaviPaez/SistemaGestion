@@ -23,12 +23,12 @@ namespace SistemaGestion
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
-            btnCancelar_Click(sender, e);
+            ReiniciarCampos();
 
             //Cargar Combo Medicos
             var dt = new DataTable();
             var med = new MedicoMetodos();
-            dt = med.cargarComboMedicos();
+            dt = med.CargarComboMedicos();
 
             cboMedico.DataSource = dt;
             cboMedico.DisplayMember = "Apenom";
@@ -37,7 +37,7 @@ namespace SistemaGestion
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
             var pac = new PacienteMetodos();
-            dt2 = pac.cargarComboPacientes();
+            dt2 = pac.CargarComboPacientes();
 
             cboDni.DataSource = dt2;
             cboDni.DisplayMember = "Dni";
@@ -52,13 +52,13 @@ namespace SistemaGestion
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
             var receta = new Receta();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     receta.IdMedico = Convert.ToInt32(cboMedico.SelectedValue);
                     receta.Dni = Convert.ToInt32(cboDni.SelectedValue);
@@ -67,10 +67,10 @@ namespace SistemaGestion
                     receta.Astig_OI = txtAstig_OI.Text;
                     receta.Astig_OD = txtAstig_OD.Text;
                     receta.Fecha = dtpFecha.Value;
-                    receta.Observaciones = txtObserv.Text;                    
+                    receta.Observaciones = txtObserv.Text;   
 
                     var recetaMetodo = new RecetaMetodos();
-                    Boolean grabo = recetaMetodo.grabarReceta(receta);
+                    Boolean grabo = recetaMetodo.GrabarReceta(receta);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                  
@@ -78,16 +78,39 @@ namespace SistemaGestion
             }
             catch (Exception ex) 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnCancelar_Click(sender, e);
+            ReiniciarCampos();
         }
 
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
-        {           
-            cboMedico.Text = "Seleccione"; 
+        {
+            ReiniciarCampos();
+        }
+
+        //Cargar label Nombre Paciente
+        private void cboDni_SelectionChangeCommitted(object sender, EventArgs e)
+        {            
+            try
+            {
+                var pacienteMetodo = new PacienteMetodos();
+                var registro = pacienteMetodo.CargarLabelNomPac(Convert.ToInt32(cboDni.SelectedValue));
+                if (registro.Read())
+                {
+                    lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            cboMedico.Text = "Seleccione";
             cboDni.Text = "Seleccione";
             txtMiop_OI.Clear();
             txtMiop_OD.Clear();
@@ -97,23 +120,6 @@ namespace SistemaGestion
             txtObserv.Clear();
             lblNombrePaciente.Text = "";
             cboMedico.Focus();
-        }
-
-        //Cargar label Nombre Paciente
-        private void cboDni_SelectionChangeCommitted(object sender, EventArgs e)
-        {            
-            try
-            {
-                var reg = new PacienteMetodos();
-                var registro = reg.cargarLabelNomPac(Convert.ToInt32(cboDni.SelectedValue));
-                if (registro.Read())
-                {
-                    lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-            }
         }
     }
 }

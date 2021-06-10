@@ -26,7 +26,7 @@ namespace SistemaGestion
             //Cargar Combo Usuarios
             var dt = new DataTable();
             var user = new LoginMetodos();
-            dt = user.cargarComboUsuarios();
+            dt = user.CargarComboUsuarios();
 
             cboUsuario.DataSource = dt;
             cboUsuario.DisplayMember = "ApeNom";
@@ -35,25 +35,34 @@ namespace SistemaGestion
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
             var pac = new PacienteMetodos();
-            dt2 = pac.cargarComboPacientes();
+            dt2 = pac.CargarComboPacientes();
 
             cboDniPaciente.DataSource = dt2;
             cboDniPaciente.DisplayMember = "Dni";
             cboDniPaciente.ValueMember = "Dni";
 
-            btnCancelar_Click(sender, e);
+            //Cargar Combo Productos
+            var dt3 = new DataTable();
+            var prod = new ProductoMetodos();
+            dt3 = prod.CargarComboProductos();
+
+            cboProducto.DataSource = dt3;
+            cboProducto.DisplayMember = "Descripcion";
+            cboProducto.ValueMember = "ID";
+
+            ReiniciarCampos();
         }
 
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
             var presupuesto = new Presupuesto();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
@@ -61,7 +70,7 @@ namespace SistemaGestion
                     presupuesto.Fecha = dtpFecha.Value;    
 
                     var presupuestoMetodo = new PresupuestoMetodos();
-                    Boolean grabo = presupuestoMetodo.grabarPresupuesto(presupuesto);
+                    Boolean grabo = presupuestoMetodo.GrabarPresupuesto(presupuesto);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -72,26 +81,13 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnCancelar_Click(sender, e);
+            ReiniciarCampos();
         }
 
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cboDniPaciente.Text = "Seleccione";
-            cboUsuario.Text = "Seleccione";
-            cboIdReceta.Text = "Seleccione";   
-            dtpFecha.Value = DateTime.Today;   
-            cboProducto.Text = "Seleccione";            
-            cboDniPaciente.Focus();
-
-            lblNombrePaciente.Text = "";
-            lblFecha.Text = "";
-            lblMiopOI.Text = "";
-            lblMiopOD.Text = "";
-            lblAstigOI.Text = "";
-            lblAstigOD.Text = "";
-            lblObservaciones.Text = "";
+            ReiniciarCampos();
         }
 
         //Cargar datos a partir del DNI
@@ -101,7 +97,7 @@ namespace SistemaGestion
             {
                 //Label Nombre
                 var reg = new PacienteMetodos();
-                var registro = reg.cargarLabelNomPac(Convert.ToInt32(cboDniPaciente.SelectedValue));
+                var registro = reg.CargarLabelNomPac(Convert.ToInt32(cboDniPaciente.SelectedValue));
                 if (registro.Read())
                 {
                     lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
@@ -110,7 +106,7 @@ namespace SistemaGestion
                 //Combo Receta
                 var dt3 = new DataTable();
                 var rec = new RecetaMetodos();
-                dt3 = rec.cargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
+                dt3 = rec.CargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
 
                 cboIdReceta.DataSource = dt3;
                 cboIdReceta.DisplayMember = "ID";
@@ -128,11 +124,12 @@ namespace SistemaGestion
         {
             try
             {
-                var reg = new RecetaMetodos();
-                var registro = reg.cargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
+                var recetaMetodo = new RecetaMetodos();
+                var registro = recetaMetodo.CargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
+
                 if (registro.Read())
                 {
-                    lblFecha.Text = registro["Fecha"].ToString();
+                    lblFecha.Text = registro["FechaOK"].ToString();
                     lblMiopOI.Text = registro["Miop_OI"].ToString();
                     lblMiopOD.Text = registro["Miop_OD"].ToString();
                     lblAstigOI.Text = registro["Astig_OI"].ToString();
@@ -143,6 +140,25 @@ namespace SistemaGestion
             catch (Exception ex)
             {
             }
+        }
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            cboDniPaciente.Text = "Seleccione";
+            cboUsuario.Text = "Seleccione";
+            cboIdReceta.Text = "Seleccione";
+            dtpFecha.Value = DateTime.Today;
+            cboProducto.Text = "Seleccione";
+            cboDniPaciente.Focus();
+
+            lblNombrePaciente.Text = "";
+            lblFecha.Text = "";
+            lblMiopOI.Text = "";
+            lblMiopOD.Text = "";
+            lblAstigOI.Text = "";
+            lblAstigOD.Text = "";
+            lblObservaciones.Text = "";
         }
     }
 }

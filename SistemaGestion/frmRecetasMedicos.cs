@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SistemaGestion
 {
-    public partial class frmRecetas_Medicos : Form
+    public partial class frmRecetasMedicos : Form
     {
-        public frmRecetas_Medicos()
+        public frmRecetasMedicos()
         {
             InitializeComponent();
         }

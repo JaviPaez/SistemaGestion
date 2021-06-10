@@ -19,8 +19,8 @@ namespace SistemaGestion
         //LOAD
         private void frmMedicos_Load(object sender, EventArgs e)
         {
-            btnNuevo_Click(sender, e);
-            btnGrilla_Click(sender, e);
+            ReiniciarCampos();
+            ArmarGrilla();
         }
 
         //BOTON GRABAR
@@ -39,7 +39,7 @@ namespace SistemaGestion
                     medico.Nombre = txtNombre.Text;                    
 
                     var medicoMetodo = new MedicoMetodos();
-                    Boolean grabo = medicoMetodo.grabarMedico(medico);
+                    Boolean grabo = medicoMetodo.GrabarMedico(medico);
                     
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -50,7 +50,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
-            btnGrilla_Click(sender, e);
+            ArmarGrilla();
         }
 
         //BOTON MODIFICAR
@@ -64,13 +64,15 @@ namespace SistemaGestion
             {
                 if (resp == DialogResult.Yes)
                 {
+                    int id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
+
+                    medico.Id = id;
                     medico.Matricula = txtMatricula.Text;
                     medico.Apellido = txtApellido.Text;
-                    medico.Nombre = txtNombre.Text;
-                    medico.Id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
+                    medico.Nombre = txtNombre.Text;                    
 
                     var medicoMetodo = new MedicoMetodos();
-                    Boolean modifico = medicoMetodo.modificarMedico(medico);
+                    Boolean modifico = medicoMetodo.ModificarMedico(medico);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,16 +83,13 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnGrilla_Click(sender, e);
+            ArmarGrilla();
         }
 
         //BOTON NUEVO      
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            txtMatricula.Clear();
-            txtApellido.Clear();
-            txtNombre.Clear();
-            txtMatricula.Focus();
+            ReiniciarCampos();
         }
 
         //CLICK EN CONTENIDO DE CELDA DGV
@@ -110,10 +109,25 @@ namespace SistemaGestion
         //BOTON ARMAR LISTA
         private void btnGrilla_Click(object sender, EventArgs e)
         {
+            ArmarGrilla();
+        }
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            txtMatricula.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtMatricula.Focus();
+        }
+
+        //Armar grilla
+        private void ArmarGrilla()
+        {
             var ds = new DataSet();
             var dt = new DataTable();
             var al = new MedicoMetodos();
-            dt = al.consultarMedicos();
+            dt = al.ConsultarMedicos();
 
             if (dt.Rows.Count != 0)
             {

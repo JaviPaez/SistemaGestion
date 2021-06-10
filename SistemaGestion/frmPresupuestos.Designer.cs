@@ -246,12 +246,6 @@
             // 
             this.cboProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Items.AddRange(new object[] {
-            "Seleccione",
-            "Apross",
-            "OSDE",
-            "Prevencion Salud",
-            "SIPSSA"});
             this.cboProducto.Location = new System.Drawing.Point(743, 477);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(200, 33);
@@ -286,7 +280,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(677, 193);
+            this.label7.Location = new System.Drawing.Point(588, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 25);
             this.label7.TabIndex = 40;
@@ -297,7 +291,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(613, 228);
+            this.label8.Location = new System.Drawing.Point(588, 228);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 25);
             this.label8.TabIndex = 41;
@@ -308,7 +302,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(926, 193);
+            this.label9.Location = new System.Drawing.Point(896, 193);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 25);
             this.label9.TabIndex = 42;
@@ -319,7 +313,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(862, 228);
+            this.label10.Location = new System.Drawing.Point(896, 228);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(189, 25);
             this.label10.TabIndex = 43;
@@ -341,7 +335,7 @@
             this.lblAstigOD.AutoSize = true;
             this.lblAstigOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAstigOD.ForeColor = System.Drawing.Color.White;
-            this.lblAstigOD.Location = new System.Drawing.Point(1047, 228);
+            this.lblAstigOD.Location = new System.Drawing.Point(1095, 228);
             this.lblAstigOD.Name = "lblAstigOD";
             this.lblAstigOD.Size = new System.Drawing.Size(91, 25);
             this.lblAstigOD.TabIndex = 48;
@@ -352,7 +346,7 @@
             this.lblMiopOD.AutoSize = true;
             this.lblMiopOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblMiopOD.ForeColor = System.Drawing.Color.White;
-            this.lblMiopOD.Location = new System.Drawing.Point(1047, 193);
+            this.lblMiopOD.Location = new System.Drawing.Point(1095, 193);
             this.lblMiopOD.Name = "lblMiopOD";
             this.lblMiopOD.Size = new System.Drawing.Size(90, 25);
             this.lblMiopOD.TabIndex = 47;

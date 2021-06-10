@@ -9,13 +9,13 @@ namespace SistemaGestion
 {
     class PresupuestoMetodos : Conexion
     {
-        public int ultimoId()
+        public int UltimoId()
         {
             try
             {
-                var selMax = "select max(Nro) + 1 from PRESUPUESTOS";
+                var maxId = "select max(Nro) + 1 from PRESUPUESTOS";
                 //***************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
+                SqlCommand com = new SqlCommand(maxId, conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -24,15 +24,15 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean grabarPresupuesto(Presupuesto presupuesto)
+        public Boolean GrabarPresupuesto(Presupuesto presupuesto)
         {
             try
             {
-                var idMax = ultimoId();
+                var idMax = UltimoId();
 
-                var sel = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro,DniUsuario,DniPaciente,IdReceta,Fecha,Total)" + " VALUES(" + idMax + "," + presupuesto.DniUsuario + "," + presupuesto.DniPaciente + "," + presupuesto.IdReceta + ",'" + presupuesto.Fecha + "','" + presupuesto.Total + "')";
+                var grabarPresupuesto = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro,DniUsuario,DniPaciente,IdReceta,Fecha,Total)" + " VALUES(" + idMax + "," + presupuesto.DniUsuario + "," + presupuesto.DniPaciente + "," + presupuesto.IdReceta + ",'" + presupuesto.Fecha + "','" + presupuesto.Total + "')";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarPresupuesto, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -44,12 +44,12 @@ namespace SistemaGestion
             }            
         }
 
-        public DataTable consultar()
+        public DataTable ConsultarPresupuestos()
         {
-            string sqlStr = "select * from PRESUPUESTOS";    
+            string presupuestos = "select * from PRESUPUESTOS";    
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(presupuestos, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -58,12 +58,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarPresupuesto(int Nro)
+        public DataTable BuscarPresupuesto(int nro)
         {
-            string sqlStr = "select * from PRESUPUESTOS where Nro = " + Nro;
+            string presupuesto = "select * from PRESUPUESTOS where Nro = " + nro;
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(presupuesto, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

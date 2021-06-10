@@ -30,7 +30,7 @@ namespace SistemaGestion
             var ds = new DataSet();
             var dt = new DataTable();
             var al = new LoginMetodos();
-            dt = al.Consultar();
+            dt = al.ConsultarUsuarios();
 
             if (dt.Rows.Count != 0)
             {
@@ -55,8 +55,8 @@ namespace SistemaGestion
 
                     int dni;
                     if (!int.TryParse(txtBuscar.Text, out dni))
-                        dt = al.buscarUsuarioApeNom(txtBuscar.Text);
-                    else dt = al.buscarUsuarioDni(dni);                  
+                        dt = al.BuscarUsuarioApeNom(txtBuscar.Text);
+                    else dt = al.BuscarUsuarioDni(dni);                  
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -26,10 +26,10 @@ namespace SistemaGestion
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var dt = new DataTable();
-            var usu = new LoginMetodos();
+            var usuario = new LoginMetodos();
             var dni = txtUsuario.Text;
-            var pas = txtPas.Text;
-            dt = usu.ConsultarLogin(dni, pas);
+            var contraseña = txtPas.Text;
+            dt = usuario.ConsultarLogin(dni, contraseña);
 
             if (dt.Rows.Count == 1)
             {

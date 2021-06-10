@@ -22,7 +22,7 @@ namespace SistemaGestion
             var ds = new DataSet();
             var dt = new DataTable();
             var al = new PresupuestoMetodos();
-            dt = al.consultar();
+            dt = al.ConsultarPresupuestos();
 
             if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -37,7 +37,7 @@ namespace SistemaGestion
                     var ds = new DataSet();
                     var dt = new DataTable();
                     var al = new PresupuestoMetodos();
-                    dt = al.buscarPresupuesto(Convert.ToInt32(txtNro.Text));
+                    dt = al.BuscarPresupuesto(Convert.ToInt32(txtNro.Text));
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    

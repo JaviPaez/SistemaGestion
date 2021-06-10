@@ -9,13 +9,13 @@ namespace SistemaGestion
 {
     class ProductoMetodos : Conexion
     {        
-        public long ultimoId()
+        public long UltimoId()
         {
             try
             {
-                var selMax = "select max(ID) + 1 from PRODUCTOS";
-                //********************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
+                var maxId = "select max(ID) + 1 from PRODUCTOS";
+                //*************************************************
+                SqlCommand com = new SqlCommand(maxId, conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -24,15 +24,15 @@ namespace SistemaGestion
             }
         }
                
-        public Boolean grabarProducto(Producto producto)
+        public Boolean GrabarProducto(Producto producto)
         {
             try
             {
-                var idMax = ultimoId();
+                var idMax = UltimoId();
 
-                var sel = "INSERT INTO PRODUCTOS(ID,Descripcion,Precio,Cantidad)" + " VALUES(" + idMax + ",'" + producto.Descripcion + "','" + producto.Precio + "'," + producto.Cantidad +  ")";
+                var grabarProducto = "INSERT INTO PRODUCTOS(ID,Descripcion,Precio,Cantidad)" + " VALUES(" + idMax + ",'" + producto.Descripcion + "','" + producto.Precio + "'," + producto.Cantidad +  ")";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarProducto, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -44,13 +44,13 @@ namespace SistemaGestion
             }            
         }
 
-        public Boolean modificarProducto(Producto producto)
+        public Boolean ModificarProducto(Producto producto)
         {
             try
             {
-                var actualizar = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where Id=@Id";
+                var modificarProducto = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where Id=@Id";
 
-                SqlCommand com = new SqlCommand(actualizar, conectar());
+                SqlCommand com = new SqlCommand(modificarProducto, conectar());
 
                 com.Parameters.AddWithValue("@Id", producto.Id);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
@@ -68,12 +68,12 @@ namespace SistemaGestion
         }
 
         //CONSULTAR PRODUCTOS
-        public DataTable consultarProductos()
+        public DataTable ConsultarProductos()
         {
-            string sqlStr = "select * from PRODUCTOS";
+            string productos = "select * from PRODUCTOS";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(productos, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -82,12 +82,26 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable buscarProducto(string sel)
+        public DataTable BuscarProducto(string descripcion)
         {
-            string sqlStr = "select * from PRODUCTOS where Descripcion like '%" + sel + "%'";
+            string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%'";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(producto, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
+        public DataTable CargarComboProductos()
+        {
+            string productos = "select ID, Descripcion from PRODUCTOS order by ID";
+
+            //*****************************************************
+            var da = new SqlDataAdapter(productos, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

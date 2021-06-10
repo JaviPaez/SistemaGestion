@@ -23,6 +23,7 @@ namespace SistemaGestion
         {          
             AbrirFormHijo(new frmInicio());
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -85,7 +86,7 @@ namespace SistemaGestion
         private void btnRecetas_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
-            AbrirFormHijo(new frmRecetas_Medicos());
+            AbrirFormHijo(new frmRecetasMedicos());
         }
 
         //Productos

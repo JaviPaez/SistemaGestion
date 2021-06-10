@@ -9,13 +9,13 @@ namespace SistemaGestion
 {
     class RecetaMetodos : Conexion
     {    
-        public int ultimoId()
+        public int UltimoId()
         {
             try
             {
-                var selMax = "select max(ID) + 1 from RECETAS";
+                var maxId = "select max(ID) + 1 from RECETAS";
                 //***************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
+                SqlCommand com = new SqlCommand(maxId, conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -24,15 +24,15 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean grabarReceta(Receta receta)
+        public Boolean GrabarReceta(Receta receta)
         {
             try
             {
-                var idMax = ultimoId();
+                var idMax = UltimoId();
 
-                var sel = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,Miop_OI,Miop_OD,Astig_OI,Astig_OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.Miop_OI + "','" + receta.Miop_OD + "','" + receta.Astig_OI + "','" + receta.Astig_OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
+                var grabarReceta = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,Miop_OI,Miop_OD,Astig_OI,Astig_OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.Miop_OI + "','" + receta.Miop_OD + "','" + receta.Astig_OI + "','" + receta.Astig_OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarReceta, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -44,12 +44,12 @@ namespace SistemaGestion
             }            
         }
 
-        public DataTable Consultar()
+        public DataTable ConsultarRecetas()
         {
-            string sqlStr = "select * from RECETAS";
+            string recetas = "select * from RECETAS";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(recetas, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -58,12 +58,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable cargarComboRecetas(int DniPaciente)
+        public DataTable CargarComboRecetas(int dniPaciente)
         {
-            string sqlStr = "select ID from RECETAS where Dni = " + DniPaciente;
+            string recetas = "select ID from RECETAS where Dni = " + dniPaciente;
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(recetas, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -72,12 +72,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public SqlDataReader cargarLabelReceta (int IdReceta)
+        public SqlDataReader CargarLabelReceta (int idReceta)
         {
-            string sqlStr = "select * from RECETAS where ID = " + IdReceta;
+            string receta = "select *,convert (varchar(10),Fecha,103) as FechaOK from RECETAS where ID = " + idReceta;
 
             //*****************************************************
-            var comando = new SqlCommand(sqlStr, conectar());
+            var comando = new SqlCommand(receta, conectar());
 
             SqlDataReader registro = comando.ExecuteReader();
 

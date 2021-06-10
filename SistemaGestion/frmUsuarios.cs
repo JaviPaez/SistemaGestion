@@ -17,24 +17,25 @@ namespace SistemaGestion
             InitializeComponent();
         }
 
+        //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                        MessageBoxIcon.Question);                      
 
-            var user = new Usuario();
+            var usuario = new Usuario();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
-                    user.Dni = Convert.ToInt32(txtDni.Text);
-                    user.IdRol = Convert.ToInt32(cboRol.SelectedValue);
-                    user.Apellido = txtApellido.Text;
-                    user.Nombre = txtNombre.Text;
-                    user.Contraseña = txtContraseña.Text;
+                    usuario.Dni = Convert.ToInt32(txtDni.Text);
+                    usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
+                    usuario.Apellido = txtApellido.Text;
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.Contraseña = txtContraseña.Text;
 
-                    var usuMetodo = new LoginMetodos();
-                    Boolean grabo = usuMetodo.grabarUsuario(user);
+                    var usuarioMetodo = new LoginMetodos();
+                    Boolean grabo = usuarioMetodo.GrabarUsuario(usuario);
 
                     if (grabo == false)  MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
                     else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
@@ -42,7 +43,7 @@ namespace SistemaGestion
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             this.Hide();
@@ -50,13 +51,8 @@ namespace SistemaGestion
 
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
-        {           
-            txtDni.Clear();
-            txtApellido.Clear();
-            txtNombre.Clear();
-            txtContraseña.Clear();
-            cboRol.Text = "Seleccione";
-            txtDni.Focus();
+        {
+            ReiniciarCampos();
         }
 
         //LOAD
@@ -65,30 +61,32 @@ namespace SistemaGestion
             //Cargar Combo Roles
             var dt = new DataTable();
             var rol = new RolMetodos();
-            dt = rol.cargarComboRoles();
+            dt = rol.CargarComboRoles();
 
             cboRol.DataSource = dt;
             cboRol.DisplayMember = "NombreRol";
             cboRol.ValueMember = "ID";
 
-            btnCancelar_Click(sender, e);
+            ReiniciarCampos();
         }
 
         //Desplazar desde barra de titulo
-        #region //
+        #region
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        #endregion
-
+        
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
 
         //BOTONES DE BARRA DE TITULO 
+        #region Botones
+
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -97,6 +95,18 @@ namespace SistemaGestion
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        #endregion BOTONES
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            txtDni.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtContraseña.Clear();
+            cboRol.Text = "Seleccione";
+            txtDni.Focus();
         }
     }
 }

@@ -9,13 +9,12 @@ namespace SistemaGestion
 {
     class RolMetodos : Conexion
     {
-        //Cargar ComboRoles
-        public DataTable cargarComboRoles()
+        public DataTable CargarComboRoles()
         {
-            string sqlStr = "select ID, NombreRol from ROLES order by ID";
+            string roles = "select ID, NombreRol from ROLES order by ID";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(roles, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -24,13 +23,13 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public int ultimoId()
+        public int UltimoId()
         {
             try
             {
-                var selMax = "select max(ID) + 1 from ROLES";
-                //****************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
+                var maxId = "select max(ID) + 1 from ROLES";
+                //*************************************************
+                SqlCommand com = new SqlCommand(maxId, conectar());
                 return (int)com.ExecuteScalar();
             }
             catch

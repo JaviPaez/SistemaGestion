@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaGestion
 {
-    partial class frmRecetas_Medicos
+    partial class frmRecetasMedicos
     {
         /// <summary>
         /// Required designer variable.

@@ -23,20 +23,20 @@ namespace SistemaGestion
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
 
-            btnNuevo_Click(sender, e);
-            btnGrilla_Click(sender, e);
+            ReiniciarCampos();
+            ArmarGrilla();
         }
 
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
             var paciente = new Paciente();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     paciente.Dni = Convert.ToInt32(txtDni.Text);
                     paciente.Apellido = txtApellido.Text;
@@ -46,7 +46,7 @@ namespace SistemaGestion
                     paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
 
                     var pacienteMetodo = new PacienteMetodos();
-                    Boolean grabo = pacienteMetodo.grabarPaciente(paciente);
+                    Boolean grabo = pacienteMetodo.GrabarPaciente(paciente);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -56,20 +56,20 @@ namespace SistemaGestion
             {
                 MessageBox.Show("Error en grabación: " + ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            btnGrilla_Click(sender, e);
+
+            ArmarGrilla();
         }
 
         //BOTON MODIFICAR
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la modificación?", "Modificar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la modificación?", "Modificar", MessageBoxButtons.YesNo,
                      MessageBoxIcon.Question);
 
             var paciente = new Paciente();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     paciente.Dni = Convert.ToInt32(txtDni.Text);
                     paciente.Apellido = txtApellido.Text;
@@ -79,7 +79,7 @@ namespace SistemaGestion
                     paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
 
                     var pacienteMetodo = new PacienteMetodos();
-                    Boolean modifico = pacienteMetodo.modificarPaciente(paciente);
+                    Boolean modifico = pacienteMetodo.ModificarPaciente(paciente);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,33 +90,19 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnGrilla_Click(sender, e);
+            ArmarGrilla();
         }
 
         //BOTON NUEVO
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            txtDni.Clear();
-            txtApellido.Clear();
-            txtNombre.Clear();
-            txtNroAfiliado.Clear();
-            dtpFecha.Value = DateTime.Today;
-            cboObraSocial.SelectedIndex = 0;
-            txtDni.Focus();
+            ReiniciarCampos();
         }
 
         //BOTON ARMAR LISTA
         private void btnGrilla_Click(object sender, EventArgs e)
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new PacienteMetodos();
-            dt = al.consultarPacientes();
-
-            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            txtBuscar.Clear();            
+            ArmarGrilla();
         }
 
         //BOTON BUSCAR POR DNI O APELLIDO Y NOMBRE
@@ -133,9 +119,9 @@ namespace SistemaGestion
                     int dni;
                     if (!int.TryParse(txtBuscar.Text, out dni))
                     {
-                        dt = al.buscarPacienteApeNom(txtBuscar.Text);
+                        dt = al.BuscarPacienteApeNom(txtBuscar.Text);
                     }
-                    else dt = al.buscarPacienteDni(dni);
+                    else dt = al.BuscarPacienteDni(dni);
 
                     if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -147,7 +133,7 @@ namespace SistemaGestion
             }
             else MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            btnNuevo_Click(sender, e);
+            ReiniciarCampos();
         }
 
         //CLICK EN CONTENIDO DE CELDA DGV
@@ -165,6 +151,32 @@ namespace SistemaGestion
             catch(Exception ex)
             {
             }
+        }
+
+        //Armar grilla
+        private void ArmarGrilla()
+        {
+            var ds = new DataSet();
+            var dt = new DataTable();
+            var al = new PacienteMetodos();
+            dt = al.ConsultarPacientes();
+
+            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtBuscar.Clear();
+        }
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            txtDni.Clear();
+            txtApellido.Clear();
+            txtNombre.Clear();
+            txtNroAfiliado.Clear();
+            dtpFecha.Value = DateTime.Today;
+            cboObraSocial.SelectedIndex = 0;
+            txtDni.Focus();
         }
     }
 }

@@ -9,13 +9,14 @@ namespace SistemaGestion
 {
     class MedicoMetodos : Conexion
     {
-        public int ultimoId()
+        public int UltimoId()
         {
             try
             {
-                var selMax = "select max(ID) + 1 from MEDICOS";
+                var maxId = "select max(ID) + 1 from MEDICOS";
+
                 //**************************************************
-                SqlCommand com = new SqlCommand(selMax, conectar());
+                SqlCommand com = new SqlCommand(maxId, conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -23,15 +24,16 @@ namespace SistemaGestion
                 return 1;
             }
         }
-        public Boolean grabarMedico(Medico medico)
+
+        public Boolean GrabarMedico(Medico medico)
         {
             try
             {
-                var idMax = ultimoId();
+                var idMax = UltimoId();
 
-                var sel = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
+                var grabarMedico = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
 
-                SqlCommand com = new SqlCommand(sel, conectar());
+                SqlCommand com = new SqlCommand(grabarMedico, conectar());
 
                 com.ExecuteNonQuery();
 
@@ -43,13 +45,13 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean modificarMedico(Medico medico)
+        public Boolean ModificarMedico(Medico medico)
         {
             try
             {
-                var actualizar = "set dateformat dmy UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
+                var modificarMedico = "set dateformat dmy UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
 
-                SqlCommand com = new SqlCommand(actualizar, conectar());
+                SqlCommand com = new SqlCommand(modificarMedico, conectar());
 
                 com.Parameters.AddWithValue("@Id", medico.Id);
                 com.Parameters.AddWithValue("@Matricula", medico.Matricula);
@@ -66,13 +68,13 @@ namespace SistemaGestion
             }
         }
 
-        //CONSULTAR PACIENTES
-        public DataTable consultarMedicos()
+        //CONSULTAR MEDICOS
+        public DataTable ConsultarMedicos()
         {
-            string sqlStr = "select * from MEDICOS order by ID";
+            string medicos = "select * from MEDICOS order by ID";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(medicos, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -81,12 +83,12 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable cargarComboMedicos()
+        public DataTable CargarComboMedicos()
         {
-            string sqlStr = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
+            string medicos = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
 
             //*****************************************************
-            var da = new SqlDataAdapter(sqlStr, conectar());
+            var da = new SqlDataAdapter(medicos, conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

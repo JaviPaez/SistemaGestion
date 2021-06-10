@@ -19,27 +19,27 @@ namespace SistemaGestion
         //LOAD
         private void frmProductos_Load(object sender, EventArgs e)
         {
-            btnGrilla_Click(sender, e);
-            btnNuevo_Click(sender, e);
+            ArmarGrilla();
+            ReiniciarCampos();
         }
 
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
             var producto = new Producto();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Precio = txtPrecio.Text;
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
                     var productoMetodo = new ProductoMetodos();
-                    Boolean grabo = productoMetodo.grabarProducto(producto);
+                    Boolean grabo = productoMetodo.GrabarProducto(producto);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
@@ -47,22 +47,22 @@ namespace SistemaGestion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnGrilla_Click(sender, e);
+            ArmarGrilla();
         }
 
         //BOTON MODIFICAR
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la modificación?", "Modificar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la modificación?", "Modificar", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
 
             var producto = new Producto();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Precio = txtPrecio.Text;
@@ -70,7 +70,7 @@ namespace SistemaGestion
                     producto.Id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
 
                     var productoMetodo = new ProductoMetodos();
-                    Boolean modifico = productoMetodo.modificarProducto(producto);
+                    Boolean modifico = productoMetodo.ModificarProducto(producto);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,16 +81,13 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            btnGrilla_Click(sender, e);
+            ArmarGrilla();
         }
 
         //BOTON NUEVO
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            txtCantidad.Clear();
-            txtPrecio.Clear();
-            txtDescripcion.Clear();
-            txtDescripcion.Focus();
+            ReiniciarCampos();
         }
 
         //BOTON BUSCAR POR DESCRIPCION
@@ -102,9 +99,9 @@ namespace SistemaGestion
                 {
                     var ds = new DataSet();
                     var dt = new DataTable();
-                    var al = new ProductoMetodos();
+                    var productoMetodo = new ProductoMetodos();
 
-                    dt = al.buscarProducto(txtBuscarDescr.Text);
+                    dt = productoMetodo.BuscarProducto(txtBuscarDescr.Text);
 
                     if (dt.Rows.Count != 0)
                     {
@@ -124,18 +121,7 @@ namespace SistemaGestion
         //BOTON ARMAR LISTA
         private void btnGrilla_Click(object sender, EventArgs e)
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new ProductoMetodos();
-            dt = al.consultarProductos();
-            if (dt.Rows.Count != 0)
-            {
-                dgvLista.DataSource = dt;
-                dgvLista.Columns["ID"].Visible = false;
-            }
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            txtBuscarDescr.Clear();
+            ArmarGrilla();
         }
 
         //CLICK EN CONTENIDO DE CELDA DGV
@@ -151,5 +137,31 @@ namespace SistemaGestion
             {
             }
         }
-    }
+
+        //Armar grilla
+        private void ArmarGrilla()
+        {
+            var ds = new DataSet();
+            var dt = new DataTable();
+            var al = new ProductoMetodos();
+            dt = al.ConsultarProductos();
+            if (dt.Rows.Count != 0)
+            {
+                dgvLista.DataSource = dt;
+                dgvLista.Columns["ID"].Visible = false;
+            }
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtBuscarDescr.Clear();
+        }
+
+        //Reiniciar campos
+        private void ReiniciarCampos()
+        {
+            txtCantidad.Clear();
+            txtPrecio.Clear();
+            txtDescripcion.Clear();
+            txtDescripcion.Focus();
+        }
+}
 }
