@@ -55,6 +55,10 @@
             this.lblAstigOI = new System.Windows.Forms.Label();
             this.lblMiopOI = new System.Windows.Forms.Label();
             this.lblObservaciones = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,12 +224,13 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitar.ForeColor = System.Drawing.Color.White;
-            this.btnQuitar.Location = new System.Drawing.Point(972, 497);
+            this.btnQuitar.Location = new System.Drawing.Point(1152, 504);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(153, 30);
             this.btnQuitar.TabIndex = 35;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnAgregar
             // 
@@ -235,28 +240,30 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(972, 461);
+            this.btnAgregar.Location = new System.Drawing.Point(1152, 468);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(153, 30);
             this.btnAgregar.TabIndex = 36;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cboProducto
             // 
             this.cboProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(743, 477);
+            this.cboProducto.Location = new System.Drawing.Point(198, 459);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(200, 33);
             this.cboProducto.TabIndex = 37;
+            this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.cboProducto_SelectionChangeCommitted);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(487, 480);
+            this.label1.Location = new System.Drawing.Point(39, 466);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 38;
@@ -385,12 +392,54 @@
             this.lblObservaciones.TabIndex = 50;
             this.lblObservaciones.Text = "Observ";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(982, 463);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(99, 31);
+            this.txtCantidad.TabIndex = 52;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(843, 466);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(118, 25);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "CANTIDAD";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(644, 463);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(99, 31);
+            this.txtPrecio.TabIndex = 51;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(503, 469);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 25);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "PRECIO";
+            // 
             // frmPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblAstigOD);
@@ -456,5 +505,9 @@
         private System.Windows.Forms.Label lblAstigOI;
         private System.Windows.Forms.Label lblMiopOI;
         private System.Windows.Forms.Label lblObservaciones;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label label12;
     }
 }

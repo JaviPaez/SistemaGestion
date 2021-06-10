@@ -82,7 +82,7 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable BuscarProducto(string descripcion)
+        public DataTable BuscarProductoDescripcion(string descripcion)
         {
             string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%'";
 
@@ -94,6 +94,23 @@ namespace SistemaGestion
 
             return dt;
             //*****************************************************
+        }
+
+        public DataRow BuscarProductoId(int idProducto)
+        {
+            var dt = new DataTable();
+            var ds = new DataSet();
+            DataRow dr;
+
+            string producto = "select * from PRODUCTOS where ID = " + idProducto;
+            var da = new SqlDataAdapter(producto, conectar());
+
+            da.Fill(ds);
+            dt = ds.Tables["Descripcion"];
+
+            dr = ds.Tables[0].Rows[0];
+
+            return dr;
         }
 
         public DataTable CargarComboProductos()

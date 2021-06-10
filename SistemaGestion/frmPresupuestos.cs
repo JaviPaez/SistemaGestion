@@ -150,7 +150,9 @@ namespace SistemaGestion
             cboIdReceta.Text = "Seleccione";
             dtpFecha.Value = DateTime.Today;
             cboProducto.Text = "Seleccione";
-            cboDniPaciente.Focus();
+            cboDniPaciente.Focus();           
+            txtPrecio.Clear();
+            txtCantidad.Clear();
 
             lblNombrePaciente.Text = "";
             lblFecha.Text = "";
@@ -159,6 +161,43 @@ namespace SistemaGestion
             lblAstigOI.Text = "";
             lblAstigOD.Text = "";
             lblObservaciones.Text = "";
+        }
+
+        //BOTON AGREGAR
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //var pu = Convert.ToDecimal(txtPrecio.Text);
+            //var can = Convert.ToInt32(txtCantidad.Text);
+            //var total = pu * can;
+            //var id = Convert.ToInt32(cmbMercaderia.SelectedValue.ToString());
+
+            //dataGridView1.Rows.Add(cmbMercaderia.Text, txtCantidad.Text, txtPrecio.Text, total, id);
+
+            //cboProducto.Text = "Seleccione";
+            //txtPrecio.Clear();
+            //txtCantidad.Clear();
+        }
+
+        //BOTON QUITAR
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Seleccion del Combo Producto
+        private void cboProducto_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var idProducto = Convert.ToInt32(cboProducto.SelectedValue);
+
+            var productoMetodo = new ProductoMetodos();
+
+            var dr = productoMetodo.BuscarProductoId(idProducto);
+
+            if (dr["Descripcion"] != null)
+            {
+                txtPrecio.Text = Convert.ToString(dr["Precio"]);
+                txtCantidad.Text = "1";
+            }
         }
     }
 }

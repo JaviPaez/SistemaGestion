@@ -35,7 +35,7 @@ namespace SistemaGestion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    producto.Precio = txtPrecio.Text;
+                    producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
                     var productoMetodo = new ProductoMetodos();
@@ -65,7 +65,7 @@ namespace SistemaGestion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    producto.Precio = txtPrecio.Text;
+                    producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.Id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
 
@@ -101,7 +101,7 @@ namespace SistemaGestion
                     var dt = new DataTable();
                     var productoMetodo = new ProductoMetodos();
 
-                    dt = productoMetodo.BuscarProducto(txtBuscarDescr.Text);
+                    dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
 
                     if (dt.Rows.Count != 0)
                     {
