@@ -65,7 +65,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(1076, 495);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 4;
+            this.btnGrabar.TabIndex = 5;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -154,7 +154,7 @@
             this.btnGrilla.Location = new System.Drawing.Point(761, 938);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
-            this.btnGrilla.TabIndex = 18;
+            this.btnGrilla.TabIndex = 6;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
@@ -187,7 +187,7 @@
             this.btnModificar.Location = new System.Drawing.Point(781, 495);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(188, 53);
-            this.btnModificar.TabIndex = 20;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);

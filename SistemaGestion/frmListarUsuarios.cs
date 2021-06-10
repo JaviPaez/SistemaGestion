@@ -16,10 +16,12 @@ namespace SistemaGestion
             InitializeComponent();
         }
 
+        //LOAD
         private void frmListarUsuarios_Load(object sender, EventArgs e)
         {
             var dt = new DataTable();
             var al = new LoginMetodos();
+            txtBuscar.Focus();
         }
 
         //BOTON ARMAR LISTA

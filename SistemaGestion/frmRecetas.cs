@@ -23,6 +23,7 @@ namespace SistemaGestion
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
+            btnCancelar_Click(sender, e);
 
             //Cargar Combo Medicos
             var dt = new DataTable();
@@ -95,6 +96,7 @@ namespace SistemaGestion
             dtpFecha.Value = DateTime.Today;
             txtObserv.Clear();
             lblNombrePaciente.Text = "";
+            cboMedico.Focus();
         }
 
         private void cboDni_SelectedValueChanged(object sender, EventArgs e)

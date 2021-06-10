@@ -50,12 +50,13 @@ namespace SistemaGestion
 
         //BOTON CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
+        {           
             txtDni.Clear();
             txtApellido.Clear();
             txtNombre.Clear();
             txtContraseña.Clear();
             cboRol.Text = "Seleccione";
+            txtDni.Focus();
         }
 
         //LOAD
@@ -70,7 +71,7 @@ namespace SistemaGestion
             cboRol.DisplayMember = "NombreRol";
             cboRol.ValueMember = "ID";
 
-            cboRol.Text = "Seleccione";
+            btnCancelar_Click(sender, e);
         }
 
         //Desplazar desde barra de titulo

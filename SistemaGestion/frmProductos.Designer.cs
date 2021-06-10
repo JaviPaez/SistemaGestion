@@ -144,7 +144,7 @@ namespace SistemaGestion
             this.btnGrabar.Location = new System.Drawing.Point(1049, 434);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 4;
+            this.btnGrabar.TabIndex = 5;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -155,7 +155,7 @@ namespace SistemaGestion
             this.txtBuscarDescr.Location = new System.Drawing.Point(717, 575);
             this.txtBuscarDescr.Name = "txtBuscarDescr";
             this.txtBuscarDescr.Size = new System.Drawing.Size(200, 31);
-            this.txtBuscarDescr.TabIndex = 7;
+            this.txtBuscarDescr.TabIndex = 6;
             // 
             // label5
             // 
@@ -179,7 +179,7 @@ namespace SistemaGestion
             this.btnBuscar.Location = new System.Drawing.Point(996, 571);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -195,7 +195,7 @@ namespace SistemaGestion
             this.btnGrilla.Location = new System.Drawing.Point(719, 934);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
-            this.btnGrilla.TabIndex = 10;
+            this.btnGrilla.TabIndex = 8;
             this.btnGrilla.Text = "Armar Lista";
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
@@ -225,7 +225,7 @@ namespace SistemaGestion
             this.btnModificar.Location = new System.Drawing.Point(769, 434);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(188, 53);
-            this.btnModificar.TabIndex = 12;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);

@@ -20,6 +20,7 @@ namespace SistemaGestion
         private void frmProductos_Load(object sender, EventArgs e)
         {
             btnGrilla_Click(sender, e);
+            btnNuevo_Click(sender, e);
         }
 
         //BOTON GRABAR
