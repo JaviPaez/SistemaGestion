@@ -168,16 +168,23 @@ namespace SistemaGestion
         //BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            var precio = Convert.ToDecimal(txtPrecio.Text);
-            var cantidad = Convert.ToInt32(txtCantidad.Text);
-            var total = precio * cantidad;
-            //var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
-            
-            dgvGrilla.Rows.Add(cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
+            try
+            {
+                var precio = Convert.ToDecimal(txtPrecio.Text);
+                var cantidad = Convert.ToInt32(txtCantidad.Text);
+                var total = precio * cantidad;
+                //var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
 
-            cboProducto.Text = "Seleccione";
-            txtPrecio.Clear();
-            txtCantidad.Clear();
+                dgvGrilla.Rows.Add(cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
+
+                cboProducto.Text = "Seleccione";
+                txtPrecio.Clear();
+                txtCantidad.Clear();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al cargar un producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //BOTON QUITAR
