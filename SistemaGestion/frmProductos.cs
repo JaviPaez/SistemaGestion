@@ -67,7 +67,7 @@ namespace SistemaGestion
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
-                    producto.Id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
+                    producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
                     var productoMetodo = new ProductoMetodos();
                     Boolean modifico = productoMetodo.ModificarProducto(producto);
@@ -105,8 +105,8 @@ namespace SistemaGestion
 
                     if (dt.Rows.Count != 0)
                     {
-                        dgvLista.DataSource = dt;
-                        dgvLista.Columns["ID"].Visible = false;
+                        dgvGrilla.DataSource = dt;
+                        dgvGrilla.Columns["ID"].Visible = false;
                     }
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -129,9 +129,9 @@ namespace SistemaGestion
         {
             try
             {
-                txtDescripcion.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                txtPrecio.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-                txtCantidad.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                txtDescripcion.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
+                txtPrecio.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
+                txtCantidad.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -147,8 +147,8 @@ namespace SistemaGestion
             dt = al.ConsultarProductos();
             if (dt.Rows.Count != 0)
             {
-                dgvLista.DataSource = dt;
-                dgvLista.Columns["ID"].Visible = false;
+                dgvGrilla.DataSource = dt;
+                dgvGrilla.Columns["ID"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

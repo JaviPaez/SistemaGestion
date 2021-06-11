@@ -44,7 +44,7 @@ namespace SistemaGestion
                         dt = usuarioMetodo.BuscarUsuarioApeNom(txtBuscar.Text);
                     else dt = usuarioMetodo.BuscarUsuarioDni(dni);                  
 
-                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+                    if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -65,8 +65,8 @@ namespace SistemaGestion
 
             if (dt.Rows.Count != 0)
             {
-                dgvLista.DataSource = dt;
-                dgvLista.Columns["Contraseña"].Visible = false;
+                dgvGrilla.DataSource = dt;
+                dgvGrilla.Columns["Contraseña"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

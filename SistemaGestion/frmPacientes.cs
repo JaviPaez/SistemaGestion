@@ -123,7 +123,7 @@ namespace SistemaGestion
                     }
                     else dt = al.BuscarPacienteDni(dni);
 
-                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+                    if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -141,12 +141,12 @@ namespace SistemaGestion
         {
             try
             {
-                txtDni.Text = dgvLista.CurrentRow.Cells[0].Value.ToString();
-                txtApellido.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                txtNombre.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-                dtpFecha.Value = Convert.ToDateTime(dgvLista.CurrentRow.Cells[3].Value);
-                cboObraSocial.SelectedItem = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                txtNroAfiliado.Text= dgvLista.CurrentRow.Cells[5].Value.ToString();
+                txtDni.Text = dgvGrilla.CurrentRow.Cells[0].Value.ToString();
+                txtApellido.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
+                dtpFecha.Value = Convert.ToDateTime(dgvGrilla.CurrentRow.Cells[3].Value);
+                cboObraSocial.SelectedItem = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
+                txtNroAfiliado.Text= dgvGrilla.CurrentRow.Cells[5].Value.ToString();
             }
             catch(Exception ex)
             {
@@ -161,7 +161,7 @@ namespace SistemaGestion
             var al = new PacienteMetodos();
             dt = al.ConsultarPacientes();
 
-            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtBuscar.Clear();

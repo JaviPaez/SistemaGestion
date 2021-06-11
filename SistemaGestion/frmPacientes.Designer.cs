@@ -48,9 +48,9 @@ namespace SistemaGestion
             this.label8 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGrilla = new System.Windows.Forms.Button();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -268,22 +268,22 @@ namespace SistemaGestion
             this.btnGrilla.UseVisualStyleBackColor = false;
             this.btnGrilla.Click += new System.EventHandler(this.btnGrilla_Click);
             // 
-            // dgvLista
+            // dgvGrilla
             // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.AllowUserToDeleteRows = false;
-            this.dgvLista.AllowUserToResizeColumns = false;
-            this.dgvLista.AllowUserToResizeRows = false;
-            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(535, 661);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.ReadOnly = true;
-            this.dgvLista.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(647, 228);
-            this.dgvLista.TabIndex = 17;
-            this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
+            this.dgvGrilla.AllowUserToAddRows = false;
+            this.dgvGrilla.AllowUserToDeleteRows = false;
+            this.dgvGrilla.AllowUserToResizeColumns = false;
+            this.dgvGrilla.AllowUserToResizeRows = false;
+            this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrilla.Location = new System.Drawing.Point(535, 661);
+            this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.ReadOnly = true;
+            this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGrilla.Size = new System.Drawing.Size(647, 228);
+            this.dgvGrilla.TabIndex = 17;
+            this.dgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
             // 
             // btnModificar
             // 
@@ -312,7 +312,7 @@ namespace SistemaGestion
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGrilla);
-            this.Controls.Add(this.dgvLista);
+            this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.txtNroAfiliado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboObraSocial);
@@ -332,7 +332,7 @@ namespace SistemaGestion
             this.Name = "frmPacientes";
             this.Text = "frmPacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,7 +358,7 @@ namespace SistemaGestion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnGrilla;
-        private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
     }

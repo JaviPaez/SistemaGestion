@@ -161,21 +161,23 @@ namespace SistemaGestion
             lblAstigOI.Text = "";
             lblAstigOD.Text = "";
             lblObservaciones.Text = "";
+
+            dgvGrilla.Rows.Clear();
         }
 
         //BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //var pu = Convert.ToDecimal(txtPrecio.Text);
-            //var can = Convert.ToInt32(txtCantidad.Text);
-            //var total = pu * can;
-            //var id = Convert.ToInt32(cmbMercaderia.SelectedValue.ToString());
+            var precio = Convert.ToDecimal(txtPrecio.Text);
+            var cantidad = Convert.ToInt32(txtCantidad.Text);
+            var total = precio * cantidad;
+            //var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
+            
+            dgvGrilla.Rows.Add(cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
 
-            //dataGridView1.Rows.Add(cmbMercaderia.Text, txtCantidad.Text, txtPrecio.Text, total, id);
-
-            //cboProducto.Text = "Seleccione";
-            //txtPrecio.Clear();
-            //txtCantidad.Clear();
+            cboProducto.Text = "Seleccione";
+            txtPrecio.Clear();
+            txtCantidad.Clear();
         }
 
         //BOTON QUITAR

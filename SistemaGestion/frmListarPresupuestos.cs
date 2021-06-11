@@ -24,7 +24,7 @@ namespace SistemaGestion
             var al = new PresupuestoMetodos();
             dt = al.ConsultarPresupuestos();
 
-            if (dt.Rows.Count != 0) dgvLista.DataSource = dt;
+            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -39,7 +39,7 @@ namespace SistemaGestion
                     var al = new PresupuestoMetodos();
                     dt = al.BuscarPresupuesto(Convert.ToInt32(txtNro.Text));
 
-                    if (dt.Rows.Count != 0) dgvLista.DataSource = dt; 
+                    if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt; 
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                 }
                 catch (Exception ex)

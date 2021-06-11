@@ -64,7 +64,7 @@ namespace SistemaGestion
             {
                 if (resp == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(dgvLista.CurrentRow.Cells[0].Value);
+                    int id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
                     medico.Id = id;
                     medico.Matricula = txtMatricula.Text;
@@ -97,9 +97,9 @@ namespace SistemaGestion
         {
             try
             {               
-                txtApellido.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                txtNombre.Text = dgvLista.CurrentRow.Cells[2].Value.ToString(); 
-                txtMatricula.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                txtApellido.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString(); 
+                txtMatricula.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -131,8 +131,8 @@ namespace SistemaGestion
 
             if (dt.Rows.Count != 0)
             {
-                dgvLista.DataSource = dt;
-                dgvLista.Columns["ID"].Visible = false;
+                dgvGrilla.DataSource = dt;
+                dgvGrilla.Columns["ID"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
