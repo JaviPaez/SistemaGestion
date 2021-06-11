@@ -60,7 +60,7 @@ namespace SistemaGestion
 
         public DataTable CargarComboRecetas(int dniPaciente)
         {
-            string recetas = "select ID from RECETAS where Dni = " + dniPaciente;
+            string recetas = "select ID,Fecha from RECETAS where Dni = " + dniPaciente + " order by Fecha desc";
 
             //*****************************************************
             var da = new SqlDataAdapter(recetas, conectar());
@@ -74,7 +74,8 @@ namespace SistemaGestion
 
         public SqlDataReader CargarLabelReceta (int idReceta)
         {
-            string receta = "select *,convert (varchar(10),Fecha,103) as FechaOK from RECETAS where ID = " + idReceta;
+            //string receta = "select *,convert (varchar(10),Fecha,103) as FechaOK from RECETAS where ID = " + idReceta;
+            string receta = "select * from RECETAS where ID = " + idReceta;
 
             //*****************************************************
             var comando = new SqlCommand(receta, conectar());

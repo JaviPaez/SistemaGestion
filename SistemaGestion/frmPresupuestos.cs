@@ -100,7 +100,10 @@ namespace SistemaGestion
                 var registro = reg.CargarLabelNomPac(Convert.ToInt32(cboDniPaciente.SelectedValue));
                 if (registro.Read())
                 {
-                    lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
+                    var apellido = registro["Apellido"].ToString();
+                    var nombre = registro["Nombre"].ToString();
+
+                    lblNombrePaciente.Text = apellido + ", " + nombre;
                 }
 
                 //Combo Receta
@@ -109,7 +112,7 @@ namespace SistemaGestion
                 dt3 = rec.CargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
 
                 cboIdReceta.DataSource = dt3;
-                cboIdReceta.DisplayMember = "ID";
+                cboIdReceta.DisplayMember = "Fecha";
                 cboIdReceta.ValueMember = "ID";
 
                 cboIdReceta.Text = "Seleccione";
@@ -129,7 +132,6 @@ namespace SistemaGestion
 
                 if (registro.Read())
                 {
-                    lblFecha.Text = registro["FechaOK"].ToString();
                     lblMiopOI.Text = registro["Miop_OI"].ToString();
                     lblMiopOD.Text = registro["Miop_OD"].ToString();
                     lblAstigOI.Text = registro["Astig_OI"].ToString();
@@ -155,7 +157,6 @@ namespace SistemaGestion
             txtCantidad.Clear();
 
             lblNombrePaciente.Text = "";
-            lblFecha.Text = "";
             lblMiopOI.Text = "";
             lblMiopOD.Text = "";
             lblAstigOI.Text = "";
@@ -190,7 +191,11 @@ namespace SistemaGestion
         //BOTON QUITAR
         private void btnQuitar_Click(object sender, EventArgs e)
         {
+            if (dgvGrilla.CurrentRow == null) return;
 
+            DialogResult respuesta = MessageBox.Show("¿Confirma eliminar el producto seleccionado?", "Quitar", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if ((respuesta == DialogResult.Yes)) dgvGrilla.Rows.Remove(dgvGrilla.CurrentRow);            
         }
 
         //Seleccion del Combo Producto

@@ -45,11 +45,14 @@
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.lblAstigOD = new System.Windows.Forms.Label();
             this.lblMiopOD = new System.Windows.Forms.Label();
             this.lblAstigOI = new System.Windows.Forms.Label();
@@ -59,10 +62,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -294,6 +293,30 @@
             this.dgvGrilla.Size = new System.Drawing.Size(647, 228);
             this.dgvGrilla.TabIndex = 39;
             // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // precioUnitario
+            // 
+            this.precioUnitario.HeaderText = "Precio Unitario";
+            this.precioUnitario.Name = "precioUnitario";
+            this.precioUnitario.ReadOnly = true;
+            // 
+            // subTotal
+            // 
+            this.subTotal.HeaderText = "SubTotal";
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -337,17 +360,6 @@
             this.label10.Size = new System.Drawing.Size(189, 25);
             this.label10.TabIndex = 43;
             this.label10.Text = "Astigmatismo O.D.";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(843, 160);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(72, 25);
-            this.lblFecha.TabIndex = 49;
-            this.lblFecha.Text = "Fecha";
             // 
             // lblAstigOD
             // 
@@ -442,30 +454,6 @@
             this.label12.TabIndex = 53;
             this.label12.Text = "PRECIO";
             // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // precioUnitario
-            // 
-            this.precioUnitario.HeaderText = "Precio Unitario";
-            this.precioUnitario.Name = "precioUnitario";
-            this.precioUnitario.ReadOnly = true;
-            // 
-            // subTotal
-            // 
-            this.subTotal.HeaderText = "SubTotal";
-            this.subTotal.Name = "subTotal";
-            this.subTotal.ReadOnly = true;
-            // 
             // frmPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,7 +465,6 @@
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblObservaciones);
-            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblAstigOD);
             this.Controls.Add(this.lblMiopOD);
             this.Controls.Add(this.lblAstigOI);
@@ -535,7 +522,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblAstigOD;
         private System.Windows.Forms.Label lblMiopOD;
         private System.Windows.Forms.Label lblAstigOI;
