@@ -30,15 +30,25 @@ namespace SistemaGestion
             {
                 var idMax = UltimoId();
 
-                var grabarReceta = "set dateformat dmy INSERT INTO RECETAS(ID,IdMedico,Dni,Miop_OI,Miop_OD,Astig_OI,Astig_OD,Fecha,Observaciones)" + " VALUES(" + idMax + "," + receta.IdMedico + "," + receta.Dni + ",'" + receta.Miop_OI + "','" + receta.Miop_OD + "','" + receta.Astig_OI + "','" + receta.Astig_OD + "','" + receta.Fecha + "','" + receta.Observaciones + "')";
+                var grabarReceta = "set dateformat dmy INSERT INTO RECETAS(ID, IdMedico, Dni, Miop_OI, Miop_OD, Astig_OI, Astig_OD, Fecha, Observaciones) VALUES(@ID, @IdMedico, @Dni, @Miop_OI, @Miop_OD, @Astig_OI, @Astig_OD, @Fecha, @Observaciones)";
 
                 SqlCommand com = new SqlCommand(grabarReceta, conectar());
+
+                com.Parameters.AddWithValue("@ID", idMax);
+                com.Parameters.AddWithValue("@IdMedico", receta.IdMedico);
+                com.Parameters.AddWithValue("@Dni", receta.Dni);
+                com.Parameters.AddWithValue("@Miop_OI", receta.Miop_OI);
+                com.Parameters.AddWithValue("@Miop_OD", receta.Miop_OD);
+                com.Parameters.AddWithValue("@Astig_OI", receta.Astig_OI);
+                com.Parameters.AddWithValue("@Astig_OD", receta.Astig_OD);
+                com.Parameters.AddWithValue("@Fecha", receta.Fecha);
+                com.Parameters.AddWithValue("@Observaciones", receta.Observaciones);
 
                 com.ExecuteNonQuery();
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;              
             }            
@@ -74,7 +84,6 @@ namespace SistemaGestion
 
         public SqlDataReader CargarLabelReceta (int idReceta)
         {
-            //string receta = "select *,convert (varchar(10),Fecha,103) as FechaOK from RECETAS where ID = " + idReceta;
             string receta = "select * from RECETAS where ID = " + idReceta;
 
             //*****************************************************

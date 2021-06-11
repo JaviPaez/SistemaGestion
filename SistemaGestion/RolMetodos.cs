@@ -11,7 +11,7 @@ namespace SistemaGestion
     {
         public DataTable CargarComboRoles()
         {
-            string roles = "select ID, NombreRol from ROLES order by ID";
+            string roles = "select ID, NombreRol from ROLES order by NombreRol";
 
             //*****************************************************
             var da = new SqlDataAdapter(roles, conectar());

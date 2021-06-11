@@ -18,7 +18,7 @@ namespace SistemaGestion
 
         //LOAD
         private void frmPresupuestos_Load(object sender, EventArgs e)
-        {            
+        {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
@@ -60,6 +60,8 @@ namespace SistemaGestion
                       MessageBoxIcon.Question);
 
             var presupuesto = new Presupuesto();
+            var i = false;
+
             try
             {
                 if (respuesta == DialogResult.Yes)
@@ -67,15 +69,37 @@ namespace SistemaGestion
                     presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
                     presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
-                    presupuesto.Fecha = dtpFecha.Value;    
+                    presupuesto.Fecha = dtpFecha.Value;
 
                     var presupuestoMetodo = new PresupuestoMetodos();
-                    Boolean grabo = presupuestoMetodo.GrabarPresupuesto(presupuesto);
+                    var maxId = presupuestoMetodo.GrabarPresupuesto(presupuesto);
 
-                    if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (maxId != 0)
+                    {
+                        var detallePresupuesto = new DetallePresupuesto();
+                        var detallePresupuestoMetodo = new DetallePresupuestoMetodos();
+
+                        //Recorro la grilla - Grabo DetallePresupuesto
+                        foreach (DataGridViewRow fila in dgvGrilla.Rows)
+                        {
+                            detallePresupuesto.IdProducto = Convert.ToInt32(fila.Cells[0].Value);
+                            detallePresupuesto.NroPresupuesto = maxId;
+                            detallePresupuesto.Cantidad = Convert.ToInt32(fila.Cells[2].Value);
+                            detallePresupuesto.PrecioUnitario = Convert.ToDecimal(fila.Cells[3].Value);
+                            if (detallePresupuesto.Cantidad != 0)
+                            {
+                                i = detallePresupuestoMetodo.GrabarDetallePresupuesto(detallePresupuesto);
+                            }
+                        }
+
+                        if (i == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    else MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }     
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -152,7 +176,7 @@ namespace SistemaGestion
             cboIdReceta.Text = "Seleccione";
             dtpFecha.Value = DateTime.Today;
             cboProducto.Text = "Seleccione";
-            cboDniPaciente.Focus();           
+            cboDniPaciente.Focus();
             txtPrecio.Clear();
             txtCantidad.Clear();
 
@@ -174,15 +198,15 @@ namespace SistemaGestion
                 var precio = Convert.ToDecimal(txtPrecio.Text);
                 var cantidad = Convert.ToInt32(txtCantidad.Text);
                 var total = precio * cantidad;
-                //var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
+                var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
 
-                dgvGrilla.Rows.Add(cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
+                dgvGrilla.Rows.Add(idProducto, cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
 
                 cboProducto.Text = "Seleccione";
                 txtPrecio.Clear();
                 txtCantidad.Clear();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar un producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -193,9 +217,9 @@ namespace SistemaGestion
         {
             if (dgvGrilla.CurrentRow == null) return;
 
-            DialogResult respuesta = MessageBox.Show("¿Confirma eliminar el producto seleccionado?", "Quitar", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("¿Confirma eliminar el producto seleccionado?", "Quitar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if ((respuesta == DialogResult.Yes)) dgvGrilla.Rows.Remove(dgvGrilla.CurrentRow);            
+            if ((respuesta == DialogResult.Yes)) dgvGrilla.Rows.Remove(dgvGrilla.CurrentRow);
         }
 
         //Seleccion del Combo Producto

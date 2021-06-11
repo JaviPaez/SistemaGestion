@@ -30,15 +30,20 @@ namespace SistemaGestion
             {
                 var idMax = UltimoId();
 
-                var grabarProducto = "INSERT INTO PRODUCTOS(ID,Descripcion,Precio,Cantidad)" + " VALUES(" + idMax + ",'" + producto.Descripcion + "','" + producto.Precio + "'," + producto.Cantidad +  ")";
+                var grabarProducto = "INSERT INTO PRODUCTOS(ID, Descripcion, Precio, Cantidad) VALUES(@ID, @Descripcion, @Precio, @Cantidad)";
 
                 SqlCommand com = new SqlCommand(grabarProducto, conectar());
+                
+                com.Parameters.AddWithValue("@ID", idMax);
+                com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                com.Parameters.AddWithValue("@Precio", producto.Precio);
+                com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
 
                 com.ExecuteNonQuery();
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;              
             }            
@@ -48,11 +53,11 @@ namespace SistemaGestion
         {
             try
             {
-                var modificarProducto = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where Id=@Id";
+                var modificarProducto = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where ID=@ID";
 
                 SqlCommand com = new SqlCommand(modificarProducto, conectar());
 
-                com.Parameters.AddWithValue("@Id", producto.Id);
+                com.Parameters.AddWithValue("@ID", producto.Id);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
                 com.Parameters.AddWithValue("@Precio", producto.Precio);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
@@ -61,7 +66,7 @@ namespace SistemaGestion
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -70,7 +75,7 @@ namespace SistemaGestion
         //CONSULTAR PRODUCTOS
         public DataTable ConsultarProductos()
         {
-            string productos = "select * from PRODUCTOS";
+            string productos = "select * from PRODUCTOS order by Descripcion";
 
             //*****************************************************
             var da = new SqlDataAdapter(productos, conectar());
@@ -84,7 +89,7 @@ namespace SistemaGestion
 
         public DataTable BuscarProductoDescripcion(string descripcion)
         {
-            string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%'";
+            string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%' order by Descripcion";
 
             //*****************************************************
             var da = new SqlDataAdapter(producto, conectar());
@@ -115,7 +120,7 @@ namespace SistemaGestion
 
         public DataTable CargarComboProductos()
         {
-            string productos = "select ID, Descripcion from PRODUCTOS order by ID";
+            string productos = "select ID, Descripcion from PRODUCTOS order by Descripcion";
 
             //*****************************************************
             var da = new SqlDataAdapter(productos, conectar());

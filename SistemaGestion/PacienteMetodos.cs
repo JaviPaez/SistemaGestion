@@ -12,16 +12,23 @@ namespace SistemaGestion
         public Boolean GrabarPaciente(Paciente paciente)
         {
             try
-            {     
-                var grabarPaciente = "set dateformat dmy INSERT INTO PACIENTES(Dni,Apellido,Nombre,FechaNac,ObraSocial,NroAfiliado)" + " VALUES(" + paciente.Dni + ",'" + paciente.Apellido + "','" + paciente.Nombre + "','" + paciente.FechaNac + "','" + paciente.ObraSocial + "'," + paciente.NroAfiliado + ")";
+            {
+                var grabarPaciente = "set dateformat dmy INSERT INTO PACIENTES (Dni, Apellido, Nombre, FechaNac, ObraSocial, NroAfiliado) VALUES(@Dni, @Apellido, @Nombre, @ObraSocial, @NroAfiliado)";
 
                 SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+
+                com.Parameters.AddWithValue("@Dni", paciente.Dni);
+                com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
+                com.Parameters.AddWithValue("@Nombre", paciente.Nombre);
+                com.Parameters.AddWithValue("@FechaNac", paciente.FechaNac);
+                com.Parameters.AddWithValue("@ObraSocial", paciente.ObraSocial);
+                com.Parameters.AddWithValue("@NroAfiliado", paciente.NroAfiliado);
 
                 com.ExecuteNonQuery();
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -46,7 +53,7 @@ namespace SistemaGestion
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -55,7 +62,7 @@ namespace SistemaGestion
         //CONSULTAR PACIENTES
         public DataTable ConsultarPacientes()
         {
-            string pacientes = "select * from PACIENTES";
+            string pacientes = "select * from PACIENTES order by Dni";
           
             //*****************************************************
             var da = new SqlDataAdapter(pacientes, conectar());
@@ -97,7 +104,7 @@ namespace SistemaGestion
 
         public DataTable CargarComboPacientes()
         {
-            string pacientes = "select Dni,Apellido,Nombre from PACIENTES";
+            string pacientes = "select Dni, Apellido, Nombre from PACIENTES order by Dni";
 
             //*****************************************************
             var da = new SqlDataAdapter(pacientes, conectar());

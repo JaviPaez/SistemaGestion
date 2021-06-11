@@ -24,29 +24,35 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean GrabarPresupuesto(Presupuesto presupuesto)
+        public int GrabarPresupuesto(Presupuesto presupuesto)
         {
             try
             {
                 var idMax = UltimoId();
 
-                var grabarPresupuesto = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro,DniUsuario,DniPaciente,IdReceta,Fecha,Total)" + " VALUES(" + idMax + "," + presupuesto.DniUsuario + "," + presupuesto.DniPaciente + "," + presupuesto.IdReceta + ",'" + presupuesto.Fecha + "','" + presupuesto.Total + "')";
+                var grabarPresupuesto = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro, DniUsuario, DniPaciente, IdReceta, Fecha) VALUES (@Nro, @DniUsuario, @DniPaciente, @IdReceta, @Fecha)";
 
                 SqlCommand com = new SqlCommand(grabarPresupuesto, conectar());
 
+                com.Parameters.AddWithValue("@Nro", idMax);
+                com.Parameters.AddWithValue("@DniUsuario", presupuesto.DniUsuario);
+                com.Parameters.AddWithValue("@DniPaciente", presupuesto.DniPaciente);
+                com.Parameters.AddWithValue("@IdReceta", presupuesto.IdReceta);
+                com.Parameters.AddWithValue("@Fecha", presupuesto.Fecha);
+
                 com.ExecuteNonQuery();
 
-                return true;
+                return idMax;
             }
-            catch (Exception ex)
+            catch
             {
-                return false;              
+                return 0;              
             }            
         }
 
         public DataTable ConsultarPresupuestos()
         {
-            string presupuestos = "select * from PRESUPUESTOS";    
+            string presupuestos = "select * from PRESUPUESTOS order by Fecha desc";    
 
             //*****************************************************
             var da = new SqlDataAdapter(presupuestos, conectar());

@@ -23,19 +23,25 @@ namespace SistemaGestion
             //*****************************************************
         }      
                
-        public Boolean GrabarUsuario(Usuario usu)
+        public Boolean GrabarUsuario(Usuario usuario)
         {
             try
             {  
-                var grabarUsuario = "INSERT INTO Usuarios(Dni,IdRol,Apellido,Nombre,Contraseña)" + " VALUES(" + usu.Dni+ " ," + usu.IdRol + ",'" + usu.Apellido + "','" + usu.Nombre + "','" + usu.Contraseña + "')";
+                var grabarUsuario = "INSERT INTO Usuarios(Dni, IdRol, Apellido, Nombre, Contraseña) VALUES(@Dni, @IdRol, @Apellido, @Nombre, @Contraseña)";
 
                 SqlCommand com = new SqlCommand(grabarUsuario, conectar());
+
+                com.Parameters.AddWithValue("@Dni", usuario.Dni);
+                com.Parameters.AddWithValue("@IdRol", usuario.IdRol);
+                com.Parameters.AddWithValue("@Apellido", usuario.Apellido);
+                com.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                com.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
 
                 com.ExecuteNonQuery();
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;              
             }            

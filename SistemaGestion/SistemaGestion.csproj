@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DetallePresupuestoMetodos.cs" />
     <Compile Include="frmListarPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +96,7 @@
     <Compile Include="Medico.cs" />
     <Compile Include="PacienteMetodos.cs" />
     <Compile Include="PacienteDireccion.cs" />
-    <Compile Include="PresupuestoProducto.cs" />
+    <Compile Include="DetallePresupuesto.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="UsuarioDireccion.cs" />
     <Compile Include="PacienteeMail.cs" />

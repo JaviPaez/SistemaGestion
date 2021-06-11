@@ -31,15 +31,20 @@ namespace SistemaGestion
             {
                 var idMax = UltimoId();
 
-                var grabarMedico = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula)" + " VALUES(" + idMax + ",'" + medico.Apellido + "','" + medico.Nombre + "','" + medico.Matricula + "')";
+                var grabarMedico = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula) VALUES(@ID, @Apellido, @Nombre, @Matricula)";
 
                 SqlCommand com = new SqlCommand(grabarMedico, conectar());
+
+                com.Parameters.AddWithValue("@ID",idMax);
+                com.Parameters.AddWithValue("@Apellido", medico.Apellido);
+                com.Parameters.AddWithValue("@Nombre", medico.Nombre);
+                com.Parameters.AddWithValue("@Matricula", medico.Matricula);
 
                 com.ExecuteNonQuery();
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -49,7 +54,7 @@ namespace SistemaGestion
         {
             try
             {
-                var modificarMedico = "set dateformat dmy UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
+                var modificarMedico = "UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
 
                 SqlCommand com = new SqlCommand(modificarMedico, conectar());
 
@@ -62,7 +67,7 @@ namespace SistemaGestion
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -71,7 +76,7 @@ namespace SistemaGestion
         //CONSULTAR MEDICOS
         public DataTable ConsultarMedicos()
         {
-            string medicos = "select * from MEDICOS order by ID";
+            string medicos = "select * from MEDICOS order by Apellido";
 
             //*****************************************************
             var da = new SqlDataAdapter(medicos, conectar());
