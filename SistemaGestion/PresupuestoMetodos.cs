@@ -64,9 +64,9 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable BuscarPresupuesto(int nro)
+        public DataTable BuscarPresupuesto(int dni)
         {
-            string presupuesto = "select * from PRESUPUESTOS where Nro = " + nro;
+            string presupuesto = "select Nro as 'Nº Presupuesto', Dni, Apellido + ', ' + Nombre as 'Apellido, Nombre', Fecha, Descripcion, PrecioUnitario, DetallePresupuesto.Cantidad from Presupuestos, DetallePresupuesto, Productos, Pacientes where DetallePresupuesto.NroPresupuesto = Presupuestos.Nro and DetallePresupuesto.IdProducto = Productos.ID and Dni = " + dni + "order by Fecha desc";
 
             //*****************************************************
             var da = new SqlDataAdapter(presupuesto, conectar());

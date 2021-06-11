@@ -19,15 +19,10 @@ namespace SistemaGestion
         //BOTON ARMAR LISTA 
         private void btnGrilla_Click(object sender, EventArgs e)
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new PresupuestoMetodos();
-            dt = al.ConsultarPresupuestos();
-
-            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ArmarGrilla();
         }
 
+        //BOTON BUSCAR POR NRO
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtNro.Text != string.Empty)
@@ -44,10 +39,31 @@ namespace SistemaGestion
                 }
                 catch (Exception ex)
                 {                    
-                    MessageBox.Show("Ingrese el número de presupuesto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Error al buscar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else MessageBox.Show("Ingrese el número de presupuesto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //Armar Grilla
+        private void ArmarGrilla()
+        {
+            var ds = new DataSet();
+            var dt = new DataTable();
+            var al = new PresupuestoMetodos();
+            dt = al.ConsultarPresupuestos();
+
+            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtNro.Clear();
+            txtNro.Focus();
+        }
+
+        //LOAD
+        private void frmListarPresupuestos_Load(object sender, EventArgs e)
+        {
+            ArmarGrilla();
         }
     }
 }
