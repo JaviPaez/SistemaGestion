@@ -85,7 +85,7 @@ namespace SistemaGestion
             this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtDni.Location = new System.Drawing.Point(858, 159);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(200, 31);
+            this.txtDni.Size = new System.Drawing.Size(265, 31);
             this.txtDni.TabIndex = 0;
             // 
             // btnNuevo
@@ -109,7 +109,7 @@ namespace SistemaGestion
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtApellido.Location = new System.Drawing.Point(858, 203);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(200, 31);
+            this.txtApellido.Size = new System.Drawing.Size(265, 31);
             this.txtApellido.TabIndex = 1;
             // 
             // label2
@@ -128,7 +128,7 @@ namespace SistemaGestion
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNombre.Location = new System.Drawing.Point(858, 244);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 31);
+            this.txtNombre.Size = new System.Drawing.Size(265, 31);
             this.txtNombre.TabIndex = 2;
             // 
             // label3
@@ -169,7 +169,7 @@ namespace SistemaGestion
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dtpFecha.Location = new System.Drawing.Point(858, 288);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 31);
+            this.dtpFecha.Size = new System.Drawing.Size(265, 31);
             this.dtpFecha.TabIndex = 3;
             // 
             // label6
@@ -188,14 +188,30 @@ namespace SistemaGestion
             this.cboObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboObraSocial.FormattingEnabled = true;
             this.cboObraSocial.Items.AddRange(new object[] {
-            "Seleccione",
             "Apross",
+            "Bienestar Salud",
+            "Consolidar",
+            "Ferroviaria OSFE",
+            "Grupo Sancor Salud",
+            "La Caja",
+            "MET medicina privada",
+            "Nivel Salud",
+            "OMINT",
             "OSDE",
+            "Parque Salud",
+            "Personal Aeronáutico OSPA",
+            "Personal Asociado a la Asociación Mutual SANCOR",
+            "PREME medicina privada",
             "Prevencion Salud",
-            "SIPSSA"});
+            "Provincia",
+            "SIPSSA medicina privada",
+            "Swiss Medical Group",
+            "Trabajadores Hoteleros y Gastronómicos de la República Argentina (O.S.U.T.H.G.R.A" +
+                ".)"});
             this.cboObraSocial.Location = new System.Drawing.Point(858, 332);
             this.cboObraSocial.Name = "cboObraSocial";
-            this.cboObraSocial.Size = new System.Drawing.Size(200, 33);
+            this.cboObraSocial.Size = new System.Drawing.Size(265, 33);
+            this.cboObraSocial.Sorted = true;
             this.cboObraSocial.TabIndex = 4;
             // 
             // txtNroAfiliado
@@ -203,7 +219,7 @@ namespace SistemaGestion
             this.txtNroAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNroAfiliado.Location = new System.Drawing.Point(858, 377);
             this.txtNroAfiliado.Name = "txtNroAfiliado";
-            this.txtNroAfiliado.Size = new System.Drawing.Size(200, 31);
+            this.txtNroAfiliado.Size = new System.Drawing.Size(265, 31);
             this.txtNroAfiliado.TabIndex = 5;
             // 
             // label7

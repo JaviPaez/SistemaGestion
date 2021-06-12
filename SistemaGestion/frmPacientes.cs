@@ -175,7 +175,7 @@ namespace SistemaGestion
             txtNombre.Clear();
             txtNroAfiliado.Clear();
             dtpFecha.Value = DateTime.Today;
-            cboObraSocial.SelectedIndex = 0;
+            cboObraSocial.Text = "Seleccione";
             txtDni.Focus();
         }
     }
