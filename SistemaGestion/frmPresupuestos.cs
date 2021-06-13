@@ -50,6 +50,8 @@ namespace SistemaGestion
             cboProducto.DisplayMember = "Descripcion";
             cboProducto.ValueMember = "ID";
 
+            dgvGrilla.Columns[0].Visible = false;
+
             ReiniciarCampos();
         }
 
