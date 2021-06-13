@@ -143,7 +143,7 @@ namespace SistemaGestion
 
                 cboIdReceta.Text = "Seleccione";
             }
-            catch (Exception ex)
+            catch
             {
             }
         }
@@ -165,7 +165,7 @@ namespace SistemaGestion
                     lblObservaciones.Text = registro["Observaciones"].ToString();
                 }
             }
-            catch (Exception ex)
+            catch
             {
             }
         }
