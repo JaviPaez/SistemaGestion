@@ -64,9 +64,9 @@ namespace SistemaGestion
             var presupuesto = new Presupuesto();
             var i = false;
 
-            try
+            if (respuesta == DialogResult.Yes)
             {
-                if (respuesta == DialogResult.Yes)
+                try
                 {
                     presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
@@ -101,10 +101,10 @@ namespace SistemaGestion
 
                     else MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             ReiniciarCampos();

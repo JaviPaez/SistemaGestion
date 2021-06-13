@@ -256,9 +256,9 @@
             // 
             this.cboProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(198, 459);
+            this.cboProducto.Location = new System.Drawing.Point(188, 463);
             this.cboProducto.Name = "cboProducto";
-            this.cboProducto.Size = new System.Drawing.Size(200, 33);
+            this.cboProducto.Size = new System.Drawing.Size(292, 33);
             this.cboProducto.TabIndex = 37;
             this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.cboProducto_SelectionChangeCommitted);
             // 
@@ -267,7 +267,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 466);
+            this.label1.Location = new System.Drawing.Point(39, 470);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 38;
