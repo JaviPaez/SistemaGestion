@@ -9,6 +9,7 @@ namespace SistemaGestion
 {
     class PacienteMetodos : Conexion
     {
+        //CREATE
         public Boolean GrabarPaciente(Paciente paciente)
         {
             try
@@ -114,6 +115,7 @@ namespace SistemaGestion
             }
         }
 
+        //UPDATE
         public Boolean ModificarPaciente(Paciente paciente)
         {
             try
@@ -139,55 +141,78 @@ namespace SistemaGestion
             }
         }
 
-        public int UltimoIdTelefono()
+        public Boolean ModificarTelefonoPaciente(PacienteTelefono telPaciente)
         {
             try
             {
-                var maxId = "select max(ID) + 1 from PacienteTelefono";
+                var modificarPaciente = "UPDATE PacienteTelefono SET NroTelefono=@NroTelefono where Dni=@Dni";
 
-                //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
-                return (int)com.ExecuteScalar();
+                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+
+                com.Parameters.AddWithValue("@Dni", telPaciente.Dni);
+                com.Parameters.AddWithValue("@NroTelefono", telPaciente.NroTelefono);
+
+                com.ExecuteNonQuery();
+
+                return true;
             }
             catch
             {
-                return 1;
+                return false;
             }
         }
 
-        public int UltimoIdDireccion()
+        public Boolean ModificarDireccionPaciente(PacienteDireccion direccionPaciente)
         {
             try
             {
-                var maxId = "select max(ID) + 1 from PacienteDireccion";
+                var modificarPaciente = "UPDATE PacienteDireccion SET Provincia=@Provincia, Localidad=@Localidad, Calle=@Calle, Nro=@Nro, Piso=@Piso, Dpto=@Dpto, Manzana=@Manzana, Lote=@Lote, Barrio=@Barrio where Dni=@Dni";
 
-                //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
-                return (int)com.ExecuteScalar();
+                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+
+                com.Parameters.AddWithValue("@Dni", direccionPaciente.Dni);
+                com.Parameters.AddWithValue("@Provincia", direccionPaciente.Provincia);
+                com.Parameters.AddWithValue("@Localidad", direccionPaciente.Localidad);
+                com.Parameters.AddWithValue("@Calle", direccionPaciente.Calle);
+                com.Parameters.AddWithValue("@Nro", direccionPaciente.Nro);
+                com.Parameters.AddWithValue("@Piso", direccionPaciente.Piso);
+                com.Parameters.AddWithValue("@Dpto", direccionPaciente.Dpto);
+                com.Parameters.AddWithValue("@Manzana", direccionPaciente.Manzana);
+                com.Parameters.AddWithValue("@Lote", direccionPaciente.Lote);
+                com.Parameters.AddWithValue("@Barrio", direccionPaciente.Barrio);
+
+                com.ExecuteNonQuery();
+
+                return true;
             }
             catch
             {
-                return 1;
+                return false;
             }
         }
 
-        public int UltimoIdMail()
+        public Boolean ModificarMailPaciente(PacienteeMail mailPaciente)
         {
             try
             {
-                var maxId = "select max(ID) + 1 from PacienteeMail";
+                var modificarPaciente = "UPDATE PacienteeMail SET eMail=@eMail where Dni=@Dni";
 
-                //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
-                return (int)com.ExecuteScalar();
+                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+
+                com.Parameters.AddWithValue("@Dni", mailPaciente.Dni);
+                com.Parameters.AddWithValue("@eMail", mailPaciente.eMail);
+
+                com.ExecuteNonQuery();
+
+                return true;
             }
             catch
             {
-                return 1;
+                return false;
             }
         }
 
-        //CONSULTAR PACIENTES
+        //CONSULTAS
         public DataTable ConsultarPacientes()
         {
             string pacientes = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Pacientes.Dni";
@@ -255,6 +280,54 @@ namespace SistemaGestion
                        
             return registro;
             //*****************************************************
+        }
+
+        public int UltimoIdTelefono()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from PacienteTelefono";
+
+                //**************************************************
+                SqlCommand com = new SqlCommand(maxId, conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
+        public int UltimoIdDireccion()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from PacienteDireccion";
+
+                //**************************************************
+                SqlCommand com = new SqlCommand(maxId, conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
+        public int UltimoIdMail()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from PacienteeMail";
+
+                //**************************************************
+                SqlCommand com = new SqlCommand(maxId, conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
         }
     }
 }

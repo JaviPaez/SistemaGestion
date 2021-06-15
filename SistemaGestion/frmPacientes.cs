@@ -133,6 +133,9 @@ namespace SistemaGestion
 
                     var pacienteMetodo = new PacienteMetodos();
                     Boolean modifico = pacienteMetodo.ModificarPaciente(paciente);
+                    pacienteMetodo.ModificarMailPaciente(mailPaciente);
+                    pacienteMetodo.ModificarTelefonoPaciente(telPaciente);
+                    pacienteMetodo.ModificarDireccionPaciente(direccPaciente);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
