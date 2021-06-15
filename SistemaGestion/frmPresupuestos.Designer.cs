@@ -77,7 +77,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(1328, 924);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
-            this.btnGrabar.TabIndex = 7;
+            this.btnGrabar.TabIndex = 10;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -93,7 +93,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(1086, 924);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -174,7 +174,7 @@
             this.cboIdReceta.Location = new System.Drawing.Point(916, 115);
             this.cboIdReceta.Name = "cboIdReceta";
             this.cboIdReceta.Size = new System.Drawing.Size(200, 33);
-            this.cboIdReceta.TabIndex = 2;
+            this.cboIdReceta.TabIndex = 1;
             this.cboIdReceta.SelectionChangeCommitted += new System.EventHandler(this.cboIdReceta_SelectionChangeCommitted);
             // 
             // cboDniPaciente
@@ -190,7 +190,7 @@
             this.cboDniPaciente.Location = new System.Drawing.Point(358, 115);
             this.cboDniPaciente.Name = "cboDniPaciente";
             this.cboDniPaciente.Size = new System.Drawing.Size(200, 33);
-            this.cboDniPaciente.TabIndex = 1;
+            this.cboDniPaciente.TabIndex = 0;
             this.cboDniPaciente.SelectionChangeCommitted += new System.EventHandler(this.cboDniPaciente_SelectionChangeCommitted);
             // 
             // cboUsuario
@@ -206,7 +206,7 @@
             this.cboUsuario.Location = new System.Drawing.Point(1392, 107);
             this.cboUsuario.Name = "cboUsuario";
             this.cboUsuario.Size = new System.Drawing.Size(200, 33);
-            this.cboUsuario.TabIndex = 0;
+            this.cboUsuario.TabIndex = 2;
             // 
             // lblNombrePaciente
             // 
@@ -231,7 +231,7 @@
             this.btnQuitar.Location = new System.Drawing.Point(1152, 504);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(153, 30);
-            this.btnQuitar.TabIndex = 35;
+            this.btnQuitar.TabIndex = 8;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -247,7 +247,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(1152, 468);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(153, 30);
-            this.btnAgregar.TabIndex = 36;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -259,7 +259,7 @@
             this.cboProducto.Location = new System.Drawing.Point(188, 463);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(292, 33);
-            this.cboProducto.TabIndex = 37;
+            this.cboProducto.TabIndex = 4;
             this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.cboProducto_SelectionChangeCommitted);
             // 
             // label1
@@ -432,7 +432,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(982, 463);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
-            this.txtCantidad.TabIndex = 52;
+            this.txtCantidad.TabIndex = 6;
             // 
             // label11
             // 
@@ -451,7 +451,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(644, 463);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(99, 31);
-            this.txtPrecio.TabIndex = 51;
+            this.txtPrecio.TabIndex = 5;
             // 
             // label12
             // 
