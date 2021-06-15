@@ -7,16 +7,16 @@ namespace SistemaGestion
 {
     class PacienteDireccion
     {
-        int Id { get; set; }
-        int Dni { get; set; }        
-        string Provincia { get; set; }
-        string Localidad { get; set; }
-        string Calle { get; set; }
-        int Nro { get; set; }
-        string Piso { get; set; }
-        string Dpto { get; set; }
-        string Manzana { get; set; }
-        string Lote { get; set; }
-        string Barrio { get; set; }
+        public int Id { get; set; }
+        public int Dni { get; set; }
+        public string Provincia { get; set; }
+        public string Localidad { get; set; }
+        public string Calle { get; set; }
+        public int Nro { get; set; }
+        public string Piso { get; set; }
+        public string Dpto { get; set; }
+        public string Manzana { get; set; }
+        public string Lote { get; set; }
+        public string Barrio { get; set; }
     }
 }

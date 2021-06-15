@@ -35,6 +35,8 @@ namespace SistemaGestion
 
             var paciente = new Paciente();
             var telPaciente = new PacienteTelefono();
+            var mailPaciente = new PacienteeMail();
+            var direccPaciente = new PacienteDireccion();
 
             try
             {
@@ -47,13 +49,33 @@ namespace SistemaGestion
                     paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
                     paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
 
+                    //Telefono
                     telPaciente.Dni = Convert.ToInt32(txtDni.Text);
                     telPaciente.NroTelefono = Convert.ToInt64(txtTelefono.Text);
 
+                    //Mail
+                    mailPaciente.Dni = Convert.ToInt32(txtDni.Text);
+                    mailPaciente.eMail = txtMail.Text;
+
+                    //Direccion
+                    direccPaciente.Dni= Convert.ToInt32(txtDni.Text);
+                    direccPaciente.Provincia = txtProvincia.Text;
+                    direccPaciente.Localidad = txtLocalidad.Text;
+                    direccPaciente.Calle = txtCalle.Text;
+                    direccPaciente.Nro = Convert.ToInt32(txtNro.Text);
+                    direccPaciente.Piso = txtPiso.Text;
+                    direccPaciente.Dpto = txtDpto.Text;
+                    direccPaciente.Manzana = txtManzana.Text;
+                    direccPaciente.Lote = txtLote.Text;
+                    direccPaciente.Barrio = txtBarrio.Text;
+
+                    //Grabo
                     var pacienteMetodo = new PacienteMetodos();
                     
                     Boolean grabo = pacienteMetodo.GrabarPaciente(paciente);
-                    pacienteMetodo.GrabarTelPaciente(telPaciente);
+                    pacienteMetodo.GrabarTelefonoPaciente(telPaciente);
+                    pacienteMetodo.GrabarMailPaciente(mailPaciente);
+                    pacienteMetodo.GrabarDireccionPaciente(direccPaciente);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -133,7 +155,7 @@ namespace SistemaGestion
                     if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -155,7 +177,7 @@ namespace SistemaGestion
                 cboObraSocial.SelectedItem = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
                 txtNroAfiliado.Text= dgvGrilla.CurrentRow.Cells[5].Value.ToString();
             }
-            catch(Exception ex)
+            catch
             {
             }
         }
@@ -183,6 +205,8 @@ namespace SistemaGestion
             txtNroAfiliado.Clear();
             dtpFecha.Value = DateTime.Today;
             cboObraSocial.Text = "Seleccione";
+
+            txtTelefono.Clear();
             txtDni.Focus();
         }
     }

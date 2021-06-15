@@ -34,7 +34,7 @@ namespace SistemaGestion
             }
         }
 
-        public Boolean GrabarTelPaciente(PacienteTelefono telPaciente)
+        public Boolean GrabarTelefonoPaciente(PacienteTelefono telPaciente)
         {
             try
             {
@@ -64,13 +64,45 @@ namespace SistemaGestion
             {
                 var maxId = UltimoIdMail();
 
-                var grabarPaciente = "set dateformat dmy INSERT INTO PacienteTelefono (ID, Dni, NroTelefono) VALUES(@ID, @Dni, @NroTelefono)";
+                var grabarPaciente = "INSERT INTO PacienteeMail (ID, Dni, eMail) VALUES(@ID, @Dni, @eMail)";
 
                 SqlCommand com = new SqlCommand(grabarPaciente, conectar());
 
                 com.Parameters.AddWithValue("@ID", maxId);
                 com.Parameters.AddWithValue("@Dni", mailPaciente.Dni);
-                com.Parameters.AddWithValue("@NroTelefono", telPaciente.NroTelefono);
+                com.Parameters.AddWithValue("@eMail", mailPaciente.eMail);
+
+                com.ExecuteNonQuery();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public Boolean GrabarDireccionPaciente(PacienteDireccion direccionPaciente)
+        {
+            try
+            {
+                var maxId = UltimoIdDireccion();
+
+                var grabarPaciente = "INSERT INTO PacienteDireccion (ID, Dni, Provincia, Localidad, Calle, Nro, Piso, Dpto, Manzana, Lote, Barrio) VALUES(@ID, @Dni, @Provincia, @Localidad, @Calle, @Nro, @Piso, @Dpto, @Manzana, @Lote, @Barrio)";
+
+                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+
+                com.Parameters.AddWithValue("@ID", maxId);
+                com.Parameters.AddWithValue("@Dni", direccionPaciente.Dni);
+                com.Parameters.AddWithValue("@Provincia", direccionPaciente.Provincia);
+                com.Parameters.AddWithValue("@Localidad", direccionPaciente.Localidad);
+                com.Parameters.AddWithValue("@Calle", direccionPaciente.Calle);
+                com.Parameters.AddWithValue("@Nro", direccionPaciente.Nro);
+                com.Parameters.AddWithValue("@Piso", direccionPaciente.Piso);
+                com.Parameters.AddWithValue("@Dpto", direccionPaciente.Dpto);
+                com.Parameters.AddWithValue("@Manzana", direccionPaciente.Manzana);
+                com.Parameters.AddWithValue("@Lote", direccionPaciente.Lote);
+                com.Parameters.AddWithValue("@Barrio", direccionPaciente.Barrio);
 
                 com.ExecuteNonQuery();
 
@@ -158,7 +190,7 @@ namespace SistemaGestion
         //CONSULTAR PACIENTES
         public DataTable ConsultarPacientes()
         {
-            string pacientes = "select Pacientes.Dni, Apellido, Nombre, FechaNac, ObraSocial, NroAfiliado ,(select NroTelefono where Pacientes.dni = PacienteTelefono.Dni) as Telefono from Pacientes, PacienteTelefono";
+            string pacientes = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Pacientes.Dni";
 
             //*****************************************************
             var da = new SqlDataAdapter(pacientes, conectar());
@@ -172,7 +204,7 @@ namespace SistemaGestion
 
         public DataTable BuscarPacienteDni(int dni)
         {
-            string paciente = "select Pacientes.Dni, Apellido, Nombre, FechaNac, ObraSocial, NroAfiliado ,(select NroTelefono where Pacientes.dni = PacienteTelefono.Dni) as Telefono from Pacientes, PacienteTelefono where Pacientes.Dni = " + dni;
+            string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Pacientes.Dni = " + dni;
 
             //*****************************************************
             var da = new SqlDataAdapter(paciente, conectar());
@@ -186,7 +218,7 @@ namespace SistemaGestion
 
         public DataTable BuscarPacienteApeNom(string apeNom)
         {
-            string paciente = "select Pacientes.Dni, Apellido, Nombre, FechaNac, ObraSocial, NroAfiliado ,(select NroTelefono where Pacientes.dni = PacienteTelefono.Dni) as Telefono from Pacientes, PacienteTelefono where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
+            string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
 
             //*****************************************************
             var da = new SqlDataAdapter(paciente, conectar());
