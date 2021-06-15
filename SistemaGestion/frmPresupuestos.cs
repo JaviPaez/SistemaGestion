@@ -180,7 +180,7 @@ namespace SistemaGestion
             cboProducto.Text = "Seleccione";
             cboDniPaciente.Focus();
             txtPrecio.Clear();
-            txtCantidad.Clear();
+            txtCantidad.Value = 0;
 
             lblNombrePaciente.Text = "";
             lblMiopOI.Text = "";
@@ -206,7 +206,7 @@ namespace SistemaGestion
 
                 cboProducto.Text = "Seleccione";
                 txtPrecio.Clear();
-                txtCantidad.Clear();
+                txtCantidad.Value = 0;
             }
             catch (Exception ex)
             {

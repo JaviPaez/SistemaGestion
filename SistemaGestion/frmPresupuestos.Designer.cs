@@ -59,11 +59,12 @@
             this.lblAstigOI = new System.Windows.Forms.Label();
             this.lblMiopOI = new System.Windows.Forms.Label();
             this.lblObservaciones = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGrabar
@@ -426,15 +427,6 @@
             this.lblObservaciones.TabIndex = 50;
             this.lblObservaciones.Text = "Observ";
             // 
-            // txtCantidad
-            // 
-            this.txtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(982, 463);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(99, 31);
-            this.txtCantidad.TabIndex = 6;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -465,6 +457,14 @@
             this.label12.Size = new System.Drawing.Size(91, 25);
             this.label12.TabIndex = 53;
             this.label12.Text = "PRECIO";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtCantidad.Location = new System.Drawing.Point(967, 464);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(99, 31);
+            this.txtCantidad.TabIndex = 55;
             // 
             // frmPresupuestos
             // 
@@ -507,6 +507,7 @@
             this.Text = "frmPresupuestos";
             this.Load += new System.EventHandler(this.frmPresupuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,7 +540,6 @@
         private System.Windows.Forms.Label lblAstigOI;
         private System.Windows.Forms.Label lblMiopOI;
         private System.Windows.Forms.Label lblObservaciones;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label12;
@@ -548,5 +548,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.NumericUpDown txtCantidad;
     }
 }

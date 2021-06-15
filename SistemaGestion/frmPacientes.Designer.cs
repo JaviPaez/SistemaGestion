@@ -213,26 +213,25 @@ namespace SistemaGestion
             this.cboObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboObraSocial.FormattingEnabled = true;
             this.cboObraSocial.Items.AddRange(new object[] {
-            "Apross",
-            "Bienestar Salud",
-            "Consolidar",
-            "Ferroviaria OSFE",
-            "Grupo Sancor Salud",
-            "La Caja",
-            "MET medicina privada",
-            "Nivel Salud",
+            "APROSS",
+            "BIENESTAR SALUD",
+            "CONSOLIDAR",
+            "FERROVIARIA OSFE",
+            "GRUPO SANCOR SALUD",
+            "LA CAJA",
+            "MET MEDICINA PRIVADA",
+            "NIVEL SALUD",
             "OMINT",
             "OSDE",
-            "Parque Salud",
-            "Personal Aeronáutico OSPA",
-            "Personal Asociado a la Asociación Mutual SANCOR",
-            "PREME medicina privada",
-            "Prevencion Salud",
-            "Provincia",
-            "SIPSSA medicina privada",
-            "Swiss Medical Group",
-            "Trabajadores Hoteleros y Gastronómicos de la República Argentina (O.S.U.T.H.G.R.A" +
-                ".)"});
+            "PARQUE SALUD",
+            "PERSONAL AERONÁUTICO OSPA",
+            "PERSONAL ASOCIADO A LA ASOCIACIÓN MUTUAL SANCOR",
+            "PREME MEDICINA PRIVADA",
+            "PREVENCIÓN SALUD",
+            "PROVINCIA",
+            "SIPSSA MEDICINA PRIVADA",
+            "SWISS MEDICAL GROUP",
+            "TRABAJADORES HOTELEROS Y GASTRONÓMICOS (OSUTHGRA)"});
             this.cboObraSocial.Location = new System.Drawing.Point(212, 178);
             this.cboObraSocial.Name = "cboObraSocial";
             this.cboObraSocial.Size = new System.Drawing.Size(874, 33);
@@ -401,7 +400,7 @@ namespace SistemaGestion
             // 
             this.txtNro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtNro.Location = new System.Drawing.Point(620, 318);
+            this.txtNro.Location = new System.Drawing.Point(733, 318);
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(80, 31);
             this.txtNro.TabIndex = 11;
@@ -411,7 +410,7 @@ namespace SistemaGestion
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(579, 321);
+            this.label12.Location = new System.Drawing.Point(692, 321);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 25);
             this.label12.TabIndex = 28;
@@ -423,7 +422,7 @@ namespace SistemaGestion
             this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtCalle.Location = new System.Drawing.Point(212, 318);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(361, 31);
+            this.txtCalle.Size = new System.Drawing.Size(467, 31);
             this.txtCalle.TabIndex = 10;
             // 
             // label13
@@ -461,7 +460,7 @@ namespace SistemaGestion
             // 
             this.txtPiso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtPiso.Location = new System.Drawing.Point(763, 315);
+            this.txtPiso.Location = new System.Drawing.Point(876, 315);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(61, 31);
             this.txtPiso.TabIndex = 12;
@@ -471,7 +470,7 @@ namespace SistemaGestion
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(706, 321);
+            this.label15.Location = new System.Drawing.Point(819, 321);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 25);
             this.label15.TabIndex = 31;
@@ -481,7 +480,7 @@ namespace SistemaGestion
             // 
             this.txtDpto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtDpto.Location = new System.Drawing.Point(897, 318);
+            this.txtDpto.Location = new System.Drawing.Point(1010, 318);
             this.txtDpto.Name = "txtDpto";
             this.txtDpto.Size = new System.Drawing.Size(61, 31);
             this.txtDpto.TabIndex = 13;
@@ -491,7 +490,7 @@ namespace SistemaGestion
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(830, 321);
+            this.label16.Location = new System.Drawing.Point(943, 321);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 25);
             this.label16.TabIndex = 38;

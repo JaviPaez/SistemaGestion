@@ -247,14 +247,14 @@ namespace SistemaGestion
             dtpFecha.Value = DateTime.Today;
             cboObraSocial.Text = "Seleccione";
 
-            txtTelefono.Clear();
+            txtTelefono.Text = "0";
 
             txtMail.Clear();
 
             cboProvincia.Text = "Seleccione";
             txtLocalidad.Clear();
             txtCalle.Clear();
-            txtNro.Clear();
+            txtNro.Text = "0";
             txtPiso.Clear();
             txtDpto.Clear();
             txtManzana.Clear();
