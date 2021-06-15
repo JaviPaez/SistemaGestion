@@ -72,6 +72,7 @@
             // 
             // txtMatricula
             // 
+            this.txtMatricula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMatricula.Location = new System.Drawing.Point(876, 243);
             this.txtMatricula.Name = "txtMatricula";
@@ -96,6 +97,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtApellido.Location = new System.Drawing.Point(876, 287);
             this.txtApellido.Name = "txtApellido";
@@ -115,6 +117,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNombre.Location = new System.Drawing.Point(876, 328);
             this.txtNombre.Name = "txtNombre";

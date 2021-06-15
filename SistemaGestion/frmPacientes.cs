@@ -59,7 +59,7 @@ namespace SistemaGestion
 
                     //Direccion
                     direccPaciente.Dni= Convert.ToInt32(txtDni.Text);
-                    direccPaciente.Provincia = txtProvincia.Text;
+                    direccPaciente.Provincia = cboProvincia.SelectedItem.ToString();
                     direccPaciente.Localidad = txtLocalidad.Text;
                     direccPaciente.Calle = txtCalle.Text;
                     direccPaciente.Nro = Convert.ToInt32(txtNro.Text);
@@ -121,7 +121,7 @@ namespace SistemaGestion
 
                     //Direccion
                     direccPaciente.Dni = Convert.ToInt32(txtDni.Text);
-                    direccPaciente.Provincia = txtProvincia.Text;
+                    direccPaciente.Provincia = cboProvincia.SelectedItem.ToString();
                     direccPaciente.Localidad = txtLocalidad.Text;
                     direccPaciente.Calle = txtCalle.Text;
                     direccPaciente.Nro = Convert.ToInt32(txtNro.Text);
@@ -208,7 +208,7 @@ namespace SistemaGestion
 
                 txtMail.Text = dgvGrilla.CurrentRow.Cells[7].Value.ToString();
 
-                txtProvincia.Text = dgvGrilla.CurrentRow.Cells[8].Value.ToString();
+                cboProvincia.Text = dgvGrilla.CurrentRow.Cells[8].Value.ToString();
                 txtLocalidad.Text = dgvGrilla.CurrentRow.Cells[9].Value.ToString();
                 txtCalle.Text = dgvGrilla.CurrentRow.Cells[10].Value.ToString();
                 txtNro.Text = dgvGrilla.CurrentRow.Cells[11].Value.ToString();
@@ -251,7 +251,7 @@ namespace SistemaGestion
 
             txtMail.Clear();
 
-            txtProvincia.Clear();
+            cboProvincia.Text = "Seleccione";
             txtLocalidad.Clear();
             txtCalle.Clear();
             txtNro.Clear();

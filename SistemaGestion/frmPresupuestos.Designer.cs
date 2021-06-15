@@ -428,6 +428,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(982, 463);
             this.txtCantidad.Name = "txtCantidad";
@@ -447,6 +448,7 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(644, 463);
             this.txtPrecio.Name = "txtPrecio";

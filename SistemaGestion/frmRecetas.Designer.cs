@@ -55,6 +55,7 @@ namespace SistemaGestion
             // 
             this.txtObserv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObserv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObserv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtObserv.Location = new System.Drawing.Point(558, 366);
             this.txtObserv.Multiline = true;
@@ -92,6 +93,7 @@ namespace SistemaGestion
             // 
             this.txtMiop_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMiop_OD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiop_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMiop_OD.Location = new System.Drawing.Point(558, 276);
             this.txtMiop_OD.Name = "txtMiop_OD";
@@ -191,6 +193,7 @@ namespace SistemaGestion
             // 
             this.txtMiop_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMiop_OI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiop_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMiop_OI.Location = new System.Drawing.Point(558, 233);
             this.txtMiop_OI.Name = "txtMiop_OI";
@@ -265,6 +268,7 @@ namespace SistemaGestion
             // 
             this.txtAstig_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAstig_OI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAstig_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtAstig_OI.Location = new System.Drawing.Point(1009, 233);
             this.txtAstig_OI.Name = "txtAstig_OI";
@@ -288,6 +292,7 @@ namespace SistemaGestion
             // 
             this.txtAstig_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAstig_OD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAstig_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtAstig_OD.Location = new System.Drawing.Point(1009, 276);
             this.txtAstig_OD.Name = "txtAstig_OD";

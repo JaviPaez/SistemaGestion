@@ -74,6 +74,7 @@
             // 
             // txtDni
             // 
+            this.txtDni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtDni.Location = new System.Drawing.Point(289, 123);
             this.txtDni.Name = "txtDni";
@@ -82,6 +83,7 @@
             // 
             // txtContraseña
             // 
+            this.txtContraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtContraseña.Location = new System.Drawing.Point(289, 294);
             this.txtContraseña.Name = "txtContraseña";
@@ -132,6 +134,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNombre.Location = new System.Drawing.Point(289, 209);
             this.txtNombre.Name = "txtNombre";
@@ -140,6 +143,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtApellido.Location = new System.Drawing.Point(289, 163);
             this.txtApellido.Name = "txtApellido";

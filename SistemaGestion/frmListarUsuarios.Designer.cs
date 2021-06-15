@@ -74,6 +74,7 @@ namespace SistemaGestion
             // 
             // txtBuscar
             // 
+            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtBuscar.Location = new System.Drawing.Point(784, 111);
             this.txtBuscar.Name = "txtBuscar";

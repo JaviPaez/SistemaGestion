@@ -71,6 +71,7 @@ namespace SistemaGestion
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(748, 235);
             this.txtDescripcion.Name = "txtDescripcion";
@@ -79,6 +80,7 @@ namespace SistemaGestion
             // 
             // txtPrecio
             // 
+            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(748, 293);
             this.txtPrecio.Name = "txtPrecio";
@@ -98,6 +100,7 @@ namespace SistemaGestion
             // 
             // txtCantidad
             // 
+            this.txtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(748, 353);
             this.txtCantidad.Name = "txtCantidad";
@@ -151,6 +154,7 @@ namespace SistemaGestion
             // 
             // txtBuscarDescr
             // 
+            this.txtBuscarDescr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscarDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtBuscarDescr.Location = new System.Drawing.Point(771, 571);
             this.txtBuscarDescr.Name = "txtBuscarDescr";
