@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPas = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblNvoUsuario = new System.Windows.Forms.LinkLabel();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
@@ -100,19 +100,19 @@
             this.txtPas.Size = new System.Drawing.Size(135, 31);
             this.txtPas.TabIndex = 1;
             // 
-            // linkLabel1
+            // lblNvoUsuario
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.linkLabel1.ForeColor = System.Drawing.Color.White;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(227, 152);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(154, 25);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Nuevo Usuario";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lblNvoUsuario.AutoSize = true;
+            this.lblNvoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.lblNvoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNvoUsuario.LinkColor = System.Drawing.Color.White;
+            this.lblNvoUsuario.Location = new System.Drawing.Point(227, 152);
+            this.lblNvoUsuario.Name = "lblNvoUsuario";
+            this.lblNvoUsuario.Size = new System.Drawing.Size(154, 25);
+            this.lblNvoUsuario.TabIndex = 2;
+            this.lblNvoUsuario.TabStop = true;
+            this.lblNvoUsuario.Text = "Nuevo Usuario";
+            this.lblNvoUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblNvoUsuario_LinkClicked);
             // 
             // BarraTitulo
             // 
@@ -159,7 +159,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(555, 282);
             this.Controls.Add(this.BarraTitulo);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lblNvoUsuario);
             this.Controls.Add(this.txtPas);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPas;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblNvoUsuario;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox pbxMinimizar;
         private System.Windows.Forms.PictureBox pbxCerrar;

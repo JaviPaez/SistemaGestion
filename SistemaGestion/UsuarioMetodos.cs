@@ -11,7 +11,7 @@ namespace SistemaGestion
     {
         public DataTable ConsultarLogin(string dni, string contraseña)
         {
-            string login = "select Dni, Contraseña from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";      
+            string login = "select Dni, Contraseña, Apellido, Nombre from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";      
 
             //*****************************************************
             var da = new SqlDataAdapter(login, conectar());

@@ -33,7 +33,9 @@ namespace SistemaGestion
 
             if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Ingreso correcto", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                var nombreApellido = dt.Rows[0]["Nombre"] + " " + dt.Rows[0]["Apellido"];
+
+                MessageBox.Show("Bienvenido\n" + nombreApellido, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);  
                 var frm = new frmMenu();
                 this.Hide();
                 frm.Show();
@@ -42,7 +44,7 @@ namespace SistemaGestion
         }
 
         //BOTON NUEVO USUARIO
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblNvoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var frm = new frmUsuarios();
             frm.Show();
@@ -71,6 +73,6 @@ namespace SistemaGestion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        #endregion
+        #endregion       
     }
 }
