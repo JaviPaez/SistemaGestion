@@ -96,6 +96,10 @@ namespace SistemaGestion
                      MessageBoxIcon.Question);
 
             var paciente = new Paciente();
+            var telPaciente = new PacienteTelefono();
+            var mailPaciente = new PacienteeMail();
+            var direccPaciente = new PacienteDireccion();
+
             try
             {
                 if (respuesta == DialogResult.Yes)
@@ -106,6 +110,26 @@ namespace SistemaGestion
                     paciente.FechaNac = dtpFecha.Value;
                     paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
                     paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
+
+                    //Telefono
+                    telPaciente.Dni = Convert.ToInt32(txtDni.Text);
+                    telPaciente.NroTelefono = Convert.ToInt64(txtTelefono.Text);
+
+                    //Mail
+                    mailPaciente.Dni = Convert.ToInt32(txtDni.Text);
+                    mailPaciente.eMail = txtMail.Text;
+
+                    //Direccion
+                    direccPaciente.Dni = Convert.ToInt32(txtDni.Text);
+                    direccPaciente.Provincia = txtProvincia.Text;
+                    direccPaciente.Localidad = txtLocalidad.Text;
+                    direccPaciente.Calle = txtCalle.Text;
+                    direccPaciente.Nro = Convert.ToInt32(txtNro.Text);
+                    direccPaciente.Piso = txtPiso.Text;
+                    direccPaciente.Dpto = txtDpto.Text;
+                    direccPaciente.Manzana = txtManzana.Text;
+                    direccPaciente.Lote = txtLote.Text;
+                    direccPaciente.Barrio = txtBarrio.Text;
 
                     var pacienteMetodo = new PacienteMetodos();
                     Boolean modifico = pacienteMetodo.ModificarPaciente(paciente);
@@ -176,6 +200,20 @@ namespace SistemaGestion
                 dtpFecha.Value = Convert.ToDateTime(dgvGrilla.CurrentRow.Cells[3].Value);
                 cboObraSocial.SelectedItem = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
                 txtNroAfiliado.Text= dgvGrilla.CurrentRow.Cells[5].Value.ToString();
+
+                txtTelefono.Text = dgvGrilla.CurrentRow.Cells[6].Value.ToString();
+
+                txtMail.Text = dgvGrilla.CurrentRow.Cells[7].Value.ToString();
+
+                txtProvincia.Text = dgvGrilla.CurrentRow.Cells[8].Value.ToString();
+                txtLocalidad.Text = dgvGrilla.CurrentRow.Cells[9].Value.ToString();
+                txtCalle.Text = dgvGrilla.CurrentRow.Cells[10].Value.ToString();
+                txtNro.Text = dgvGrilla.CurrentRow.Cells[11].Value.ToString();
+                txtPiso.Text = dgvGrilla.CurrentRow.Cells[12].Value.ToString();
+                txtDpto.Text = dgvGrilla.CurrentRow.Cells[13].Value.ToString();
+                txtManzana.Text = dgvGrilla.CurrentRow.Cells[14].Value.ToString();
+                txtLote.Text = dgvGrilla.CurrentRow.Cells[15].Value.ToString();
+                txtBarrio.Text = dgvGrilla.CurrentRow.Cells[16].Value.ToString();
             }
             catch
             {
@@ -207,6 +245,19 @@ namespace SistemaGestion
             cboObraSocial.Text = "Seleccione";
 
             txtTelefono.Clear();
+
+            txtMail.Clear();
+
+            txtProvincia.Clear();
+            txtLocalidad.Clear();
+            txtCalle.Clear();
+            txtNro.Clear();
+            txtPiso.Clear();
+            txtDpto.Clear();
+            txtManzana.Clear();
+            txtLote.Clear();
+            txtBarrio.Clear();
+
             txtDni.Focus();
         }
     }
