@@ -7,8 +7,8 @@ namespace SistemaGestion
 {
     class PacienteTelefono
     {
-        int Id { get; set; }
-        int Dni { get; set; }     
-        Int64 NroTelefono { get; set; }
+        public int Id { get; set; }
+        public int Dni { get; set; }
+        public Int64 NroTelefono { get; set; }
     }
 }

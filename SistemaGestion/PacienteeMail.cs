@@ -7,8 +7,8 @@ namespace SistemaGestion
 {
     class PacienteeMail
     {
-        int Id { get; set; }
-        int Dni { get; set; }       
-        string eMail { get; set; }
+        public int Id { get; set; }
+        public int Dni { get; set; }
+        public string eMail { get; set; }
     }
 }

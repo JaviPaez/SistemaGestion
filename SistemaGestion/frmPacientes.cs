@@ -34,6 +34,8 @@ namespace SistemaGestion
                       MessageBoxIcon.Question);
 
             var paciente = new Paciente();
+            var telPaciente = new PacienteTelefono();
+
             try
             {
                 if (respuesta == DialogResult.Yes)
@@ -45,8 +47,13 @@ namespace SistemaGestion
                     paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
                     paciente.NroAfiliado = Convert.ToInt32(txtNroAfiliado.Text);
 
+                    telPaciente.Dni = Convert.ToInt32(txtDni.Text);
+                    telPaciente.NroTelefono = Convert.ToInt64(txtTelefono.Text);
+
                     var pacienteMetodo = new PacienteMetodos();
+                    
                     Boolean grabo = pacienteMetodo.GrabarPaciente(paciente);
+                    pacienteMetodo.GrabarTelPaciente(telPaciente);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
