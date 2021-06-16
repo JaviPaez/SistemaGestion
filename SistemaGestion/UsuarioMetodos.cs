@@ -49,7 +49,7 @@ namespace SistemaGestion
 
         public DataTable ConsultarUsuarios()
         {
-            string usuarios = "select * from USUARIOS order by Dni";
+            string usuarios = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id order by Dni";
 
             //*****************************************************
             var da = new SqlDataAdapter(usuarios, conectar());
@@ -63,7 +63,7 @@ namespace SistemaGestion
 
         public DataTable BuscarUsuarioDni(int dni)
         {
-            string usuario = "select * from USUARIOS where Dni = " + dni;
+            string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Dni = " + dni;
 
             //*****************************************************
             var da = new SqlDataAdapter(usuario, conectar());
@@ -77,7 +77,7 @@ namespace SistemaGestion
 
         public DataTable BuscarUsuarioApeNom(string ApeNom)
         {
-            string usuario = "select * from USUARIOS where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
+            string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
 
             //*****************************************************
             var da = new SqlDataAdapter(usuario, conectar());

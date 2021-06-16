@@ -66,7 +66,6 @@ namespace SistemaGestion
             if (dt.Rows.Count != 0)
             {
                 dgvGrilla.DataSource = dt;
-                dgvGrilla.Columns["Contraseña"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
