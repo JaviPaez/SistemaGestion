@@ -259,6 +259,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Usuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.BarraTitulo.ResumeLayout(false);

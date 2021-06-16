@@ -13,7 +13,7 @@ namespace SistemaGestion
     {
         public frmLogin()
         {
-            InitializeComponent();
+            InitializeComponent();            
         } 
         
         //LOAD
