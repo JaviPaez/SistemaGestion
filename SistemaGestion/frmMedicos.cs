@@ -20,19 +20,19 @@ namespace SistemaGestion
         private void frmMedicos_Load(object sender, EventArgs e)
         {
             ReiniciarCampos();
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
+            DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
             var medico = new Medico();
             try
             {
-                if (resp == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     medico.Matricula = txtMatricula.Text;
                     medico.Apellido = txtApellido.Text;
@@ -50,7 +50,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON MODIFICAR
@@ -83,7 +83,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON NUEVO      
@@ -101,7 +101,7 @@ namespace SistemaGestion
                 txtNombre.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString(); 
                 txtMatricula.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
             }
-            catch (Exception ex)
+            catch
             {
             }
         }

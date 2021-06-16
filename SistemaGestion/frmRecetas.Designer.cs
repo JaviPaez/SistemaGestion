@@ -49,6 +49,7 @@ namespace SistemaGestion
             this.label8 = new System.Windows.Forms.Label();
             this.txtAstig_OD = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblMedicos = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtObserv
@@ -60,7 +61,7 @@ namespace SistemaGestion
             this.txtObserv.Location = new System.Drawing.Point(558, 366);
             this.txtObserv.Multiline = true;
             this.txtObserv.Name = "txtObserv";
-            this.txtObserv.Size = new System.Drawing.Size(528, 100);
+            this.txtObserv.Size = new System.Drawing.Size(528, 190);
             this.txtObserv.TabIndex = 7;
             // 
             // label7
@@ -136,7 +137,7 @@ namespace SistemaGestion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(594, 494);
+            this.btnCancelar.Location = new System.Drawing.Point(590, 596);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 8;
@@ -153,7 +154,7 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(898, 494);
+            this.btnGrabar.Location = new System.Drawing.Point(894, 596);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 9;
@@ -221,7 +222,7 @@ namespace SistemaGestion
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dtpFecha.Location = new System.Drawing.Point(558, 320);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(528, 31);
+            this.dtpFecha.Size = new System.Drawing.Size(208, 31);
             this.dtpFecha.TabIndex = 6;
             // 
             // cboMedico
@@ -249,7 +250,7 @@ namespace SistemaGestion
             "Seleccione"});
             this.cboDni.Location = new System.Drawing.Point(558, 189);
             this.cboDni.Name = "cboDni";
-            this.cboDni.Size = new System.Drawing.Size(528, 33);
+            this.cboDni.Size = new System.Drawing.Size(271, 33);
             this.cboDni.TabIndex = 1;
             this.cboDni.SelectionChangeCommitted += new System.EventHandler(this.cboDni_SelectionChangeCommitted);
             // 
@@ -259,10 +260,11 @@ namespace SistemaGestion
             this.lblNombrePaciente.AutoSize = true;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.lblNombrePaciente.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePaciente.Location = new System.Drawing.Point(1092, 191);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(835, 189);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
-            this.lblNombrePaciente.Size = new System.Drawing.Size(0, 31);
+            this.lblNombrePaciente.Size = new System.Drawing.Size(277, 31);
             this.lblNombrePaciente.TabIndex = 33;
+            this.lblNombrePaciente.Text = "NOMBRE PACIENTE";
             // 
             // txtAstig_OI
             // 
@@ -312,12 +314,27 @@ namespace SistemaGestion
             this.label9.TabIndex = 36;
             this.label9.Text = "ASTIGMATISMO O.D.";
             // 
+            // lblMedicos
+            // 
+            this.lblMedicos.AutoSize = true;
+            this.lblMedicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.lblMedicos.ForeColor = System.Drawing.Color.White;
+            this.lblMedicos.LinkColor = System.Drawing.Color.White;
+            this.lblMedicos.Location = new System.Drawing.Point(1093, 148);
+            this.lblMedicos.Name = "lblMedicos";
+            this.lblMedicos.Size = new System.Drawing.Size(150, 25);
+            this.lblMedicos.TabIndex = 38;
+            this.lblMedicos.TabStop = true;
+            this.lblMedicos.Text = "Nuevo Médico";
+            this.lblMedicos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblMedicos_LinkClicked);
+            // 
             // frmRecetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.lblMedicos);
             this.Controls.Add(this.txtAstig_OI);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAstig_OD);
@@ -369,5 +386,6 @@ namespace SistemaGestion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAstig_OD;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel lblMedicos;
     }
 }

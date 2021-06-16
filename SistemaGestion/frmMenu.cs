@@ -101,7 +101,7 @@ namespace SistemaGestion
         private void btnRecetas_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
-            AbrirFormHijo(new frmRecetasMedicos());
+            AbrirFormHijo(new frmRecetas());
         }
 
         //Productos

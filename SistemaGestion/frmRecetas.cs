@@ -26,13 +26,7 @@ namespace SistemaGestion
             ReiniciarCampos();
 
             //Cargar Combo Medicos
-            var dt = new DataTable();
-            var med = new MedicoMetodos();
-            dt = med.CargarComboMedicos();
-
-            cboMedico.DataSource = dt;
-            cboMedico.DisplayMember = "Apenom";
-            cboMedico.ValueMember = "ID";  
+            CargarMedicos();
 
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
@@ -102,7 +96,7 @@ namespace SistemaGestion
                     lblNombrePaciente.Text = registro["Apellido"].ToString() + ", " + registro["Nombre"].ToString();
                 }
             }
-            catch (Exception ex)
+            catch
             {
             }
         }
@@ -120,6 +114,27 @@ namespace SistemaGestion
             txtObserv.Clear();
             lblNombrePaciente.Text = "";
             cboMedico.Focus();
+        }
+
+        //Nuevo Médico
+        private void lblMedicos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var frm = new frmMedicos();
+            frm.ShowDialog();
+            CargarMedicos();
+            cboMedico.Text = "Seleccione";
+        }
+
+        private void CargarMedicos()
+        { 
+            //Cargar Combo Medicos
+            var dt = new DataTable();
+            var med = new MedicoMetodos();
+            dt = med.CargarComboMedicos();
+
+            cboMedico.DataSource = dt;
+            cboMedico.DisplayMember = "Apenom";
+            cboMedico.ValueMember = "ID";
         }
     }
 }
