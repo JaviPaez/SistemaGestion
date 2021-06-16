@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -17,11 +18,24 @@ namespace SistemaGestion
         }
 
         //LOAD
+        #region
         private void frmMedicos_Load(object sender, EventArgs e)
         {
             ReiniciarCampos();
             //ArmarGrilla();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
 
         //BOTON GRABAR
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -135,6 +149,17 @@ namespace SistemaGestion
                 dgvGrilla.Columns["ID"].Visible = false;
             }
             else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //BOTONES BARRA DE TITULO
+        private void pbxMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbxCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

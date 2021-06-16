@@ -38,7 +38,6 @@ namespace SistemaGestion
 
         #region BOTONES
         //BOTONES DE BARRA DE TITULO
-
         //Posicion actual frm
         int lx, ly;
         int sw, sh;

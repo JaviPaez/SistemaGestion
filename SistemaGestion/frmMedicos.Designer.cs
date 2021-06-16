@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.label1 = new System.Windows.Forms.Label();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.txtMatricula = new System.Windows.Forms.TextBox();
@@ -40,7 +41,13 @@
             this.btnGrilla = new System.Windows.Forms.Button();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pbxMinimizar = new System.Windows.Forms.PictureBox();
+            this.pbxCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,7 +147,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(295, 30);
+            this.label4.Location = new System.Drawing.Point(295, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 31);
             this.label4.TabIndex = 8;
@@ -197,12 +204,51 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BarraTitulo.Controls.Add(this.pbxMinimizar);
+            this.BarraTitulo.Controls.Add(this.pbxCerrar);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(711, 38);
+            this.BarraTitulo.TabIndex = 20;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // pbxMinimizar
+            // 
+            this.pbxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbxMinimizar.Image")));
+            this.pbxMinimizar.Location = new System.Drawing.Point(646, 7);
+            this.pbxMinimizar.Name = "pbxMinimizar";
+            this.pbxMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxMinimizar.TabIndex = 2;
+            this.pbxMinimizar.TabStop = false;
+            this.pbxMinimizar.Click += new System.EventHandler(this.pbxMinimizar_Click);
+            // 
+            // pbxCerrar
+            // 
+            this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbxCerrar.Image")));
+            this.pbxCerrar.Location = new System.Drawing.Point(683, 7);
+            this.pbxCerrar.Name = "pbxCerrar";
+            this.pbxCerrar.Size = new System.Drawing.Size(25, 25);
+            this.pbxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxCerrar.TabIndex = 0;
+            this.pbxCerrar.TabStop = false;
+            this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
+            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(711, 611);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnGrilla);
             this.Controls.Add(this.dgvGrilla);
@@ -220,6 +266,9 @@
             this.Text = "frmPacientes";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +288,8 @@
         private System.Windows.Forms.Button btnGrilla;
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pbxMinimizar;
+        private System.Windows.Forms.PictureBox pbxCerrar;
     }
 }
