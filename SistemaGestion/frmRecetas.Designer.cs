@@ -92,7 +92,7 @@ namespace SistemaGestion
             this.txtMiop_OD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMiop_OD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiop_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtMiop_OD.Location = new System.Drawing.Point(558, 276);
+            this.txtMiop_OD.Location = new System.Drawing.Point(1009, 233);
             this.txtMiop_OD.Name = "txtMiop_OD";
             this.txtMiop_OD.Size = new System.Drawing.Size(77, 31);
             this.txtMiop_OD.TabIndex = 3;
@@ -103,7 +103,7 @@ namespace SistemaGestion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(302, 276);
+            this.label3.Location = new System.Drawing.Point(753, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 25);
             this.label3.TabIndex = 21;
@@ -252,7 +252,7 @@ namespace SistemaGestion
             this.txtAstig_OI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAstig_OI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAstig_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtAstig_OI.Location = new System.Drawing.Point(1009, 233);
+            this.txtAstig_OI.Location = new System.Drawing.Point(558, 276);
             this.txtAstig_OI.Name = "txtAstig_OI";
             this.txtAstig_OI.Size = new System.Drawing.Size(77, 31);
             this.txtAstig_OI.TabIndex = 4;
@@ -263,7 +263,7 @@ namespace SistemaGestion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(753, 233);
+            this.label8.Location = new System.Drawing.Point(302, 276);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(211, 25);
             this.label8.TabIndex = 37;

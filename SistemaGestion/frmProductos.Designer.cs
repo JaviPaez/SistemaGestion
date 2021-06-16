@@ -156,9 +156,9 @@ namespace SistemaGestion
             // 
             this.txtBuscarDescr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscarDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscarDescr.Location = new System.Drawing.Point(771, 571);
+            this.txtBuscarDescr.Location = new System.Drawing.Point(748, 571);
             this.txtBuscarDescr.Name = "txtBuscarDescr";
-            this.txtBuscarDescr.Size = new System.Drawing.Size(200, 31);
+            this.txtBuscarDescr.Size = new System.Drawing.Size(327, 31);
             this.txtBuscarDescr.TabIndex = 6;
             // 
             // label5
@@ -180,7 +180,7 @@ namespace SistemaGestion
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1050, 567);
+            this.btnBuscar.Location = new System.Drawing.Point(1100, 567);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
             this.btnBuscar.TabIndex = 7;

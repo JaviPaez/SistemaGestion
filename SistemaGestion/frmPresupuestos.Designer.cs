@@ -296,7 +296,7 @@
             this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(647, 228);
-            this.dgvGrilla.TabIndex = 39;
+            this.dgvGrilla.TabIndex = 11;
             // 
             // IdProducto
             // 
@@ -464,7 +464,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(967, 464);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
-            this.txtCantidad.TabIndex = 55;
+            this.txtCantidad.TabIndex = 6;
             // 
             // frmPresupuestos
             // 
