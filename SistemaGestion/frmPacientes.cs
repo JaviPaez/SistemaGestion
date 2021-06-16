@@ -24,7 +24,7 @@ namespace SistemaGestion
             dtpFecha.MaxDate = DateTime.Today;
 
             ReiniciarCampos();
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON GRABAR
@@ -86,7 +86,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON MODIFICAR
@@ -146,7 +146,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON NUEVO

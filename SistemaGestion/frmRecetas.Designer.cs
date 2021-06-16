@@ -54,8 +54,7 @@ namespace SistemaGestion
             // 
             // txtObserv
             // 
-            this.txtObserv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObserv.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtObserv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObserv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtObserv.Location = new System.Drawing.Point(558, 366);
@@ -66,9 +65,7 @@ namespace SistemaGestion
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
@@ -92,8 +89,7 @@ namespace SistemaGestion
             // 
             // txtMiop_OD
             // 
-            this.txtMiop_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMiop_OD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMiop_OD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiop_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMiop_OD.Location = new System.Drawing.Point(558, 276);
@@ -103,8 +99,7 @@ namespace SistemaGestion
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -116,9 +111,7 @@ namespace SistemaGestion
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -164,9 +157,7 @@ namespace SistemaGestion
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -178,9 +169,7 @@ namespace SistemaGestion
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -192,8 +181,7 @@ namespace SistemaGestion
             // 
             // txtMiop_OI
             // 
-            this.txtMiop_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMiop_OI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMiop_OI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiop_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMiop_OI.Location = new System.Drawing.Point(558, 233);
@@ -203,8 +191,7 @@ namespace SistemaGestion
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -216,9 +203,7 @@ namespace SistemaGestion
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dtpFecha.Location = new System.Drawing.Point(558, 320);
             this.dtpFecha.Name = "dtpFecha";
@@ -227,9 +212,7 @@ namespace SistemaGestion
             // 
             // cboMedico
             // 
-            this.cboMedico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboMedico.FormattingEnabled = true;
             this.cboMedico.Items.AddRange(new object[] {
@@ -241,9 +224,7 @@ namespace SistemaGestion
             // 
             // cboDni
             // 
-            this.cboDni.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboDni.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboDni.FormattingEnabled = true;
             this.cboDni.Items.AddRange(new object[] {
@@ -268,8 +249,7 @@ namespace SistemaGestion
             // 
             // txtAstig_OI
             // 
-            this.txtAstig_OI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAstig_OI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAstig_OI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAstig_OI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtAstig_OI.Location = new System.Drawing.Point(1009, 233);
@@ -279,8 +259,7 @@ namespace SistemaGestion
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
@@ -292,8 +271,7 @@ namespace SistemaGestion
             // 
             // txtAstig_OD
             // 
-            this.txtAstig_OD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAstig_OD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAstig_OD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAstig_OD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtAstig_OD.Location = new System.Drawing.Point(1009, 276);
@@ -303,8 +281,7 @@ namespace SistemaGestion
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
@@ -316,6 +293,7 @@ namespace SistemaGestion
             // 
             // lblMedicos
             // 
+            this.lblMedicos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMedicos.AutoSize = true;
             this.lblMedicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblMedicos.ForeColor = System.Drawing.Color.White;

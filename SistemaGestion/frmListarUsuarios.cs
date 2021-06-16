@@ -19,7 +19,7 @@ namespace SistemaGestion
         //LOAD
         private void frmListarUsuarios_Load(object sender, EventArgs e)
         {
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON ARMAR LISTA
@@ -47,7 +47,7 @@ namespace SistemaGestion
                     if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex)
+                catch
                 {                    
                     MessageBox.Show("Ingrese Dni o apellido y nombre", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

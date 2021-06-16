@@ -63,7 +63,7 @@ namespace SistemaGestion
         //LOAD
         private void frmListarPresupuestos_Load(object sender, EventArgs e)
         {
-            ArmarGrilla();
+            //ArmarGrilla();
         }
     }
 }

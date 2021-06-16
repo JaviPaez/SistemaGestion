@@ -19,7 +19,7 @@ namespace SistemaGestion
         //LOAD
         private void frmProductos_Load(object sender, EventArgs e)
         {
-            ArmarGrilla();
+            //ArmarGrilla();
             ReiniciarCampos();
         }
 
@@ -50,7 +50,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON MODIFICAR
@@ -81,7 +81,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ArmarGrilla();
+            //ArmarGrilla();
         }
 
         //BOTON NUEVO
@@ -110,7 +110,7 @@ namespace SistemaGestion
                     }
                     else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -133,7 +133,7 @@ namespace SistemaGestion
                 txtPrecio.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
             }
-            catch (Exception ex)
+            catch
             {
             }
         }
