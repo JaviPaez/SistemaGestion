@@ -38,9 +38,21 @@ namespace SistemaGestion
 
         #region BOTONES
         //BOTONES DE BARRA DE TITULO
+
+        //Posicion actual frm
+        int lx, ly;
+        int sw, sh;
+
         private void pbxMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+
             pbxMaximizar.Visible = false;
             pbxRestaurar.Visible = true;
         }
@@ -52,6 +64,9 @@ namespace SistemaGestion
 
         private void pbxRestaurar_Click(object sender, EventArgs e)
         {
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+
             this.WindowState = FormWindowState.Normal;
             pbxRestaurar.Visible = false;
             pbxMaximizar.Visible = true;

@@ -89,7 +89,7 @@ namespace SistemaGestion
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1920, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(1158, 38);
             this.BarraTitulo.TabIndex = 0;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -109,7 +109,7 @@ namespace SistemaGestion
             this.pbxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pbxRestaurar.Image")));
-            this.pbxRestaurar.Location = new System.Drawing.Point(1852, 7);
+            this.pbxRestaurar.Location = new System.Drawing.Point(1090, 7);
             this.pbxRestaurar.Name = "pbxRestaurar";
             this.pbxRestaurar.Size = new System.Drawing.Size(25, 25);
             this.pbxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +123,7 @@ namespace SistemaGestion
             this.pbxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbxMinimizar.Image")));
-            this.pbxMinimizar.Location = new System.Drawing.Point(1810, 7);
+            this.pbxMinimizar.Location = new System.Drawing.Point(1048, 7);
             this.pbxMinimizar.Name = "pbxMinimizar";
             this.pbxMinimizar.Size = new System.Drawing.Size(25, 25);
             this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +136,7 @@ namespace SistemaGestion
             this.pbxMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pbxMaximizar.Image")));
-            this.pbxMaximizar.Location = new System.Drawing.Point(1852, 7);
+            this.pbxMaximizar.Location = new System.Drawing.Point(1090, 7);
             this.pbxMaximizar.Name = "pbxMaximizar";
             this.pbxMaximizar.Size = new System.Drawing.Size(25, 25);
             this.pbxMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +149,7 @@ namespace SistemaGestion
             this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbxCerrar.Image")));
-            this.pbxCerrar.Location = new System.Drawing.Point(1892, 7);
+            this.pbxCerrar.Location = new System.Drawing.Point(1130, 7);
             this.pbxCerrar.Name = "pbxCerrar";
             this.pbxCerrar.Size = new System.Drawing.Size(25, 25);
             this.pbxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +181,7 @@ namespace SistemaGestion
             this.PanelVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelVertical.Location = new System.Drawing.Point(0, 38);
             this.PanelVertical.Name = "PanelVertical";
-            this.PanelVertical.Size = new System.Drawing.Size(200, 1042);
+            this.PanelVertical.Size = new System.Drawing.Size(200, 668);
             this.PanelVertical.TabIndex = 1;
             // 
             // panelSubmenuPresupuestos
@@ -253,7 +253,7 @@ namespace SistemaGestion
             this.pbxSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pbxSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbxSalir.Image")));
-            this.pbxSalir.Location = new System.Drawing.Point(0, 997);
+            this.pbxSalir.Location = new System.Drawing.Point(0, 623);
             this.pbxSalir.Name = "pbxSalir";
             this.pbxSalir.Size = new System.Drawing.Size(200, 45);
             this.pbxSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -560,21 +560,20 @@ namespace SistemaGestion
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(200, 38);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1720, 1042);
+            this.PanelContenedor.Size = new System.Drawing.Size(958, 668);
             this.PanelContenedor.TabIndex = 2;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1158, 706);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelVertical);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
             this.Text = "Menú";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.BarraTitulo.ResumeLayout(false);
