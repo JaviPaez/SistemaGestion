@@ -131,7 +131,7 @@
             this.Controls.Add(this.dgvGrilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListarPresupuestos";
-            this.Text = "frmListarPresupuestos";
+            this.Text = "Presupuestos";
             this.Load += new System.EventHandler(this.frmListarPresupuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.ResumeLayout(false);

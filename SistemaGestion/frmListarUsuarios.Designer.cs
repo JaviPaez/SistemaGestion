@@ -133,7 +133,7 @@ namespace SistemaGestion
             this.Controls.Add(this.dgvGrilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListarUsuarios";
-            this.Text = "frmListarUsuarios";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmListarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.ResumeLayout(false);

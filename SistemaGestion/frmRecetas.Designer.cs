@@ -335,7 +335,7 @@ namespace SistemaGestion
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecetas";
-            this.Text = "frmRecetas";
+            this.Text = "Recetas";
             this.Load += new System.EventHandler(this.frmRecetas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

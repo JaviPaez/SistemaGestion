@@ -260,7 +260,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion de Usuarios";
+            this.Text = "Nuevo Usuario";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();

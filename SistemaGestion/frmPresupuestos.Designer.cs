@@ -504,7 +504,7 @@
             this.Controls.Add(this.btnGrabar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPresupuestos";
-            this.Text = "frmPresupuestos";
+            this.Text = "Presupuestos";
             this.Load += new System.EventHandler(this.frmPresupuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
