@@ -77,6 +77,7 @@ namespace SistemaGestion
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -88,6 +89,7 @@ namespace SistemaGestion
             // 
             // btnGrabar
             // 
+            this.btnGrabar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrabar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGrabar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -104,6 +106,7 @@ namespace SistemaGestion
             // 
             // txtDni
             // 
+            this.txtDni.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtDni.Location = new System.Drawing.Point(212, 127);
@@ -113,6 +116,7 @@ namespace SistemaGestion
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNuevo.BackColor = System.Drawing.Color.SeaGreen;
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -129,6 +133,7 @@ namespace SistemaGestion
             // 
             // txtApellido
             // 
+            this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtApellido.Location = new System.Drawing.Point(520, 130);
@@ -138,6 +143,7 @@ namespace SistemaGestion
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -149,6 +155,7 @@ namespace SistemaGestion
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNombre.Location = new System.Drawing.Point(922, 130);
@@ -158,6 +165,7 @@ namespace SistemaGestion
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -169,6 +177,7 @@ namespace SistemaGestion
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -180,6 +189,7 @@ namespace SistemaGestion
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -191,6 +201,7 @@ namespace SistemaGestion
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dtpFecha.Location = new System.Drawing.Point(1465, 128);
             this.dtpFecha.Name = "dtpFecha";
@@ -199,6 +210,7 @@ namespace SistemaGestion
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -210,6 +222,7 @@ namespace SistemaGestion
             // 
             // cboObraSocial
             // 
+            this.cboObraSocial.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboObraSocial.FormattingEnabled = true;
             this.cboObraSocial.Items.AddRange(new object[] {
@@ -240,6 +253,7 @@ namespace SistemaGestion
             // 
             // txtNroAfiliado
             // 
+            this.txtNroAfiliado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNroAfiliado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNroAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNroAfiliado.Location = new System.Drawing.Point(1281, 178);
@@ -249,6 +263,7 @@ namespace SistemaGestion
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
@@ -260,6 +275,7 @@ namespace SistemaGestion
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtBuscar.Location = new System.Drawing.Point(780, 565);
@@ -269,6 +285,7 @@ namespace SistemaGestion
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
@@ -280,6 +297,7 @@ namespace SistemaGestion
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -296,6 +314,7 @@ namespace SistemaGestion
             // 
             // btnGrilla
             // 
+            this.btnGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -316,6 +335,7 @@ namespace SistemaGestion
             this.dgvGrilla.AllowUserToDeleteRows = false;
             this.dgvGrilla.AllowUserToResizeColumns = false;
             this.dgvGrilla.AllowUserToResizeRows = false;
+            this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -331,6 +351,7 @@ namespace SistemaGestion
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -347,6 +368,7 @@ namespace SistemaGestion
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtTelefono.Location = new System.Drawing.Point(212, 226);
@@ -356,6 +378,7 @@ namespace SistemaGestion
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
@@ -367,6 +390,7 @@ namespace SistemaGestion
             // 
             // txtLocalidad
             // 
+            this.txtLocalidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtLocalidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtLocalidad.Location = new System.Drawing.Point(674, 270);
@@ -376,6 +400,7 @@ namespace SistemaGestion
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label10.ForeColor = System.Drawing.Color.White;
@@ -387,6 +412,7 @@ namespace SistemaGestion
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label11.ForeColor = System.Drawing.Color.White;
@@ -398,6 +424,7 @@ namespace SistemaGestion
             // 
             // txtNro
             // 
+            this.txtNro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNro.Location = new System.Drawing.Point(733, 318);
@@ -407,6 +434,7 @@ namespace SistemaGestion
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label12.ForeColor = System.Drawing.Color.White;
@@ -418,6 +446,7 @@ namespace SistemaGestion
             // 
             // txtCalle
             // 
+            this.txtCalle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtCalle.Location = new System.Drawing.Point(212, 318);
@@ -427,6 +456,7 @@ namespace SistemaGestion
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label13.ForeColor = System.Drawing.Color.White;
@@ -438,6 +468,7 @@ namespace SistemaGestion
             // 
             // txtManzana
             // 
+            this.txtManzana.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtManzana.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtManzana.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtManzana.Location = new System.Drawing.Point(212, 365);
@@ -447,6 +478,7 @@ namespace SistemaGestion
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label14.ForeColor = System.Drawing.Color.White;
@@ -458,6 +490,7 @@ namespace SistemaGestion
             // 
             // txtPiso
             // 
+            this.txtPiso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPiso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtPiso.Location = new System.Drawing.Point(876, 315);
@@ -467,6 +500,7 @@ namespace SistemaGestion
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label15.ForeColor = System.Drawing.Color.White;
@@ -478,6 +512,7 @@ namespace SistemaGestion
             // 
             // txtDpto
             // 
+            this.txtDpto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDpto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtDpto.Location = new System.Drawing.Point(1010, 318);
@@ -487,6 +522,7 @@ namespace SistemaGestion
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label16.ForeColor = System.Drawing.Color.White;
@@ -498,6 +534,7 @@ namespace SistemaGestion
             // 
             // txtBarrio
             // 
+            this.txtBarrio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBarrio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtBarrio.Location = new System.Drawing.Point(548, 365);
@@ -507,6 +544,7 @@ namespace SistemaGestion
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label17.ForeColor = System.Drawing.Color.White;
@@ -518,6 +556,7 @@ namespace SistemaGestion
             // 
             // txtLote
             // 
+            this.txtLote.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtLote.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtLote.Location = new System.Drawing.Point(365, 365);
@@ -527,6 +566,7 @@ namespace SistemaGestion
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label18.ForeColor = System.Drawing.Color.White;
@@ -538,6 +578,7 @@ namespace SistemaGestion
             // 
             // txtMail
             // 
+            this.txtMail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMail.Location = new System.Drawing.Point(522, 226);
@@ -547,6 +588,7 @@ namespace SistemaGestion
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label19.ForeColor = System.Drawing.Color.White;
@@ -558,6 +600,7 @@ namespace SistemaGestion
             // 
             // cboProvincia
             // 
+            this.cboProvincia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboProvincia.FormattingEnabled = true;
             this.cboProvincia.Items.AddRange(new object[] {

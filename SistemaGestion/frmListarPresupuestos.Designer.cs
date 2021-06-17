@@ -43,6 +43,7 @@
             this.dgvGrilla.AllowUserToDeleteRows = false;
             this.dgvGrilla.AllowUserToResizeColumns = false;
             this.dgvGrilla.AllowUserToResizeRows = false;
+            this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -57,6 +58,7 @@
             // 
             // btnGrilla
             // 
+            this.btnGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGrilla.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGrilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -73,6 +75,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -89,6 +92,7 @@
             // 
             // txtNro
             // 
+            this.txtNro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtNro.Location = new System.Drawing.Point(738, 173);
             this.txtNro.Name = "txtNro";
@@ -97,6 +101,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -108,6 +113,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
