@@ -153,7 +153,7 @@
             // 
             this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.dtpFecha.Location = new System.Drawing.Point(1392, 165);
+            this.dtpFecha.Location = new System.Drawing.Point(1360, 165);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 31);
             this.dtpFecha.TabIndex = 3;
@@ -215,9 +215,9 @@
             "OSDE",
             "Prevencion Salud",
             "SIPSSA"});
-            this.cboUsuario.Location = new System.Drawing.Point(1392, 107);
+            this.cboUsuario.Location = new System.Drawing.Point(1360, 107);
             this.cboUsuario.Name = "cboUsuario";
-            this.cboUsuario.Size = new System.Drawing.Size(200, 33);
+            this.cboUsuario.Size = new System.Drawing.Size(295, 33);
             this.cboUsuario.TabIndex = 2;
             // 
             // lblNombrePaciente
