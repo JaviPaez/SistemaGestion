@@ -153,8 +153,7 @@ namespace SistemaGestion
         }
         #endregion
 
-        #region METODOS
-        //METODOS
+        #region METODOS        
         private void AbrirFormHijo(Form fh)
         {
             if (this.PanelContenedor.Controls.Count > 0)
@@ -193,7 +192,7 @@ namespace SistemaGestion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //RESIZE METODO PARA REDIMENSIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION
+        //RESIZE / REDIMENSIONAR / CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION
         private int tolerance = 12;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
@@ -231,7 +230,7 @@ namespace SistemaGestion
             SolidBrush blueBrush = new SolidBrush(Color.FromArgb(49,66,82));
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
             base.OnPaint(e);
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
+            ControlPaint.DrawSizeGrip(e.Graphics, Color.White, sizeGripRectangle);
         }
         #endregion
     }
