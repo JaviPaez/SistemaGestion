@@ -10,10 +10,10 @@ namespace SistemaGestion
         public int Id { get; set; }
         public int IdMedico { get; set; }
         public int Dni { get; set; }
-        public Decimal Miop_OI { get; set; }
-        public Decimal Miop_OD { get; set; }
-        public Decimal Astig_OI { get; set; }
-        public Decimal Astig_OD { get; set; }     
+        public decimal Miop_OI { get; set; }
+        public decimal Miop_OD { get; set; }
+        public decimal Astig_OI { get; set; }
+        public decimal Astig_OD { get; set; }     
         public DateTime Fecha { get; set; }
         public string Observaciones { get; set; }
     }

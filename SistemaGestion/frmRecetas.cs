@@ -106,6 +106,11 @@ namespace SistemaGestion
             if (txtAstig_OI.Text == string.Empty) txtAstig_OI.Text = 0.ToString();
             if (txtAstig_OD.Text == string.Empty) txtAstig_OD.Text = 0.ToString();
 
+            if (txtMiop_OI.Text.Contains(".")) txtMiop_OI.Text= txtMiop_OI.Text.Replace(".", ",");
+            if (txtMiop_OD.Text.Contains(".")) txtMiop_OD.Text = txtMiop_OD.Text.Replace(".", ",");
+            if (txtAstig_OI.Text.Contains(".")) txtAstig_OI.Text = txtAstig_OI.Text.Replace(".", ",");
+            if (txtAstig_OD.Text.Contains(".")) txtAstig_OD.Text = txtAstig_OD.Text.Replace(".", ",");
+
             if (decimal.TryParse(txtMiop_OI.Text, out decimal miopOI) && decimal.TryParse(txtMiop_OD.Text, out decimal miopOD) && decimal.TryParse(txtAstig_OI.Text, out decimal astigOI) && decimal.TryParse(txtAstig_OD.Text, out decimal astigOD))
             {
                 List<decimal> listValores = new List<decimal>
