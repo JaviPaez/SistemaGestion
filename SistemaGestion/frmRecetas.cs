@@ -16,10 +16,10 @@ namespace SistemaGestion
         {
             InitializeComponent();
         }
-        
+
         //LOAD
         private void frmRecetas_Load(object sender, EventArgs e)
-        {            
+        {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
@@ -38,9 +38,7 @@ namespace SistemaGestion
             cboDni.ValueMember = "Dni";
 
 
-            lblNombrePaciente.Text = "";
-            cboDni.Text = "Seleccione";
-            cboMedico.Text = "Seleccione";
+            ReiniciarCampos();
         }
 
         //BOTON GRABAR
@@ -50,32 +48,95 @@ namespace SistemaGestion
                       MessageBoxIcon.Question);
 
             var receta = new Receta();
-            try
+            if (respuesta == DialogResult.Yes)
             {
-                if (respuesta == DialogResult.Yes)
+                List<decimal> valores;
+                valores = VerificarDecimal();
+
+                if (valores.Count != 0)
                 {
-                    receta.IdMedico = Convert.ToInt32(cboMedico.SelectedValue);
-                    receta.Dni = Convert.ToInt32(cboDni.SelectedValue);
-                    receta.Miop_OI = txtMiop_OI.Text;
-                    receta.Miop_OD = txtMiop_OD.Text;
-                    receta.Astig_OI = txtAstig_OI.Text;
-                    receta.Astig_OD = txtAstig_OD.Text;
-                    receta.Fecha = dtpFecha.Value;
-                    receta.Observaciones = txtObserv.Text;   
+                    var valoresCorrectos = VerificarValoresCorrectos(valores);
+                    if (valoresCorrectos == true)
+                    {
+                        receta.Miop_OI = valores[0];
+                        receta.Miop_OD = valores[1];
+                        receta.Astig_OI = valores[2];
+                        receta.Astig_OD = valores[3];
 
-                    var recetaMetodo = new RecetaMetodos();
-                    Boolean grabo = recetaMetodo.GrabarReceta(receta);
+                        try
+                        {
+                            if (cboMedico.Text == "SELECCIONE" || cboMedico.SelectedValue == null)
+                            {
+                                receta.IdMedico = 0;
+                            }
+                            else
+                            {
+                                receta.IdMedico = Convert.ToInt32(cboMedico.SelectedValue);
+                            }
 
-                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                  
+                            receta.Dni = Convert.ToInt32(cboDni.SelectedValue);
+                            receta.Fecha = dtpFecha.Value;
+                            receta.Observaciones = txtObserv.Text;
+
+                            var recetaMetodo = new RecetaMetodos();
+                            Boolean grabo = recetaMetodo.GrabarReceta(receta);
+
+                            if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else MessageBox.Show("Ingrese valores de graduación correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese valores de graduación correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            catch (Exception ex) 
+        }
+
+        private List<decimal> VerificarDecimal()
+        {
+            if (txtMiop_OI.Text == string.Empty) txtMiop_OI.Text = 0.ToString();
+            if (txtMiop_OD.Text == string.Empty) txtMiop_OD.Text = 0.ToString();
+            if (txtAstig_OI.Text == string.Empty) txtAstig_OI.Text = 0.ToString();
+            if (txtAstig_OD.Text == string.Empty) txtAstig_OD.Text = 0.ToString();
+
+            if (decimal.TryParse(txtMiop_OI.Text, out decimal miopOI) && decimal.TryParse(txtMiop_OD.Text, out decimal miopOD) && decimal.TryParse(txtAstig_OI.Text, out decimal astigOI) && decimal.TryParse(txtAstig_OD.Text, out decimal astigOD))
             {
-                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                List<decimal> listValores = new List<decimal>
+                {
+                    miopOI,
+                    miopOD,
+                    astigOI,
+                    astigOD
+                };
+
+                return listValores;
             }
 
-            ReiniciarCampos();
+            else
+            {
+                List<decimal> listVacia = new List<decimal>();
+                return listVacia;
+            }
+        }
+
+        private bool VerificarValoresCorrectos(List<decimal> listValores)
+        {
+            bool correcto;
+
+            if ((listValores[0] < 100 && listValores[0] > -100) && (listValores[1] < 100 && listValores[1] > -100) && (listValores[2] < 100 && listValores[2] > -100) && (listValores[3] < 100 && listValores[3] > -100))
+            {
+                correcto = true;
+            }
+            else correcto = false;
+
+            return correcto;
         }
 
         //BOTON CANCELAR
@@ -86,7 +147,7 @@ namespace SistemaGestion
 
         //Cargar label Nombre Paciente
         private void cboDni_SelectionChangeCommitted(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 var pacienteMetodo = new PacienteMetodos();
@@ -104,8 +165,8 @@ namespace SistemaGestion
         //Reiniciar campos
         private void ReiniciarCampos()
         {
-            cboMedico.Text = "Seleccione";
-            cboDni.Text = "Seleccione";
+            cboMedico.Text = "SELECCIONE";
+            cboDni.Text = "SELECCIONE";
             txtMiop_OI.Clear();
             txtMiop_OD.Clear();
             txtAstig_OI.Clear();
@@ -122,11 +183,11 @@ namespace SistemaGestion
             var frm = new frmMedicos();
             frm.ShowDialog();
             CargarMedicos();
-            cboMedico.Text = "Seleccione";
+            cboMedico.Text = "SELECCIONE";
         }
 
         private void CargarMedicos()
-        { 
+        {
             //Cargar Combo Medicos
             var dt = new DataTable();
             var med = new MedicoMetodos();

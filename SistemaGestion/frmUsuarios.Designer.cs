@@ -83,7 +83,6 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtContraseña.Location = new System.Drawing.Point(289, 294);
             this.txtContraseña.Name = "txtContraseña";
