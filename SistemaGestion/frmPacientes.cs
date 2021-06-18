@@ -52,7 +52,7 @@ namespace SistemaGestion
                     }
                     else paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
 
-                    if (Int32.TryParse(txtNroAfiliado.Text, out Int32 nroAfiliado))
+                    if (Int64.TryParse(txtNroAfiliado.Text, out Int64 nroAfiliado))
                     {
                         paciente.NroAfiliado = nroAfiliado;
                     }
@@ -134,7 +134,7 @@ namespace SistemaGestion
                     }
                     else paciente.ObraSocial = cboObraSocial.SelectedItem.ToString();
 
-                    if (Int32.TryParse(txtNroAfiliado.Text, out Int32 nroAfiliado))
+                    if (Int64.TryParse(txtNroAfiliado.Text, out Int64 nroAfiliado))
                     {
                         paciente.NroAfiliado = nroAfiliado;
                     }
@@ -241,7 +241,6 @@ namespace SistemaGestion
                 txtApellido.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
                 txtNombre.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
                 dtpFecha.Value = Convert.ToDateTime(dgvGrilla.CurrentRow.Cells[3].Value);
-                //cboObraSocial.SelectedItem = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
                 cboObraSocial.Text = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
                 txtNroAfiliado.Text = dgvGrilla.CurrentRow.Cells[5].Value.ToString();
 

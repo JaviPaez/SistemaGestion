@@ -18,8 +18,7 @@ namespace SistemaGestion
         
         //LOAD
         private void frmProductos_Load(object sender, EventArgs e)
-        {
-            //ArmarGrilla();
+        {            
             ReiniciarCampos();
         }
 
@@ -35,6 +34,7 @@ namespace SistemaGestion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
+                    if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
                     producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
@@ -50,7 +50,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //ArmarGrilla();
+            MostrarProductoActual(Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value));
         }
 
         //BOTON MODIFICAR
@@ -65,6 +65,7 @@ namespace SistemaGestion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
+                    if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
                     producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
@@ -81,7 +82,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //ArmarGrilla();
+            MostrarProductoActual(Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value));
         }
 
         //BOTON NUEVO
@@ -155,10 +156,27 @@ namespace SistemaGestion
             txtBuscarDescr.Clear();
         }
 
+        private void MostrarProductoActual(int id)
+        {
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new ProductoMetodos();
+
+                dt = al.BuscarProductoId(id);
+
+                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+            }
+            catch
+            {
+            }
+        }
+
         //Reiniciar campos
         private void ReiniciarCampos()
         {
-            txtCantidad.Clear();
+            txtCantidad.Value = 0;
             txtPrecio.Clear();
             txtDescripcion.Clear();
             txtDescripcion.Focus();

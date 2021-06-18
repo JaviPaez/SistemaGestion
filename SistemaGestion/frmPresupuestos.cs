@@ -141,7 +141,7 @@ namespace SistemaGestion
                 cboIdReceta.DisplayMember = "Fecha";
                 cboIdReceta.ValueMember = "ID";
 
-                cboIdReceta.Text = "Seleccione";
+                cboIdReceta.Text = "SELECCIONE";
             }
             catch
             {
@@ -173,11 +173,11 @@ namespace SistemaGestion
         //Reiniciar campos
         private void ReiniciarCampos()
         {
-            cboDniPaciente.Text = "Seleccione";
-            cboUsuario.Text = "Seleccione";
-            cboIdReceta.Text = "Seleccione";
+            cboDniPaciente.Text = "SELECCIONE";
+            cboUsuario.Text = "SELECCIONE";
+            cboIdReceta.Text = "SELECCIONE";
             dtpFecha.Value = DateTime.Today;
-            cboProducto.Text = "Seleccione";
+            cboProducto.Text = "SELECCIONE";
             cboDniPaciente.Focus();
             txtPrecio.Clear();
             txtCantidad.Value = 0;
@@ -197,6 +197,7 @@ namespace SistemaGestion
         {
             try
             {
+                if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
                 var precio = Convert.ToDecimal(txtPrecio.Text);
                 var cantidad = Convert.ToInt32(txtCantidad.Text);
                 var total = precio * cantidad;
@@ -204,7 +205,7 @@ namespace SistemaGestion
 
                 dgvGrilla.Rows.Add(idProducto, cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
 
-                cboProducto.Text = "Seleccione";
+                cboProducto.Text = "SELECCIONE";
                 txtPrecio.Clear();
                 txtCantidad.Value = 0;
             }
@@ -231,7 +232,7 @@ namespace SistemaGestion
 
             var productoMetodo = new ProductoMetodos();
 
-            var dr = productoMetodo.BuscarProductoId(idProducto);
+            var dr = productoMetodo.BuscarIdProducto(idProducto);
 
             if (dr["Descripcion"] != null)
             {

@@ -12,6 +12,6 @@ namespace SistemaGestion
         public string Nombre { get; set; }
         public DateTime FechaNac { get; set; }
         public string ObraSocial { get; set; }
-        public int NroAfiliado { get; set; }
+        public Int64 NroAfiliado { get; set; }
     }
 }

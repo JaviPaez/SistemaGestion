@@ -175,12 +175,6 @@
             this.cboIdReceta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboIdReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboIdReceta.FormattingEnabled = true;
-            this.cboIdReceta.Items.AddRange(new object[] {
-            "Seleccione",
-            "Apross",
-            "OSDE",
-            "Prevencion Salud",
-            "SIPSSA"});
             this.cboIdReceta.Location = new System.Drawing.Point(916, 115);
             this.cboIdReceta.Name = "cboIdReceta";
             this.cboIdReceta.Size = new System.Drawing.Size(200, 33);
@@ -241,7 +235,7 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitar.ForeColor = System.Drawing.Color.White;
-            this.btnQuitar.Location = new System.Drawing.Point(1152, 504);
+            this.btnQuitar.Location = new System.Drawing.Point(1262, 501);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(153, 30);
             this.btnQuitar.TabIndex = 8;
@@ -258,7 +252,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1152, 468);
+            this.btnAgregar.Location = new System.Drawing.Point(1262, 465);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(153, 30);
             this.btnAgregar.TabIndex = 7;
@@ -273,7 +267,7 @@
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(188, 463);
             this.cboProducto.Name = "cboProducto";
-            this.cboProducto.Size = new System.Drawing.Size(292, 33);
+            this.cboProducto.Size = new System.Drawing.Size(406, 33);
             this.cboProducto.TabIndex = 4;
             this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.cboProducto_SelectionChangeCommitted);
             // 
@@ -306,7 +300,7 @@
             this.cantidad,
             this.precioUnitario,
             this.subTotal});
-            this.dgvGrilla.Location = new System.Drawing.Point(492, 546);
+            this.dgvGrilla.Location = new System.Drawing.Point(529, 541);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
             this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -458,7 +452,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(843, 466);
+            this.label11.Location = new System.Drawing.Point(953, 463);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 25);
             this.label11.TabIndex = 54;
@@ -469,7 +463,7 @@
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(644, 463);
+            this.txtPrecio.Location = new System.Drawing.Point(754, 460);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(99, 31);
             this.txtPrecio.TabIndex = 5;
@@ -480,7 +474,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(503, 469);
+            this.label12.Location = new System.Drawing.Point(613, 466);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 25);
             this.label12.TabIndex = 53;
@@ -490,7 +484,7 @@
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtCantidad.Location = new System.Drawing.Point(967, 464);
+            this.txtCantidad.Location = new System.Drawing.Point(1077, 461);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 6;

@@ -278,9 +278,9 @@ namespace SistemaGestion
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscar.Location = new System.Drawing.Point(780, 565);
+            this.txtBuscar.Location = new System.Drawing.Point(639, 565);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(259, 31);
+            this.txtBuscar.Size = new System.Drawing.Size(432, 31);
             this.txtBuscar.TabIndex = 20;
             // 
             // label8
@@ -289,7 +289,7 @@ namespace SistemaGestion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(468, 568);
+            this.label8.Location = new System.Drawing.Point(327, 568);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(292, 25);
             this.label8.TabIndex = 18;

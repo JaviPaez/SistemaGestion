@@ -101,7 +101,21 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataRow BuscarProductoId(int idProducto)
+        public DataTable BuscarProductoId(int id)
+        {
+            string producto = "select * from PRODUCTOS where Id = " + id;
+
+            //*****************************************************
+            var da = new SqlDataAdapter(producto, conectar());
+            var ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            return dt;
+            //*****************************************************
+        }
+
+        public DataRow BuscarIdProducto(int idProducto)
         {
             var dt = new DataTable();
             var ds = new DataSet();
