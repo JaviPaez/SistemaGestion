@@ -21,32 +21,38 @@ namespace SistemaGestion
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
-                       MessageBoxIcon.Question);                      
+                       MessageBoxIcon.Question);
 
             var usuario = new Usuario();
-            try
+            if (respuesta == DialogResult.Yes)
             {
-                if (respuesta == DialogResult.Yes)
+                if (txtContraseña.Text == txtVerifContr.Text)
                 {
-                    usuario.Dni = Convert.ToInt32(txtDni.Text);
-                    usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
-                    usuario.Apellido = txtApellido.Text;
-                    usuario.Nombre = txtNombre.Text;
-                    usuario.Contraseña = txtContraseña.Text;
+                    try
+                    {
+                        usuario.Contraseña = txtContraseña.Text;
+                        usuario.Dni = Convert.ToInt32(txtDni.Text);
+                        usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
+                        usuario.Apellido = txtApellido.Text;
+                        usuario.Nombre = txtNombre.Text;
 
-                    var usuarioMetodo = new UsuarioMetodos();
-                    Boolean grabo = usuarioMetodo.GrabarUsuario(usuario);
+                        var usuarioMetodo = new UsuarioMetodos();
+                        Boolean grabo = usuarioMetodo.GrabarUsuario(usuario);
 
-                    if (grabo == false)  MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
-                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
+                        if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                else MessageBox.Show("La contraseña no coincide", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-            this.Hide();
         }
 
         //BOTON CANCELAR
@@ -70,13 +76,14 @@ namespace SistemaGestion
             ReiniciarCampos();
         }
 
-        //Desplazar desde barra de titulo
+
         #region
+        //ARRASTRAR EL FORMULARIO
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
+
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -84,9 +91,8 @@ namespace SistemaGestion
         }
         #endregion
 
-        //BOTONES DE BARRA DE TITULO 
         #region Botones
-
+        //BOTONES DE BARRA DE TITULO 
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -105,7 +111,8 @@ namespace SistemaGestion
             txtApellido.Clear();
             txtNombre.Clear();
             txtContraseña.Clear();
-            cboRol.Text = "Seleccione";
+            txtVerifContr.Clear();
+            cboRol.Text = "SELECCIONE";
             txtDni.Focus();
         }
     }
