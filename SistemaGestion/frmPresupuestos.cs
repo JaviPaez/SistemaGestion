@@ -240,5 +240,27 @@ namespace SistemaGestion
                 txtCantidad.Text = "1";
             }
         }
+
+        //BOTON GENERAR PRESUPUESTO
+        private void btnReportPresup_Click(object sender, EventArgs e)
+        {
+            var frm = new frmReportPresup();         
+
+            for (int i = 0; i < dgvGrilla.Rows.Count; i++)
+            {
+                var variables = new DatosPresup();
+
+                variables.Paciente = lblNombrePaciente.Text;
+                variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
+                variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
+                variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
+                variables.PrecioUnitario = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[3].Value);
+                variables.Subtotal = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[4].Value);              
+
+                frm.Datos.Add(variables);
+            }            
+
+            frm.ShowDialog();
+        }
     }
 }

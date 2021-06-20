@@ -63,6 +63,7 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.btnReportPresup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +77,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(1316, 924);
+            this.btnGrabar.Location = new System.Drawing.Point(1305, 924);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 10;
@@ -489,12 +490,31 @@
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 6;
             // 
+            // btnReportPresup
+            // 
+            this.btnReportPresup.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReportPresup.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnReportPresup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportPresup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnReportPresup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportPresup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnReportPresup.ForeColor = System.Drawing.Color.White;
+            this.btnReportPresup.Location = new System.Drawing.Point(1520, 924);
+            this.btnReportPresup.Name = "btnReportPresup";
+            this.btnReportPresup.Size = new System.Drawing.Size(188, 53);
+            this.btnReportPresup.TabIndex = 55;
+            this.btnReportPresup.Text = "Generar Presup";
+            this.btnReportPresup.UseVisualStyleBackColor = false;
+            this.btnReportPresup.Click += new System.EventHandler(this.btnReportPresup_Click);
+            // 
             // frmPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.dgvGrilla);
+            this.Controls.Add(this.btnReportPresup);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPrecio);
@@ -508,7 +528,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
@@ -572,5 +591,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.Button btnReportPresup;
     }
 }
