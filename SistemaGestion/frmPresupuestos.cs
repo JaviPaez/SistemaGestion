@@ -107,7 +107,7 @@ namespace SistemaGestion
                 }
             }
 
-            ReiniciarCampos();
+            //ReiniciarCampos();
         }
 
         //BOTON CANCELAR
