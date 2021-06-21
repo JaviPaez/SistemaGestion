@@ -250,8 +250,9 @@ namespace SistemaGestion
             {
                 var variables = new DatosPresup();
 
-                variables.Paciente = lblNombrePaciente.Text;
+                variables.Nombre = lblNombrePaciente.Text;
                 variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
+                variables.Fecha = dtpFecha.Value;
                 variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
                 variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
                 variables.PrecioUnitario = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[3].Value);
