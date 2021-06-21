@@ -198,7 +198,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cantidad</rd:DefaultName>
@@ -225,10 +227,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PrecioUnitario.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PrecioUnitario</rd:DefaultName>
@@ -241,6 +247,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -255,10 +262,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Subtotal.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Subtotal</rd:DefaultName>
@@ -271,6 +282,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -309,7 +321,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.23633in</Height>
+    <Height>0.87744in</Height>
     <Style />
   </Body>
   <Width>6.57117in</Width>
@@ -482,10 +494,14 @@
               <TextRuns>
                 <TextRun>
                   <Value>=First(Fields!Fecha.Value, "DataSet")</Value>
-                  <Style />
+                  <Style>
+                    <Format>d</Format>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -533,6 +549,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>0.03528cm</Top>
           <Left>11.18807cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
@@ -554,13 +571,18 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Sum(Fields!Subtotal.Value, "DataSet")</Value>
-                  <Style />
+                  <Style>
+                    <Format>'$'#,0.00;('$'#,0.00)</Format>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>0.03528cm</Top>
           <Left>13.68807cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
@@ -573,6 +595,7 @@
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
             <PaddingBottom>2pt</PaddingBottom>
+            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
           </Style>
         </Textbox>
       </ReportItems>
