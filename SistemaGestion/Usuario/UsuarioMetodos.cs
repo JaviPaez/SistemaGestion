@@ -14,7 +14,7 @@ namespace SistemaGestion
             string login = "select Dni, Contraseña, Apellido, Nombre from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";      
 
             //*****************************************************
-            var da = new SqlDataAdapter(login, conectar());
+            var da = new SqlDataAdapter(login, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -29,7 +29,7 @@ namespace SistemaGestion
             {  
                 var grabarUsuario = "INSERT INTO Usuarios(Dni, IdRol, Apellido, Nombre, Contraseña) VALUES(@Dni, @IdRol, @Apellido, @Nombre, @Contraseña)";
 
-                SqlCommand com = new SqlCommand(grabarUsuario, conectar());
+                SqlCommand com = new SqlCommand(grabarUsuario, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", usuario.Dni);
                 com.Parameters.AddWithValue("@IdRol", usuario.IdRol);
@@ -52,7 +52,7 @@ namespace SistemaGestion
             string usuarios = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id order by Dni";
 
             //*****************************************************
-            var da = new SqlDataAdapter(usuarios, conectar());
+            var da = new SqlDataAdapter(usuarios, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -66,7 +66,7 @@ namespace SistemaGestion
             string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Dni = " + dni;
 
             //*****************************************************
-            var da = new SqlDataAdapter(usuario, conectar());
+            var da = new SqlDataAdapter(usuario, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -80,7 +80,7 @@ namespace SistemaGestion
             string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
 
             //*****************************************************
-            var da = new SqlDataAdapter(usuario, conectar());
+            var da = new SqlDataAdapter(usuario, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -94,7 +94,7 @@ namespace SistemaGestion
             string usuarios = "select Dni, Apellido + ', ' + Nombre as ApeNom from USUARIOS order by ApeNom";
 
             //*****************************************************
-            var da = new SqlDataAdapter(usuarios, conectar());
+            var da = new SqlDataAdapter(usuarios, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

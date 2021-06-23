@@ -15,7 +15,7 @@ namespace SistemaGestion
             {
                 var maxId = "select max(ID) + 1 from RECETAS";
                 //***************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -32,7 +32,7 @@ namespace SistemaGestion
 
                 var grabarReceta = "set dateformat dmy INSERT INTO RECETAS(ID, IdMedico, Dni, Miop_OI, Miop_OD, Astig_OI, Astig_OD, Fecha, Observaciones) VALUES(@ID, @IdMedico, @Dni, @Miop_OI, @Miop_OD, @Astig_OI, @Astig_OD, @Fecha, @Observaciones)";
 
-                SqlCommand com = new SqlCommand(grabarReceta, conectar());
+                SqlCommand com = new SqlCommand(grabarReceta, Conectar());
 
                 com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@IdMedico", receta.IdMedico);
@@ -59,7 +59,7 @@ namespace SistemaGestion
             string recetas = "select * from RECETAS";
 
             //*****************************************************
-            var da = new SqlDataAdapter(recetas, conectar());
+            var da = new SqlDataAdapter(recetas, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -73,7 +73,7 @@ namespace SistemaGestion
             string recetas = "select ID,Fecha from RECETAS where Dni = " + dniPaciente + " order by Fecha desc";
 
             //*****************************************************
-            var da = new SqlDataAdapter(recetas, conectar());
+            var da = new SqlDataAdapter(recetas, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -87,7 +87,7 @@ namespace SistemaGestion
             string receta = "select * from RECETAS where ID = " + idReceta;
 
             //*****************************************************
-            var comando = new SqlCommand(receta, conectar());
+            var comando = new SqlCommand(receta, Conectar());
 
             SqlDataReader registro = comando.ExecuteReader();
 

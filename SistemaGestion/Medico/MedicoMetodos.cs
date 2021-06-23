@@ -16,7 +16,7 @@ namespace SistemaGestion
                 var maxId = "select max(ID) + 1 from MEDICOS";
 
                 //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -33,7 +33,7 @@ namespace SistemaGestion
 
                 var grabarMedico = "INSERT INTO MEDICOS(ID,Apellido,Nombre,Matricula) VALUES(@ID, @Apellido, @Nombre, @Matricula)";
 
-                SqlCommand com = new SqlCommand(grabarMedico, conectar());
+                SqlCommand com = new SqlCommand(grabarMedico, Conectar());
 
                 com.Parameters.AddWithValue("@ID",idMax);
                 com.Parameters.AddWithValue("@Apellido", medico.Apellido);
@@ -56,7 +56,7 @@ namespace SistemaGestion
             {
                 var modificarMedico = "UPDATE MEDICOS SET Matricula=@Matricula, Apellido=@Apellido, Nombre=@Nombre where Id=@Id";
 
-                SqlCommand com = new SqlCommand(modificarMedico, conectar());
+                SqlCommand com = new SqlCommand(modificarMedico, Conectar());
 
                 com.Parameters.AddWithValue("@Id", medico.Id);
                 com.Parameters.AddWithValue("@Matricula", medico.Matricula);
@@ -79,7 +79,7 @@ namespace SistemaGestion
             string medicos = "select * from MEDICOS order by Apellido";
 
             //*****************************************************
-            var da = new SqlDataAdapter(medicos, conectar());
+            var da = new SqlDataAdapter(medicos, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -93,7 +93,7 @@ namespace SistemaGestion
             string medicos = "select ID, Apellido + ', ' + Nombre as ApeNom from MEDICOS order by ApeNom";
 
             //*****************************************************
-            var da = new SqlDataAdapter(medicos, conectar());
+            var da = new SqlDataAdapter(medicos, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

@@ -14,7 +14,7 @@ namespace SistemaGestion
         private SqlConnection sCon = new SqlConnection();
         private string con = "Data Source=JAVIER\\SQLSERVER;Integrated Security=SSPI;Initial Catalog=OPTICA";
 
-        public SqlConnection conectar()
+        public SqlConnection Conectar()
         {
             try
             {
@@ -28,7 +28,7 @@ namespace SistemaGestion
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.ToString());
             }
 
             return sCon;

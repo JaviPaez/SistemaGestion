@@ -16,7 +16,7 @@ namespace SistemaGestion
             {
                 var grabarPaciente = "set dateformat dmy INSERT INTO PACIENTES (Dni, Apellido, Nombre, FechaNac, ObraSocial, NroAfiliado) VALUES(@Dni, @Apellido, @Nombre, @FechaNac, @ObraSocial, @NroAfiliado)";
 
-                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+                SqlCommand com = new SqlCommand(grabarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", paciente.Dni);
                 com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
@@ -43,7 +43,7 @@ namespace SistemaGestion
 
                 var grabarPaciente = "INSERT INTO PacienteTelefono (ID, Dni, NroTelefono) VALUES(@ID, @Dni, @NroTelefono)";
 
-                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+                SqlCommand com = new SqlCommand(grabarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@ID", maxId);
                 com.Parameters.AddWithValue("@Dni", telPaciente.Dni);
@@ -67,7 +67,7 @@ namespace SistemaGestion
 
                 var grabarPaciente = "INSERT INTO PacienteeMail (ID, Dni, eMail) VALUES(@ID, @Dni, @eMail)";
 
-                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+                SqlCommand com = new SqlCommand(grabarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@ID", maxId);
                 com.Parameters.AddWithValue("@Dni", mailPaciente.Dni);
@@ -91,7 +91,7 @@ namespace SistemaGestion
 
                 var grabarPaciente = "INSERT INTO PacienteDireccion (ID, Dni, Provincia, Localidad, Calle, Nro, Piso, Dpto, Manzana, Lote, Barrio) VALUES(@ID, @Dni, @Provincia, @Localidad, @Calle, @Nro, @Piso, @Dpto, @Manzana, @Lote, @Barrio)";
 
-                SqlCommand com = new SqlCommand(grabarPaciente, conectar());
+                SqlCommand com = new SqlCommand(grabarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@ID", maxId);
                 com.Parameters.AddWithValue("@Dni", direccionPaciente.Dni);
@@ -122,7 +122,7 @@ namespace SistemaGestion
             {
                 var modificarPaciente = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";
 
-                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+                SqlCommand com = new SqlCommand(modificarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", paciente.Dni);
                 com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
@@ -147,7 +147,7 @@ namespace SistemaGestion
             {
                 var modificarPaciente = "UPDATE PacienteTelefono SET NroTelefono=@NroTelefono where Dni=@Dni";
 
-                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+                SqlCommand com = new SqlCommand(modificarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", telPaciente.Dni);
                 com.Parameters.AddWithValue("@NroTelefono", telPaciente.NroTelefono);
@@ -168,7 +168,7 @@ namespace SistemaGestion
             {
                 var modificarPaciente = "UPDATE PacienteDireccion SET Provincia=@Provincia, Localidad=@Localidad, Calle=@Calle, Nro=@Nro, Piso=@Piso, Dpto=@Dpto, Manzana=@Manzana, Lote=@Lote, Barrio=@Barrio where Dni=@Dni";
 
-                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+                SqlCommand com = new SqlCommand(modificarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", direccionPaciente.Dni);
                 com.Parameters.AddWithValue("@Provincia", direccionPaciente.Provincia);
@@ -197,7 +197,7 @@ namespace SistemaGestion
             {
                 var modificarPaciente = "UPDATE PacienteeMail SET eMail=@eMail where Dni=@Dni";
 
-                SqlCommand com = new SqlCommand(modificarPaciente, conectar());
+                SqlCommand com = new SqlCommand(modificarPaciente, Conectar());
 
                 com.Parameters.AddWithValue("@Dni", mailPaciente.Dni);
                 com.Parameters.AddWithValue("@eMail", mailPaciente.eMail);
@@ -218,7 +218,7 @@ namespace SistemaGestion
             string pacientes = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Pacientes.Dni";
 
             //*****************************************************
-            var da = new SqlDataAdapter(pacientes, conectar());
+            var da = new SqlDataAdapter(pacientes, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -232,7 +232,7 @@ namespace SistemaGestion
             string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Pacientes.Dni = " + dni;
 
             //*****************************************************
-            var da = new SqlDataAdapter(paciente, conectar());
+            var da = new SqlDataAdapter(paciente, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -246,7 +246,7 @@ namespace SistemaGestion
             string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
 
             //*****************************************************
-            var da = new SqlDataAdapter(paciente, conectar());
+            var da = new SqlDataAdapter(paciente, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -260,7 +260,7 @@ namespace SistemaGestion
             string pacientes = "select Dni, Apellido, Nombre from PACIENTES order by Dni";
 
             //*****************************************************
-            var da = new SqlDataAdapter(pacientes, conectar());
+            var da = new SqlDataAdapter(pacientes, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -274,7 +274,7 @@ namespace SistemaGestion
             string paciente = "select Dni, Apellido, Nombre from PACIENTES where Dni = " + Dni;
 
             //*****************************************************
-            var comando = new SqlCommand(paciente, conectar());
+            var comando = new SqlCommand(paciente, Conectar());
 
             SqlDataReader registro = comando.ExecuteReader();
 
@@ -289,7 +289,7 @@ namespace SistemaGestion
                 var maxId = "select max(ID) + 1 from PacienteTelefono";
 
                 //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -305,7 +305,7 @@ namespace SistemaGestion
                 var maxId = "select max(ID) + 1 from PacienteDireccion";
 
                 //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -321,7 +321,7 @@ namespace SistemaGestion
                 var maxId = "select max(ID) + 1 from PacienteeMail";
 
                 //**************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch

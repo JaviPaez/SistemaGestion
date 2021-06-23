@@ -15,7 +15,7 @@ namespace SistemaGestion
             {
                 var maxId = "select max(ID) + 1 from PRODUCTOS";
                 //*************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -32,7 +32,7 @@ namespace SistemaGestion
 
                 var grabarProducto = "INSERT INTO PRODUCTOS(ID, Descripcion, Precio, Cantidad) VALUES(@ID, @Descripcion, @Precio, @Cantidad)";
 
-                SqlCommand com = new SqlCommand(grabarProducto, conectar());
+                SqlCommand com = new SqlCommand(grabarProducto, Conectar());
                 
                 com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
@@ -55,7 +55,7 @@ namespace SistemaGestion
             {
                 var modificarProducto = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where ID=@ID";
 
-                SqlCommand com = new SqlCommand(modificarProducto, conectar());
+                SqlCommand com = new SqlCommand(modificarProducto, Conectar());
 
                 com.Parameters.AddWithValue("@ID", producto.Id);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
@@ -78,7 +78,7 @@ namespace SistemaGestion
             string productos = "select * from PRODUCTOS order by Descripcion";
 
             //*****************************************************
-            var da = new SqlDataAdapter(productos, conectar());
+            var da = new SqlDataAdapter(productos, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -92,7 +92,7 @@ namespace SistemaGestion
             string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%' order by Descripcion";
 
             //*****************************************************
-            var da = new SqlDataAdapter(producto, conectar());
+            var da = new SqlDataAdapter(producto, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -106,7 +106,7 @@ namespace SistemaGestion
             string producto = "select * from PRODUCTOS where Id = " + id;
 
             //*****************************************************
-            var da = new SqlDataAdapter(producto, conectar());
+            var da = new SqlDataAdapter(producto, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -122,7 +122,7 @@ namespace SistemaGestion
             DataRow dr;
 
             string producto = "select * from PRODUCTOS where ID = " + idProducto;
-            var da = new SqlDataAdapter(producto, conectar());
+            var da = new SqlDataAdapter(producto, Conectar());
 
             da.Fill(ds);
             dt = ds.Tables["Descripcion"];
@@ -137,7 +137,7 @@ namespace SistemaGestion
             string productos = "select ID, Descripcion from PRODUCTOS order by Descripcion";
 
             //*****************************************************
-            var da = new SqlDataAdapter(productos, conectar());
+            var da = new SqlDataAdapter(productos, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

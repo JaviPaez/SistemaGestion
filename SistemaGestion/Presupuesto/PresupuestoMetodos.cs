@@ -15,7 +15,7 @@ namespace SistemaGestion
             {
                 var maxId = "select max(Nro) + 1 from PRESUPUESTOS";
                 //***************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
@@ -32,7 +32,7 @@ namespace SistemaGestion
 
                 var grabarPresupuesto = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro, DniUsuario, DniPaciente, IdReceta, Fecha) VALUES (@Nro, @DniUsuario, @DniPaciente, @IdReceta, @Fecha)";
 
-                SqlCommand com = new SqlCommand(grabarPresupuesto, conectar());
+                SqlCommand com = new SqlCommand(grabarPresupuesto, Conectar());
 
                 com.Parameters.AddWithValue("@Nro", idMax);
                 com.Parameters.AddWithValue("@DniUsuario", presupuesto.DniUsuario);
@@ -55,7 +55,7 @@ namespace SistemaGestion
             string presupuestos = "select * from PRESUPUESTOS order by Fecha desc";    
 
             //*****************************************************
-            var da = new SqlDataAdapter(presupuestos, conectar());
+            var da = new SqlDataAdapter(presupuestos, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -69,7 +69,7 @@ namespace SistemaGestion
             string presupuesto = "select Nro as 'Nº Presupuesto', Dni, Apellido + ', ' + Nombre as 'Apellido, Nombre', Fecha, Descripcion, PrecioUnitario, DetallePresupuesto.Cantidad from Presupuestos, DetallePresupuesto, Productos, Pacientes where DetallePresupuesto.NroPresupuesto = Presupuestos.Nro and DetallePresupuesto.IdProducto = Productos.ID and Dni = " + dni + "order by Fecha desc";
 
             //*****************************************************
-            var da = new SqlDataAdapter(presupuesto, conectar());
+            var da = new SqlDataAdapter(presupuesto, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];

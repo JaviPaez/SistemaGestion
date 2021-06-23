@@ -14,7 +14,7 @@ namespace SistemaGestion
             string roles = "select ID, NombreRol from ROLES order by NombreRol";
 
             //*****************************************************
-            var da = new SqlDataAdapter(roles, conectar());
+            var da = new SqlDataAdapter(roles, Conectar());
             var ds = new DataSet();
             da.Fill(ds);
             DataTable dt = ds.Tables[0];
@@ -29,7 +29,7 @@ namespace SistemaGestion
             {
                 var maxId = "select max(ID) + 1 from ROLES";
                 //*************************************************
-                SqlCommand com = new SqlCommand(maxId, conectar());
+                SqlCommand com = new SqlCommand(maxId, Conectar());
                 return (int)com.ExecuteScalar();
             }
             catch
