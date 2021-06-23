@@ -290,11 +290,8 @@
             // 
             this.dgvGrilla.AllowUserToAddRows = false;
             this.dgvGrilla.AllowUserToDeleteRows = false;
-            this.dgvGrilla.AllowUserToResizeColumns = false;
-            this.dgvGrilla.AllowUserToResizeRows = false;
             this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvGrilla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
