@@ -66,137 +66,137 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="DatosPresup.cs" />
-    <Compile Include="DetallePresupuestoMetodos.cs" />
-    <Compile Include="frmListarPresupuestos.cs">
+    <Compile Include="Presupuesto\DatosPresup.cs" />
+    <Compile Include="Presupuesto\DetallePresupuestoMetodos.cs" />
+    <Compile Include="Formularios\frmListarPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListarPresupuestos.Designer.cs">
+    <Compile Include="Formularios\frmListarPresupuestos.Designer.cs">
       <DependentUpon>frmListarPresupuestos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListarUsuarios.cs">
+    <Compile Include="Formularios\frmListarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListarUsuarios.Designer.cs">
+    <Compile Include="Formularios\frmListarUsuarios.Designer.cs">
       <DependentUpon>frmListarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMedicos.cs">
+    <Compile Include="Formularios\frmMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMedicos.Designer.cs">
+    <Compile Include="Formularios\frmMedicos.Designer.cs">
       <DependentUpon>frmMedicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPacientes.cs">
+    <Compile Include="Formularios\frmPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPacientes.Designer.cs">
+    <Compile Include="Formularios\frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPresupuestos.cs">
+    <Compile Include="Formularios\frmPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPresupuestos.Designer.cs">
+    <Compile Include="Formularios\frmPresupuestos.Designer.cs">
       <DependentUpon>frmPresupuestos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecetas.cs">
+    <Compile Include="Formularios\frmRecetas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecetas.Designer.cs">
+    <Compile Include="Formularios\frmRecetas.Designer.cs">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportPresup.cs">
+    <Compile Include="Formularios\frmReportPresup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportPresup.Designer.cs">
+    <Compile Include="Formularios\frmReportPresup.Designer.cs">
       <DependentUpon>frmReportPresup.cs</DependentUpon>
     </Compile>
-    <Compile Include="MedicoMetodos.cs" />
-    <Compile Include="ProductoMetodos.cs" />
-    <Compile Include="PresupuestoMetodos.cs" />
-    <Compile Include="RolMetodos.cs" />
-    <Compile Include="RecetaMetodos.cs" />
-    <Compile Include="Medico.cs" />
-    <Compile Include="PacienteMetodos.cs" />
-    <Compile Include="PacienteDireccion.cs" />
-    <Compile Include="DetallePresupuesto.cs" />
-    <Compile Include="Producto.cs" />
+    <Compile Include="Medico\MedicoMetodos.cs" />
+    <Compile Include="Producto\ProductoMetodos.cs" />
+    <Compile Include="Presupuesto\PresupuestoMetodos.cs" />
+    <Compile Include="PermisoyRol\RolMetodos.cs" />
+    <Compile Include="Receta\RecetaMetodos.cs" />
+    <Compile Include="Medico\Medico.cs" />
+    <Compile Include="Paciente\PacienteMetodos.cs" />
+    <Compile Include="Paciente\PacienteDireccion.cs" />
+    <Compile Include="Presupuesto\DetallePresupuesto.cs" />
+    <Compile Include="Producto\Producto.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UsuarioDireccion.cs" />
-    <Compile Include="PacienteeMail.cs" />
-    <Compile Include="UsuarioeMail.cs" />
-    <Compile Include="frmInicio.cs">
+    <Compile Include="Usuario\UsuarioDireccion.cs" />
+    <Compile Include="Paciente\PacienteeMail.cs" />
+    <Compile Include="Usuario\UsuarioeMail.cs" />
+    <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInicio.Designer.cs">
+    <Compile Include="Formularios\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioMetodos.cs" />
-    <Compile Include="frmMenu.cs">
+    <Compile Include="Usuario\UsuarioMetodos.cs" />
+    <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenu.Designer.cs">
+    <Compile Include="Formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paciente.cs" />
-    <Compile Include="Permiso.cs" />
-    <Compile Include="Presupuesto.cs" />
-    <Compile Include="frmProductos.cs">
+    <Compile Include="Paciente\Paciente.cs" />
+    <Compile Include="PermisoyRol\Permiso.cs" />
+    <Compile Include="Presupuesto\Presupuesto.cs" />
+    <Compile Include="Formularios\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos.Designer.cs">
+    <Compile Include="Formularios\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receta.cs" />
-    <Compile Include="Rol.cs" />
-    <Compile Include="RolPermiso.cs" />
-    <Compile Include="PacienteTelefono.cs" />
-    <Compile Include="UsuarioTelefono.cs" />
-    <Compile Include="frmUsuarios.cs">
+    <Compile Include="Receta\Receta.cs" />
+    <Compile Include="PermisoyRol\Rol.cs" />
+    <Compile Include="PermisoyRol\RolPermiso.cs" />
+    <Compile Include="Paciente\PacienteTelefono.cs" />
+    <Compile Include="Usuario\UsuarioTelefono.cs" />
+    <Compile Include="Formularios\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsuarios.Designer.cs">
+    <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="frmInicio.resx">
+    <Compile Include="Usuario\Usuario.cs" />
+    <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarPresupuestos.resx">
+    <EmbeddedResource Include="Formularios\frmListarPresupuestos.resx">
       <DependentUpon>frmListarPresupuestos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarUsuarios.resx">
+    <EmbeddedResource Include="Formularios\frmListarUsuarios.resx">
       <DependentUpon>frmListarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMedicos.resx">
+    <EmbeddedResource Include="Formularios\frmMedicos.resx">
       <DependentUpon>frmMedicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPacientes.resx">
+    <EmbeddedResource Include="Formularios\frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPresupuestos.resx">
+    <EmbeddedResource Include="Formularios\frmPresupuestos.resx">
       <DependentUpon>frmPresupuestos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProductos.resx">
+    <EmbeddedResource Include="Formularios\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecetas.resx">
+    <EmbeddedResource Include="Formularios\frmRecetas.resx">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportPresup.resx">
+    <EmbeddedResource Include="Formularios\frmReportPresup.resx">
       <DependentUpon>frmReportPresup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -209,7 +209,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="frmUsuarios.resx">
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPresup.rdlc" />

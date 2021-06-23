@@ -14,14 +14,14 @@ namespace SistemaGestion
         public frmPresupuestos()
         {
             InitializeComponent();
-        }
-
+        }        
         //LOAD
         private void frmPresupuestos_Load(object sender, EventArgs e)
         {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
             dtpFecha.MaxDate = DateTime.Today;
+            
 
             //Cargar Combo Usuarios
             var dt = new DataTable();
@@ -188,6 +188,9 @@ namespace SistemaGestion
             lblAstigOI.Text = "";
             lblAstigOD.Text = "";
             lblObservaciones.Text = "";
+            lblTotal.Text = "";
+            lblTotals.Text = "";
+            total = 0;
 
             dgvGrilla.Rows.Clear();
         }
@@ -195,19 +198,24 @@ namespace SistemaGestion
         //BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
                 var precio = Convert.ToDecimal(txtPrecio.Text);
                 var cantidad = Convert.ToInt32(txtCantidad.Text);
-                var total = precio * cantidad;
+                var subtotal = precio * cantidad;                
+                total += subtotal;
+
                 var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
 
-                dgvGrilla.Rows.Add(idProducto, cboProducto.Text, txtCantidad.Text, txtPrecio.Text, total);
+                dgvGrilla.Rows.Add(idProducto, cboProducto.Text, txtCantidad.Text, txtPrecio.Text, subtotal);
 
                 cboProducto.Text = "SELECCIONE";
                 txtPrecio.Clear();
                 txtCantidad.Value = 0;
+                lblTotals.Text = "Total: $";
+                lblTotal.Text = total.ToString();
             }
             catch (Exception ex)
             {
@@ -251,7 +259,12 @@ namespace SistemaGestion
                 var variables = new DatosPresup();
 
                 variables.Nombre = lblNombrePaciente.Text;
-                variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
+                if(cboDniPaciente.Text =="SELECCIONE" || cboDniPaciente.SelectedValue == null)
+                {
+                    variables.Dni = 0;
+                }
+                else variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
+
                 variables.Fecha = dtpFecha.Value;
                 variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
                 variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
@@ -263,5 +276,7 @@ namespace SistemaGestion
 
             frm.ShowDialog();
         }
+
+        decimal total = 0;
     }
 }
