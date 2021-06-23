@@ -98,15 +98,16 @@ namespace SistemaGestion
                     pacienteMetodo.GrabarDireccionPaciente(direccPaciente);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                    {
+                        MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information); MostrarPacienteActual(Convert.ToInt32(txtDni.Text));
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            MostrarPacienteActual(Convert.ToInt32(txtDni.Text));
         }
 
         //BOTON MODIFICAR
@@ -178,7 +179,10 @@ namespace SistemaGestion
                     pacienteMetodo.ModificarDireccionPaciente(direccPaciente);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                    {
+                        MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information); MostrarPacienteActual(Convert.ToInt32(txtDni.Text));
+                    }
                 }
 
                 catch (Exception ex)
@@ -186,8 +190,6 @@ namespace SistemaGestion
                     MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            MostrarPacienteActual(Convert.ToInt32(txtDni.Text));
         }
 
         //BOTON NUEVO
@@ -284,7 +286,7 @@ namespace SistemaGestion
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new PacienteMetodos();
-                
+
                 dt = al.BuscarPacienteDni(dni);
 
                 if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;

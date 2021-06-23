@@ -230,7 +230,17 @@ namespace SistemaGestion
 
             DialogResult respuesta = MessageBox.Show("¿Confirma eliminar el producto seleccionado?", "Quitar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if ((respuesta == DialogResult.Yes)) dgvGrilla.Rows.Remove(dgvGrilla.CurrentRow);
+            if (respuesta == DialogResult.Yes) 
+            {
+                total -= Convert.ToDecimal(dgvGrilla.CurrentRow.Cells["Subtotal"].Value);
+                lblTotal.Text = total.ToString();
+                dgvGrilla.Rows.Remove(dgvGrilla.CurrentRow);
+                if (dgvGrilla.Rows.Count < 1)
+                {
+                    lblTotal.Text = "";
+                    lblTotals.Text = "";
+                }
+            }
         }
 
         //Seleccion del Combo Producto
@@ -277,6 +287,7 @@ namespace SistemaGestion
             frm.ShowDialog();
         }
 
+        //Variables
         decimal total = 0;
     }
 }

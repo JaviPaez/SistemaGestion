@@ -333,19 +333,17 @@ namespace SistemaGestion
             // 
             this.dgvGrilla.AllowUserToAddRows = false;
             this.dgvGrilla.AllowUserToDeleteRows = false;
-            this.dgvGrilla.AllowUserToResizeColumns = false;
-            this.dgvGrilla.AllowUserToResizeRows = false;
             this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrilla.Location = new System.Drawing.Point(100, 662);
+            this.dgvGrilla.Location = new System.Drawing.Point(96, 619);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
             this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGrilla.Size = new System.Drawing.Size(1516, 228);
+            this.dgvGrilla.Size = new System.Drawing.Size(1516, 283);
             this.dgvGrilla.TabIndex = 23;
             this.dgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
             // 
@@ -493,7 +491,7 @@ namespace SistemaGestion
             this.txtPiso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPiso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtPiso.Location = new System.Drawing.Point(876, 315);
+            this.txtPiso.Location = new System.Drawing.Point(876, 318);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(61, 31);
             this.txtPiso.TabIndex = 12;

@@ -14,11 +14,11 @@ namespace SistemaGestion
         public frmProductos()
         {
             InitializeComponent();
-        }          
-        
+        }
+
         //LOAD
         private void frmProductos_Load(object sender, EventArgs e)
-        {            
+        {
             ReiniciarCampos();
         }
 
@@ -41,16 +41,17 @@ namespace SistemaGestion
                     var productoMetodo = new ProductoMetodos();
                     Boolean grabo = productoMetodo.GrabarProducto(producto);
 
-                    if (grabo == false) MessageBox.Show("Error en grabación", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    else MessageBox.Show("Grabación correcta", "Grabar",MessageBoxButtons.OK,MessageBoxIcon.Information);                    
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information); MostrarProductoActual();
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            MostrarProductoActual();
         }
 
         //BOTON MODIFICAR
@@ -74,15 +75,17 @@ namespace SistemaGestion
                     Boolean modifico = productoMetodo.ModificarProducto(producto);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                    {
+                        MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MostrarProductoModificado(Convert.ToInt64(dgvGrilla.CurrentRow.Cells["ID"].Value));
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            MostrarProductoModificado(Convert.ToInt64(dgvGrilla.CurrentRow.Cells["ID"].Value));
         }
 
         //BOTON NUEVO
@@ -159,12 +162,12 @@ namespace SistemaGestion
         private void MostrarProductoActual()
         {
             try
-            {               
+            {
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new ProductoMetodos();
 
-                var id = al.UltimoId()-1;
+                var id = al.UltimoId() - 1;
 
                 dt = al.BuscarProductoId(id);
 
@@ -201,5 +204,5 @@ namespace SistemaGestion
             txtDescripcion.Clear();
             txtDescripcion.Focus();
         }
-}
+    }
 }

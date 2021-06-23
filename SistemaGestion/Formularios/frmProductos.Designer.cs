@@ -54,7 +54,7 @@ namespace SistemaGestion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(746, 107);
+            this.label1.Location = new System.Drawing.Point(741, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 31);
             this.label1.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace SistemaGestion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(499, 232);
+            this.label2.Location = new System.Drawing.Point(488, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 25);
             this.label2.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace SistemaGestion
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(726, 229);
+            this.txtDescripcion.Location = new System.Drawing.Point(715, 117);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(489, 31);
             this.txtDescripcion.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace SistemaGestion
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(726, 287);
+            this.txtPrecio.Location = new System.Drawing.Point(715, 175);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(129, 31);
             this.txtPrecio.TabIndex = 1;
@@ -98,7 +98,7 @@ namespace SistemaGestion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(499, 290);
+            this.label3.Location = new System.Drawing.Point(488, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace SistemaGestion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(499, 350);
+            this.label4.Location = new System.Drawing.Point(488, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 5;
@@ -125,7 +125,7 @@ namespace SistemaGestion
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(466, 428);
+            this.btnNuevo.Location = new System.Drawing.Point(436, 308);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(188, 53);
             this.btnNuevo.TabIndex = 3;
@@ -142,7 +142,7 @@ namespace SistemaGestion
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(1027, 428);
+            this.btnGrabar.Location = new System.Drawing.Point(997, 308);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 5;
@@ -155,7 +155,7 @@ namespace SistemaGestion
             this.txtBuscarDescr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscarDescr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscarDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtBuscarDescr.Location = new System.Drawing.Point(726, 562);
+            this.txtBuscarDescr.Location = new System.Drawing.Point(696, 421);
             this.txtBuscarDescr.Name = "txtBuscarDescr";
             this.txtBuscarDescr.Size = new System.Drawing.Size(489, 31);
             this.txtBuscarDescr.TabIndex = 6;
@@ -166,7 +166,7 @@ namespace SistemaGestion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(499, 562);
+            this.label5.Location = new System.Drawing.Point(469, 421);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 25);
             this.label5.TabIndex = 11;
@@ -181,7 +181,7 @@ namespace SistemaGestion
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1255, 558);
+            this.btnBuscar.Location = new System.Drawing.Point(1225, 417);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 38);
             this.btnBuscar.TabIndex = 7;
@@ -198,7 +198,7 @@ namespace SistemaGestion
             this.btnGrilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrilla.ForeColor = System.Drawing.Color.White;
-            this.btnGrilla.Location = new System.Drawing.Point(751, 924);
+            this.btnGrilla.Location = new System.Drawing.Point(715, 893);
             this.btnGrilla.Name = "btnGrilla";
             this.btnGrilla.Size = new System.Drawing.Size(188, 53);
             this.btnGrilla.TabIndex = 8;
@@ -211,15 +211,15 @@ namespace SistemaGestion
             this.dgvGrilla.AllowUserToAddRows = false;
             this.dgvGrilla.AllowUserToDeleteRows = false;
             this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrilla.Location = new System.Drawing.Point(520, 659);
+            this.dgvGrilla.Location = new System.Drawing.Point(474, 469);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGrilla.Size = new System.Drawing.Size(618, 228);
+            this.dgvGrilla.Size = new System.Drawing.Size(711, 394);
             this.dgvGrilla.TabIndex = 9;
             this.dgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
             // 
@@ -232,7 +232,7 @@ namespace SistemaGestion
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(747, 428);
+            this.btnModificar.Location = new System.Drawing.Point(717, 308);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(188, 53);
             this.btnModificar.TabIndex = 4;
@@ -244,7 +244,12 @@ namespace SistemaGestion
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtCantidad.Location = new System.Drawing.Point(726, 348);
+            this.txtCantidad.Location = new System.Drawing.Point(715, 236);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 2;

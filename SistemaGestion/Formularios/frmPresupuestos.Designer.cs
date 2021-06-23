@@ -294,6 +294,7 @@
             this.dgvGrilla.AllowUserToResizeRows = false;
             this.dgvGrilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvGrilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGrilla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvGrilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dgvGrilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -488,6 +489,11 @@
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtCantidad.Location = new System.Drawing.Point(1202, 461);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 6;
