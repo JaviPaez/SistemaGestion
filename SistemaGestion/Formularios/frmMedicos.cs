@@ -54,8 +54,8 @@ namespace SistemaGestion
 
                     var medicoMetodo = new MedicoMetodos();
                     Boolean grabo = medicoMetodo.GrabarMedico(medico);
-                    
-                    if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
+
+                    if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }     
@@ -138,17 +138,24 @@ namespace SistemaGestion
         //Armar grilla
         private void ArmarGrilla()
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new MedicoMetodos();
-            dt = al.ConsultarMedicos();
-
-            if (dt.Rows.Count != 0)
+            try
             {
-                dgvGrilla.DataSource = dt;
-                dgvGrilla.Columns["ID"].Visible = false;
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new MedicoMetodos();
+                dt = al.ConsultarMedicos();
+
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                }
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //BOTONES BARRA DE TITULO

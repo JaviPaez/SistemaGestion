@@ -120,7 +120,7 @@ namespace SistemaGestion
         {
             try
             {
-                var modificarPaciente = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";                
+                var modificarPaciente = "set dateformat dmy UPDATE PACIENTES SET Dni=@Dni, Apellido=@Apellido, Nombre=@Nombre, FechaNac=@FechaNac, ObraSocial=@ObraSocial ,NroAfiliado=@NroAfiliado where Dni=@Dni";
 
                 SqlCommand com = new SqlCommand(modificarPaciente, conectar());
 
@@ -128,7 +128,7 @@ namespace SistemaGestion
                 com.Parameters.AddWithValue("@Apellido", paciente.Apellido);
                 com.Parameters.AddWithValue("@Nombre", paciente.Nombre);
                 com.Parameters.AddWithValue("@FechaNac", paciente.FechaNac);
-                com.Parameters.AddWithValue("@ObraSocial", paciente.ObraSocial); 
+                com.Parameters.AddWithValue("@ObraSocial", paciente.ObraSocial);
                 com.Parameters.AddWithValue("@NroAfiliado", paciente.NroAfiliado);
 
                 com.ExecuteNonQuery();
@@ -277,7 +277,7 @@ namespace SistemaGestion
             var comando = new SqlCommand(paciente, conectar());
 
             SqlDataReader registro = comando.ExecuteReader();
-                       
+
             return registro;
             //*****************************************************
         }
