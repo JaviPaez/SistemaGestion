@@ -70,7 +70,7 @@ namespace SistemaGestion
 
                     //Direccion
                     direccPaciente.Dni = Convert.ToInt32(txtDni.Text);
-                    if (cboProvincia.Text != "SELECCIONE" || cboProvincia.SelectedItem == null)
+                    if (cboProvincia.Text == "SELECCIONE" || cboProvincia.SelectedItem == null)
                     {
                         direccPaciente.Provincia = "";
                     }

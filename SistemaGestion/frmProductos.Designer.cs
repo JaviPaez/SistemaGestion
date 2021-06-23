@@ -247,7 +247,7 @@ namespace SistemaGestion
             this.txtCantidad.Location = new System.Drawing.Point(726, 348);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
-            this.txtCantidad.TabIndex = 12;
+            this.txtCantidad.TabIndex = 2;
             // 
             // frmProductos
             // 

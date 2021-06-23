@@ -50,7 +50,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            MostrarProductoActual(Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value));
+            MostrarProductoActual();
         }
 
         //BOTON MODIFICAR
@@ -82,7 +82,7 @@ namespace SistemaGestion
                 MessageBox.Show("Error en modificación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            MostrarProductoActual(Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value));
+            MostrarProductoModificado(Convert.ToInt64(dgvGrilla.CurrentRow.Cells["ID"].Value));
         }
 
         //BOTON NUEVO
@@ -156,10 +156,30 @@ namespace SistemaGestion
             txtBuscarDescr.Clear();
         }
 
-        private void MostrarProductoActual(int id)
+        private void MostrarProductoActual()
+        {
+            try
+            {               
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new ProductoMetodos();
+
+                var id = al.UltimoId()-1;
+
+                dt = al.BuscarProductoId(id);
+
+                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+            }
+            catch
+            {
+            }
+        }
+
+        private void MostrarProductoModificado(Int64 id)
         {
             try
             {
+
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new ProductoMetodos();

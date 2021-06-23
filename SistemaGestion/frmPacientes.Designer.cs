@@ -685,6 +685,7 @@ namespace SistemaGestion
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();

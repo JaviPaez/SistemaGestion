@@ -135,7 +135,7 @@ namespace SistemaGestion
         {
             bool correcto;
 
-            if ((listValores[0] < 100 && listValores[0] > -100) && (listValores[1] < 100 && listValores[1] > -100) && (listValores[2] < 100 && listValores[2] > -100) && (listValores[3] < 100 && listValores[3] > -100))
+            if ((listValores[0] <= 20 && listValores[0] >= -20) && (listValores[1] <= 20 && listValores[1] >= -20) && (listValores[2] <= 20 && listValores[2] >= -20) && (listValores[3] <= 20 && listValores[3] >= -20))
             {
                 correcto = true;
             }

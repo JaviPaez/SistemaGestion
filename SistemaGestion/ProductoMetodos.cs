@@ -101,7 +101,7 @@ namespace SistemaGestion
             //*****************************************************
         }
 
-        public DataTable BuscarProductoId(int id)
+        public DataTable BuscarProductoId(Int64 id)
         {
             string producto = "select * from PRODUCTOS where Id = " + id;
 

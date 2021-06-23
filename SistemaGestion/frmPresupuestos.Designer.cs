@@ -307,7 +307,7 @@
             this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(647, 228);
-            this.dgvGrilla.TabIndex = 11;
+            this.dgvGrilla.TabIndex = 12;
             // 
             // IdProducto
             // 
@@ -502,7 +502,7 @@
             this.btnReportPresup.Location = new System.Drawing.Point(1520, 924);
             this.btnReportPresup.Name = "btnReportPresup";
             this.btnReportPresup.Size = new System.Drawing.Size(188, 53);
-            this.btnReportPresup.TabIndex = 55;
+            this.btnReportPresup.TabIndex = 11;
             this.btnReportPresup.Text = "Generar Presup";
             this.btnReportPresup.UseVisualStyleBackColor = false;
             this.btnReportPresup.Click += new System.EventHandler(this.btnReportPresup_Click);
