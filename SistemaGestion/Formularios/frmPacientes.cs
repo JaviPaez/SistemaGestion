@@ -268,13 +268,20 @@ namespace SistemaGestion
         //Armar grilla
         private void ArmarGrilla()
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new PacienteMetodos();
-            dt = al.ConsultarPacientes();
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new PacienteMetodos();
+                dt = al.ConsultarPacientes();
 
-            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             txtBuscar.Clear();
         }

@@ -145,16 +145,23 @@ namespace SistemaGestion
         //Armar grilla
         private void ArmarGrilla()
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new ProductoMetodos();
-            dt = al.ConsultarProductos();
-            if (dt.Rows.Count != 0)
+            try
             {
-                dgvGrilla.DataSource = dt;
-                dgvGrilla.Columns["ID"].Visible = false;
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new ProductoMetodos();
+                dt = al.ConsultarProductos();
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                }
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             txtBuscarDescr.Clear();
         }

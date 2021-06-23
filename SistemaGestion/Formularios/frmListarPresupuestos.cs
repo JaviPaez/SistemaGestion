@@ -34,11 +34,11 @@ namespace SistemaGestion
                     var al = new PresupuestoMetodos();
                     dt = al.BuscarPresupuesto(Convert.ToInt32(txtNro.Text));
 
-                    if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt; 
-                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
-                {                    
+                {
                     MessageBox.Show("Error al buscar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -48,13 +48,20 @@ namespace SistemaGestion
         //Armar Grilla
         private void ArmarGrilla()
         {
-            var ds = new DataSet();
-            var dt = new DataTable();
-            var al = new PresupuestoMetodos();
-            dt = al.ConsultarPresupuestos();
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new PresupuestoMetodos();
+                dt = al.ConsultarPresupuestos();
 
-            if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
-            else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             txtNro.Clear();
             txtNro.Focus();
