@@ -212,7 +212,7 @@
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportPresup.rdlc" />
+    <EmbeddedResource Include="Presupuesto\ReportPresup.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DatosPresup.datasource" />

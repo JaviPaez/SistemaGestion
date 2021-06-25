@@ -29,18 +29,29 @@ namespace SistemaGestion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer
             // 
             this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "SistemaGestion.ReportPresup.rdlc";
+            reportDataSource1.Name = "DataSet";
+            reportDataSource1.Value = this.DatosPresupBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "SistemaGestion.Presupuesto.ReportPresup.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(824, 653);
             this.reportViewer.TabIndex = 0;
+            // 
+            // DatosPresupBindingSource
+            // 
+            this.DatosPresupBindingSource.DataSource = typeof(SistemaGestion.DatosPresup);
             // 
             // frmReportPresup
             // 
@@ -51,6 +62,7 @@ namespace SistemaGestion
             this.Name = "frmReportPresup";
             this.Text = "Presupuesto";
             this.Load += new System.EventHandler(this.frmReportPresup_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +70,6 @@ namespace SistemaGestion
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.Windows.Forms.BindingSource DatosPresupBindingSource;
     }
 }
