@@ -108,16 +108,10 @@ namespace SistemaGestion
 
         //CLICK EN CONTENIDO DE CELDA DGV
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {               
+        {          
                 txtApellido.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
                 txtNombre.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString(); 
                 txtMatricula.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
-            }
-            catch
-            {
-            }
         }
 
         //BOTON ARMAR LISTA

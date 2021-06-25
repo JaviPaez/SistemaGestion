@@ -40,7 +40,7 @@ namespace SistemaGestion
                 this.Hide();
                 frm.Show();
             }
-            else MessageBox.Show("No se ha encontrado el usuario ingresado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);        
+            else MessageBox.Show("Usuario y/o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);        
         }
 
         //BOTON NUEVO USUARIO

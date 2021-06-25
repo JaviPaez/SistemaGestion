@@ -76,7 +76,6 @@ namespace SistemaGestion
             ReiniciarCampos();
         }
 
-
         #region
         //ARRASTRAR EL FORMULARIO
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -91,8 +90,7 @@ namespace SistemaGestion
         }
         #endregion
 
-        #region Botones
-        //BOTONES DE BARRA DE TITULO 
+        #region BOTONES DE BARRA DE TITULO
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -113,7 +111,15 @@ namespace SistemaGestion
             txtContraseña.Clear();
             txtVerifContr.Clear();
             cboRol.Text = "SELECCIONE";
+            cbxContraseña.Checked = false;
             txtDni.Focus();
+        }
+
+        //Check ver contraseña
+        private void cbxContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxContraseña.Checked == true) txtContraseña.PasswordChar = '\0';
+            else txtContraseña.PasswordChar = '*';
         }
     }
 }

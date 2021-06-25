@@ -215,7 +215,7 @@ namespace SistemaGestion
         //CONSULTAS
         public DataTable ConsultarPacientes()
         {
-            string pacientes = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Pacientes.Dni";
+            string pacientes = "select Apellido Apellidos, Nombre Nombres, Pacientes.Dni 'D.N.I.', FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Apellidos";
 
             //*****************************************************
             var da = new SqlDataAdapter(pacientes, Conectar());
@@ -229,7 +229,7 @@ namespace SistemaGestion
 
         public DataTable BuscarPacienteDni(int dni)
         {
-            string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Pacientes.Dni = " + dni;
+            string paciente = "select Apellido Apellidos, Nombre Nombres, Pacientes.Dni 'D.N.I.', FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Pacientes.Dni = " + dni;
 
             //*****************************************************
             var da = new SqlDataAdapter(paciente, Conectar());
@@ -243,7 +243,7 @@ namespace SistemaGestion
 
         public DataTable BuscarPacienteApeNom(string apeNom)
         {
-            string paciente = "select Pacientes.Dni 'D.N.I.', Apellido Apellidos, Nombre Nombres, FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
+            string paciente = "select Apellido Apellidos, Nombre Nombres, Pacientes.Dni 'D.N.I.', FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni where Apellido + ' ' + Nombre like '%" + apeNom + "%'";
 
             //*****************************************************
             var da = new SqlDataAdapter(paciente, Conectar());
@@ -257,7 +257,7 @@ namespace SistemaGestion
 
         public DataTable CargarComboPacientes()
         {
-            string pacientes = "select Dni, Apellido, Nombre from PACIENTES order by Dni";
+            string pacientes = "select Dni, Apellido, Nombre from PACIENTES order by Apellido";
 
             //*****************************************************
             var da = new SqlDataAdapter(pacientes, Conectar());

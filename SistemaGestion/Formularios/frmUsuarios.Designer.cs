@@ -47,6 +47,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtVerifContr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbxContraseña = new System.Windows.Forms.CheckBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -256,7 +257,20 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(274, 25);
             this.label7.TabIndex = 13;
-            this.label7.Text = "VERIFIQUE CONTRASEÑA";
+            this.label7.Text = "CONFIRME CONTRASEÑA";
+            // 
+            // cbxContraseña
+            // 
+            this.cbxContraseña.AutoSize = true;
+            this.cbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbxContraseña.ForeColor = System.Drawing.Color.White;
+            this.cbxContraseña.Location = new System.Drawing.Point(555, 280);
+            this.cbxContraseña.Name = "cbxContraseña";
+            this.cbxContraseña.Size = new System.Drawing.Size(140, 24);
+            this.cbxContraseña.TabIndex = 14;
+            this.cbxContraseña.Text = "Ver Contraseña";
+            this.cbxContraseña.UseVisualStyleBackColor = true;
+            this.cbxContraseña.CheckedChanged += new System.EventHandler(this.cbxContraseña_CheckedChanged);
             // 
             // frmUsuarios
             // 
@@ -264,6 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(698, 438);
+            this.Controls.Add(this.cbxContraseña);
             this.Controls.Add(this.txtVerifContr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCancelar);
@@ -313,5 +328,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtVerifContr;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox cbxContraseña;
     }
 }

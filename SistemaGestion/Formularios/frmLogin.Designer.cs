@@ -38,6 +38,7 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -117,6 +118,7 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BarraTitulo.Controls.Add(this.label4);
             this.BarraTitulo.Controls.Add(this.pbxMinimizar);
             this.BarraTitulo.Controls.Add(this.pbxCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -152,6 +154,17 @@
             this.pbxCerrar.TabStop = false;
             this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(237, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 31);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "LOGIN";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +184,7 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -189,5 +203,6 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox pbxMinimizar;
         private System.Windows.Forms.PictureBox pbxCerrar;
+        private System.Windows.Forms.Label label4;
     }
 }
