@@ -31,10 +31,15 @@ namespace SistemaGestion
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportPresup));
             this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DatosPresupBindingSource
+            // 
+            this.DatosPresupBindingSource.DataSource = typeof(SistemaGestion.DatosPresup);
             // 
             // reportViewer
             // 
@@ -42,16 +47,12 @@ namespace SistemaGestion
             reportDataSource1.Name = "DataSet";
             reportDataSource1.Value = this.DatosPresupBindingSource;
             this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "SistemaGestion.Presupuesto.ReportPresup.rdlc";
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "SistemaGestion.Presupuesto.Presupuesto.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(824, 653);
             this.reportViewer.TabIndex = 0;
-            // 
-            // DatosPresupBindingSource
-            // 
-            this.DatosPresupBindingSource.DataSource = typeof(SistemaGestion.DatosPresup);
             // 
             // frmReportPresup
             // 
@@ -59,6 +60,7 @@ namespace SistemaGestion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 653);
             this.Controls.Add(this.reportViewer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReportPresup";
             this.Text = "Presupuesto";
             this.Load += new System.EventHandler(this.frmReportPresup_Load);
