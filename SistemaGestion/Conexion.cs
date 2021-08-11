@@ -12,7 +12,7 @@ namespace SistemaGestion
     public class Conexion
     {
         private SqlConnection sCon = new SqlConnection();
-        private string con = "Data Source=JAVIER\\SQLSERVER;Integrated Security=SSPI;Initial Catalog=OPTICA";
+        private string con = "Data Source=JAVIER;Integrated Security=SSPI;Initial Catalog=OPTICA";
 
         public SqlConnection Conectar()
         {

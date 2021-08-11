@@ -96,9 +96,9 @@ namespace SistemaGestion
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(200, 38);
+            this.PanelContenedor.Location = new System.Drawing.Point(204, 38);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(950, 662);
+            this.PanelContenedor.Size = new System.Drawing.Size(946, 662);
             this.PanelContenedor.TabIndex = 5;
             // 
             // PanelVertical
@@ -125,7 +125,7 @@ namespace SistemaGestion
             this.PanelVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelVertical.Location = new System.Drawing.Point(0, 38);
             this.PanelVertical.Name = "PanelVertical";
-            this.PanelVertical.Size = new System.Drawing.Size(200, 662);
+            this.PanelVertical.Size = new System.Drawing.Size(204, 662);
             this.PanelVertical.TabIndex = 4;
             // 
             // panelSubmenuPresupuestos
@@ -199,7 +199,7 @@ namespace SistemaGestion
             this.pbxSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbxSalir.Image")));
             this.pbxSalir.Location = new System.Drawing.Point(0, 617);
             this.pbxSalir.Name = "pbxSalir";
-            this.pbxSalir.Size = new System.Drawing.Size(200, 45);
+            this.pbxSalir.Size = new System.Drawing.Size(204, 45);
             this.pbxSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSalir.TabIndex = 0;
             this.pbxSalir.TabStop = false;
@@ -381,7 +381,7 @@ namespace SistemaGestion
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(0, 253);
+            this.panel4.Location = new System.Drawing.Point(0, 204);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(22, 54);
             this.panel4.TabIndex = 5;
@@ -397,7 +397,7 @@ namespace SistemaGestion
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(12, 253);
+            this.btnProductos.Location = new System.Drawing.Point(12, 204);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(188, 54);
             this.btnProductos.TabIndex = 3;
@@ -408,7 +408,7 @@ namespace SistemaGestion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(0, 202);
+            this.panel3.Location = new System.Drawing.Point(0, 154);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(22, 54);
             this.panel3.TabIndex = 3;
@@ -424,7 +424,7 @@ namespace SistemaGestion
             this.btnRecetas.ForeColor = System.Drawing.Color.White;
             this.btnRecetas.Image = ((System.Drawing.Image)(resources.GetObject("btnRecetas.Image")));
             this.btnRecetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecetas.Location = new System.Drawing.Point(12, 202);
+            this.btnRecetas.Location = new System.Drawing.Point(12, 154);
             this.btnRecetas.Name = "btnRecetas";
             this.btnRecetas.Size = new System.Drawing.Size(188, 54);
             this.btnRecetas.TabIndex = 2;
@@ -435,7 +435,7 @@ namespace SistemaGestion
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(0, 151);
+            this.panel2.Location = new System.Drawing.Point(0, 255);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(22, 54);
             this.panel2.TabIndex = 1;
@@ -451,7 +451,7 @@ namespace SistemaGestion
             this.btnVentas.ForeColor = System.Drawing.Color.White;
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(12, 151);
+            this.btnVentas.Location = new System.Drawing.Point(12, 255);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(188, 54);
             this.btnVentas.TabIndex = 1;
