@@ -32,7 +32,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Descripción</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -64,7 +66,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cantidad</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -96,7 +100,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Precio Unitario</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -128,7 +134,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Subtotal</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1006,7 +1014,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
       <rd:DataSetInfo>
         <rd:DataSetName>SistemaGestion</rd:DataSetName>
         <rd:TableName>DatosPresup</rd:TableName>
-        <rd:ObjectDataSourceType>SistemaGestion.DatosPresup, SistemaGestion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>SistemaGestion.DatosPresup, Presentacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

@@ -269,7 +269,7 @@ namespace SistemaGestion
                 var variables = new DatosPresup();
 
                 variables.Nombre = lblNombrePaciente.Text;
-                if(cboDniPaciente.Text =="SELECCIONE" || cboDniPaciente.SelectedValue == null)
+                if(cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)
                 {
                     variables.Dni = 0;
                 }

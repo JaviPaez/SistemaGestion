@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5C2C18BA-5E03-495C-9453-565D24C9C939}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SistemaGestion</RootNamespace>
-    <AssemblyName>SistemaGestion</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -66,7 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Medico\Medico.cs" />
+    <Compile Include="Paciente\Paciente.cs" />
+    <Compile Include="Paciente\PacienteDireccion.cs" />
+    <Compile Include="Paciente\PacienteeMail.cs" />
+    <Compile Include="Paciente\PacienteTelefono.cs" />
+    <Compile Include="PermisoyRol\Permiso.cs" />
+    <Compile Include="PermisoyRol\Rol.cs" />
+    <Compile Include="PermisoyRol\RolPermiso.cs" />
     <Compile Include="Presupuesto\DatosPresup.cs" />
+    <Compile Include="Presupuesto\DetallePresupuesto.cs" />
     <Compile Include="Presupuesto\DetallePresupuestoMetodos.cs" />
     <Compile Include="Formularios\frmListarPresupuestos.cs">
       <SubType>Form</SubType>
@@ -104,26 +113,22 @@
     <Compile Include="Formularios\frmRecetas.Designer.cs">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmReportPresup.cs">
+    <Compile Include="Formularios\frmRptPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmReportPresup.Designer.cs">
-      <DependentUpon>frmReportPresup.cs</DependentUpon>
+    <Compile Include="Formularios\frmRptPresupuesto.Designer.cs">
+      <DependentUpon>frmRptPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Medico\MedicoMetodos.cs" />
+    <Compile Include="Presupuesto\Presupuesto.cs" />
+    <Compile Include="Producto\Producto.cs" />
     <Compile Include="Producto\ProductoMetodos.cs" />
     <Compile Include="Presupuesto\PresupuestoMetodos.cs" />
     <Compile Include="PermisoyRol\RolMetodos.cs" />
+    <Compile Include="Receta\Receta.cs" />
     <Compile Include="Receta\RecetaMetodos.cs" />
-    <Compile Include="Medico\Medico.cs" />
     <Compile Include="Paciente\PacienteMetodos.cs" />
-    <Compile Include="Paciente\PacienteDireccion.cs" />
-    <Compile Include="Presupuesto\DetallePresupuesto.cs" />
-    <Compile Include="Producto\Producto.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="Usuario\UsuarioDireccion.cs" />
-    <Compile Include="Paciente\PacienteeMail.cs" />
-    <Compile Include="Usuario\UsuarioeMail.cs" />
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +141,9 @@
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuario\Usuario.cs" />
+    <Compile Include="Usuario\UsuarioDireccion.cs" />
+    <Compile Include="Usuario\UsuarioeMail.cs" />
     <Compile Include="Usuario\UsuarioMetodos.cs" />
     <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
@@ -143,9 +151,6 @@
     <Compile Include="Formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paciente\Paciente.cs" />
-    <Compile Include="PermisoyRol\Permiso.cs" />
-    <Compile Include="Presupuesto\Presupuesto.cs" />
     <Compile Include="Formularios\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,18 +159,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receta\Receta.cs" />
-    <Compile Include="PermisoyRol\Rol.cs" />
-    <Compile Include="PermisoyRol\RolPermiso.cs" />
-    <Compile Include="Paciente\PacienteTelefono.cs" />
-    <Compile Include="Usuario\UsuarioTelefono.cs" />
     <Compile Include="Formularios\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\Usuario.cs" />
+    <Compile Include="Usuario\UsuarioTelefono.cs" />
     <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="Formularios\frmRecetas.resx">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmReportPresup.resx">
-      <DependentUpon>frmReportPresup.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmRptPresupuesto.resx">
+      <DependentUpon>frmRptPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -212,7 +212,7 @@
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presupuesto\Presupuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\rptPresupuesto.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DatosPresup.datasource" />
@@ -251,8 +251,6 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

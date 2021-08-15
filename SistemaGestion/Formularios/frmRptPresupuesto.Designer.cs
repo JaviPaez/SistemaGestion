@@ -47,7 +47,7 @@ namespace SistemaGestion
             reportDataSource1.Name = "DataSet";
             reportDataSource1.Value = this.DatosPresupBindingSource;
             this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "SistemaGestion.Presupuesto.Presupuesto.rdlc";
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Presentacion.Reportes.rptPresupuesto.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
