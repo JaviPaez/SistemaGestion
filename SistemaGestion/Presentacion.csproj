@@ -65,16 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Paciente\Paciente.cs" />
-    <Compile Include="Paciente\PacienteDireccion.cs" />
-    <Compile Include="Paciente\PacienteeMail.cs" />
-    <Compile Include="Paciente\PacienteTelefono.cs" />
-    <Compile Include="PermisoyRol\Permiso.cs" />
-    <Compile Include="PermisoyRol\Rol.cs" />
-    <Compile Include="PermisoyRol\RolPermiso.cs" />
-    <Compile Include="Presupuesto\DatosPresup.cs" />
-    <Compile Include="Presupuesto\DetallePresupuesto.cs" />
-    <Compile Include="Presupuesto\DetallePresupuestoMetodos.cs" />
     <Compile Include="Formularios\frmListarPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,14 +107,6 @@
     <Compile Include="Formularios\frmRptPresupuesto.Designer.cs">
       <DependentUpon>frmRptPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presupuesto\Presupuesto.cs" />
-    <Compile Include="Producto\Producto.cs" />
-    <Compile Include="Producto\ProductoMetodos.cs" />
-    <Compile Include="Presupuesto\PresupuestoMetodos.cs" />
-    <Compile Include="PermisoyRol\RolMetodos.cs" />
-    <Compile Include="Receta\Receta.cs" />
-    <Compile Include="Receta\RecetaMetodos.cs" />
-    <Compile Include="Paciente\PacienteMetodos.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
@@ -138,10 +120,6 @@
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\Usuario.cs" />
-    <Compile Include="Usuario\UsuarioDireccion.cs" />
-    <Compile Include="Usuario\UsuarioeMail.cs" />
-    <Compile Include="Usuario\UsuarioMetodos.cs" />
     <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,7 +140,6 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\UsuarioTelefono.cs" />
     <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +216,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{495A6409-84E8-40AE-9120-E70FE2F25997}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
       <Project>{c061c9ce-ddad-4b42-b28d-744d2d92436c}</Project>
       <Name>CapaEntidad</Name>
@@ -248,8 +229,6 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Medico\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
