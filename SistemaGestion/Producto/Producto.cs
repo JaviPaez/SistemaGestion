@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Producto
+    public class Producto
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

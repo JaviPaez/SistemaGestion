@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class ProductoMetodos : Conexion
+    public class ProductoMetodos : Conexion
     {        
         public long UltimoId()
         {

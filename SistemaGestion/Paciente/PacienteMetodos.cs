@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class PacienteMetodos : Conexion
+    public class PacienteMetodos : Conexion
     {
         //CREATE
         public Boolean GrabarPaciente(Paciente paciente)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class PacienteeMail
+    public class PacienteeMail
     {
         public int Id { get; set; }
         public int Dni { get; set; }

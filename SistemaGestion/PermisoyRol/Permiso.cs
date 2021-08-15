@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Permiso
+    public class Permiso
     {
         int Id { get; set; }
         string NombrePermiso { get; set; }

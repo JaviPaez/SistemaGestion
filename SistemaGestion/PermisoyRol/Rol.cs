@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Rol
+    public class Rol
     {
         int Id { get; set; }
         string NombreRol { get; set; }

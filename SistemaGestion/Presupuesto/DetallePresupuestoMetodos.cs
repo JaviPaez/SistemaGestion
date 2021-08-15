@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class DetallePresupuestoMetodos : Conexion
+    public class DetallePresupuestoMetodos : Conexion
     {
         public int UltimoId()
         {

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class UsuarioMetodos : Conexion
+    public class UsuarioMetodos : Conexion
     {
         public DataTable ConsultarLogin(string dni, string contraseña)
         {

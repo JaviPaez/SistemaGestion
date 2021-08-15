@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Usuario
+    public class Usuario
     {
         public Int32 Dni { get; set; }
         public Int32 IdRol { get; set; }

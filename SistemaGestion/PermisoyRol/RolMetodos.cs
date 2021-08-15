@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class RolMetodos : Conexion
+    public class RolMetodos : Conexion
     {
         public DataTable CargarComboRoles()
         {

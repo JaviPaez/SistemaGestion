@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SistemaGestion
 {
-    class MedicoMetodos : Conexion
+    public class MedicoMetodos : Conexion
     {
         public int UltimoId()
         {

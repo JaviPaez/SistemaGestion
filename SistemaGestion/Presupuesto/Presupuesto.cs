@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SistemaGestion
 {
-    class Presupuesto
+    public class Presupuesto
     {
         public int Nro { get; set; }
         public int DniUsuario { get; set; }
