@@ -1,29 +1,10 @@
-﻿using CapaDatos;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+﻿using System.Data.SqlClient;
+using CapaEntidad;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class DetallePresupuestoMetodos : Conexion
+    public class DetallePresupuestoDatos : Conexion
     {
-        public int UltimoId()
-        {
-            try
-            {
-                var maxId = "SELECT max(ID) + 1 from DetallePresupuesto";
-                //****************************************************
-                SqlCommand com = new SqlCommand(maxId, Conectar());
-                return (int)com.ExecuteScalar();
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-
         public bool GrabarDetallePresupuesto(DetallePresupuesto detallePresupuesto)
         {
             try
@@ -48,6 +29,21 @@ namespace CapaNegocio
             catch
             {
                 return false;
+            }
+        }
+
+        public int UltimoId()
+        {
+            try
+            {
+                var maxId = "SELECT max(ID) + 1 from DetallePresupuesto";
+                //****************************************************
+                SqlCommand com = new SqlCommand(maxId, Conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
             }
         }
     }

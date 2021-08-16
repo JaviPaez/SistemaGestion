@@ -192,7 +192,7 @@ namespace Presentacion
         {
             //Cargar Combo Medicos
             var dt = new DataTable();
-            var med = new MedicoMetodos();
+            var med = new MedicoNegocio();
             dt = med.CargarComboMedicos();
 
             cboMedico.DataSource = dt;

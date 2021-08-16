@@ -1,31 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using CapaDatos;
+using CapaEntidad;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class MedicoMetodos : Conexion
+    public class MedicoDatos : Conexion
     {
-        public int UltimoId()
-        {
-            try
-            {
-                var maxId = "select max(ID) + 1 from MEDICOS";
-
-                //**************************************************
-                SqlCommand com = new SqlCommand(maxId, Conectar());
-                return (int)com.ExecuteScalar();
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-
         public Boolean GrabarMedico(Medico medico)
         {
             try
@@ -36,7 +17,7 @@ namespace CapaNegocio
 
                 SqlCommand com = new SqlCommand(grabarMedico, Conectar());
 
-                com.Parameters.AddWithValue("@ID",idMax);
+                com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@Apellido", medico.Apellido);
                 com.Parameters.AddWithValue("@Nombre", medico.Nombre);
                 com.Parameters.AddWithValue("@Matricula", medico.Matricula);
@@ -62,7 +43,7 @@ namespace CapaNegocio
                 com.Parameters.AddWithValue("@Id", medico.Id);
                 com.Parameters.AddWithValue("@Matricula", medico.Matricula);
                 com.Parameters.AddWithValue("@Apellido", medico.Apellido);
-                com.Parameters.AddWithValue("@Nombre", medico.Nombre);  
+                com.Parameters.AddWithValue("@Nombre", medico.Nombre);
 
                 com.ExecuteNonQuery();
 
@@ -74,7 +55,6 @@ namespace CapaNegocio
             }
         }
 
-        //CONSULTAR MEDICOS
         public DataTable ConsultarMedicos()
         {
             string medicos = "select * from MEDICOS order by Apellido";
@@ -101,6 +81,22 @@ namespace CapaNegocio
 
             return dt;
             //*****************************************************
+        }
+
+        public int UltimoId()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from MEDICOS";
+
+                //**************************************************
+                SqlCommand com = new SqlCommand(maxId, Conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
         }
     }
 }

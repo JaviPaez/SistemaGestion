@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace Presentacion
 {
@@ -52,7 +49,7 @@ namespace Presentacion
                     medico.Apellido = txtApellido.Text;
                     medico.Nombre = txtNombre.Text;                    
 
-                    var medicoMetodo = new MedicoMetodos();
+                    var medicoMetodo = new MedicoNegocio();
                     Boolean grabo = medicoMetodo.GrabarMedico(medico);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -85,7 +82,7 @@ namespace Presentacion
                     medico.Apellido = txtApellido.Text;
                     medico.Nombre = txtNombre.Text;                    
 
-                    var medicoMetodo = new MedicoMetodos();
+                    var medicoMetodo = new MedicoNegocio();
                     Boolean modifico = medicoMetodo.ModificarMedico(medico);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -136,7 +133,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new MedicoMetodos();
+                var al = new MedicoNegocio();
                 dt = al.ConsultarMedicos();
 
                 if (dt.Rows.Count != 0)
