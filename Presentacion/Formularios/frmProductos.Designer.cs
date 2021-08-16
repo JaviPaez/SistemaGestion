@@ -159,6 +159,7 @@ namespace Presentacion
             this.txtBuscarDescr.Name = "txtBuscarDescr";
             this.txtBuscarDescr.Size = new System.Drawing.Size(489, 31);
             this.txtBuscarDescr.TabIndex = 6;
+            this.txtBuscarDescr.TextChanged += new System.EventHandler(this.txtBuscarDescr_TextChanged);
             // 
             // label5
             // 

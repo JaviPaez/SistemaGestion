@@ -17,6 +17,7 @@ namespace Presentacion
         private void frmProductos_Load(object sender, EventArgs e)
         {
             ReiniciarCampos();
+            btnBuscar.Visible = false;
         }
 
         //BOTON GRABAR
@@ -91,13 +92,31 @@ namespace Presentacion
             ReiniciarCampos();
         }
 
+        //BUSCAR POR DESCRIPCION
+        private void txtBuscarDescr_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscarDescr.Text != string.Empty)
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var productoMetodo = new ProductoNegocio();
+
+                dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
+
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                }
+                //else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         //BOTON BUSCAR POR DESCRIPCION
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtBuscarDescr.Text != string.Empty)
-            {
-                try
-                {
+            {              
                     var ds = new DataSet();
                     var dt = new DataTable();
                     var productoMetodo = new ProductoNegocio();
@@ -109,12 +128,8 @@ namespace Presentacion
                         dgvGrilla.DataSource = dt;
                         dgvGrilla.Columns["ID"].Visible = false;
                     }
-                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                
+                
             }
             else MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -186,7 +201,6 @@ namespace Presentacion
         {
             try
             {
-
                 var ds = new DataSet();
                 var dt = new DataTable();
                 var al = new ProductoNegocio();
@@ -208,5 +222,7 @@ namespace Presentacion
             txtDescripcion.Clear();
             txtDescripcion.Focus();
         }
+
+        
     }
 }

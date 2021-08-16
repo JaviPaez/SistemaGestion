@@ -34,9 +34,8 @@ namespace Presentacion
                     var ds = new DataSet();
                     var dt = new DataTable();
                     var usuarioNegocio = new UsuarioNegocio();
-
-                    int dni;
-                    if (!int.TryParse(txtBuscar.Text, out dni))
+                    
+                    if (!int.TryParse(txtBuscar.Text, out int dni))
                         dt = usuarioNegocio.BuscarUsuarioApeNom(txtBuscar.Text);
                     else dt = usuarioNegocio.BuscarUsuarioDni(dni);
 
