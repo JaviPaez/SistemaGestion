@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace Presentacion
 {
@@ -78,7 +75,7 @@ namespace Presentacion
                             receta.Fecha = dtpFecha.Value;
                             receta.Observaciones = txtObserv.Text;
 
-                            var recetaMetodo = new RecetaMetodos();
+                            var recetaMetodo = new RecetaNegocio();
                             Boolean grabo = recetaMetodo.GrabarReceta(receta);
 
                             if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

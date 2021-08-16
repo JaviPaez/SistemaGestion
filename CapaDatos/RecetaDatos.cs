@@ -1,30 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using CapaEntidad;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using CapaDatos;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class RecetaMetodos : Conexion
-    {    
-        public int UltimoId()
-        {
-            try
-            {
-                var maxId = "select max(ID) + 1 from RECETAS";
-                //***************************************************
-                SqlCommand com = new SqlCommand(maxId, Conectar());
-                return (int)com.ExecuteScalar();
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-
+    public class RecetaDatos : Conexion
+    {
         public Boolean GrabarReceta(Receta receta)
         {
             try
@@ -51,8 +33,8 @@ namespace CapaNegocio
             }
             catch
             {
-                return false;              
-            }            
+                return false;
+            }
         }
 
         public DataTable ConsultarRecetas()
@@ -83,7 +65,7 @@ namespace CapaNegocio
             //*****************************************************
         }
 
-        public SqlDataReader CargarLabelReceta (int idReceta)
+        public SqlDataReader CargarLabelReceta(int idReceta)
         {
             string receta = "select * from RECETAS where ID = " + idReceta;
 
@@ -94,6 +76,21 @@ namespace CapaNegocio
 
             return registro;
             //*****************************************************
+        }
+
+        public int UltimoId()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from RECETAS";
+                //***************************************************
+                SqlCommand com = new SqlCommand(maxId, Conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
         }
     }
 }

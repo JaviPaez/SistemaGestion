@@ -1,30 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using CapaDatos;
+using CapaEntidad;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class ProductoMetodos : Conexion
-    {        
-        public long UltimoId()
-        {
-            try
-            {
-                var maxId = "select max(ID) + 1 from PRODUCTOS";
-                //*************************************************
-                SqlCommand com = new SqlCommand(maxId, Conectar());
-                return (int)com.ExecuteScalar();
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-               
+    public class ProductoDatos : Conexion
+    {
         public Boolean GrabarProducto(Producto producto)
         {
             try
@@ -34,7 +16,7 @@ namespace CapaNegocio
                 var grabarProducto = "INSERT INTO PRODUCTOS(ID, Descripcion, Precio, Cantidad) VALUES(@ID, @Descripcion, @Precio, @Cantidad)";
 
                 SqlCommand com = new SqlCommand(grabarProducto, Conectar());
-                
+
                 com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
                 com.Parameters.AddWithValue("@Precio", producto.Precio);
@@ -46,8 +28,8 @@ namespace CapaNegocio
             }
             catch
             {
-                return false;              
-            }            
+                return false;
+            }
         }
 
         public Boolean ModificarProducto(Producto producto)
@@ -73,7 +55,6 @@ namespace CapaNegocio
             }
         }
 
-        //CONSULTAR PRODUCTOS
         public DataTable ConsultarProductos()
         {
             string productos = "select * from PRODUCTOS order by Descripcion";
@@ -145,6 +126,21 @@ namespace CapaNegocio
 
             return dt;
             //*****************************************************
+        }
+
+        public long UltimoId()
+        {
+            try
+            {
+                var maxId = "select max(ID) + 1 from PRODUCTOS";
+                //*************************************************
+                SqlCommand com = new SqlCommand(maxId, Conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
         }
     }
 }

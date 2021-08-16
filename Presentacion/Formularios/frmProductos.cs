@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +40,7 @@ namespace Presentacion
                     producto.Precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
-                    var productoMetodo = new ProductoMetodos();
+                    var productoMetodo = new ProductoNegocio();
                     Boolean grabo = productoMetodo.GrabarProducto(producto);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,7 +73,7 @@ namespace Presentacion
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
-                    var productoMetodo = new ProductoMetodos();
+                    var productoMetodo = new ProductoNegocio();
                     Boolean modifico = productoMetodo.ModificarProducto(producto);
 
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -103,7 +105,7 @@ namespace Presentacion
                 {
                     var ds = new DataSet();
                     var dt = new DataTable();
-                    var productoMetodo = new ProductoMetodos();
+                    var productoMetodo = new ProductoNegocio();
 
                     dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
 
@@ -149,7 +151,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new ProductoMetodos();
+                var al = new ProductoNegocio();
                 dt = al.ConsultarProductos();
                 if (dt.Rows.Count != 0)
                 {
@@ -172,7 +174,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new ProductoMetodos();
+                var al = new ProductoNegocio();
 
                 var id = al.UltimoId() - 1;
 
@@ -192,7 +194,7 @@ namespace Presentacion
 
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new ProductoMetodos();
+                var al = new ProductoNegocio();
 
                 dt = al.BuscarProductoId(id);
 

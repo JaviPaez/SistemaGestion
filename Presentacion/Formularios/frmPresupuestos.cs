@@ -45,7 +45,7 @@ namespace Presentacion
 
             //Cargar Combo Productos
             var dt3 = new DataTable();
-            var prod = new ProductoMetodos();
+            var prod = new ProductoNegocio();
             dt3 = prod.CargarComboProductos();
 
             cboProducto.DataSource = dt3;
@@ -136,7 +136,7 @@ namespace Presentacion
 
                 //Combo Receta
                 var dt3 = new DataTable();
-                var rec = new RecetaMetodos();
+                var rec = new RecetaNegocio();
                 dt3 = rec.CargarComboRecetas(Convert.ToInt32(cboDniPaciente.SelectedValue));
 
                 cboIdReceta.DataSource = dt3;
@@ -155,7 +155,7 @@ namespace Presentacion
         {
             try
             {
-                var recetaMetodo = new RecetaMetodos();
+                var recetaMetodo = new RecetaNegocio();
                 var registro = recetaMetodo.CargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
 
                 if (registro.Read())
@@ -250,7 +250,7 @@ namespace Presentacion
         {
             var idProducto = Convert.ToInt32(cboProducto.SelectedValue);
 
-            var productoMetodo = new ProductoMetodos();
+            var productoMetodo = new ProductoNegocio();
 
             var dr = productoMetodo.BuscarIdProducto(idProducto);
 
