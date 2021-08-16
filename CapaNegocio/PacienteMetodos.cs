@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using CapaDatos;
 
-namespace SistemaGestion
+namespace CapaNegocio
 {
     public class PacienteMetodos : Conexion
     {

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace SistemaGestion
+namespace CapaNegocio
 {
     public class DetallePresupuestoMetodos : Conexion
     {
