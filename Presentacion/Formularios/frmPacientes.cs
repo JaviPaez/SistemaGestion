@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -90,12 +92,12 @@ namespace Presentacion
                     direccPaciente.Barrio = txtBarrio.Text;
 
                     //Grabo
-                    var pacienteMetodo = new PacienteMetodos();
+                    var pacienteNegocio = new PacienteNegocio();
 
-                    Boolean grabo = pacienteMetodo.GrabarPaciente(paciente);
-                    pacienteMetodo.GrabarTelefonoPaciente(telPaciente);
-                    pacienteMetodo.GrabarMailPaciente(mailPaciente);
-                    pacienteMetodo.GrabarDireccionPaciente(direccPaciente);
+                    Boolean grabo = pacienteNegocio.GrabarPaciente(paciente);
+                    pacienteNegocio.GrabarTelefonoPaciente(telPaciente);
+                    pacienteNegocio.GrabarMailPaciente(mailPaciente);
+                    pacienteNegocio.GrabarDireccionPaciente(direccPaciente);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
@@ -172,7 +174,7 @@ namespace Presentacion
                     direccPaciente.Lote = txtLote.Text;
                     direccPaciente.Barrio = txtBarrio.Text;
 
-                    var pacienteMetodo = new PacienteMetodos();
+                    var pacienteMetodo = new PacienteNegocio();
                     Boolean modifico = pacienteMetodo.ModificarPaciente(paciente);
                     pacienteMetodo.ModificarMailPaciente(mailPaciente);
                     pacienteMetodo.ModificarTelefonoPaciente(telPaciente);
@@ -214,7 +216,7 @@ namespace Presentacion
                 {
                     var ds = new DataSet();
                     var dt = new DataTable();
-                    var al = new PacienteMetodos();
+                    var al = new PacienteNegocio();
 
                     if (!int.TryParse(txtBuscar.Text, out int dni))
                     {
@@ -270,7 +272,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new PacienteMetodos();
+                var al = new PacienteNegocio();
                 dt = al.ConsultarPacientes();
 
                 if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
@@ -290,7 +292,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new PacienteMetodos();
+                var al = new PacienteNegocio();
 
                 dt = al.BuscarPacienteDni(dni);
 

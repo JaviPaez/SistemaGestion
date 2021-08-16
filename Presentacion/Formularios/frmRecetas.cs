@@ -27,7 +27,7 @@ namespace Presentacion
 
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
-            var pac = new PacienteMetodos();
+            var pac = new PacienteNegocio();
             dt2 = pac.CargarComboPacientes();
 
             cboDni.DataSource = dt2;
@@ -152,7 +152,7 @@ namespace Presentacion
         {
             try
             {
-                var pacienteMetodo = new PacienteMetodos();
+                var pacienteMetodo = new PacienteNegocio();
                 var registro = pacienteMetodo.CargarLabelNomPac(Convert.ToInt32(cboDni.SelectedValue));
                 if (registro.Read())
                 {

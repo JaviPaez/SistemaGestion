@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="DetallePresupuestoMetodos.cs" />
     <Compile Include="MedicoMetodos.cs" />
-    <Compile Include="PacienteMetodos.cs" />
-    <Compile Include="PresupuestoMetodos.cs" />
+    <Compile Include="PacienteNegocio.cs" />
+    <Compile Include="PresupuestoNegocio.cs" />
     <Compile Include="ProductoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecetaNegocio.cs" />

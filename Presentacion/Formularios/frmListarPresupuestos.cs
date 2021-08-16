@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CapaNegocio;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -15,7 +11,6 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-
 
         //BOTON ARMAR LISTA 
         private void btnGrilla_Click(object sender, EventArgs e)
@@ -32,7 +27,7 @@ namespace Presentacion
                 {
                     var ds = new DataSet();
                     var dt = new DataTable();
-                    var al = new PresupuestoMetodos();
+                    var al = new PresupuestoNegocio();
                     dt = al.BuscarPresupuesto(Convert.ToInt32(txtNro.Text));
 
                     if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
@@ -53,7 +48,7 @@ namespace Presentacion
             {
                 var ds = new DataSet();
                 var dt = new DataTable();
-                var al = new PresupuestoMetodos();
+                var al = new PresupuestoNegocio();
                 dt = al.ConsultarPresupuestos();
 
                 if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;

@@ -1,30 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using CapaDatos;
+using CapaEntidad;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class PresupuestoMetodos : Conexion
+    public class PresupuestoDatos : Conexion
     {
-        public int UltimoId()
-        {
-            try
-            {
-                var maxId = "select max(Nro) + 1 from PRESUPUESTOS";
-                //***************************************************
-                SqlCommand com = new SqlCommand(maxId, Conectar());
-                return (int)com.ExecuteScalar();
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-
         public int GrabarPresupuesto(Presupuesto presupuesto)
         {
             try
@@ -47,13 +28,13 @@ namespace CapaNegocio
             }
             catch
             {
-                return 0;              
-            }            
+                return 0;
+            }
         }
 
         public DataTable ConsultarPresupuestos()
         {
-            string presupuestos = "select * from PRESUPUESTOS order by Fecha desc";    
+            string presupuestos = "select * from PRESUPUESTOS order by Fecha desc";
 
             //*****************************************************
             var da = new SqlDataAdapter(presupuestos, Conectar());
@@ -77,6 +58,21 @@ namespace CapaNegocio
 
             return dt;
             //*****************************************************
+        }
+
+        public int UltimoId()
+        {
+            try
+            {
+                var maxId = "select max(Nro) + 1 from PRESUPUESTOS";
+                //***************************************************
+                SqlCommand com = new SqlCommand(maxId, Conectar());
+                return (int)com.ExecuteScalar();
+            }
+            catch
+            {
+                return 1;
+            }
         }
     }
 }

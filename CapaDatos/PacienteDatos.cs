@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using CapaDatos;
+using CapaEntidad;
 
-namespace CapaNegocio
+namespace CapaDatos
 {
-    public class PacienteMetodos : Conexion
+    public class PacienteDatos : Conexion
     {
-        //CREATE
         public Boolean GrabarPaciente(Paciente paciente)
         {
             try
@@ -116,7 +112,6 @@ namespace CapaNegocio
             }
         }
 
-        //UPDATE
         public Boolean ModificarPaciente(Paciente paciente)
         {
             try
@@ -213,7 +208,6 @@ namespace CapaNegocio
             }
         }
 
-        //CONSULTAS
         public DataTable ConsultarPacientes()
         {
             string pacientes = "select Apellido Apellidos, Nombre Nombres, Pacientes.Dni 'D.N.I.', FechaNac 'Fecha de Nacimiento', ObraSocial 'Obra Social', NroAfiliado 'Nº Afiliado', NroTelefono Telefono, eMail 'e-Mail', Provincia, Localidad, Calle, nro Nº, Piso, Dpto, Manzana, Lote, Barrio from Pacientes left join PacienteTelefono on PacienteTelefono.Dni = Pacientes.Dni left join PacienteDireccion on PacienteDireccion.Dni = Pacientes.Dni left join PacienteeMail on PacienteeMail.Dni = Pacientes.Dni order by Apellidos";

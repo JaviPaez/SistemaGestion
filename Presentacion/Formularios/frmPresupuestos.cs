@@ -1,12 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -124,7 +119,7 @@ namespace Presentacion
             try
             {
                 //Label Nombre
-                var reg = new PacienteMetodos();
+                var reg = new PacienteNegocio();
                 var registro = reg.CargarLabelNomPac(Convert.ToInt32(cboDniPaciente.SelectedValue));
                 if (registro.Read())
                 {
