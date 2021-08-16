@@ -1,8 +1,8 @@
-﻿using CapaEntidad;
+﻿using System;
 using Microsoft.Reporting.WinForms;
-using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using CapaEntidad;
 
 namespace Presentacion
 {
