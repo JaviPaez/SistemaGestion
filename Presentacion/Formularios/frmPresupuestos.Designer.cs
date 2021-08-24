@@ -63,7 +63,7 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.btnReportPresup = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.lblTotals = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -495,22 +495,22 @@
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 6;
             // 
-            // btnReportPresup
+            // btnImprimir
             // 
-            this.btnReportPresup.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnReportPresup.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnReportPresup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportPresup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnReportPresup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportPresup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnReportPresup.ForeColor = System.Drawing.Color.White;
-            this.btnReportPresup.Location = new System.Drawing.Point(1520, 924);
-            this.btnReportPresup.Name = "btnReportPresup";
-            this.btnReportPresup.Size = new System.Drawing.Size(188, 53);
-            this.btnReportPresup.TabIndex = 11;
-            this.btnReportPresup.Text = "Generar Presup";
-            this.btnReportPresup.UseVisualStyleBackColor = false;
-            this.btnReportPresup.Click += new System.EventHandler(this.btnReportPresup_Click);
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnImprimir.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(1520, 924);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(188, 53);
+            this.btnImprimir.TabIndex = 11;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // lblTotals
             // 
@@ -545,7 +545,7 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblTotals);
             this.Controls.Add(this.dgvGrilla);
-            this.Controls.Add(this.btnReportPresup);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPrecio);
@@ -622,7 +622,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.NumericUpDown txtCantidad;
-        private System.Windows.Forms.Button btnReportPresup;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label lblTotals;
         private System.Windows.Forms.Label lblTotal;
     }

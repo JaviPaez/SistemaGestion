@@ -26,18 +26,40 @@ namespace Presentacion
             var usuario = new UsuarioNegocio();
             var dni = txtUsuario.Text;
             var contraseña = txtPas.Text;
-            dt = usuario.Login(dni, contraseña);
 
-            if (dt.Rows.Count == 1)
+            if (txtUsuario.Text != "")
             {
-                var nombreApellido = dt.Rows[0]["Nombre"] + " " + dt.Rows[0]["Apellido"];
+                if (txtPas.Text != "")
+                {
+                    dt = usuario.Login(dni, contraseña);
 
-                MessageBox.Show("Bienvenido\n" + nombreApellido, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);  
-                var frm = new frmMenu();
-                this.Hide();
-                frm.Show();
+                    if (dt.Rows.Count == 1)
+                    {
+                        var nombreApellido = dt.Rows[0]["Nombre"] + " " + dt.Rows[0]["Apellido"];
+
+                        MessageBox.Show("Bienvenido\n" + nombreApellido, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        var frm = new frmMenu();
+                        this.Hide();
+                        frm.Show();
+                    }
+                    else 
+                    {  
+                        MessageBox.Show("Usuario y/o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                        lblError.Visible = false;
+                        txtPas.Clear();
+                        txtUsuario.Clear();
+                        txtUsuario.Focus();
+                    }
+                }
+                else MensajeError("Ingrese contraseña");
             }
-            else MessageBox.Show("Usuario y/o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);      
+            else MensajeError("Ingrese usuario");                  
+        }
+
+        private void MensajeError(string mensaje)
+        {
+            lblError.Text = mensaje;
+            lblError.Visible = true;
         }
 
         //BOTON NUEVO USUARIO

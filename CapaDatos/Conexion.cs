@@ -5,10 +5,10 @@ using System.Windows.Forms;
 
 namespace CapaDatos
 {
-    public class Conexion
+    public abstract class Conexion
     {
         private SqlConnection sCon = new SqlConnection();
-        private string con = "Data Source=JAVIER;Integrated Security=SSPI;Initial Catalog=OPTICA";
+        private readonly string con = "Data Source=JAVIER;Integrated Security=SSPI;Initial Catalog=OPTICA";
 
         public SqlConnection Conectar()
         {

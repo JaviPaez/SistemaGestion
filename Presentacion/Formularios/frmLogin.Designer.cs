@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -107,7 +108,7 @@
             this.lblNvoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblNvoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblNvoUsuario.LinkColor = System.Drawing.Color.White;
-            this.lblNvoUsuario.Location = new System.Drawing.Point(227, 152);
+            this.lblNvoUsuario.Location = new System.Drawing.Point(227, 173);
             this.lblNvoUsuario.Name = "lblNvoUsuario";
             this.lblNvoUsuario.Size = new System.Drawing.Size(154, 25);
             this.lblNvoUsuario.TabIndex = 2;
@@ -165,12 +166,25 @@
             this.pbxCerrar.TabStop = false;
             this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.lblError.ForeColor = System.Drawing.Color.White;
+            this.lblError.Location = new System.Drawing.Point(229, 146);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(46, 18);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "label3";
+            this.lblError.Visible = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(555, 282);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.lblNvoUsuario);
             this.Controls.Add(this.txtPas);
@@ -205,5 +219,6 @@
         private System.Windows.Forms.PictureBox pbxMinimizar;
         private System.Windows.Forms.PictureBox pbxCerrar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblError;
     }
 }

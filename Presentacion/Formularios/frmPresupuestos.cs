@@ -257,16 +257,16 @@ namespace Presentacion
         }
 
         //BOTON GENERAR PRESUPUESTO
-        private void btnReportPresup_Click(object sender, EventArgs e)
+        private void btnImprimir_Click(object sender, EventArgs e)
         {
-            var frm = new frmReportPresup();         
+            var frm = new frmReportPresup();
 
             for (int i = 0; i < dgvGrilla.Rows.Count; i++)
             {
                 var variables = new DatosPresup();
 
                 variables.Nombre = lblNombrePaciente.Text;
-                if(cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)
+                if (cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)
                 {
                     variables.Dni = 0;
                 }
@@ -276,10 +276,10 @@ namespace Presentacion
                 variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
                 variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
                 variables.PrecioUnitario = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[3].Value);
-                variables.Subtotal = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[4].Value);              
+                variables.Subtotal = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[4].Value);
 
                 frm.Datos.Add(variables);
-            }            
+            }
 
             frm.ShowDialog();
         }
