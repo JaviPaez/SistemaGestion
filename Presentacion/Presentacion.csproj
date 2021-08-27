@@ -101,11 +101,11 @@
     <Compile Include="Formularios\frmRecetas.Designer.cs">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmRptPresupuesto.cs">
+    <Compile Include="Formularios\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmRptPresupuesto.Designer.cs">
-      <DependentUpon>frmRptPresupuesto.cs</DependentUpon>
+    <Compile Include="Formularios\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Formularios\frmInicio.cs">
@@ -170,8 +170,8 @@
     <EmbeddedResource Include="Formularios\frmRecetas.resx">
       <DependentUpon>frmRecetas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmRptPresupuesto.resx">
-      <DependentUpon>frmRptPresupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,9 +186,15 @@
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\rptPresupuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaEntidad.DatosPresup.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.DetallePresupuesto.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.Paciente.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.Presupuesto.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.Producto.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.ReportePresupuesto.datasource" />
     <None Include="Properties\DataSources\DatosPresup.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

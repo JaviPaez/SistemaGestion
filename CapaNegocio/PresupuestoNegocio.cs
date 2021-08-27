@@ -21,5 +21,10 @@ namespace CapaNegocio
         {
             return presupuestoDatos.BuscarPresupuesto(dni);
         }
+
+        public DataTable ConsultarPresupuestoReporte()
+        {
+            return presupuestoDatos.ConsultarPresupuestoReporte();
+        }
     }
 }

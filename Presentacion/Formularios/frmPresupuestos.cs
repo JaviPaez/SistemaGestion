@@ -70,8 +70,8 @@ namespace Presentacion
                     presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
                     presupuesto.Fecha = dtpFecha.Value;
 
-                    var presupuestoMetodo = new PresupuestoNegocio();
-                    var maxId = presupuestoMetodo.GrabarPresupuesto(presupuesto);
+                    var presupuestoNegocio = new PresupuestoNegocio();
+                    var maxId = presupuestoNegocio.GrabarPresupuesto(presupuesto);
 
                     if (maxId != 0)
                     {
@@ -103,8 +103,6 @@ namespace Presentacion
                     MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            //ReiniciarCampos();
         }
 
         //BOTON CANCELAR
@@ -148,8 +146,6 @@ namespace Presentacion
         //Cargar datos de Receta
         private void cboIdReceta_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            try
-            {
                 var recetaMetodo = new RecetaNegocio();
                 var registro = recetaMetodo.CargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
 
@@ -161,10 +157,6 @@ namespace Presentacion
                     lblAstigOD.Text = registro["Astig_OD"].ToString();
                     lblObservaciones.Text = registro["Observaciones"].ToString();
                 }
-            }
-            catch
-            {
-            }
         }
 
         //Reiniciar campos
@@ -195,7 +187,6 @@ namespace Presentacion
         //BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
             try
             {
                 if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
@@ -256,14 +247,17 @@ namespace Presentacion
             }
         }
 
-        //BOTON GENERAR PRESUPUESTO
+        //BOTON IMPRIMIR
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            var frm = new frmReportPresup();
+            //frmReportes report = new frmReportes();
+            //report.ShowDialog();
+
+            var frm = new frmReportes();
 
             for (int i = 0; i < dgvGrilla.Rows.Count; i++)
             {
-                var variables = new DatosPresup();
+                var variables = new ReportePresupuesto();
 
                 variables.Nombre = lblNombrePaciente.Text;
                 if (cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)

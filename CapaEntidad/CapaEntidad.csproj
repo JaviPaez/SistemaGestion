@@ -49,7 +49,7 @@
     <Compile Include="PermisoyRol\Permiso.cs" />
     <Compile Include="PermisoyRol\Rol.cs" />
     <Compile Include="PermisoyRol\RolPermiso.cs" />
-    <Compile Include="Presupuesto\DatosPresup.cs" />
+    <Compile Include="Presupuesto\ReportePresupuesto.cs" />
     <Compile Include="Presupuesto\DetallePresupuesto.cs" />
     <Compile Include="Presupuesto\Presupuesto.cs" />
     <Compile Include="Producto\Producto.cs" />

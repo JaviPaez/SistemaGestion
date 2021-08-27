@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using CapaEntidad;
 
@@ -44,6 +45,27 @@ namespace CapaDatos
 
             return dt;
             //*****************************************************
+        }
+
+        public DataTable ConsultarPresupuestoReporte()
+        {
+            var dt = new DataTable();
+            try
+            {
+                string sqlStr = "Select * from Presupuestos order by Nro";
+                var ds = new DataSet();
+                var da = new SqlDataAdapter(sqlStr, Conectar());
+                ds = new DataSet();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+
+                return dt;
+            }
+            catch
+            {
+                //  MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+                return dt;
+            }
         }
 
         public DataTable BuscarPresupuesto(int dni)
