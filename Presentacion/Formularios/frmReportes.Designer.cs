@@ -80,17 +80,17 @@ namespace Presentacion
             // 
             // reportViewer
             // 
-            this.reportViewer.Location = new System.Drawing.Point(-1, 38);
+            this.reportViewer.Location = new System.Drawing.Point(0, 38);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(824, 617);
+            this.reportViewer.Size = new System.Drawing.Size(853, 628);
             this.reportViewer.TabIndex = 4;
             // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 653);
+            this.ClientSize = new System.Drawing.Size(852, 665);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -107,10 +107,10 @@ namespace Presentacion
 
         #endregion
         private System.Windows.Forms.BindingSource DatosPresupBindingSource;
+        private System.Windows.Forms.BindingSource ReportePresupuestoBindingSource;
         private System.Windows.Forms.Button btnPresupuestos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.BindingSource ReportePresupuestoBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }

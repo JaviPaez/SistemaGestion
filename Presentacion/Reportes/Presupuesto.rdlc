@@ -525,7 +525,7 @@
     <Height>3.42194cm</Height>
     <Style />
   </Body>
-  <Width>21.27689cm</Width>
+  <Width>21cm</Width>
   <Page>
     <PageHeader>
       <Height>8.46405cm</Height>
@@ -804,7 +804,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Top>2.04196cm</Top>
           <Height>1.01493cm</Height>
-          <Width>21.18323cm</Width>
+          <Width>21cm</Width>
           <ZIndex>7</ZIndex>
           <Style>
             <Border>
@@ -851,7 +851,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
         <Line Name="Line1">
           <Top>8.05808cm</Top>
           <Height>0cm</Height>
-          <Width>21.12696cm</Width>
+          <Width>21cm</Width>
           <ZIndex>9</ZIndex>
           <Style>
             <Border>
@@ -893,7 +893,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
           <Top>0.21167cm</Top>
           <Left>0.07639cm</Left>
           <Height>0.6cm</Height>
-          <Width>21.07069cm</Width>
+          <Width>20.92361cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -924,7 +924,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
           <Top>0.81167cm</Top>
           <Left>0.05627cm</Left>
           <Height>0.6cm</Height>
-          <Width>21.07069cm</Width>
+          <Width>20.94373cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -939,7 +939,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
         <Line Name="Line3">
           <Top>0.14111cm</Top>
           <Height>0cm</Height>
-          <Width>21.27689cm</Width>
+          <Width>21cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
