@@ -250,32 +250,32 @@ namespace Presentacion
         //BOTON IMPRIMIR
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            //frmReportes report = new frmReportes();
-            //report.ShowDialog();
+            frmReportes report = new frmReportes();
+            report.ShowDialog();
 
-            var frm = new frmReportes();
+            //var frm = new frmReportes();
 
-            for (int i = 0; i < dgvGrilla.Rows.Count; i++)
-            {
-                var variables = new ReportePresupuesto();
+            //for (int i = 0; i < dgvGrilla.Rows.Count; i++)
+            //{
+            //    var variables = new ReportePresupuesto();
 
-                variables.Nombre = lblNombrePaciente.Text;
-                if (cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)
-                {
-                    variables.Dni = 0;
-                }
-                else variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
+            //    variables.Nombre = lblNombrePaciente.Text;
+            //    if (cboDniPaciente.Text == "SELECCIONE" || cboDniPaciente.SelectedValue == null)
+            //    {
+            //        variables.Dni = 0;
+            //    }
+            //    else variables.Dni = Convert.ToInt32(cboDniPaciente.Text);
 
-                variables.Fecha = dtpFecha.Value;
-                variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
-                variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
-                variables.PrecioUnitario = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[3].Value);
-                variables.Subtotal = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[4].Value);
+            //    variables.Fecha = dtpFecha.Value;
+            //    variables.Descripcion = dgvGrilla.Rows[i].Cells[1].Value.ToString();
+            //    variables.Cantidad = Convert.ToInt32(dgvGrilla.Rows[i].Cells[2].Value);
+            //    variables.PrecioUnitario = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[3].Value);
+            //    variables.Subtotal = Convert.ToDecimal(dgvGrilla.Rows[i].Cells[4].Value);
 
-                frm.Datos.Add(variables);
-            }
+            //    frm.Datos.Add(variables);
+            //}
 
-            frm.ShowDialog();
+            //frm.ShowDialog();
         }
 
         //Variables

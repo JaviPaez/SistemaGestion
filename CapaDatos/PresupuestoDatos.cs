@@ -52,7 +52,9 @@ namespace CapaDatos
             var dt = new DataTable();
             try
             {
-                string sqlStr = "Select * from Presupuestos order by Nro";
+                //string sqlStr = "Select * from Presupuestos order by Nro";
+                string sqlStr = "select Dni, Fecha, Apellido, Nombre, Descripcion, PrecioUnitario, DetallePresupuesto.Cantidad, DetallePresupuesto.Cantidad*PrecioUnitario as Subtotal from Presupuestos inner join DetallePresupuesto on Nro = NroPresupuesto inner join Productos on IdProducto = Productos.ID inner join Pacientes on Dni = DniPaciente where DniPaciente = 15456789";
+
                 var ds = new DataSet();
                 var da = new SqlDataAdapter(sqlStr, Conectar());
                 ds = new DataSet();

@@ -187,15 +187,10 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\CapaEntidad.DatosPresup.datasource" />
-    <None Include="Properties\DataSources\CapaEntidad.DetallePresupuesto.datasource" />
-    <None Include="Properties\DataSources\CapaEntidad.Paciente.datasource" />
-    <None Include="Properties\DataSources\CapaEntidad.Presupuesto.datasource" />
-    <None Include="Properties\DataSources\CapaEntidad.Producto.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.ReportePresupuesto.datasource" />
-    <None Include="Properties\DataSources\DatosPresup.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
