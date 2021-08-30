@@ -8,9 +8,7 @@ using CapaNegocio;
 namespace Presentacion
 {
     public partial class frmReportes : Form
-    {
-        //public List<ReportePresupuesto> Datos = new List<ReportePresupuesto>();
-        
+    {        
         public frmReportes()
         {
             InitializeComponent();
@@ -19,11 +17,6 @@ namespace Presentacion
         //Presupuestos
         private void btnPresupuestos_Click(object sender, EventArgs e)
         {
-            //Codigo anterior
-            //reportViewer.LocalReport.DataSources.Clear();
-            //reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet", Datos));
-            //this.reportViewer.RefreshReport();
-
             var met = new PresupuestoNegocio();
             var dt = met.ConsultarPresupuestoReporte();
 
@@ -32,14 +25,13 @@ namespace Presentacion
 
             this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
             sReportDataSource.Name = "DSPresupuesto";
-            sReportDataSource.Value = dt; //.Tables[0];
+            sReportDataSource.Value = dt;
             reportViewer.LocalReport.DataSources.Add(sReportDataSource);
             reportViewer.RefreshReport();
         }
 
         private void frmReportes_Load(object sender, EventArgs e)
         {
-            this.reportViewer.RefreshReport();
         }
     }
 }

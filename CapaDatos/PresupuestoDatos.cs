@@ -52,7 +52,6 @@ namespace CapaDatos
             var dt = new DataTable();
             try
             {
-                //string sqlStr = "Select * from Presupuestos order by Nro";
                 string sqlStr = "select Dni, Fecha, Apellido, Nombre, Descripcion, PrecioUnitario, DetallePresupuesto.Cantidad, DetallePresupuesto.Cantidad*PrecioUnitario as Subtotal from Presupuestos inner join DetallePresupuesto on Nro = NroPresupuesto inner join Productos on IdProducto = Productos.ID inner join Pacientes on Dni = DniPaciente where Nro = (select max(nro) from Presupuestos)";
 
                 var ds = new DataSet();
@@ -65,7 +64,6 @@ namespace CapaDatos
             }
             catch
             {
-                //  MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
                 return dt;
             }
         }
