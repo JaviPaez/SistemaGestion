@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Runtime.InteropServices;
 using CapaNegocio;
+using System.Data.SqlClient;
 
 namespace Presentacion
 {
@@ -22,7 +23,7 @@ namespace Presentacion
         //BOTON INGRESAR
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var dt = new DataTable();
+            //var dr = new SqlDataReader();
             var usuario = new UsuarioNegocio();
             var dni = txtUsuario.Text;
             var contraseña = txtPas.Text;
@@ -31,11 +32,11 @@ namespace Presentacion
             {
                 if (txtPas.Text != "")
                 {
-                    dt = usuario.Login(dni, contraseña);
+                    var dr = usuario.Login(dni, contraseña);
 
-                    if (dt.Rows.Count == 1)
-                    {
-                        var nombreApellido = dt.Rows[0]["Nombre"] + " " + dt.Rows[0]["Apellido"];
+                    if (dr.Read())
+                    {                        
+                        var nombreApellido = dr["Nombre"] + " " + dr["Apellido"];
 
                         MessageBox.Show("Bienvenido\n" + nombreApellido, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         var frm = new frmMenu();

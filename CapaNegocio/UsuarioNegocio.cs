@@ -2,6 +2,7 @@
 using System.Data;
 using CapaEntidad;
 using CapaDatos;
+using System.Data.SqlClient;
 
 namespace CapaNegocio
 {
@@ -9,9 +10,9 @@ namespace CapaNegocio
     {
         UsuarioDatos usuarioDatos = new UsuarioDatos();
 
-        public DataTable Login(string dni, string contraseña)
+        public SqlDataReader Login(string dni, string contraseña)
         {
-            return usuarioDatos.ConsultarLogin(dni,contraseña);
+            return usuarioDatos.Login(dni,contraseña);
         }      
                
         public Boolean GrabarUsuario(Usuario usuario)

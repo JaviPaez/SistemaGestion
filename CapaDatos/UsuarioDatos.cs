@@ -7,18 +7,29 @@ namespace CapaDatos
 {
     public class UsuarioDatos : Conexion
     {
-        public DataTable ConsultarLogin(string dni, string contraseña)
+        //public DataTable ConsultarLogin(string dni, string contraseña)
+        //{//Dni, Contraseña, Apellido, Nombre
+        //    string login = "select * from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";
+
+        //    //*****************************************************
+        //    var da = new SqlDataAdapter(login, Conectar());
+        //    var ds = new DataSet();
+        //    da.Fill(ds);
+        //    DataTable dt = ds.Tables[0];
+
+        //    return dt;
+        //    //*****************************************************
+        //}
+
+        public SqlDataReader Login(string dni, string contraseña)
         {
-            string login = "select Dni, Contraseña, Apellido, Nombre from USUARIOS where Dni = '" + dni + "' and Contraseña = '" + contraseña + "'";
+            var cmd = new SqlCommand("SP_Login", Conectar());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@dni", dni);
+            cmd.Parameters.AddWithValue("@contraseña", contraseña);
+            var registro = cmd.ExecuteReader();
 
-            //*****************************************************
-            var da = new SqlDataAdapter(login, Conectar());
-            var ds = new DataSet();
-            da.Fill(ds);
-            DataTable dt = ds.Tables[0];
-
-            return dt;
-            //*****************************************************
+            return registro;
         }
 
         public Boolean GrabarUsuario(Usuario usuario)

@@ -187,7 +187,6 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaEntidad.ReportePresupuesto.datasource" />
