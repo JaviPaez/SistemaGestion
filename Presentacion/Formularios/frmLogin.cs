@@ -23,13 +23,17 @@ namespace Presentacion
         //BOTON INGRESAR
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //var dr = new SqlDataReader();
             var usuario = new UsuarioNegocio();
-            var dni = txtUsuario.Text;
-            var contraseña = txtPas.Text;
+            if (!int.TryParse(txtUsuario.Text, out int dni))
+            {
+                dni = 0;
+            }
+            else dni = Convert.ToInt32(txtUsuario.Text);
+
+            var contraseña = txtPas.Text;            
 
             if (txtUsuario.Text != "")
-            {
+            {             
                 if (txtPas.Text != "")
                 {
                     var dr = usuario.Login(dni, contraseña);

@@ -10,7 +10,7 @@ namespace CapaNegocio
     {
         UsuarioDatos usuarioDatos = new UsuarioDatos();
 
-        public SqlDataReader Login(string dni, string contraseña)
+        public SqlDataReader Login(int dni, string contraseña)
         {
             return usuarioDatos.Login(dni,contraseña);
         }      
