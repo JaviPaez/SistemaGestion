@@ -16,7 +16,88 @@ namespace Presentacion
         private void Menu_Load(object sender, EventArgs e)
         {
             AbrirFormHijo(new frmInicio());
-        }     
+
+            switch (frmLogin.RolUsuario)
+            {
+                //Cajero
+                case 1:
+                    Cajero(); break;
+
+                //Óptico
+                case 2:
+                    Optico(); break;
+
+                //Depósito
+                case 3:
+                    Deposito(); break;
+
+                //Administrativo
+                case 4:
+                    Administrativo(); break;
+
+                //Gerente
+                case 5:
+                    break;
+            }
+        } 
+        
+        private void Cajero()
+        {
+            btnProductos.Visible = false;
+            panelProducto.Visible = false;
+            btnPacientes.Visible = false;
+            panelPaciente.Visible = false;
+            btnRecetas.Visible = false;
+            panelReceta.Visible = false;
+            btnUsuarios.Visible = false;
+            panelUsuario.Visible = false;
+            btnReportes.Visible = false;
+            panelEstadstica.Visible = false;
+        }
+
+        private void Optico()
+        {
+            btnProductos.Visible = false;
+            panelProducto.Visible = false;
+            btnVentas.Visible = false;
+            panelVenta.Visible = false;
+            btnUsuarios.Visible = false;
+            panelUsuario.Visible = false;
+            btnPresupuestos.Visible = false;
+            panelPresup.Visible = false;
+            btnReportes.Visible = false;
+            panelEstadstica.Visible = false;
+        }
+
+        private void Deposito()
+        {
+            btnPacientes.Visible = false;
+            panelPaciente.Visible = false;
+            btnRecetas.Visible = false;
+            panelReceta.Visible = false;
+            btnVentas.Visible = false;
+            panelVenta.Visible = false;
+            btnUsuarios.Visible = false;
+            panelUsuario.Visible = false;
+            btnPresupuestos.Visible = false;
+            panelPresup.Visible = false;
+            btnReportes.Visible = false;
+            panelEstadstica.Visible = false;
+        }
+
+        private void Administrativo()
+        {
+            btnVentas.Visible = false;
+            panelVenta.Visible = false;
+            btnProductos.Visible = false;
+            panelProducto.Visible = false;
+            btnUsuarios.Visible = false;
+            panelUsuario.Visible = false;
+            btnPresupuestos.Visible = false;
+            panelPresup.Visible = false;
+            btnReportes.Visible = false;
+            panelEstadstica.Visible = false;
+        }
         #endregion
 
         #region BOTONES

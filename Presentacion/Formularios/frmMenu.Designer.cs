@@ -46,19 +46,19 @@ namespace Presentacion
             this.btnRptEstadisticas = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelEstadstica = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelPresup = new System.Windows.Forms.Panel();
             this.btnPresupuestos = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelUsuario = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelProducto = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelReceta = new System.Windows.Forms.Panel();
             this.btnRecetas = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelVenta = new System.Windows.Forms.Panel();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelPaciente = new System.Windows.Forms.Panel();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
@@ -107,19 +107,19 @@ namespace Presentacion
             this.PanelVertical.Controls.Add(this.panelSubmenuPresupuestos);
             this.PanelVertical.Controls.Add(this.pbxSalir);
             this.PanelVertical.Controls.Add(this.panelSubmenuReportes);
-            this.PanelVertical.Controls.Add(this.panel7);
+            this.PanelVertical.Controls.Add(this.panelEstadstica);
             this.PanelVertical.Controls.Add(this.btnReportes);
-            this.PanelVertical.Controls.Add(this.panel6);
+            this.PanelVertical.Controls.Add(this.panelPresup);
             this.PanelVertical.Controls.Add(this.btnPresupuestos);
-            this.PanelVertical.Controls.Add(this.panel5);
+            this.PanelVertical.Controls.Add(this.panelUsuario);
             this.PanelVertical.Controls.Add(this.btnUsuarios);
-            this.PanelVertical.Controls.Add(this.panel4);
+            this.PanelVertical.Controls.Add(this.panelProducto);
             this.PanelVertical.Controls.Add(this.btnProductos);
-            this.PanelVertical.Controls.Add(this.panel3);
+            this.PanelVertical.Controls.Add(this.panelReceta);
             this.PanelVertical.Controls.Add(this.btnRecetas);
-            this.PanelVertical.Controls.Add(this.panel2);
+            this.PanelVertical.Controls.Add(this.panelVenta);
             this.PanelVertical.Controls.Add(this.btnVentas);
-            this.PanelVertical.Controls.Add(this.panel1);
+            this.PanelVertical.Controls.Add(this.panelPaciente);
             this.PanelVertical.Controls.Add(this.btnPacientes);
             this.PanelVertical.Controls.Add(this.pbxLogo);
             this.PanelVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -297,13 +297,13 @@ namespace Presentacion
             this.panel9.Size = new System.Drawing.Size(10, 28);
             this.panel9.TabIndex = 13;
             // 
-            // panel7
+            // panelEstadstica
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(0, 404);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(22, 54);
-            this.panel7.TabIndex = 11;
+            this.panelEstadstica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelEstadstica.Location = new System.Drawing.Point(0, 404);
+            this.panelEstadstica.Name = "panelEstadstica";
+            this.panelEstadstica.Size = new System.Drawing.Size(22, 54);
+            this.panelEstadstica.TabIndex = 11;
             // 
             // btnReportes
             // 
@@ -324,13 +324,13 @@ namespace Presentacion
             this.btnReportes.UseVisualStyleBackColor = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
-            // panel6
+            // panelPresup
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(0, 353);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(22, 54);
-            this.panel6.TabIndex = 9;
+            this.panelPresup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelPresup.Location = new System.Drawing.Point(0, 353);
+            this.panelPresup.Name = "panelPresup";
+            this.panelPresup.Size = new System.Drawing.Size(22, 54);
+            this.panelPresup.TabIndex = 9;
             // 
             // btnPresupuestos
             // 
@@ -351,13 +351,13 @@ namespace Presentacion
             this.btnPresupuestos.UseVisualStyleBackColor = false;
             this.btnPresupuestos.Click += new System.EventHandler(this.btnPresupuestos_Click);
             // 
-            // panel5
+            // panelUsuario
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 303);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(22, 54);
-            this.panel5.TabIndex = 7;
+            this.panelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelUsuario.Location = new System.Drawing.Point(0, 303);
+            this.panelUsuario.Name = "panelUsuario";
+            this.panelUsuario.Size = new System.Drawing.Size(22, 54);
+            this.panelUsuario.TabIndex = 7;
             // 
             // btnUsuarios
             // 
@@ -378,13 +378,13 @@ namespace Presentacion
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // panel4
+            // panelProducto
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(0, 204);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(22, 54);
-            this.panel4.TabIndex = 5;
+            this.panelProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelProducto.Location = new System.Drawing.Point(0, 204);
+            this.panelProducto.Name = "panelProducto";
+            this.panelProducto.Size = new System.Drawing.Size(22, 54);
+            this.panelProducto.TabIndex = 5;
             // 
             // btnProductos
             // 
@@ -405,13 +405,13 @@ namespace Presentacion
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // panel3
+            // panelReceta
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(0, 154);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(22, 54);
-            this.panel3.TabIndex = 3;
+            this.panelReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelReceta.Location = new System.Drawing.Point(0, 154);
+            this.panelReceta.Name = "panelReceta";
+            this.panelReceta.Size = new System.Drawing.Size(22, 54);
+            this.panelReceta.TabIndex = 3;
             // 
             // btnRecetas
             // 
@@ -432,13 +432,13 @@ namespace Presentacion
             this.btnRecetas.UseVisualStyleBackColor = false;
             this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
             // 
-            // panel2
+            // panelVenta
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(0, 255);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(22, 54);
-            this.panel2.TabIndex = 1;
+            this.panelVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelVenta.Location = new System.Drawing.Point(0, 255);
+            this.panelVenta.Name = "panelVenta";
+            this.panelVenta.Size = new System.Drawing.Size(22, 54);
+            this.panelVenta.TabIndex = 1;
             // 
             // btnVentas
             // 
@@ -459,13 +459,13 @@ namespace Presentacion
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // panel1
+            // panelPaciente
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(0, 103);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(22, 54);
-            this.panel1.TabIndex = 0;
+            this.panelPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelPaciente.Location = new System.Drawing.Point(0, 103);
+            this.panelPaciente.Name = "panelPaciente";
+            this.panelPaciente.Size = new System.Drawing.Size(22, 54);
+            this.panelPaciente.TabIndex = 0;
             // 
             // btnPacientes
             // 
@@ -625,19 +625,19 @@ namespace Presentacion
         private System.Windows.Forms.Button btnRptEstadisticas;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelEstadstica;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelPresup;
         private System.Windows.Forms.Button btnPresupuestos;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelProducto;
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelReceta;
         private System.Windows.Forms.Button btnRecetas;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelVenta;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPaciente;
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Panel BarraTitulo;

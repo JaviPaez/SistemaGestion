@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data;
 using System.Runtime.InteropServices;
 using CapaNegocio;
-using System.Data.SqlClient;
 
 namespace Presentacion
 {
+
     public partial class frmLogin : Form
     {
+        public static int RolUsuario;
         public frmLogin()
         {
-            InitializeComponent();            
-        } 
-        
+            InitializeComponent();
+        }
+
         //LOAD
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -24,32 +24,57 @@ namespace Presentacion
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var usuario = new UsuarioNegocio();
-            if (!int.TryParse(txtUsuario.Text, out int dni))
+            if (int.TryParse(txtUsuario.Text, out int dni))
             {
-                dni = 0;
             }
             else dni = Convert.ToInt32(txtUsuario.Text);
 
-            var contraseña = txtPas.Text;            
+            var contraseña = txtPas.Text;
 
             if (txtUsuario.Text != "")
-            {             
+            {
                 if (txtPas.Text != "")
                 {
                     var dr = usuario.Login(dni, contraseña);
 
                     if (dr.Read())
-                    {                        
+                    {
                         var nombreApellido = dr["Nombre"] + " " + dr["Apellido"];
 
-                        MessageBox.Show("Bienvenido\n" + nombreApellido, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string rol="";
+
+                        switch (dr["IdRol"])
+                        {
+                            case 1:
+                                rol = "Cajero";
+                                RolUsuario = 1; break;
+
+                            case 2:
+                                rol = "Óptico";
+                                RolUsuario = 2; break;
+
+                            case 3:
+                                rol = "Depósito";
+                                RolUsuario = 3; break;
+
+                            case 4:
+                                rol = "Administrativo";
+                                RolUsuario = 4; break;
+
+                            case 5:
+                                rol = "Gerente";
+                                RolUsuario = 5; break;
+                        }
+
+                        MessageBox.Show("Bienvenido\n" + nombreApellido + "\nRol: " + rol, "Ingreso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         var frm = new frmMenu();
                         this.Hide();
                         frm.Show();
                     }
-                    else 
-                    {  
-                        MessageBox.Show("Usuario y/o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                    else
+                    {
+                        MessageBox.Show("Usuario y/o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         lblError.Visible = false;
                         txtPas.Clear();
                         txtUsuario.Clear();
@@ -58,7 +83,7 @@ namespace Presentacion
                 }
                 else MensajeError("Ingrese contraseña");
             }
-            else MensajeError("Ingrese usuario");                  
+            else MensajeError("Ingrese usuario");
         }
 
         private void MensajeError(string mensaje)
@@ -78,7 +103,7 @@ namespace Presentacion
         private void pbxMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }   
+        }
 
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
@@ -91,7 +116,7 @@ namespace Presentacion
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-       
+
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

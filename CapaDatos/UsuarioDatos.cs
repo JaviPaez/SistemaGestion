@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using CapaEntidad;
 
 namespace CapaDatos
@@ -10,13 +9,13 @@ namespace CapaDatos
     {
         public SqlDataReader Login(int dni, string contraseña)
         {
-                var cmd = new SqlCommand("SP_Login", Conectar());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dni", dni);
-                cmd.Parameters.AddWithValue("@contraseña", contraseña);
-                var registro = cmd.ExecuteReader();
+            var cmd = new SqlCommand("SP_Login", Conectar());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@dni", dni);
+            cmd.Parameters.AddWithValue("@contraseña", contraseña);
+            var registro = cmd.ExecuteReader();
 
-                return registro;     
+            return registro;
         }
 
         public Boolean GrabarUsuario(Usuario usuario)
