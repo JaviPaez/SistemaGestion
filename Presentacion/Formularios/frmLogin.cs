@@ -5,7 +5,6 @@ using CapaNegocio;
 
 namespace Presentacion
 {
-
     public partial class frmLogin : Form
     {
         public static int RolUsuario;

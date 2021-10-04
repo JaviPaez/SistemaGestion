@@ -48,6 +48,8 @@
             this.txtVerifContr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxContraseña = new System.Windows.Forms.CheckBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -69,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(126, 273);
+            this.label2.Location = new System.Drawing.Point(129, 312);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 25);
             this.label2.TabIndex = 1;
@@ -87,7 +89,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtContraseña.Location = new System.Drawing.Point(289, 270);
+            this.txtContraseña.Location = new System.Drawing.Point(292, 309);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(259, 31);
@@ -101,7 +103,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(498, 363);
+            this.btnGrabar.Location = new System.Drawing.Point(450, 426);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 7;
@@ -193,7 +195,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(698, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(701, 38);
             this.BarraTitulo.TabIndex = 12;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -202,7 +204,7 @@
             this.pbxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbxMinimizar.Image")));
-            this.pbxMinimizar.Location = new System.Drawing.Point(618, 7);
+            this.pbxMinimizar.Location = new System.Drawing.Point(621, 7);
             this.pbxMinimizar.Name = "pbxMinimizar";
             this.pbxMinimizar.Size = new System.Drawing.Size(25, 25);
             this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +217,7 @@
             this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbxCerrar.Image")));
-            this.pbxCerrar.Location = new System.Drawing.Point(670, 7);
+            this.pbxCerrar.Location = new System.Drawing.Point(673, 7);
             this.pbxCerrar.Name = "pbxCerrar";
             this.pbxCerrar.Size = new System.Drawing.Size(25, 25);
             this.pbxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,7 +233,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(202, 363);
+            this.btnCancelar.Location = new System.Drawing.Point(154, 426);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 6;
@@ -242,7 +244,7 @@
             // txtVerifContr
             // 
             this.txtVerifContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtVerifContr.Location = new System.Drawing.Point(289, 316);
+            this.txtVerifContr.Location = new System.Drawing.Point(292, 355);
             this.txtVerifContr.Name = "txtVerifContr";
             this.txtVerifContr.PasswordChar = '*';
             this.txtVerifContr.Size = new System.Drawing.Size(259, 31);
@@ -253,7 +255,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 319);
+            this.label7.Location = new System.Drawing.Point(15, 358);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(274, 25);
             this.label7.TabIndex = 13;
@@ -264,7 +266,7 @@
             this.cbxContraseña.AutoSize = true;
             this.cbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbxContraseña.ForeColor = System.Drawing.Color.White;
-            this.cbxContraseña.Location = new System.Drawing.Point(555, 280);
+            this.cbxContraseña.Location = new System.Drawing.Point(558, 319);
             this.cbxContraseña.Name = "cbxContraseña";
             this.cbxContraseña.Size = new System.Drawing.Size(140, 24);
             this.cbxContraseña.TabIndex = 14;
@@ -272,12 +274,34 @@
             this.cbxContraseña.UseVisualStyleBackColor = true;
             this.cbxContraseña.CheckedChanged += new System.EventHandler(this.cbxContraseña_CheckedChanged);
             // 
+            // txtEmail
+            // 
+            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtEmail.Location = new System.Drawing.Point(289, 263);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(259, 31);
+            this.txtEmail.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(126, 266);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "E-MAIL";
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(698, 438);
+            this.ClientSize = new System.Drawing.Size(701, 528);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cbxContraseña);
             this.Controls.Add(this.txtVerifContr);
             this.Controls.Add(this.label7);
@@ -330,5 +354,7 @@
         private System.Windows.Forms.TextBox txtVerifContr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox cbxContraseña;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -22,7 +22,7 @@ namespace CapaDatos
         {
             try
             {
-                var grabarUsuario = "INSERT INTO Usuarios(Dni, IdRol, Apellido, Nombre, Contraseña) VALUES(@Dni, @IdRol, @Apellido, @Nombre, @Contraseña)";
+                var grabarUsuario = "INSERT INTO Usuarios(Dni, IdRol, Apellido, Nombre, Contraseña, email) VALUES(@Dni, @IdRol, @Apellido, @Nombre, @Contraseña, @email)";
 
                 SqlCommand com = new SqlCommand(grabarUsuario, Conectar());
 
@@ -31,6 +31,7 @@ namespace CapaDatos
                 com.Parameters.AddWithValue("@Apellido", usuario.Apellido);
                 com.Parameters.AddWithValue("@Nombre", usuario.Nombre);
                 com.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
+                com.Parameters.AddWithValue("@email", usuario.email);
 
                 com.ExecuteNonQuery();
 
@@ -44,7 +45,7 @@ namespace CapaDatos
 
         public DataTable ConsultarUsuarios()
         {
-            string usuarios = "select Apellido Apellidos, Nombre Nombres, Dni, NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id order by Apellidos";
+            string usuarios = "select Apellido Apellidos, Nombre Nombres, Dni, email, NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id order by Apellidos";
 
             //*****************************************************
             var da = new SqlDataAdapter(usuarios, Conectar());
@@ -58,7 +59,7 @@ namespace CapaDatos
 
         public DataTable BuscarUsuarioDni(int dni)
         {
-            string usuario = "select Apellido Apellidos, Nombre Nombres, Dni, NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Dni = " + dni;
+            string usuario = "select Apellido Apellidos, Nombre Nombres, Dni, email, NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Dni = " + dni;
 
             //*****************************************************
             var da = new SqlDataAdapter(usuario, Conectar());
@@ -72,7 +73,7 @@ namespace CapaDatos
 
         public DataTable BuscarUsuarioApeNom(string ApeNom)
         {
-            string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
+            string usuario = "select Dni,Apellido Apellidos, Nombre Nombres,email,NombreRol Rol from Usuarios join Roles on Usuarios.Idrol = Roles.Id where Apellido + ' ' + Nombre like '%" + ApeNom + "%'";
 
             //*****************************************************
             var da = new SqlDataAdapter(usuario, Conectar());

@@ -32,6 +32,7 @@ namespace Presentacion
                         usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
                         usuario.Apellido = txtApellido.Text;
                         usuario.Nombre = txtNombre.Text;
+                        usuario.email = txtEmail.Text;
 
                         var usuarioNegocio = new UsuarioNegocio();
                         Boolean grabo = usuarioNegocio.GrabarUsuario(usuario);
