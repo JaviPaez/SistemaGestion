@@ -110,6 +110,7 @@ namespace Presentacion
             txtVerifContr.Clear();
             cboRol.Text = "SELECCIONE";
             cbxContraseña.Checked = false;
+            txtEmail.Clear();
             txtDni.Focus();
         }
 

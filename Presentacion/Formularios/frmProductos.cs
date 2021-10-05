@@ -32,8 +32,8 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
-                    producto.Precio = Convert.ToDecimal(txtPrecio.Text);
+                    if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
+                    producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
                     var productoMetodo = new ProductoNegocio();
@@ -64,8 +64,8 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
-                    producto.Precio = Convert.ToDecimal(txtPrecio.Text);
+                    if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
+                    producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
@@ -146,7 +146,7 @@ namespace Presentacion
             try
             {
                 txtDescripcion.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
-                txtPrecio.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
+                txtCosto.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
             }
             catch
@@ -218,7 +218,7 @@ namespace Presentacion
         private void ReiniciarCampos()
         {
             txtCantidad.Value = 0;
-            txtPrecio.Clear();
+            txtCosto.Clear();
             txtDescripcion.Clear();
             txtDescripcion.Focus();
         }

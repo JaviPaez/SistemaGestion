@@ -71,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(129, 312);
+            this.label2.Location = new System.Drawing.Point(126, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 25);
             this.label2.TabIndex = 1;
@@ -89,11 +89,11 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtContraseña.Location = new System.Drawing.Point(292, 309);
+            this.txtContraseña.Location = new System.Drawing.Point(289, 300);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(259, 31);
-            this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.TabIndex = 5;
             // 
             // btnGrabar
             // 
@@ -244,18 +244,18 @@
             // txtVerifContr
             // 
             this.txtVerifContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtVerifContr.Location = new System.Drawing.Point(292, 355);
+            this.txtVerifContr.Location = new System.Drawing.Point(289, 346);
             this.txtVerifContr.Name = "txtVerifContr";
             this.txtVerifContr.PasswordChar = '*';
             this.txtVerifContr.Size = new System.Drawing.Size(259, 31);
-            this.txtVerifContr.TabIndex = 5;
+            this.txtVerifContr.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(15, 358);
+            this.label7.Location = new System.Drawing.Point(12, 349);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(274, 25);
             this.label7.TabIndex = 13;
@@ -266,7 +266,7 @@
             this.cbxContraseña.AutoSize = true;
             this.cbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbxContraseña.ForeColor = System.Drawing.Color.White;
-            this.cbxContraseña.Location = new System.Drawing.Point(558, 319);
+            this.cbxContraseña.Location = new System.Drawing.Point(555, 310);
             this.cbxContraseña.Name = "cbxContraseña";
             this.cbxContraseña.Size = new System.Drawing.Size(140, 24);
             this.cbxContraseña.TabIndex = 14;
@@ -281,7 +281,7 @@
             this.txtEmail.Location = new System.Drawing.Point(289, 263);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(259, 31);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 4;
             // 
             // label8
             // 

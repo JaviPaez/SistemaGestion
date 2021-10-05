@@ -32,7 +32,7 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtCosto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -82,15 +82,15 @@ namespace Presentacion
             this.txtDescripcion.Size = new System.Drawing.Size(489, 31);
             this.txtDescripcion.TabIndex = 0;
             // 
-            // txtPrecio
+            // txtCosto
             // 
-            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(715, 175);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(129, 31);
-            this.txtPrecio.TabIndex = 1;
+            this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCosto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCosto.Location = new System.Drawing.Point(715, 175);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(129, 31);
+            this.txtCosto.TabIndex = 1;
             // 
             // label3
             // 
@@ -100,9 +100,9 @@ namespace Presentacion
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(488, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 25);
+            this.label3.Size = new System.Drawing.Size(86, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "PRECIO";
+            this.label3.Text = "COSTO";
             // 
             // label4
             // 
@@ -271,7 +271,7 @@ namespace Presentacion
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
@@ -292,7 +292,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnNuevo;
