@@ -1,4 +1,4 @@
-# SistemaOptica
+# Sistema Optica
 
 Gestión de Pacientes y Presupuestos para una óptica  
-.NET, C#, Windows Forms, SQL
+C# .NET, Windows Forms, SQL
