@@ -187,6 +187,7 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\GraficoRolesUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\UsuarioLista.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />

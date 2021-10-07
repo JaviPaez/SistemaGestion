@@ -32,23 +32,15 @@ namespace Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
-            this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReportePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPresupuestos = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGraficoRolesUsuarios = new System.Windows.Forms.Button();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReportePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportePresupuestoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DatosPresupBindingSource
-            // 
-            this.DatosPresupBindingSource.DataSource = typeof(CapaEntidad.ReportePresupuesto);
-            // 
-            // ReportePresupuestoBindingSource
-            // 
-            this.ReportePresupuestoBindingSource.DataSource = typeof(CapaEntidad.ReportePresupuesto);
             // 
             // btnPresupuestos
             // 
@@ -62,7 +54,7 @@ namespace Presentacion
             // 
             // btnListaUsuarios
             // 
-            this.btnListaUsuarios.Location = new System.Drawing.Point(147, 9);
+            this.btnListaUsuarios.Location = new System.Drawing.Point(111, 9);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(96, 23);
             this.btnListaUsuarios.TabIndex = 2;
@@ -70,14 +62,15 @@ namespace Presentacion
             this.btnListaUsuarios.UseVisualStyleBackColor = true;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
-            // button3
+            // btnGraficoRolesUsuarios
             // 
-            this.button3.Location = new System.Drawing.Point(278, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGraficoRolesUsuarios.Location = new System.Drawing.Point(224, 9);
+            this.btnGraficoRolesUsuarios.Name = "btnGraficoRolesUsuarios";
+            this.btnGraficoRolesUsuarios.Size = new System.Drawing.Size(145, 23);
+            this.btnGraficoRolesUsuarios.TabIndex = 3;
+            this.btnGraficoRolesUsuarios.Text = "Gráfico Roles de Usuarios";
+            this.btnGraficoRolesUsuarios.UseVisualStyleBackColor = true;
+            this.btnGraficoRolesUsuarios.Click += new System.EventHandler(this.btnGraficoRolesUsuarios_Click);
             // 
             // reportViewer
             // 
@@ -87,13 +80,21 @@ namespace Presentacion
             this.reportViewer.Size = new System.Drawing.Size(988, 966);
             this.reportViewer.TabIndex = 4;
             // 
+            // DatosPresupBindingSource
+            // 
+            this.DatosPresupBindingSource.DataSource = typeof(CapaEntidad.ReportePresupuesto);
+            // 
+            // ReportePresupuestoBindingSource
+            // 
+            this.ReportePresupuestoBindingSource.DataSource = typeof(CapaEntidad.ReportePresupuesto);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 1003);
             this.Controls.Add(this.reportViewer);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnGraficoRolesUsuarios);
             this.Controls.Add(this.btnListaUsuarios);
             this.Controls.Add(this.btnPresupuestos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -111,7 +112,7 @@ namespace Presentacion
         private System.Windows.Forms.BindingSource ReportePresupuestoBindingSource;
         private System.Windows.Forms.Button btnPresupuestos;
         private System.Windows.Forms.Button btnListaUsuarios;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGraficoRolesUsuarios;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }

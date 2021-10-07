@@ -46,5 +46,20 @@ namespace Presentacion
             reportViewer.LocalReport.DataSources.Add(sReportDataSource);
             reportViewer.RefreshReport();
         }
+
+        private void btnGraficoRolesUsuarios_Click(object sender, EventArgs e)
+        {
+            var met = new UsuarioListaNegocio();
+            var dt = met.ReporteListaUsuarios();
+
+            var reportPath = "Presentacion.Reportes.GraficoRolesUsuarios.rdlc";
+            ReportDataSource sReportDataSource = new ReportDataSource();
+
+            this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
+            sReportDataSource.Name = "DSUsuarios";
+            sReportDataSource.Value = dt;
+            reportViewer.LocalReport.DataSources.Add(sReportDataSource);
+            reportViewer.RefreshReport();
+        }
     }
 }
