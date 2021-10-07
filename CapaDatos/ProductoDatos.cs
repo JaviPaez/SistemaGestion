@@ -19,7 +19,7 @@ namespace CapaDatos
 
                 com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
-                com.Parameters.AddWithValue("@Precio", producto.Precio);
+                //com.Parameters.AddWithValue("@Precio", producto.Precio);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
 
                 com.ExecuteNonQuery();
@@ -42,7 +42,7 @@ namespace CapaDatos
 
                 com.Parameters.AddWithValue("@ID", producto.Id);
                 com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
-                com.Parameters.AddWithValue("@Precio", producto.Precio);
+                //com.Parameters.AddWithValue("@Precio", producto.Precio);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
 
                 com.ExecuteNonQuery();

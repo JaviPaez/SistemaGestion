@@ -44,6 +44,10 @@ namespace Presentacion
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cboSubCategoria = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +70,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(488, 120);
+            this.label2.Location = new System.Drawing.Point(128, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 25);
             this.label2.TabIndex = 1;
@@ -77,7 +81,7 @@ namespace Presentacion
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(715, 117);
+            this.txtDescripcion.Location = new System.Drawing.Point(298, 111);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(489, 31);
             this.txtDescripcion.TabIndex = 0;
@@ -87,7 +91,7 @@ namespace Presentacion
             this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCosto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCosto.Location = new System.Drawing.Point(715, 175);
+            this.txtCosto.Location = new System.Drawing.Point(963, 111);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(129, 31);
             this.txtCosto.TabIndex = 1;
@@ -98,7 +102,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(488, 178);
+            this.label3.Location = new System.Drawing.Point(859, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 25);
             this.label3.TabIndex = 3;
@@ -110,7 +114,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(488, 238);
+            this.label4.Location = new System.Drawing.Point(827, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 5;
@@ -245,7 +249,7 @@ namespace Presentacion
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtCantidad.Location = new System.Drawing.Point(715, 236);
+            this.txtCantidad.Location = new System.Drawing.Point(963, 164);
             this.txtCantidad.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -255,12 +259,60 @@ namespace Presentacion
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 2;
             // 
+            // cboSubCategoria
+            // 
+            this.cboSubCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboSubCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.cboSubCategoria.FormattingEnabled = true;
+            this.cboSubCategoria.Location = new System.Drawing.Point(298, 213);
+            this.cboSubCategoria.Name = "cboSubCategoria";
+            this.cboSubCategoria.Size = new System.Drawing.Size(489, 33);
+            this.cboSubCategoria.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(106, 216);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(177, 25);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "SUBCATEGORIA";
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(298, 163);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(489, 33);
+            this.cboCategoria.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(149, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 25);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "CATEGORIA";
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.cboCategoria);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cboSubCategoria);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtBuscarDescr);
@@ -304,5 +356,9 @@ namespace Presentacion
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.ComboBox cboSubCategoria;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.Label label7;
     }
 }

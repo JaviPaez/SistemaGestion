@@ -33,7 +33,7 @@ namespace Presentacion
                 {
                     producto.Descripcion = txtDescripcion.Text;
                     if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
-                    producto.Precio = Convert.ToDecimal(txtCosto.Text);
+                    //producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
                     var productoMetodo = new ProductoNegocio();
@@ -65,7 +65,7 @@ namespace Presentacion
                 {
                     producto.Descripcion = txtDescripcion.Text;
                     if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
-                    producto.Precio = Convert.ToDecimal(txtCosto.Text);
+                    //producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
