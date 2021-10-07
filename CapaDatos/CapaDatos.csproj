@@ -52,6 +52,7 @@
     <Compile Include="RecetaDatos.cs" />
     <Compile Include="RolDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
+    <Compile Include="UsuarioListaDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">

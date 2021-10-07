@@ -206,6 +206,8 @@ namespace Presentacion
         {
             CerrarSubpaneles();
             panelSubmenuReportes.Visible = true;
+
+            AbrirFormHijo(new frmReportes());
         }
 
         private void btnRptVenta_Click(object sender, EventArgs e)

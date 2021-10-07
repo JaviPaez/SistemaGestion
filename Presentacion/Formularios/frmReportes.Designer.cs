@@ -35,7 +35,7 @@ namespace Presentacion
             this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPresupuestos = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).BeginInit();
@@ -60,14 +60,15 @@ namespace Presentacion
             this.btnPresupuestos.UseVisualStyleBackColor = true;
             this.btnPresupuestos.Click += new System.EventHandler(this.btnPresupuestos_Click);
             // 
-            // button2
+            // btnListaUsuarios
             // 
-            this.button2.Location = new System.Drawing.Point(147, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnListaUsuarios.Location = new System.Drawing.Point(147, 9);
+            this.btnListaUsuarios.Name = "btnListaUsuarios";
+            this.btnListaUsuarios.Size = new System.Drawing.Size(96, 23);
+            this.btnListaUsuarios.TabIndex = 2;
+            this.btnListaUsuarios.Text = "Lista de Usuarios";
+            this.btnListaUsuarios.UseVisualStyleBackColor = true;
+            this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
             // button3
             // 
@@ -93,7 +94,7 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(987, 1003);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnListaUsuarios);
             this.Controls.Add(this.btnPresupuestos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReportes";
@@ -109,7 +110,7 @@ namespace Presentacion
         private System.Windows.Forms.BindingSource DatosPresupBindingSource;
         private System.Windows.Forms.BindingSource ReportePresupuestoBindingSource;
         private System.Windows.Forms.Button btnPresupuestos;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnListaUsuarios;
         private System.Windows.Forms.Button button3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }

@@ -187,9 +187,10 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\UsuarioLista.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\CapaEntidad.ReportePresupuesto.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.UsuarioLista.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
