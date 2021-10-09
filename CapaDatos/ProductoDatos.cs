@@ -57,10 +57,7 @@ namespace CapaDatos
 
         public DataTable ConsultarProductos()
         {
-            string productos = "select productos.ID, nombre Marca, productos.Descripcion," +
-            "categorias.descripcion Categoría," +
-            "subcategorias.descripcion Subcategoría," +
-            "Cantidad " +
+            string productos = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad " +
             "from productos " +
             "join marcas on idmarca = marcas.id " +
             "join Subcategorias on IdSubCategoria = Subcategorias.id " +

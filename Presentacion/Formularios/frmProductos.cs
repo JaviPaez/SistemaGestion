@@ -127,6 +127,9 @@ namespace Presentacion
                 {
                     dgvGrilla.DataSource = dt;
                     dgvGrilla.Columns["ID"].Visible = false;
+                    dgvGrilla.Columns["idcategoria"].Visible = false;
+                    dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    dgvGrilla.Columns["idmarca"].Visible = false;
                 }
             }
         }
@@ -146,6 +149,9 @@ namespace Presentacion
                 {
                     dgvGrilla.DataSource = dt;
                     dgvGrilla.Columns["ID"].Visible = false;
+                    dgvGrilla.Columns["idcategoria"].Visible = false;
+                    dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    dgvGrilla.Columns["idmarca"].Visible = false;
                 }
                 else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -164,9 +170,20 @@ namespace Presentacion
         {
             try
             {
-                txtDescripcion.Text = dgvGrilla.CurrentRow.Cells[1].Value.ToString();
-                txtCosto.Text = dgvGrilla.CurrentRow.Cells[2].Value.ToString();
-                txtCantidad.Text = dgvGrilla.CurrentRow.Cells[3].Value.ToString();
+                txtDescripcion.Text = dgvGrilla.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtCantidad.Text = dgvGrilla.CurrentRow.Cells["Cantidad"].Value.ToString();
+
+                cboCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idcategoria"].Value;
+                cboCategoria.Text = dgvGrilla.CurrentRow.Cells["Categoria"].Value.ToString();
+
+                //cboCategoria_SelectionChangeCommitted(sender, e);
+                ComboSubCat();
+
+                cboSubCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idsubcategoria"].Value;
+                cboSubCategoria.Text = dgvGrilla.CurrentRow.Cells["Subcategoria"].Value.ToString();               
+
+                cboMarca.SelectedValue = dgvGrilla.CurrentRow.Cells["idmarca"].Value;
+                cboMarca.Text = dgvGrilla.CurrentRow.Cells["Marca"].Value.ToString();
             }
             catch
             {
@@ -185,7 +202,10 @@ namespace Presentacion
                 if (dt.Rows.Count != 0)
                 {
                     dgvGrilla.DataSource = dt;
-                    dgvGrilla.Columns["ID"].Visible = false;
+                    //dgvGrilla.Columns["ID"].Visible = false;
+                    //dgvGrilla.Columns["idcategoria"].Visible = false;
+                    //dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    //dgvGrilla.Columns["idmarca"].Visible = false;
                 }
                 else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -240,18 +260,23 @@ namespace Presentacion
             txtCosto.Clear();
             txtDescripcion.Clear();
 
-            cboCategoria.SelectedValue = 0;
             cboSubCategoria.SelectedValue = 0;
+            cboCategoria.SelectedValue = 0;
             cboMarca.SelectedValue = 0;
 
             cboMarca.Text = "SELECCIONE";
-            cboCategoria.Text = "SELECCIONE";
             cboSubCategoria.Text = "SELECCIONE";
+            cboCategoria.Text = "SELECCIONE";
 
             txtDescripcion.Focus();
         }
 
         private void cboCategoria_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ComboSubCat();
+        }
+
+        private void ComboSubCat()
         {
             //Cargar Combo Subcategorias
             var dt2 = new DataTable();
