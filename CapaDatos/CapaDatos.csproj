@@ -45,6 +45,7 @@
     <Compile Include="CategoriaDatos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DetallePresupuestoDatos.cs" />
+    <Compile Include="MarcaDatos.cs" />
     <Compile Include="MedicoDatos.cs" />
     <Compile Include="PacienteDatos.cs" />
     <Compile Include="PresupuestoDatos.cs" />

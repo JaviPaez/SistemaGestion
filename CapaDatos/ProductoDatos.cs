@@ -57,7 +57,14 @@ namespace CapaDatos
 
         public DataTable ConsultarProductos()
         {
-            string productos = "select * from PRODUCTOS order by Descripcion";
+            string productos = "select productos.ID, nombre Marca, productos.Descripcion," +
+            "categorias.descripcion Categoría," +
+            "subcategorias.descripcion Subcategoría," +
+            "Cantidad " +
+            "from productos " +
+            "join marcas on idmarca = marcas.id " +
+            "join Subcategorias on IdSubCategoria = Subcategorias.id " +
+            "join Categorias on Categorias.id = Subcategorias.IdCategoria";
 
             //*****************************************************
             var da = new SqlDataAdapter(productos, Conectar());

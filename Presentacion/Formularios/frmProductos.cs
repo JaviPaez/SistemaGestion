@@ -16,6 +16,24 @@ namespace Presentacion
         //LOAD
         private void frmProductos_Load(object sender, EventArgs e)
         {
+            //Cargar Combo Categorias
+            var dt = new DataTable();
+            var cat = new CategoriaNegocio();
+            dt = cat.CargarComboCategorias();
+
+            cboCategoria.DataSource = dt;
+            cboCategoria.DisplayMember = "Descripcion";
+            cboCategoria.ValueMember = "ID";
+
+            //Cargar Combo Marcas
+            var dt3 = new DataTable();
+            var marca = new MarcaNegocio();
+            dt3 = marca.CargarComboMarcas();
+
+            cboMarca.DataSource = dt3;
+            cboMarca.DisplayMember = "Nombre";
+            cboMarca.ValueMember = "ID";
+
             ReiniciarCampos();
             btnBuscar.Visible = false;
         }
@@ -32,9 +50,9 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
-                    //producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    producto.IdSubcategoria = Convert.ToInt32(cboSubCategoria.SelectedValue);
+                    producto.IdMarca = Convert.ToInt32(cboMarca.SelectedValue);
 
                     var productoMetodo = new ProductoNegocio();
                     Boolean grabo = productoMetodo.GrabarProducto(producto);
@@ -64,9 +82,9 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     producto.Descripcion = txtDescripcion.Text;
-                    if (txtCosto.Text.Contains(".")) txtCosto.Text = txtCosto.Text.Replace(".", ",");
-                    //producto.Precio = Convert.ToDecimal(txtCosto.Text);
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    producto.IdSubcategoria = Convert.ToInt32(cboSubCategoria.SelectedValue);
+                    producto.IdMarca = Convert.ToInt32(cboMarca.SelectedValue);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
 
                     var productoMetodo = new ProductoNegocio();
@@ -89,7 +107,9 @@ namespace Presentacion
         //BOTON NUEVO
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            ReiniciarCampos();
+            this.Controls.Clear();
+            InitializeComponent();
+            frmProductos_Load(e, e);
         }
 
         //BUSCAR POR DESCRIPCION
@@ -108,7 +128,6 @@ namespace Presentacion
                     dgvGrilla.DataSource = dt;
                     dgvGrilla.Columns["ID"].Visible = false;
                 }
-                //else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -116,20 +135,20 @@ namespace Presentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtBuscarDescr.Text != string.Empty)
-            {              
-                    var ds = new DataSet();
-                    var dt = new DataTable();
-                    var productoMetodo = new ProductoNegocio();
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var productoMetodo = new ProductoNegocio();
 
-                    dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
+                dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
 
-                    if (dt.Rows.Count != 0)
-                    {
-                        dgvGrilla.DataSource = dt;
-                        dgvGrilla.Columns["ID"].Visible = false;
-                    }
-                    else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                
-                
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                }
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else MessageBox.Show("Ingrese una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -220,9 +239,30 @@ namespace Presentacion
             txtCantidad.Value = 0;
             txtCosto.Clear();
             txtDescripcion.Clear();
+
+            cboCategoria.SelectedValue = 0;
+            cboSubCategoria.SelectedValue = 0;
+            cboMarca.SelectedValue = 0;
+
+            cboMarca.Text = "SELECCIONE";
+            cboCategoria.Text = "SELECCIONE";
+            cboSubCategoria.Text = "SELECCIONE";
+
             txtDescripcion.Focus();
         }
 
-        
+        private void cboCategoria_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //Cargar Combo Subcategorias
+            var dt2 = new DataTable();
+            var subcat = new CategoriaNegocio();
+            int idCat;
+            idCat = Convert.ToInt32(cboCategoria.SelectedValue);
+            dt2 = subcat.CargarComboSubCategorias(idCat);
+
+            cboSubCategoria.DataSource = dt2;
+            cboSubCategoria.DisplayMember = "Descripcion";
+            cboSubCategoria.ValueMember = "ID";
+        }
     }
 }
