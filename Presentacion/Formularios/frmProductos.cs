@@ -176,7 +176,6 @@ namespace Presentacion
                 cboCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idcategoria"].Value;
                 cboCategoria.Text = dgvGrilla.CurrentRow.Cells["Categoria"].Value.ToString();
 
-                //cboCategoria_SelectionChangeCommitted(sender, e);
                 ComboSubCat();
 
                 cboSubCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idsubcategoria"].Value;
@@ -202,10 +201,10 @@ namespace Presentacion
                 if (dt.Rows.Count != 0)
                 {
                     dgvGrilla.DataSource = dt;
-                    //dgvGrilla.Columns["ID"].Visible = false;
-                    //dgvGrilla.Columns["idcategoria"].Visible = false;
-                    //dgvGrilla.Columns["idsubcategoria"].Visible = false;
-                    //dgvGrilla.Columns["idmarca"].Visible = false;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                    dgvGrilla.Columns["idcategoria"].Visible = false;
+                    dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    dgvGrilla.Columns["idmarca"].Visible = false;
                 }
                 else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

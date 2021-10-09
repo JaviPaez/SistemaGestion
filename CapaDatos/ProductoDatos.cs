@@ -75,7 +75,7 @@ namespace CapaDatos
 
         public DataTable BuscarProductoDescripcion(string descripcion)
         {
-            string producto = "select * from PRODUCTOS where Descripcion like '%" + descripcion + "%' order by Descripcion";
+            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria where productos.Descripcion like '%" + descripcion + "%' order by productos.Descripcion";
 
             //*****************************************************
             var da = new SqlDataAdapter(producto, Conectar());
