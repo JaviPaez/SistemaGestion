@@ -285,6 +285,7 @@ namespace Presentacion
             txtDescripcion.Focus();
         }
 
+        //Combo subcategorias
         private void cboCategoria_SelectionChangeCommitted(object sender, EventArgs e)
         {
             ComboSubCat();
