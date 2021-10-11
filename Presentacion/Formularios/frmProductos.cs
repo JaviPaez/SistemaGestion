@@ -179,7 +179,7 @@ namespace Presentacion
                 ComboSubCat();
 
                 cboSubCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idsubcategoria"].Value;
-                cboSubCategoria.Text = dgvGrilla.CurrentRow.Cells["Subcategoria"].Value.ToString();               
+                cboSubCategoria.Text = dgvGrilla.CurrentRow.Cells["Subcategoria"].Value.ToString();
 
                 cboMarca.SelectedValue = dgvGrilla.CurrentRow.Cells["idmarca"].Value;
                 cboMarca.Text = dgvGrilla.CurrentRow.Cells["Marca"].Value.ToString();
@@ -228,7 +228,15 @@ namespace Presentacion
 
                 dt = al.BuscarProductoId(id);
 
-                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                    dgvGrilla.Columns["idcategoria"].Visible = false;
+                    dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    dgvGrilla.Columns["idmarca"].Visible = false;
+                }
+
             }
             catch
             {
@@ -245,7 +253,14 @@ namespace Presentacion
 
                 dt = al.BuscarProductoId(id);
 
-                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                if (dt.Rows.Count != 0)
+                {
+                    dgvGrilla.DataSource = dt;
+                    dgvGrilla.Columns["ID"].Visible = false;
+                    dgvGrilla.Columns["idcategoria"].Visible = false;
+                    dgvGrilla.Columns["idsubcategoria"].Visible = false;
+                    dgvGrilla.Columns["idmarca"].Visible = false;
+                }
             }
             catch
             {

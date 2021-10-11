@@ -13,14 +13,17 @@ namespace CapaDatos
             {
                 var idMax = UltimoId();
 
-                var grabarProducto = "INSERT INTO PRODUCTOS(ID, Descripcion, Precio, Cantidad) VALUES(@ID, @Descripcion, @Precio, @Cantidad)";
+                var grabarProducto = "SP_GrabarProducto";
 
                 SqlCommand com = new SqlCommand(grabarProducto, Conectar());
+                com.CommandType = CommandType.StoredProcedure;
+
 
                 com.Parameters.AddWithValue("@ID", idMax);
-                com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
-                //com.Parameters.AddWithValue("@Precio", producto.Precio);
+                com.Parameters.AddWithValue("@descripcion", producto.Descripcion);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
+                com.Parameters.AddWithValue("@idMarca", producto.IdMarca);
+                com.Parameters.AddWithValue("@idSubCategoria", producto.IdSubcategoria);
 
                 com.ExecuteNonQuery();
 
@@ -36,14 +39,16 @@ namespace CapaDatos
         {
             try
             {
-                var modificarProducto = "UPDATE PRODUCTOS SET Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad where ID=@ID";
+                var modificarProducto = "SP_ModificarProducto";
 
                 SqlCommand com = new SqlCommand(modificarProducto, Conectar());
+                com.CommandType = CommandType.StoredProcedure;
 
                 com.Parameters.AddWithValue("@ID", producto.Id);
-                com.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
-                //com.Parameters.AddWithValue("@Precio", producto.Precio);
+                com.Parameters.AddWithValue("@descripcion", producto.Descripcion);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
+                com.Parameters.AddWithValue("@idMarca", producto.IdMarca);
+                com.Parameters.AddWithValue("@idSubCategoria", producto.IdSubcategoria);
 
                 com.ExecuteNonQuery();
 
@@ -89,7 +94,7 @@ namespace CapaDatos
 
         public DataTable BuscarProductoId(Int64 id)
         {
-            string producto = "select * from PRODUCTOS where Id = " + id;
+            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria where productos.ID = " + id;
 
             //*****************************************************
             var da = new SqlDataAdapter(producto, Conectar());
