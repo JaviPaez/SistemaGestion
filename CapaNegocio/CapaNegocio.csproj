@@ -46,6 +46,7 @@
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="MedicoNegocio.cs" />
     <Compile Include="PacienteNegocio.cs" />
+    <Compile Include="PrecioNegocio.cs" />
     <Compile Include="PresupuestoNegocio.cs" />
     <Compile Include="ProductoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -45,6 +45,8 @@
             this.cboSubCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -58,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(254, 231);
+            this.label1.Location = new System.Drawing.Point(245, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 0;
@@ -72,7 +74,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnGrabar.ForeColor = System.Drawing.Color.White;
-            this.btnGrabar.Location = new System.Drawing.Point(407, 457);
+            this.btnGrabar.Location = new System.Drawing.Point(420, 441);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(188, 53);
             this.btnGrabar.TabIndex = 6;
@@ -85,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(180, 328);
+            this.label2.Location = new System.Drawing.Point(171, 376);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(233, 25);
             this.label2.TabIndex = 4;
@@ -96,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(237, 280);
+            this.label3.Location = new System.Drawing.Point(228, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 25);
             this.label3.TabIndex = 6;
@@ -121,7 +123,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(771, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(736, 38);
             this.BarraTitulo.TabIndex = 20;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -130,7 +132,7 @@
             this.pbxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbxMinimizar.Image")));
-            this.pbxMinimizar.Location = new System.Drawing.Point(706, 7);
+            this.pbxMinimizar.Location = new System.Drawing.Point(671, 7);
             this.pbxMinimizar.Name = "pbxMinimizar";
             this.pbxMinimizar.Size = new System.Drawing.Size(25, 25);
             this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +145,7 @@
             this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbxCerrar.Image")));
-            this.pbxCerrar.Location = new System.Drawing.Point(743, 7);
+            this.pbxCerrar.Location = new System.Drawing.Point(708, 7);
             this.pbxCerrar.Name = "pbxCerrar";
             this.pbxCerrar.Size = new System.Drawing.Size(25, 25);
             this.pbxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +157,7 @@
             // 
             this.txtCF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtCF.Location = new System.Drawing.Point(446, 278);
+            this.txtCF.Location = new System.Drawing.Point(420, 326);
             this.txtCF.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -169,7 +171,7 @@
             // 
             this.txtCV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtCV.Location = new System.Drawing.Point(446, 326);
+            this.txtCV.Location = new System.Drawing.Point(420, 374);
             this.txtCV.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -183,7 +185,7 @@
             // 
             this.txtGanancia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGanancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtGanancia.Location = new System.Drawing.Point(446, 229);
+            this.txtGanancia.Location = new System.Drawing.Point(420, 277);
             this.txtGanancia.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -198,7 +200,7 @@
             this.cboCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(219, 108);
+            this.cboCategoria.Location = new System.Drawing.Point(217, 106);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(489, 33);
             this.cboCategoria.TabIndex = 0;
@@ -210,7 +212,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(70, 115);
+            this.label7.Location = new System.Drawing.Point(68, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 25);
             this.label7.TabIndex = 46;
@@ -221,7 +223,7 @@
             this.cboSubCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboSubCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cboSubCategoria.FormattingEnabled = true;
-            this.cboSubCategoria.Location = new System.Drawing.Point(219, 158);
+            this.cboSubCategoria.Location = new System.Drawing.Point(217, 156);
             this.cboSubCategoria.Name = "cboSubCategoria";
             this.cboSubCategoria.Size = new System.Drawing.Size(489, 33);
             this.cboSubCategoria.TabIndex = 1;
@@ -232,7 +234,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 161);
+            this.label6.Location = new System.Drawing.Point(25, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 25);
             this.label6.TabIndex = 45;
@@ -246,7 +248,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(172, 457);
+            this.btnCancelar.Location = new System.Drawing.Point(185, 441);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(188, 53);
             this.btnCancelar.TabIndex = 5;
@@ -254,12 +256,35 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.dtpFecha.Location = new System.Drawing.Point(217, 205);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(151, 31);
+            this.dtpFecha.TabIndex = 47;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(119, 210);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 25);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "FECHA";
+            // 
             // frmActualizarPrecio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(771, 616);
+            this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboSubCategoria);
@@ -309,5 +334,7 @@
         private System.Windows.Forms.ComboBox cboSubCategoria;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -48,17 +48,21 @@ namespace Presentacion
             DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
-            var medico = new Medico();
+            var precio = new Precio();
             try
             {
                 if (respuesta == DialogResult.Yes)
                 {
-                    //medico.Matricula = txtMatricula.Text;
-                    //medico.Apellido = txtApellido.Text;
-                    //medico.Nombre = txtNombre.Text;                   
+                    decimal CV = txtCV.Value;
+                    decimal CF = txtCF.Value;
+                    decimal Ganancia = txtGanancia.Value;
 
-                    var medicoMetodo = new MedicoNegocio();
-                    Boolean grabo = medicoMetodo.GrabarMedico(medico);
+                    precio.IdSubcategoria = Convert.ToInt32(cboSubCategoria.SelectedValue);
+                    precio.Porcentaje = (CV + CF + Ganancia) / 100;
+                    precio.Fecha = dtpFecha.Value;
+
+                    var precioMetodo = new PrecioNegocio();
+                    Boolean grabo = precioMetodo.GrabarPrecio(precio);
 
                     if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
