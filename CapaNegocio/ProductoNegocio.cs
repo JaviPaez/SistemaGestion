@@ -48,5 +48,10 @@ namespace CapaNegocio
         {
             return productoDatos.UltimoId();
         }
+
+        public DataTable ListarProductos()
+        {
+            return productoDatos.ListarProductos();
+        }        
     }
 }

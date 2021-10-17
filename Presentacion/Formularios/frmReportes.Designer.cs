@@ -1,4 +1,4 @@
-﻿using CapaEntidad;
+﻿//using CapaEntidad;
 
 namespace Presentacion
 {
@@ -35,6 +35,7 @@ namespace Presentacion
             this.btnPresupuestos = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnGraficoRolesUsuarios = new System.Windows.Forms.Button();
+            this.btlListaProductos = new System.Windows.Forms.Button();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -64,7 +65,7 @@ namespace Presentacion
             // 
             // btnGraficoRolesUsuarios
             // 
-            this.btnGraficoRolesUsuarios.Location = new System.Drawing.Point(224, 9);
+            this.btnGraficoRolesUsuarios.Location = new System.Drawing.Point(213, 9);
             this.btnGraficoRolesUsuarios.Name = "btnGraficoRolesUsuarios";
             this.btnGraficoRolesUsuarios.Size = new System.Drawing.Size(145, 23);
             this.btnGraficoRolesUsuarios.TabIndex = 3;
@@ -72,13 +73,23 @@ namespace Presentacion
             this.btnGraficoRolesUsuarios.UseVisualStyleBackColor = true;
             this.btnGraficoRolesUsuarios.Click += new System.EventHandler(this.btnGraficoRolesUsuarios_Click);
             // 
+            // btlListaProductos
+            // 
+            this.btlListaProductos.Location = new System.Drawing.Point(364, 9);
+            this.btlListaProductos.Name = "btlListaProductos";
+            this.btlListaProductos.Size = new System.Drawing.Size(108, 23);
+            this.btlListaProductos.TabIndex = 4;
+            this.btlListaProductos.Text = "Lista de Productos";
+            this.btlListaProductos.UseVisualStyleBackColor = true;
+            this.btlListaProductos.Click += new System.EventHandler(this.btlListaProductos_Click);
+            // 
             // reportViewer
             // 
-            this.reportViewer.Location = new System.Drawing.Point(0, 38);
+            this.reportViewer.Location = new System.Drawing.Point(1, 38);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(988, 966);
-            this.reportViewer.TabIndex = 4;
+            this.reportViewer.Size = new System.Drawing.Size(984, 963);
+            this.reportViewer.TabIndex = 5;
             // 
             // DatosPresupBindingSource
             // 
@@ -94,6 +105,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 1003);
             this.Controls.Add(this.reportViewer);
+            this.Controls.Add(this.btlListaProductos);
             this.Controls.Add(this.btnGraficoRolesUsuarios);
             this.Controls.Add(this.btnListaUsuarios);
             this.Controls.Add(this.btnPresupuestos);
@@ -113,6 +125,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btnPresupuestos;
         private System.Windows.Forms.Button btnListaUsuarios;
         private System.Windows.Forms.Button btnGraficoRolesUsuarios;
+        private System.Windows.Forms.Button btlListaProductos;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }

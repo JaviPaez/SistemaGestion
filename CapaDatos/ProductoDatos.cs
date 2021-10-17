@@ -18,7 +18,6 @@ namespace CapaDatos
                 SqlCommand com = new SqlCommand(grabarProducto, Conectar());
                 com.CommandType = CommandType.StoredProcedure;
 
-
                 com.Parameters.AddWithValue("@ID", idMax);
                 com.Parameters.AddWithValue("@descripcion", producto.Descripcion);
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
@@ -150,6 +149,21 @@ namespace CapaDatos
             {
                 return 1;
             }
+        }
+
+        public DataTable ListarProductos()
+        {
+            string productos = "SP_ListarProductos";
+
+            //*****************************************************
+            var com = new SqlCommand(productos, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+
+            return dt;
+            //*****************************************************
         }
     }
 }

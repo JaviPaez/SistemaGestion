@@ -30,6 +30,7 @@ namespace Presentacion
 
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            this.reportViewer.RefreshReport();
         }
 
         private void btnListaUsuarios_Click(object sender, EventArgs e)
@@ -57,6 +58,21 @@ namespace Presentacion
 
             this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
             sReportDataSource.Name = "DSUsuarios";
+            sReportDataSource.Value = dt;
+            reportViewer.LocalReport.DataSources.Add(sReportDataSource);
+            reportViewer.RefreshReport();
+        }
+
+        private void btlListaProductos_Click(object sender, EventArgs e)
+        {
+            var met = new ProductoNegocio();
+            var dt = met.ListarProductos();
+
+            var reportPath = "Presentacion.Reportes.ProductoLista.rdlc";
+            ReportDataSource sReportDataSource = new ReportDataSource();
+
+            this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
+            sReportDataSource.Name = "DSProductos";
             sReportDataSource.Value = dt;
             reportViewer.LocalReport.DataSources.Add(sReportDataSource);
             reportViewer.RefreshReport();
