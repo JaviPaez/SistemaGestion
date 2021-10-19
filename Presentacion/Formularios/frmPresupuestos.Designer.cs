@@ -30,7 +30,6 @@
         {
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cboIdReceta = new System.Windows.Forms.ComboBox();
             this.cboDniPaciente = new System.Windows.Forms.ComboBox();
-            this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -103,18 +101,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1248, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "USUARIO";
             // 
             // label3
             // 
@@ -200,22 +186,6 @@
             this.cboDniPaciente.Size = new System.Drawing.Size(200, 33);
             this.cboDniPaciente.TabIndex = 0;
             this.cboDniPaciente.SelectionChangeCommitted += new System.EventHandler(this.cboDniPaciente_SelectionChangeCommitted);
-            // 
-            // cboUsuario
-            // 
-            this.cboUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.cboUsuario.FormattingEnabled = true;
-            this.cboUsuario.Items.AddRange(new object[] {
-            "Seleccione",
-            "Apross",
-            "OSDE",
-            "Prevencion Salud",
-            "SIPSSA"});
-            this.cboUsuario.Location = new System.Drawing.Point(1360, 107);
-            this.cboUsuario.Name = "cboUsuario";
-            this.cboUsuario.Size = new System.Drawing.Size(295, 33);
-            this.cboUsuario.TabIndex = 2;
             // 
             // lblNombrePaciente
             // 
@@ -564,7 +534,6 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.lblNombrePaciente);
-            this.Controls.Add(this.cboUsuario);
             this.Controls.Add(this.cboDniPaciente);
             this.Controls.Add(this.cboIdReceta);
             this.Controls.Add(this.label6);
@@ -572,7 +541,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -589,7 +557,6 @@
         #endregion
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -597,7 +564,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboIdReceta;
         private System.Windows.Forms.ComboBox cboDniPaciente;
-        private System.Windows.Forms.ComboBox cboUsuario;
         private System.Windows.Forms.Label lblNombrePaciente;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAgregar;

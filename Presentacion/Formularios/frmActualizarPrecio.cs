@@ -18,6 +18,10 @@ namespace Presentacion
         #region
         private void frmActualizarPrecio_Load(object sender, EventArgs e)
         {
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.MinDate = DateTime.Today.AddMonths(-1);
+            dtpFecha.MaxDate = DateTime.Today.AddMonths(1);
+
             //Cargar Combo Categorias
             var dt = new DataTable();
             var cat = new CategoriaNegocio();

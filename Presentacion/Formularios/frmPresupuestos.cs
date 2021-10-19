@@ -17,17 +17,16 @@ namespace Presentacion
         {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
-            dtpFecha.MaxDate = DateTime.Today;
-            
+            dtpFecha.MaxDate = DateTime.Today;            
 
             //Cargar Combo Usuarios
-            var dt = new DataTable();
-            var user = new UsuarioNegocio();
-            dt = user.CargarComboUsuarios();
+            //var dt = new DataTable();
+            //var user = new UsuarioNegocio();
+            //dt = user.CargarComboUsuarios();
 
-            cboUsuario.DataSource = dt;
-            cboUsuario.DisplayMember = "ApeNom";
-            cboUsuario.ValueMember = "Dni";
+            //cboUsuario.DataSource = dt;
+            //cboUsuario.DisplayMember = "ApeNom";
+            //cboUsuario.ValueMember = "Dni";
 
             //Cargar Combo Pacientes
             var dt2 = new DataTable();
@@ -65,7 +64,8 @@ namespace Presentacion
             {
                 try
                 {
-                    presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
+                    //presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
+                    presupuesto.DniUsuario = frmLogin.DniUsuario;
                     presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
                     presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
                     presupuesto.Fecha = dtpFecha.Value;
@@ -163,7 +163,7 @@ namespace Presentacion
         private void ReiniciarCampos()
         {
             cboDniPaciente.Text = "SELECCIONE";
-            cboUsuario.Text = "SELECCIONE";
+            //cboUsuario.Text = "SELECCIONE";
             cboIdReceta.Text = "SELECCIONE";
             dtpFecha.Value = DateTime.Today;
             cboProducto.Text = "SELECCIONE";

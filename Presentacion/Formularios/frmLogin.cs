@@ -8,6 +8,8 @@ namespace Presentacion
     public partial class frmLogin : Form
     {
         public static int RolUsuario;
+        public static int DniUsuario;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -38,9 +40,11 @@ namespace Presentacion
 
                     if (dr.Read())
                     {
+                        DniUsuario = Convert.ToInt32(dr["Dni"]);
+
                         var nombreApellido = dr["Nombre"] + " " + dr["Apellido"];
 
-                        string rol="";
+                        string rol = "";
 
                         switch (dr["IdRol"])
                         {
