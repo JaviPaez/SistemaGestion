@@ -39,6 +39,7 @@ namespace Presentacion
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DatosPresupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPreciosHistoricos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DatosPresupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportePresupuestoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -99,11 +100,22 @@ namespace Presentacion
             // 
             this.ReportePresupuestoBindingSource.DataSource = typeof(CapaEntidad.ReportePresupuesto);
             // 
+            // btnPreciosHistoricos
+            // 
+            this.btnPreciosHistoricos.Location = new System.Drawing.Point(478, 9);
+            this.btnPreciosHistoricos.Name = "btnPreciosHistoricos";
+            this.btnPreciosHistoricos.Size = new System.Drawing.Size(145, 23);
+            this.btnPreciosHistoricos.TabIndex = 6;
+            this.btnPreciosHistoricos.Text = "Gráfico Precios Históricos";
+            this.btnPreciosHistoricos.UseVisualStyleBackColor = true;
+            this.btnPreciosHistoricos.Click += new System.EventHandler(this.btnPreciosHistoricos_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 1003);
+            this.Controls.Add(this.btnPreciosHistoricos);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.btlListaProductos);
             this.Controls.Add(this.btnGraficoRolesUsuarios);
@@ -127,5 +139,6 @@ namespace Presentacion
         private System.Windows.Forms.Button btnGraficoRolesUsuarios;
         private System.Windows.Forms.Button btlListaProductos;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.Windows.Forms.Button btnPreciosHistoricos;
     }
 }

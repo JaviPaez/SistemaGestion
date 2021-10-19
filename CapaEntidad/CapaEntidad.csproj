@@ -62,6 +62,7 @@
     <Compile Include="Producto\Categoria.cs" />
     <Compile Include="Producto\Marca.cs" />
     <Compile Include="Producto\Precio.cs" />
+    <Compile Include="Producto\PrecioHistorico.cs" />
     <Compile Include="Producto\ProductoLista.cs" />
     <Compile Include="Producto\Subcategoria.cs" />
     <Compile Include="Medico\Medico.cs" />

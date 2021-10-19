@@ -2,6 +2,7 @@
 using Microsoft.Reporting.WinForms;
 using System.Windows.Forms;
 using CapaNegocio;
+using CapaEntidad;
 
 namespace Presentacion
 {
@@ -73,6 +74,26 @@ namespace Presentacion
 
             this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
             sReportDataSource.Name = "DSProductos";
+            sReportDataSource.Value = dt;
+            reportViewer.LocalReport.DataSources.Add(sReportDataSource);
+            reportViewer.RefreshReport();
+        }
+
+        private void btnPreciosHistoricos_Click(object sender, EventArgs e)
+        {
+            PrecioHistorico prod = new PrecioHistorico();
+            prod.FechaInicio = new DateTime(2010, 1, 1);
+            prod.FechaFin = new DateTime(2022, 1, 1);
+            prod.Idprod = 46803;
+
+            var met = new ProductoNegocio();
+            var dt = met.GraficarPreciosHistoricos(prod);
+
+            var reportPath = "Presentacion.Reportes.GraficoPreciosHistoricos.rdlc";
+            ReportDataSource sReportDataSource = new ReportDataSource();
+
+            this.reportViewer.LocalReport.ReportEmbeddedResource = reportPath;
+            sReportDataSource.Name = "DSPrecioHistorico";
             sReportDataSource.Value = dt;
             reportViewer.LocalReport.DataSources.Add(sReportDataSource);
             reportViewer.RefreshReport();

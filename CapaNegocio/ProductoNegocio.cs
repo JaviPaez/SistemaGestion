@@ -52,6 +52,11 @@ namespace CapaNegocio
         public DataTable ListarProductos()
         {
             return productoDatos.ListarProductos();
-        }        
+        }
+
+        public DataTable GraficarPreciosHistoricos(PrecioHistorico prod)
+        {
+            return productoDatos.GraficarPreciosHistoricos(prod);
+        }
     }
 }

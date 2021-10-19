@@ -196,12 +196,14 @@
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GraficoPreciosHistoricos.rdlc" />
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
     <EmbeddedResource Include="Reportes\GraficoRolesUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ProductoLista.rdlc" />
     <EmbeddedResource Include="Reportes\UsuarioLista.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaEntidad.PrecioHistorico.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.ProductoLista.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.UsuarioLista.datasource" />
     <None Include="Properties\Settings.settings">

@@ -165,5 +165,25 @@ namespace CapaDatos
             return dt;
             //*****************************************************
         }
+
+        public DataTable GraficarPreciosHistoricos(PrecioHistorico prod)
+        {
+            string productos = "SP_GraficarPreciosHistoricos";
+
+            //*****************************************************
+            var com = new SqlCommand(productos, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.AddWithValue("@idProd", prod.Idprod);
+            com.Parameters.AddWithValue("@fecha1", prod.FechaInicio);
+            com.Parameters.AddWithValue("@fecha2", prod.FechaFin);
+
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+
+            return dt;
+            //*****************************************************
+        }
     }
 }
