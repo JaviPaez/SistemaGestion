@@ -34,7 +34,6 @@ namespace Presentacion
             cboDni.DisplayMember = "Dni";
             cboDni.ValueMember = "Dni";
 
-
             ReiniciarCampos();
         }
 
@@ -198,6 +197,27 @@ namespace Presentacion
             cboMedico.DataSource = dt;
             cboMedico.DisplayMember = "Apenom";
             cboMedico.ValueMember = "ID";
+        }
+
+        //BOTON BUSCAR Receta
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new RecetaNegocio();
+                dt = al.ConsultarRecetas(Convert.ToInt32(txtBuscar.Text));
+
+                if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            txtBuscar.Clear();
         }
     }
 }

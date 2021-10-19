@@ -304,5 +304,12 @@ namespace Presentacion
             cboSubCategoria.DisplayMember = "Descripcion";
             cboSubCategoria.ValueMember = "ID";
         }
+
+        //ACTUALIZAR PRECIOS
+        private void lblNvoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var frm = new frmActualizarPrecio();
+            frm.Show();
+        }
     }
 }

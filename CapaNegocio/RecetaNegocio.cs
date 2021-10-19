@@ -15,9 +15,9 @@ namespace CapaNegocio
             return recetaDatos.GrabarReceta(receta);
         }
 
-        public DataTable ConsultarRecetas()
+        public DataTable ConsultarRecetas(int dni)
         {
-            return recetaDatos.ConsultarRecetas();
+            return recetaDatos.ConsultarRecetas(dni);
         }
 
         public DataTable CargarComboRecetas(int dniPaciente)

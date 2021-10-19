@@ -50,6 +50,7 @@ namespace Presentacion
             this.label7 = new System.Windows.Forms.Label();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblNvoUsuario = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
@@ -328,12 +329,27 @@ namespace Presentacion
             this.label8.TabIndex = 44;
             this.label8.Text = "MARCA";
             // 
+            // lblNvoUsuario
+            // 
+            this.lblNvoUsuario.AutoSize = true;
+            this.lblNvoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.lblNvoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNvoUsuario.LinkColor = System.Drawing.Color.White;
+            this.lblNvoUsuario.Location = new System.Drawing.Point(1106, 165);
+            this.lblNvoUsuario.Name = "lblNvoUsuario";
+            this.lblNvoUsuario.Size = new System.Drawing.Size(185, 25);
+            this.lblNvoUsuario.TabIndex = 45;
+            this.lblNvoUsuario.TabStop = true;
+            this.lblNvoUsuario.Text = "Actualizar Precios";
+            this.lblNvoUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblNvoUsuario_LinkClicked);
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1720, 1042);
+            this.Controls.Add(this.lblNvoUsuario);
             this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cboCategoria);
@@ -389,5 +405,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel lblNvoUsuario;
     }
 }

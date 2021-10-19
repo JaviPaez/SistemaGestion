@@ -37,15 +37,19 @@ namespace CapaDatos
             }
         }
 
-        public DataTable ConsultarRecetas()
+        public DataTable ConsultarRecetas(int dni)
         {
-            string recetas = "select * from RECETAS";
+            string recetas = "SP_ConsultarRecetas";
 
             //*****************************************************
-            var da = new SqlDataAdapter(recetas, Conectar());
-            var ds = new DataSet();
-            da.Fill(ds);
-            DataTable dt = ds.Tables[0];
+            var com = new SqlCommand(recetas, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.AddWithValue("@dniPac", dni);
+
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
 
             return dt;
             //*****************************************************
