@@ -46,7 +46,7 @@ namespace Presentacion
             this.btnRptEstadisticas = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panelEstadstica = new System.Windows.Forms.Panel();
+            this.panelReportes = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelPresup = new System.Windows.Forms.Panel();
             this.btnPresupuestos = new System.Windows.Forms.Button();
@@ -107,7 +107,7 @@ namespace Presentacion
             this.PanelVertical.Controls.Add(this.panelSubmenuPresupuestos);
             this.PanelVertical.Controls.Add(this.pbxSalir);
             this.PanelVertical.Controls.Add(this.panelSubmenuReportes);
-            this.PanelVertical.Controls.Add(this.panelEstadstica);
+            this.PanelVertical.Controls.Add(this.panelReportes);
             this.PanelVertical.Controls.Add(this.btnReportes);
             this.PanelVertical.Controls.Add(this.panelPresup);
             this.PanelVertical.Controls.Add(this.btnPresupuestos);
@@ -297,13 +297,13 @@ namespace Presentacion
             this.panel9.Size = new System.Drawing.Size(10, 28);
             this.panel9.TabIndex = 13;
             // 
-            // panelEstadstica
+            // panelReportes
             // 
-            this.panelEstadstica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panelEstadstica.Location = new System.Drawing.Point(0, 404);
-            this.panelEstadstica.Name = "panelEstadstica";
-            this.panelEstadstica.Size = new System.Drawing.Size(22, 54);
-            this.panelEstadstica.TabIndex = 11;
+            this.panelReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelReportes.Location = new System.Drawing.Point(0, 404);
+            this.panelReportes.Name = "panelReportes";
+            this.panelReportes.Size = new System.Drawing.Size(22, 54);
+            this.panelReportes.TabIndex = 11;
             // 
             // btnReportes
             // 
@@ -625,7 +625,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btnRptEstadisticas;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panelEstadstica;
+        private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panelPresup;
         private System.Windows.Forms.Button btnPresupuestos;

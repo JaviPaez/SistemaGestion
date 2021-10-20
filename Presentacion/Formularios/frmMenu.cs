@@ -39,8 +39,8 @@ namespace Presentacion
                 case 5:
                     break;
             }
-        } 
-        
+        }
+
         private void Cajero()
         {
             btnProductos.Visible = false;
@@ -51,8 +51,13 @@ namespace Presentacion
             panelReceta.Visible = false;
             btnUsuarios.Visible = false;
             panelUsuario.Visible = false;
+            panelReportes.Visible = false;
             btnReportes.Visible = false;
-            panelEstadstica.Visible = false;
+            panelPresup.Location = new Point(0, 103);
+            btnPresupuestos.Location = new Point(12, 103);
+            panelSubmenuPresupuestos.Location = new Point(57, 157);
+            panelVenta.Location = new Point(0, 154);
+            btnVentas.Location = new Point(12, 154);
         }
 
         private void Optico()
@@ -65,8 +70,8 @@ namespace Presentacion
             panelUsuario.Visible = false;
             btnPresupuestos.Visible = false;
             panelPresup.Visible = false;
+            panelReportes.Visible = false;
             btnReportes.Visible = false;
-            panelEstadstica.Visible = false;
         }
 
         private void Deposito()
@@ -81,8 +86,11 @@ namespace Presentacion
             panelUsuario.Visible = false;
             btnPresupuestos.Visible = false;
             panelPresup.Visible = false;
-            btnReportes.Visible = false;
-            panelEstadstica.Visible = false;
+            panelProducto.Location = new Point(0, 103);
+            btnProductos.Location = new Point(0, 103);
+            panelReportes.Location = new Point(0, 154);
+            btnReportes.Location = new Point(12, 154);
+            panelSubmenuReportes.Location = new Point(57, 208);
         }
 
         private void Administrativo()
@@ -95,8 +103,9 @@ namespace Presentacion
             panelUsuario.Visible = false;
             btnPresupuestos.Visible = false;
             panelPresup.Visible = false;
-            btnReportes.Visible = false;
-            panelEstadstica.Visible = false;
+            panelReportes.Location = new Point(0, 204);
+            btnReportes.Location = new Point(12, 204);
+            panelSubmenuReportes.Location = new Point(57, 258);
         }
         #endregion
 
@@ -306,7 +315,7 @@ namespace Presentacion
         //COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)
         {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(49,66,82));
+            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(49, 66, 82));
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.White, sizeGripRectangle);
