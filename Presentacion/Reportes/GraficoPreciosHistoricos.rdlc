@@ -121,20 +121,28 @@
                         <Y>=Fields!Precio.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
-                        <Style />
+                        <Style>
+                          <FontSize>12pt</FontSize>
+                          <Format>'$'0.00;('$'0.00)</Format>
+                          <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
+                        </Style>
                         <UseValueAsLabel>true</UseValueAsLabel>
                         <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style>
                         <Border>
-                          <Color>Aqua</Color>
+                          <Color>DarkBlue</Color>
                         </Border>
+                        <Color>Blue</Color>
                       </Style>
                       <ChartMarker>
                         <Type>Diamond</Type>
-                        <Size>4pt</Size>
+                        <Size>6pt</Size>
                         <Style>
-                          <Color>Aqua</Color>
+                          <Border>
+                            <Color>#00ffffff</Color>
+                          </Border>
+                          <Color>Red</Color>
                         </Style>
                       </ChartMarker>
                       <DataElementOutput>Output</DataElementOutput>
@@ -167,18 +175,16 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>Gainsboro</Color>
-                        <Style>None</Style>
+                        <Style>Solid</Style>
+                        <Width>1.5pt</Width>
                       </Border>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <Format>d</Format>
-                      <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption />
+                      <Caption>Fecha</Caption>
                       <Style>
-                        <FontSize>9pt</FontSize>
-                        <Color>#5c5c5c</Color>
+                        <FontSize>15pt</FontSize>
                       </Style>
                     </ChartAxisTitle>
                     <ChartMajorGridLines>
@@ -200,10 +206,11 @@
                     <ChartMajorTickMarks>
                       <Style>
                         <Border>
-                          <Color>Gainsboro</Color>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
+                          <Width>1.25pt</Width>
                         </Border>
                       </Style>
+                      <Length>2</Length>
                     </ChartMajorTickMarks>
                     <ChartMinorTickMarks>
                       <Style>
@@ -216,6 +223,7 @@
                     <CrossAt>NaN</CrossAt>
                     <Minimum>NaN</Minimum>
                     <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                     <ChartAxisScaleBreak>
                       <Style />
                     </ChartAxisScaleBreak>
@@ -281,17 +289,15 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>Gainsboro</Color>
-                        <Style>None</Style>
+                        <Style>Solid</Style>
+                        <Width>1.5pt</Width>
                       </Border>
-                      <FontSize>8pt</FontSize>
-                      <Color>#5c5c5c</Color>
+                      <FontSize>12pt</FontSize>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption />
+                      <Caption>Precio</Caption>
                       <Style>
-                        <FontSize>9pt</FontSize>
-                        <Color>#5c5c5c</Color>
+                        <FontSize>15pt</FontSize>
                       </Style>
                     </ChartAxisTitle>
                     <ChartMajorGridLines>
@@ -302,6 +308,7 @@
                       </Style>
                     </ChartMajorGridLines>
                     <ChartMinorGridLines>
+                      <Enabled>True</Enabled>
                       <Style>
                         <Border>
                           <Color>Gainsboro</Color>
@@ -312,10 +319,11 @@
                     <ChartMajorTickMarks>
                       <Style>
                         <Border>
-                          <Color>Gainsboro</Color>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
+                          <Width>1.25pt</Width>
                         </Border>
                       </Style>
+                      <Length>1.5</Length>
                     </ChartMajorTickMarks>
                     <ChartMinorTickMarks>
                       <Style>
@@ -328,6 +336,7 @@
                     <CrossAt>NaN</CrossAt>
                     <Minimum>NaN</Minimum>
                     <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                     <ChartAxisScaleBreak>
                       <Style />
                     </ChartAxisScaleBreak>
@@ -398,7 +407,6 @@
               <ChartLegend Name="Default">
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>8pt</FontSize>
                 </Style>
                 <Position>TopLeft</Position>
                 <ChartLegendTitle>
@@ -409,24 +417,11 @@
                     <TextAlign>Center</TextAlign>
                   </Style>
                 </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
                 <HeaderSeparatorColor>Black</HeaderSeparatorColor>
                 <ColumnSeparatorColor>Black</ColumnSeparatorColor>
               </ChartLegend>
             </ChartLegends>
-            <ChartTitles>
-              <ChartTitle Name="Default">
-                <Caption>Título del gráfico</Caption>
-                <Style>
-                  <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextAlign>Left</TextAlign>
-                  <VerticalAlign>Top</VerticalAlign>
-                  <Color>#a6a6a6</Color>
-                </Style>
-                <Position>TopLeft</Position>
-              </ChartTitle>
-            </ChartTitles>
             <Palette>Pacific</Palette>
             <ChartBorderSkin>
               <Style>
@@ -445,7 +440,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DSPrecioHistorico</DataSetName>
-            <Top>0.7364cm</Top>
+            <Top>3.22403cm</Top>
             <Left>0.73766cm</Left>
             <Height>13.56369cm</Height>
             <Width>19.18604cm</Width>
@@ -459,8 +454,148 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Marca: " &amp; First(Fields!Marca.Value, "DSPrecioHistorico")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox9</rd:DefaultName>
+            <Top>1.58805cm</Top>
+            <Left>1.48488cm</Left>
+            <Height>0.6cm</Height>
+            <Width>15.57472cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox27">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Descripción: " &amp; First(Fields!Descripcion.Value, "DSPrecioHistorico")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox9</rd:DefaultName>
+            <Top>2.29389cm</Top>
+            <Left>1.48488cm</Left>
+            <Height>0.6cm</Height>
+            <Width>15.57472cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Categoría: " &amp; First(Fields!Categoria.Value, "DSPrecioHistorico")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox9</rd:DefaultName>
+            <Top>0.14111cm</Top>
+            <Left>1.48488cm</Left>
+            <Height>0.6cm</Height>
+            <Width>15.57472cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Subcategoría: " &amp; First(Fields!Subcategoria.Value, "DSPrecioHistorico")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox9</rd:DefaultName>
+            <Top>0.84694cm</Top>
+            <Left>1.48488cm</Left>
+            <Height>0.6cm</Height>
+            <Width>15.57472cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>5.62995in</Height>
+        <Height>6.60934in</Height>
         <Style />
       </Body>
       <Width>8.2702in</Width>
@@ -776,40 +911,6 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
               <Height>0.6cm</Height>
               <Width>3.55833cm</Width>
               <ZIndex>8</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox26">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Página " &amp; Globals!PageNumber &amp; " de " &amp; Globals!OverallTotalPages</Value>
-                      <Style>
-                        <Format>d</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox9</rd:DefaultName>
-              <Top>7.42457cm</Top>
-              <Left>14.5596cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
