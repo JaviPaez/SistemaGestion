@@ -40,12 +40,12 @@ namespace Presentacion
             this.panel17 = new System.Windows.Forms.Panel();
             this.pbxSalir = new System.Windows.Forms.PictureBox();
             this.panelSubmenuReportes = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnRptVenta = new System.Windows.Forms.Button();
-            this.btnRptPagos = new System.Windows.Forms.Button();
-            this.btnRptEstadisticas = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.subpanelRpt3 = new System.Windows.Forms.Panel();
+            this.btnRpt1 = new System.Windows.Forms.Button();
+            this.btnRpt2 = new System.Windows.Forms.Button();
+            this.btnRpt3 = new System.Windows.Forms.Button();
+            this.subpanelRpt2 = new System.Windows.Forms.Panel();
+            this.subpanelRpt1 = new System.Windows.Forms.Panel();
             this.panelReportes = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelPresup = new System.Windows.Forms.Panel();
@@ -207,95 +207,98 @@ namespace Presentacion
             // 
             // panelSubmenuReportes
             // 
-            this.panelSubmenuReportes.Controls.Add(this.panel11);
-            this.panelSubmenuReportes.Controls.Add(this.btnRptVenta);
-            this.panelSubmenuReportes.Controls.Add(this.btnRptPagos);
-            this.panelSubmenuReportes.Controls.Add(this.btnRptEstadisticas);
-            this.panelSubmenuReportes.Controls.Add(this.panel10);
-            this.panelSubmenuReportes.Controls.Add(this.panel9);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt3);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt1);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt2);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt3);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt2);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt1);
             this.panelSubmenuReportes.Location = new System.Drawing.Point(57, 459);
             this.panelSubmenuReportes.Name = "panelSubmenuReportes";
-            this.panelSubmenuReportes.Size = new System.Drawing.Size(143, 82);
+            this.panelSubmenuReportes.Size = new System.Drawing.Size(280, 82);
             this.panelSubmenuReportes.TabIndex = 0;
             this.panelSubmenuReportes.Visible = false;
             // 
-            // panel11
+            // subpanelRpt3
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel11.Location = new System.Drawing.Point(7, 51);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 28);
-            this.panel11.TabIndex = 17;
+            this.subpanelRpt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt3.Location = new System.Drawing.Point(7, 51);
+            this.subpanelRpt3.Name = "subpanelRpt3";
+            this.subpanelRpt3.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt3.TabIndex = 17;
             // 
-            // btnRptVenta
+            // btnRpt1
             // 
-            this.btnRptVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnRptVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRptVenta.FlatAppearance.BorderSize = 0;
-            this.btnRptVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnRptVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRptVenta.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRptVenta.ForeColor = System.Drawing.Color.White;
-            this.btnRptVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRptVenta.Location = new System.Drawing.Point(19, 0);
-            this.btnRptVenta.Name = "btnRptVenta";
-            this.btnRptVenta.Size = new System.Drawing.Size(124, 28);
-            this.btnRptVenta.TabIndex = 7;
-            this.btnRptVenta.Text = "Ventas";
-            this.btnRptVenta.UseVisualStyleBackColor = false;
-            this.btnRptVenta.Click += new System.EventHandler(this.btnRptVenta_Click);
+            this.btnRpt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt1.FlatAppearance.BorderSize = 0;
+            this.btnRpt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt1.ForeColor = System.Drawing.Color.White;
+            this.btnRpt1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt1.Location = new System.Drawing.Point(19, 0);
+            this.btnRpt1.Name = "btnRpt1";
+            this.btnRpt1.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt1.TabIndex = 7;
+            this.btnRpt1.Text = "Ventas";
+            this.btnRpt1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt1.UseVisualStyleBackColor = false;
+            this.btnRpt1.Click += new System.EventHandler(this.btnRptVenta_Click);
             // 
-            // btnRptPagos
+            // btnRpt2
             // 
-            this.btnRptPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnRptPagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRptPagos.FlatAppearance.BorderSize = 0;
-            this.btnRptPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnRptPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRptPagos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRptPagos.ForeColor = System.Drawing.Color.White;
-            this.btnRptPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRptPagos.Location = new System.Drawing.Point(19, 24);
-            this.btnRptPagos.Name = "btnRptPagos";
-            this.btnRptPagos.Size = new System.Drawing.Size(124, 28);
-            this.btnRptPagos.TabIndex = 8;
-            this.btnRptPagos.Text = "Pagos";
-            this.btnRptPagos.UseVisualStyleBackColor = false;
-            this.btnRptPagos.Click += new System.EventHandler(this.btnRptPagos_Click);
+            this.btnRpt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt2.FlatAppearance.BorderSize = 0;
+            this.btnRpt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt2.ForeColor = System.Drawing.Color.White;
+            this.btnRpt2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt2.Location = new System.Drawing.Point(19, 24);
+            this.btnRpt2.Name = "btnRpt2";
+            this.btnRpt2.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt2.TabIndex = 8;
+            this.btnRpt2.Text = "Pagos";
+            this.btnRpt2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt2.UseVisualStyleBackColor = false;
+            this.btnRpt2.Click += new System.EventHandler(this.btnRptPagos_Click);
             // 
-            // btnRptEstadisticas
+            // btnRpt3
             // 
-            this.btnRptEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnRptEstadisticas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRptEstadisticas.FlatAppearance.BorderSize = 0;
-            this.btnRptEstadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnRptEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRptEstadisticas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRptEstadisticas.ForeColor = System.Drawing.Color.White;
-            this.btnRptEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRptEstadisticas.Location = new System.Drawing.Point(19, 51);
-            this.btnRptEstadisticas.Name = "btnRptEstadisticas";
-            this.btnRptEstadisticas.Size = new System.Drawing.Size(124, 28);
-            this.btnRptEstadisticas.TabIndex = 9;
-            this.btnRptEstadisticas.Text = "Estadísticas";
-            this.btnRptEstadisticas.UseVisualStyleBackColor = false;
-            this.btnRptEstadisticas.Click += new System.EventHandler(this.btnRptEstadisticas_Click);
+            this.btnRpt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt3.FlatAppearance.BorderSize = 0;
+            this.btnRpt3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt3.ForeColor = System.Drawing.Color.White;
+            this.btnRpt3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt3.Location = new System.Drawing.Point(19, 51);
+            this.btnRpt3.Name = "btnRpt3";
+            this.btnRpt3.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt3.TabIndex = 9;
+            this.btnRpt3.Text = "Estadísticas";
+            this.btnRpt3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt3.UseVisualStyleBackColor = false;
+            this.btnRpt3.Click += new System.EventHandler(this.btnRptEstadisticas_Click);
             // 
-            // panel10
+            // subpanelRpt2
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel10.Location = new System.Drawing.Point(7, 24);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 28);
-            this.panel10.TabIndex = 15;
+            this.subpanelRpt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt2.Location = new System.Drawing.Point(7, 24);
+            this.subpanelRpt2.Name = "subpanelRpt2";
+            this.subpanelRpt2.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt2.TabIndex = 15;
             // 
-            // panel9
+            // subpanelRpt1
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel9.Location = new System.Drawing.Point(7, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 28);
-            this.panel9.TabIndex = 13;
+            this.subpanelRpt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt1.Location = new System.Drawing.Point(7, 0);
+            this.subpanelRpt1.Name = "subpanelRpt1";
+            this.subpanelRpt1.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt1.TabIndex = 13;
             // 
             // panelReportes
             // 
@@ -619,12 +622,12 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.PictureBox pbxSalir;
         private System.Windows.Forms.Panel panelSubmenuReportes;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnRptVenta;
-        private System.Windows.Forms.Button btnRptPagos;
-        private System.Windows.Forms.Button btnRptEstadisticas;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel subpanelRpt3;
+        private System.Windows.Forms.Button btnRpt1;
+        private System.Windows.Forms.Button btnRpt2;
+        private System.Windows.Forms.Button btnRpt3;
+        private System.Windows.Forms.Panel subpanelRpt2;
+        private System.Windows.Forms.Panel subpanelRpt1;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panelPresup;

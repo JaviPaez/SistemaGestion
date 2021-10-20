@@ -90,7 +90,14 @@ namespace Presentacion
             btnProductos.Location = new Point(0, 103);
             panelReportes.Location = new Point(0, 154);
             btnReportes.Location = new Point(12, 154);
-            panelSubmenuReportes.Location = new Point(57, 208);
+            panelSubmenuReportes.Location = new Point(30, 208);
+
+            btnRpt1.Text = "Listar productos";
+            btnRpt2.Text = "Precio histórico";
+            btnRpt1.Size = new Size(200, 28);
+            btnRpt2.Size = new Size(200, 28);
+            subpanelRpt3.Visible = false;
+            btnRpt3.Visible = false;
         }
 
         private void Administrativo()
@@ -105,7 +112,14 @@ namespace Presentacion
             panelPresup.Visible = false;
             panelReportes.Location = new Point(0, 204);
             btnReportes.Location = new Point(12, 204);
-            panelSubmenuReportes.Location = new Point(57, 258);
+            panelSubmenuReportes.Location = new Point(2, 258);
+
+            btnRpt1.Text = "Listar comprobantes";
+            btnRpt2.Text = "Día con más ventas";
+            btnRpt3.Text = "Producto mas vendido";
+            btnRpt1.Size = new Size(300, 28);
+            btnRpt2.Size = new Size(300, 28);
+            btnRpt3.Size = new Size(300, 28);
         }
         #endregion
 
