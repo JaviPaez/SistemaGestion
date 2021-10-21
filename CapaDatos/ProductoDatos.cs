@@ -114,7 +114,7 @@ namespace CapaDatos
             var ds = new DataSet();
             DataRow dr;
 
-            string producto = "select top(1) PRODUCTOS.ID, Descripcion, Cantidad, IdSubCategoria, IdMarca, Fecha from PRODUCTOS, Producto_Precio, Precios where PRODUCTOS.ID = " + idProducto + " and IdProducto = PRODUCTOS.ID and IdPrecio = Precios.ID order by Fecha desc";
+            string producto = "select top(1) PRODUCTOS.ID, Descripcion, Cantidad, IdSubCategoria, IdMarca, Fecha, Precio from PRODUCTOS, Producto_Precio, Precios where PRODUCTOS.ID = " + idProducto + " and IdProducto = PRODUCTOS.ID and IdPrecio = Precios.ID order by Fecha desc";
             var da = new SqlDataAdapter(producto, Conectar());
 
             da.Fill(ds);
