@@ -61,7 +61,6 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.lblTotals = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -250,7 +249,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 470);
+            this.label1.Location = new System.Drawing.Point(39, 466);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 38;
@@ -465,23 +464,6 @@
             this.txtCantidad.Size = new System.Drawing.Size(99, 31);
             this.txtCantidad.TabIndex = 6;
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnImprimir.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(1520, 924);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(188, 53);
-            this.btnImprimir.TabIndex = 11;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
             // lblTotals
             // 
             this.lblTotals.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -515,7 +497,6 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblTotals);
             this.Controls.Add(this.dgvGrilla);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPrecio);
@@ -588,7 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.NumericUpDown txtCantidad;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label lblTotals;
         private System.Windows.Forms.Label lblTotal;
     }

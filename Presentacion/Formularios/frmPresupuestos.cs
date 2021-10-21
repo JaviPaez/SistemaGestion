@@ -11,13 +11,13 @@ namespace Presentacion
         public frmPresupuestos()
         {
             InitializeComponent();
-        }        
+        }
         //LOAD
         private void frmPresupuestos_Load(object sender, EventArgs e)
         {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
-            dtpFecha.MaxDate = DateTime.Today;            
+            dtpFecha.MaxDate = DateTime.Today;
 
             //Cargar Combo Usuarios
             //var dt = new DataTable();
@@ -93,7 +93,13 @@ namespace Presentacion
 
                         if (i == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        else MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                        {
+                            MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                            
+                            frmRptCompPresup report = new frmRptCompPresup();
+                            report.ShowDialog();
+                        }
                     }
 
                     else MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -146,17 +152,17 @@ namespace Presentacion
         //Cargar datos de Receta
         private void cboIdReceta_SelectionChangeCommitted(object sender, EventArgs e)
         {
-                var recetaMetodo = new RecetaNegocio();
-                var registro = recetaMetodo.CargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
+            var recetaMetodo = new RecetaNegocio();
+            var registro = recetaMetodo.CargarLabelReceta(Convert.ToInt32(cboIdReceta.SelectedValue));
 
-                if (registro.Read())
-                {
-                    lblMiopOI.Text = registro["Miop_OI"].ToString();
-                    lblMiopOD.Text = registro["Miop_OD"].ToString();
-                    lblAstigOI.Text = registro["Astig_OI"].ToString();
-                    lblAstigOD.Text = registro["Astig_OD"].ToString();
-                    lblObservaciones.Text = registro["Observaciones"].ToString();
-                }
+            if (registro.Read())
+            {
+                lblMiopOI.Text = registro["Miop_OI"].ToString();
+                lblMiopOD.Text = registro["Miop_OD"].ToString();
+                lblAstigOI.Text = registro["Astig_OI"].ToString();
+                lblAstigOD.Text = registro["Astig_OD"].ToString();
+                lblObservaciones.Text = registro["Observaciones"].ToString();
+            }
         }
 
         //Reiniciar campos
@@ -192,7 +198,7 @@ namespace Presentacion
                 if (txtPrecio.Text.Contains(".")) txtPrecio.Text = txtPrecio.Text.Replace(".", ",");
                 var precio = Convert.ToDecimal(txtPrecio.Text);
                 var cantidad = Convert.ToInt32(txtCantidad.Text);
-                var subtotal = precio * cantidad;                
+                var subtotal = precio * cantidad;
                 total += subtotal;
 
                 var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
@@ -218,7 +224,7 @@ namespace Presentacion
 
             DialogResult respuesta = MessageBox.Show("¿Confirma eliminar el producto seleccionado?", "Quitar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (respuesta == DialogResult.Yes) 
+            if (respuesta == DialogResult.Yes)
             {
                 total -= Convert.ToDecimal(dgvGrilla.CurrentRow.Cells["Subtotal"].Value);
                 lblTotal.Text = total.ToString();

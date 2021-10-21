@@ -23,6 +23,7 @@ namespace CapaDatos
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
                 com.Parameters.AddWithValue("@idMarca", producto.IdMarca);
                 com.Parameters.AddWithValue("@idSubCategoria", producto.IdSubcategoria);
+                com.Parameters.AddWithValue("@costo", producto.Costo);
 
                 com.ExecuteNonQuery();
 
@@ -48,6 +49,7 @@ namespace CapaDatos
                 com.Parameters.AddWithValue("@Cantidad", producto.Cantidad);
                 com.Parameters.AddWithValue("@idMarca", producto.IdMarca);
                 com.Parameters.AddWithValue("@idSubCategoria", producto.IdSubcategoria);
+                com.Parameters.AddWithValue("@costo", producto.Costo);
 
                 com.ExecuteNonQuery();
 
@@ -61,11 +63,12 @@ namespace CapaDatos
 
         public DataTable ConsultarProductos()
         {
-            string productos = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad " +
+            string productos = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad, Costo " +
             "from productos " +
             "join marcas on idmarca = marcas.id " +
             "join Subcategorias on IdSubCategoria = Subcategorias.id " +
-            "join Categorias on Categorias.id = Subcategorias.IdCategoria";
+            "join Categorias on Categorias.id = Subcategorias.IdCategoria " +
+            "join Costos on Costos.Idproducto = productos.ID";
 
             //*****************************************************
             var da = new SqlDataAdapter(productos, Conectar());
@@ -79,7 +82,7 @@ namespace CapaDatos
 
         public DataTable BuscarProductoDescripcion(string descripcion)
         {
-            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria where productos.Descripcion like '%" + descripcion + "%' order by productos.Descripcion";
+            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad, Costo from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria join Costos on Costos.Idproducto = productos.ID where productos.Descripcion like '%" + descripcion + "%' order by productos.Descripcion";
 
             //*****************************************************
             var da = new SqlDataAdapter(producto, Conectar());
@@ -93,7 +96,7 @@ namespace CapaDatos
 
         public DataTable BuscarProductoId(Int64 id)
         {
-            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria where productos.ID = " + id;
+            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad, Costo from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria join Costos on Costos.Idproducto = productos.ID where productos.ID = " + id;
 
             //*****************************************************
             var da = new SqlDataAdapter(producto, Conectar());
@@ -111,7 +114,7 @@ namespace CapaDatos
             var ds = new DataSet();
             DataRow dr;
 
-            string producto = "select * from PRODUCTOS where ID = " + idProducto;
+            string producto = "select top(1) PRODUCTOS.ID, Descripcion, Cantidad, IdSubCategoria, IdMarca, Fecha from PRODUCTOS, Producto_Precio, Precios where PRODUCTOS.ID = " + idProducto + " and IdProducto = PRODUCTOS.ID and IdPrecio = Precios.ID order by Fecha desc";
             var da = new SqlDataAdapter(producto, Conectar());
 
             da.Fill(ds);

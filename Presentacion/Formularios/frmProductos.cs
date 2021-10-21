@@ -53,6 +53,7 @@ namespace Presentacion
                     producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     producto.IdSubcategoria = Convert.ToInt32(cboSubCategoria.SelectedValue);
                     producto.IdMarca = Convert.ToInt32(cboMarca.SelectedValue);
+                    producto.Costo = Convert.ToDecimal(txtCosto.Text);
 
                     var productoMetodo = new ProductoNegocio();
                     Boolean grabo = productoMetodo.GrabarProducto(producto);
@@ -86,6 +87,7 @@ namespace Presentacion
                     producto.IdSubcategoria = Convert.ToInt32(cboSubCategoria.SelectedValue);
                     producto.IdMarca = Convert.ToInt32(cboMarca.SelectedValue);
                     producto.Id = Convert.ToInt32(dgvGrilla.CurrentRow.Cells[0].Value);
+                    producto.Costo = Convert.ToDecimal(txtCosto.Text);
 
                     var productoMetodo = new ProductoNegocio();
                     Boolean modifico = productoMetodo.ModificarProducto(producto);
@@ -172,6 +174,7 @@ namespace Presentacion
             {
                 txtDescripcion.Text = dgvGrilla.CurrentRow.Cells["Descripcion"].Value.ToString();
                 txtCantidad.Text = dgvGrilla.CurrentRow.Cells["Cantidad"].Value.ToString();
+                txtCosto.Text = dgvGrilla.CurrentRow.Cells["Costo"].Value.ToString();
 
                 cboCategoria.SelectedValue = dgvGrilla.CurrentRow.Cells["idcategoria"].Value;
                 cboCategoria.Text = dgvGrilla.CurrentRow.Cells["Categoria"].Value.ToString();

@@ -114,6 +114,18 @@
     <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRptCompPresup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptCompPresup.Designer.cs">
+      <DependentUpon>frmRptCompPresup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptCompVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptCompVenta.Designer.cs">
+      <DependentUpon>frmRptCompVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,12 @@
     <EmbeddedResource Include="Formularios\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptCompPresup.resx">
+      <DependentUpon>frmRptCompPresup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptCompVenta.resx">
+      <DependentUpon>frmRptCompVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -197,6 +215,7 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\GraficoPreciosHistoricos.rdlc" />
+    <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
     <EmbeddedResource Include="Reportes\GraficoRolesUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ProductoLista.rdlc" />
