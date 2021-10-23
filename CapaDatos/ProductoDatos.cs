@@ -82,13 +82,19 @@ namespace CapaDatos
 
         public DataTable BuscarProductoDescripcion(string descripcion)
         {
-            string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad, Costo from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria join Costos on Costos.Idproducto = productos.ID where productos.Descripcion like '%" + descripcion + "%' order by productos.Descripcion";
+            string producto = "SP_BuscarProductoDescripcion";
 
             //*****************************************************
-            var da = new SqlDataAdapter(producto, Conectar());
-            var ds = new DataSet();
-            da.Fill(ds);
-            DataTable dt = ds.Tables[0];
+            var com = new SqlCommand(producto, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+            //var ds = new DataSet();
+            //com.Fill(ds);
+            //DataTable dt = ds.Tables[0];
+
+            com.Parameters.AddWithValue("@descrip", descripcion);
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
 
             return dt;
             //*****************************************************

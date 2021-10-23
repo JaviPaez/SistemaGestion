@@ -37,15 +37,6 @@ namespace Presentacion
             cboDniPaciente.DisplayMember = "Dni";
             cboDniPaciente.ValueMember = "Dni";
 
-            //Cargar Combo Productos
-            var dt3 = new DataTable();
-            var prod = new ProductoNegocio();
-            dt3 = prod.CargarComboProductos();
-
-            cboProducto.DataSource = dt3;
-            cboProducto.DisplayMember = "Descripcion";
-            cboProducto.ValueMember = "ID";
-
             dgvGrilla.Columns[0].Visible = false;
 
             ReiniciarCampos();
@@ -172,7 +163,7 @@ namespace Presentacion
             //cboUsuario.Text = "SELECCIONE";
             cboIdReceta.Text = "SELECCIONE";
             dtpFecha.Value = DateTime.Today;
-            cboProducto.Text = "SELECCIONE";
+            //cboProducto.Text = "SELECCIONE";
             cboDniPaciente.Focus();
             txtPrecio.Clear();
             txtCantidad.Value = 0;
@@ -201,11 +192,11 @@ namespace Presentacion
                 var subtotal = precio * cantidad;
                 total += subtotal;
 
-                var idProducto = Convert.ToInt32(cboProducto.SelectedValue.ToString());
+                var idProducto = Convert.ToInt32((dgvProd.CurrentRow.Cells["ID"].Value));
+                string descripc = dgvProd.CurrentRow.Cells["Descripcion"].Value.ToString();
 
-                dgvGrilla.Rows.Add(idProducto, cboProducto.Text, txtCantidad.Text, txtPrecio.Text, subtotal);
+                dgvGrilla.Rows.Add(idProducto, descripc, txtCantidad.Text, txtPrecio.Text, subtotal);
 
-                cboProducto.Text = "SELECCIONE";
                 txtPrecio.Clear();
                 txtCantidad.Value = 0;
                 lblTotals.Text = "Total: $";
@@ -237,21 +228,21 @@ namespace Presentacion
             }
         }
 
-        //Seleccion del Combo Producto
-        private void cboProducto_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            var idProducto = Convert.ToInt32(cboProducto.SelectedValue);
+        ////Seleccion del Combo Producto
+        //private void cboProducto_SelectionChangeCommitted(object sender, EventArgs e)
+        //{
+        //    var idProducto = Convert.ToInt32(dgvProd.CurrentRow.Cells["ID"].Value);
 
-            var productoMetodo = new ProductoNegocio();
+        //    var productoMetodo = new ProductoNegocio();
 
-            var dr = productoMetodo.BuscarIdProducto(idProducto);
+        //    var dr = productoMetodo.BuscarIdProducto(idProducto);
 
-            if (dr["Descripcion"] != null)
-            {
-                txtPrecio.Text = Convert.ToString(dr["Precio"]);
-                txtCantidad.Text = "1";
-            }
-        }
+        //    if (dr["Descripcion"] != null)
+        //    {
+        //        txtPrecio.Text = Convert.ToString(dr["Precio"]);
+        //        txtCantidad.Text = "1";
+        //    }
+        //}
 
         //BOTON IMPRIMIR
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -262,5 +253,65 @@ namespace Presentacion
 
         //Variables
         decimal total = 0;
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var al = new ProductoNegocio();
+                dt = al.ListarProductos();
+                if (dt.Rows.Count != 0)
+                {
+                    dgvProd.DataSource = dt;
+                    dgvProd.Columns["ID"].Visible = false;
+                    dgvProd.Columns["categoria"].Visible = false;
+                    dgvProd.Columns["subcategoria"].Visible = false;
+                    dgvProd.Columns["costo"].Visible = false;
+                }
+                else MessageBox.Show("No hay registros en la selección", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            txtBuscarDescr.Clear();
+        }
+
+        //Click para cargar producto a la venta
+        private void dgvProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtPrecio.Text = dgvProd.CurrentRow.Cells["Precio"].Value.ToString();
+            var stock = Convert.ToInt32(dgvProd.CurrentRow.Cells["Stock"].Value);
+
+            if (stock > 0)
+            {
+                txtCantidad.Maximum = stock;
+                txtCantidad.Text = "1";                
+            }          
+        }
+
+        private void txtBuscarDescr_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscarDescr.Text != string.Empty)
+            {
+                var ds = new DataSet();
+                var dt = new DataTable();
+                var productoMetodo = new ProductoNegocio();
+
+                dt = productoMetodo.BuscarProductoDescripcion(txtBuscarDescr.Text);
+
+                if (dt.Rows.Count != 0)
+                {
+                    dgvProd.DataSource = dt;
+                    dgvProd.Columns["ID"].Visible = false;
+                    dgvProd.Columns["idcategoria"].Visible = false;
+                    dgvProd.Columns["idsubcategoria"].Visible = false;
+                    dgvProd.Columns["idmarca"].Visible = false;
+                }
+            }
+        }
     }
 }
