@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using CapaEntidad;
 using System;
+using System.Data;
 
 namespace CapaNegocio
 {
@@ -18,9 +19,9 @@ namespace CapaNegocio
             return ventaDatos.GrabarDetalleVenta(detalleVenta);
         }
 
-        //public DataTable ConsultarPresupuestoReporte()
-        //{
-        //    return ventaDatos.();
-        //}
+        public DataTable ReporteVenta()
+        {
+            return ventaDatos.ReporteVenta();
+        }
     }
 }

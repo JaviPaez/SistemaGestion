@@ -16,7 +16,6 @@ namespace CapaDatos
                 SqlCommand com = new SqlCommand(grabarProducto, Conectar());
                 com.CommandType = CommandType.StoredProcedure;
 
-
                 com.Parameters.AddWithValue("@porcentaje", precio.Porcentaje);
                 com.Parameters.AddWithValue("@fecha", precio.Fecha);
                 com.Parameters.AddWithValue("@idsubcat", precio.IdSubcategoria);

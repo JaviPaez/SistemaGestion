@@ -1,4 +1,5 @@
 ﻿using CapaEntidad;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace CapaDatos
@@ -11,9 +12,10 @@ namespace CapaDatos
             {
                 var idMax = UltimoId();
 
-                var grabarVenta = "set dateformat dmy INSERT INTO PRESUPUESTOS(Nro, DniUsuario, DniPaciente, IdReceta, Fecha) VALUES (@Nro, @DniUsuario, @DniPaciente, @IdReceta, @Fecha)";
+                var grabarVenta = "SP_GrabarVenta";
 
                 SqlCommand sqlCom = new SqlCommand(grabarVenta, Conectar());
+                sqlCom.CommandType = CommandType.StoredProcedure;
 
                 sqlCom.Parameters.AddWithValue("@Nro", idMax);
                 sqlCom.Parameters.AddWithValue("@DniUsuario", venta.DniUsuario);
@@ -46,6 +48,27 @@ namespace CapaDatos
             }
         }
 
+        public DataTable ReporteVenta()
+        {
+            var dt = new DataTable();
+            try
+            {
+                string sqlStr = "SP_ReporteVenta";
+
+                var ds = new DataSet();
+                var da = new SqlDataAdapter(sqlStr, Conectar());
+                ds = new DataSet();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+
+                return dt;
+            }
+            catch
+            {
+                return dt;
+            }
+        }
+
         //DETALLE VENTA
         public bool GrabarDetalleVenta(DetalleVenta detalleVenta)
         {
@@ -53,13 +76,14 @@ namespace CapaDatos
             {
                 var maxId = DetalleUltimoId();
 
-                var grabarDetalleVenta = "INSERT INTO DetallePresupuesto(ID, IdProducto, NroPresupuesto, Cantidad, PrecioUnitario) VALUES (@ID, @IdProducto, @NroPresupuesto, @Cantidad, @PrecioUnitario)";
+                var grabarDetalleVenta = "SP_GrabarDetalleVenta";
 
                 SqlCommand sqlCom = new SqlCommand(grabarDetalleVenta, Conectar());
+                sqlCom.CommandType = CommandType.StoredProcedure;
 
                 sqlCom.Parameters.AddWithValue("@ID", maxId);
                 sqlCom.Parameters.AddWithValue("@IdProducto", detalleVenta.IdProducto);
-                sqlCom.Parameters.AddWithValue("@NroPresupuesto", detalleVenta.NroPresupuesto);
+                sqlCom.Parameters.AddWithValue("@NroVenta", detalleVenta.NroVenta);
                 sqlCom.Parameters.AddWithValue("@Cantidad", detalleVenta.Cantidad);
                 sqlCom.Parameters.AddWithValue("@PrecioUnitario", detalleVenta.PrecioUnitario);
 

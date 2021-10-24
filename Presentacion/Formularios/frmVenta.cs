@@ -69,11 +69,11 @@ namespace Presentacion
                         var detalleVenta = new DetalleVenta();
                         var detalleVentaMetodo = new VentaNegocio();
 
-                        //Recorro la grilla - Grabo DetallePresupuesto
+                        //Recorro la grilla - Grabo DetalleVenta
                         foreach (DataGridViewRow fila in dgvGrilla.Rows)
                         {
                             detalleVenta.IdProducto = Convert.ToInt32(fila.Cells[0].Value);
-                            detalleVenta.NroPresupuesto = maxId;
+                            detalleVenta.NroVenta = maxId;
                             detalleVenta.Cantidad = Convert.ToInt32(fila.Cells[2].Value);
                             detalleVenta.PrecioUnitario = Convert.ToDecimal(fila.Cells[3].Value);
                             if (detalleVenta.Cantidad != 0)
