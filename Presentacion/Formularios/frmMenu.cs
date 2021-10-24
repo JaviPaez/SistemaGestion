@@ -182,6 +182,7 @@ namespace Presentacion
         private void btnVentas_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmVenta());
         }
 
         //Recetas

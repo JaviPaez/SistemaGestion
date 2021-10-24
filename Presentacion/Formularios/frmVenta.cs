@@ -6,14 +6,14 @@ using CapaNegocio;
 
 namespace Presentacion
 {
-    public partial class frmPresupuestos : Form
+    public partial class frmVenta : Form
     {
-        public frmPresupuestos()
+        public frmVenta()
         {
             InitializeComponent();
         }
         //LOAD
-        private void frmPresupuestos_Load(object sender, EventArgs e)
+        private void frmVenta_Load(object sender, EventArgs e)
         {
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.MinDate = new DateTime(1900, 1, 1);
@@ -48,7 +48,7 @@ namespace Presentacion
             DialogResult respuesta = MessageBox.Show("¿Confirma la grabación?", "Grabar", MessageBoxButtons.YesNo,
                       MessageBoxIcon.Question);
 
-            var presupuesto = new Presupuesto();
+            var venta = new Venta();
             var i = false;
 
             if (respuesta == DialogResult.Yes)
@@ -56,29 +56,29 @@ namespace Presentacion
                 try
                 {
                     //presupuesto.DniUsuario = Convert.ToInt32(cboUsuario.SelectedValue);
-                    presupuesto.DniUsuario = frmLogin.DniUsuario;
-                    presupuesto.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
-                    presupuesto.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
-                    presupuesto.Fecha = dtpFecha.Value;
+                    venta.DniUsuario = frmLogin.DniUsuario;
+                    venta.DniPaciente = Convert.ToInt32(cboDniPaciente.SelectedValue);
+                    venta.IdReceta = Convert.ToInt32(cboIdReceta.SelectedValue);
+                    venta.Fecha = dtpFecha.Value;
 
-                    var presupuestoNegocio = new PresupuestoNegocio();
-                    var maxId = presupuestoNegocio.GrabarPresupuesto(presupuesto);
+                    var ventaNegocio = new VentaNegocio();
+                    var maxId = ventaNegocio.GrabarVenta(venta);
 
                     if (maxId != 0)
                     {
-                        var detallePresupuesto = new DetallePresupuesto();
-                        var detallePresupuestoMetodo = new DetallePresupuestoNegocio();
+                        var detalleVenta = new DetalleVenta();
+                        var detalleVentaMetodo = new VentaNegocio();
 
                         //Recorro la grilla - Grabo DetallePresupuesto
                         foreach (DataGridViewRow fila in dgvGrilla.Rows)
                         {
-                            detallePresupuesto.IdProducto = Convert.ToInt32(fila.Cells[0].Value);
-                            detallePresupuesto.NroPresupuesto = maxId;
-                            detallePresupuesto.Cantidad = Convert.ToInt32(fila.Cells[2].Value);
-                            detallePresupuesto.PrecioUnitario = Convert.ToDecimal(fila.Cells[3].Value);
-                            if (detallePresupuesto.Cantidad != 0)
+                            detalleVenta.IdProducto = Convert.ToInt32(fila.Cells[0].Value);
+                            detalleVenta.NroPresupuesto = maxId;
+                            detalleVenta.Cantidad = Convert.ToInt32(fila.Cells[2].Value);
+                            detalleVenta.PrecioUnitario = Convert.ToDecimal(fila.Cells[3].Value);
+                            if (detalleVenta.Cantidad != 0)
                             {
-                                i = detallePresupuestoMetodo.GrabarDetallePresupuesto(detallePresupuesto);
+                                i = detalleVentaMetodo.GrabarDetalleVenta(detalleVenta);
                             }
                         }
 
@@ -86,9 +86,9 @@ namespace Presentacion
 
                         else
                         {
-                            MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-                            
-                            frmRptCompPresup report = new frmRptCompPresup();
+                            MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            frmRptCompVenta report = new frmRptCompVenta();
                             report.ShowDialog();
                         }
                     }
@@ -230,32 +230,10 @@ namespace Presentacion
             }
         }
 
-        ////Seleccion del Combo Producto
-        //private void cboProducto_SelectionChangeCommitted(object sender, EventArgs e)
-        //{
-        //    var idProducto = Convert.ToInt32(dgvProd.CurrentRow.Cells["ID"].Value);
-
-        //    var productoMetodo = new ProductoNegocio();
-
-        //    var dr = productoMetodo.BuscarIdProducto(idProducto);
-
-        //    if (dr["Descripcion"] != null)
-        //    {
-        //        txtPrecio.Text = Convert.ToString(dr["Precio"]);
-        //        txtCantidad.Text = "1";
-        //    }
-        //}
-
-        //BOTON IMPRIMIR
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmReportes report = new frmReportes();
-            report.ShowDialog();
-        }
-
         //Variables
         decimal total = 0;
 
+        //LISTAR PRODUCTOS
         private void btnListar_Click(object sender, EventArgs e)
         {
             try

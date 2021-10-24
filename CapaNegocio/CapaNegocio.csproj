@@ -73,6 +73,7 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UsuarioListaNegocio.cs" />
     <Compile Include="UsuarioNegocio.cs" />
+    <Compile Include="VentaNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

@@ -40,7 +40,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Apellido.Value, "DSPresupuesto")+" "+First(Fields!Nombre.Value, "DSPresupuesto")</Value>
+                <Value>=First(Fields!Apellido.Value, "DSVenta")+" "+First(Fields!Nombre.Value, "DSVenta")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -104,7 +104,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Dni.Value, "DSPresupuesto")</Value>
+                <Value>=First(Fields!Dni.Value, "DSVenta")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -168,7 +168,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Subtotal.Value, "DSPresupuesto")</Value>
+                <Value>=Sum(Fields!Subtotal.Value, "DSVenta")</Value>
                 <Style>
                   <Format>'$'#,0.00;('$'#,0.00)</Format>
                 </Style>
@@ -509,7 +509,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSPresupuesto</DataSetName>
+        <DataSetName>DSVenta</DataSetName>
         <Top>1.27056cm</Top>
         <Left>1.38488cm</Left>
         <Height>1.19118cm</Height>
@@ -570,7 +570,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Fecha.Value, "DSPresupuesto")</Value>
+                  <Value>=First(Fields!Fecha.Value, "DSVenta")</Value>
                   <Style>
                     <Format>d</Format>
                   </Style>
@@ -1008,7 +1008,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSPresupuesto">
+    <DataSet Name="DSVenta">
       <Query>
         <DataSourceName>CapaEntidad</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1049,8 +1049,8 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CapaEntidad</rd:DataSetName>
-        <rd:TableName>ReportePresupuesto</rd:TableName>
-        <rd:ObjectDataSourceType>CapaEntidad.ReportePresupuesto, CapaEntidad, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>ReporteVenta</rd:TableName>
+        <rd:ObjectDataSourceType>CapaEntidad.ReporteVenta, CapaEntidad, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

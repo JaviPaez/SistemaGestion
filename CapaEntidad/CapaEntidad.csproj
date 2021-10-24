@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presupuesto\ReporteVenta.cs" />
     <Compile Include="Producto\Categoria.cs" />
     <Compile Include="Producto\Marca.cs" />
     <Compile Include="Producto\Precio.cs" />
@@ -85,6 +86,8 @@
     <Compile Include="Usuario\UsuarioeMail.cs" />
     <Compile Include="Usuario\UsuarioLista.cs" />
     <Compile Include="Usuario\UsuarioTelefono.cs" />
+    <Compile Include="Venta\DetalleVenta.cs" />
+    <Compile Include="Venta\Venta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
