@@ -29,6 +29,11 @@ namespace CapaNegocio
             return productoDatos.BuscarProductoDescripcion(descripcion);
         }
 
+        public DataTable BuscarProductoxSubcategoria(int subcat)
+        {
+            return productoDatos.BuscarProductoxSubcategoria(subcat);
+        }
+
         public DataTable BuscarProductoId(Int64 id)
         {
             return productoDatos.BuscarProductoId(id);

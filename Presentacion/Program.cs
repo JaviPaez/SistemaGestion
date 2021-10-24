@@ -16,7 +16,7 @@ namespace Presentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            //Application.Run(new frmReportes());
+            //Application.Run(new frmRptPrecioHistorico());
         }
     }
 }

@@ -270,7 +270,7 @@ namespace Presentacion
             {
                 txtCantidad.Maximum = stock;
                 txtCantidad.Text = "1";                
-            }          
+            }
         }
 
         private void txtBuscarDescr_TextChanged(object sender, EventArgs e)

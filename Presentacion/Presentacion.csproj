@@ -126,6 +126,12 @@
     <Compile Include="Formularios\frmRptCompVenta.Designer.cs">
       <DependentUpon>frmRptCompVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRptPrecioHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptPrecioHistorico.Designer.cs">
+      <DependentUpon>frmRptPrecioHistorico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRptCompVenta.resx">
       <DependentUpon>frmRptCompVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptPrecioHistorico.resx">
+      <DependentUpon>frmRptPrecioHistorico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>

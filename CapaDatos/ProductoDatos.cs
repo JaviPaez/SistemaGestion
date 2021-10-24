@@ -100,6 +100,23 @@ namespace CapaDatos
             //*****************************************************
         }
 
+        public DataTable BuscarProductoxSubcategoria(int subcat)
+        {
+            string producto = "SP_BuscarProductoxSubcategoria";
+
+            //*****************************************************
+            var com = new SqlCommand(producto, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.AddWithValue("@subcat", subcat);
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+
+            return dt;
+            //*****************************************************
+        }
+
         public DataTable BuscarProductoId(Int64 id)
         {
             string producto = "select productos.ID, marcas.id idmarca, subcategorias.id idsubcategoria, categorias.id idcategoria, nombre Marca, productos.Descripcion, categorias.descripcion Categoria,  subcategorias.descripcion Subcategoria, Cantidad, Costo from productos join marcas on idmarca = marcas.id join Subcategorias on IdSubCategoria = Subcategorias.id join Categorias on Categorias.id = Subcategorias.IdCategoria join Costos on Costos.Idproducto = productos.ID where productos.ID = " + id;
