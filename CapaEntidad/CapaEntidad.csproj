@@ -59,7 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presupuesto\ReporteVenta.cs" />
+    <Compile Include="Venta\ReporteListaVentas.cs" />
+    <Compile Include="Venta\ReporteVenta.cs" />
     <Compile Include="Producto\Categoria.cs" />
     <Compile Include="Producto\Marca.cs" />
     <Compile Include="Producto\Precio.cs" />

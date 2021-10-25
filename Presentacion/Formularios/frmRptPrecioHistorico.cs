@@ -51,6 +51,8 @@ namespace Presentacion
             cboCategoria.Text = "SELECCIONE";
             cboSubCategoria.Text = "SELECCIONE";
             cboCategoria.Focus();
+            dtpFechaDesde.Value = DateTime.Today;
+            dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void cboCategoria_SelectionChangeCommitted(object sender, EventArgs e)
