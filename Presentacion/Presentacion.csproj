@@ -138,6 +138,18 @@
     <Compile Include="Formularios\frmRptListaCompVta.Designer.cs">
       <DependentUpon>frmRptListaCompVta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRptListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptListaProductos.Designer.cs">
+      <DependentUpon>frmRptListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptListaUsuarios.Designer.cs">
+      <DependentUpon>frmRptListaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmRptPrecioHistorico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,12 @@
     </Compile>
     <Compile Include="Formularios\frmRptProductoMasVendido.Designer.cs">
       <DependentUpon>frmRptProductoMasVendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptRolesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptRolesUsuarios.Designer.cs">
+      <DependentUpon>frmRptRolesUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmVenta.cs">
       <SubType>Form</SubType>
@@ -237,11 +255,20 @@
     <EmbeddedResource Include="Formularios\frmRptListaCompVta.resx">
       <DependentUpon>frmRptListaCompVta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptListaProductos.resx">
+      <DependentUpon>frmRptListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptListaUsuarios.resx">
+      <DependentUpon>frmRptListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRptPrecioHistorico.resx">
       <DependentUpon>frmRptPrecioHistorico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRptProductoMasVendido.resx">
       <DependentUpon>frmRptProductoMasVendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptRolesUsuarios.resx">
+      <DependentUpon>frmRptRolesUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>

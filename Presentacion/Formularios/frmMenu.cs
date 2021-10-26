@@ -37,8 +37,29 @@ namespace Presentacion
 
                 //Gerente
                 case 5:
-                    break;
+                    Gerente(); break;
             }
+        }
+
+        private void Gerente()
+        {
+            btnRpt1.Text = "Listar comprobantes";
+            btnRpt2.Text = "Día con más ventas";
+            btnRpt3.Text = "Producto mas vendido";
+            btnRpt4.Text = "Precios históricos";
+            btnRpt5.Text = "Listar productos";
+            btnRpt6.Text = "Listar usuarios";
+            btnRpt7.Text = "Roles de usuarios";
+
+            btnRpt1.Size = new Size(300, 28);
+            btnRpt2.Size = new Size(300, 28);
+            btnRpt3.Size = new Size(300, 28);
+            btnRpt4.Size = new Size(300, 28);
+            btnRpt5.Size = new Size(300, 28);
+            btnRpt6.Size = new Size(300, 28);
+            btnRpt7.Size = new Size(300, 28);
+
+            panelSubmenuReportes.Location = new Point(2, 459);
         }
 
         private void Cajero()
@@ -96,8 +117,17 @@ namespace Presentacion
             btnRpt2.Text = "Precio histórico";
             btnRpt1.Size = new Size(200, 28);
             btnRpt2.Size = new Size(200, 28);
-            subpanelRpt3.Visible = false;
+           
             btnRpt3.Visible = false;
+            subpanelRpt3.Visible = false;
+            btnRpt4.Visible = false;
+            subpanelRpt4.Visible = false;
+            btnRpt5.Visible = false;
+            subpanelRpt5.Visible = false;
+            btnRpt6.Visible = false;
+            subpanelRpt6.Visible = false;
+            btnRpt7.Visible = false;
+            subpanelRpt7.Visible = false;
         }
 
         private void Administrativo()
@@ -120,6 +150,15 @@ namespace Presentacion
             btnRpt1.Size = new Size(300, 28);
             btnRpt2.Size = new Size(300, 28);
             btnRpt3.Size = new Size(300, 28);
+
+            btnRpt4.Visible = false;
+            subpanelRpt4.Visible = false;
+            btnRpt5.Visible = false;
+            subpanelRpt5.Visible = false;
+            btnRpt6.Visible = false;
+            subpanelRpt6.Visible = false;
+            btnRpt7.Visible = false;
+            subpanelRpt7.Visible = false;
         }
         #endregion
 
@@ -231,22 +270,50 @@ namespace Presentacion
             CerrarSubpaneles();
             panelSubmenuReportes.Visible = true;
 
-            AbrirFormHijo(new frmReportes());
+            //AbrirFormHijo(new frmReportes());
         }
 
-        private void btnRptVenta_Click(object sender, EventArgs e)
+        private void btnRpt1_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmRptListaCompVta());
+
         }
 
-        private void btnRptPagos_Click(object sender, EventArgs e)
+        private void btnRpt2_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmRptDiaMasVentas());
         }
 
-        private void btnRptEstadisticas_Click(object sender, EventArgs e)
+        private void btnRpt3_Click(object sender, EventArgs e)
         {
             CerrarSubpaneles();
+            AbrirFormHijo(new frmRptProductoMasVendido());
+        }
+
+        private void btnRpt4_Click(object sender, EventArgs e)
+        {
+            CerrarSubpaneles();
+            AbrirFormHijo(new frmRptPrecioHistorico());
+        }
+
+        private void btnRpt5_Click(object sender, EventArgs e)
+        {
+            CerrarSubpaneles();
+            AbrirFormHijo(new frmRptListaProductos());
+        }
+
+        private void btnRpt6_Click(object sender, EventArgs e)
+        {
+            CerrarSubpaneles();
+            AbrirFormHijo(new frmRptListaUsuarios());
+        }
+
+        private void btnRpt7_Click(object sender, EventArgs e)
+        {
+            CerrarSubpaneles();
+            AbrirFormHijo(new frmRptRolesUsuarios());
         }
 
         //Salir
@@ -300,6 +367,12 @@ namespace Presentacion
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/16XK2o_n4YYpi9ljQT-JTVrFONeq7xUQr097Z1maNuVA/edit");
+        }
+
         //protected override void WndProc(ref Message m)
         //{
         //    switch (m.Msg)

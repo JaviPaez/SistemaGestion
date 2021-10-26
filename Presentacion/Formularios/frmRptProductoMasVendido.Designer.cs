@@ -63,9 +63,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(160, 52);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(368, 31);
+            this.label4.Size = new System.Drawing.Size(404, 31);
             this.label4.TabIndex = 8;
-            this.label4.Text = "PRODUCTO MÁS VENDIDO";
+            this.label4.Text = "PRODUCTOS MÁS VENDIDOS";
             // 
             // dtpFechaDesde
             // 

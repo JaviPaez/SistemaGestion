@@ -63,9 +63,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(179, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(309, 31);
+            this.label4.Size = new System.Drawing.Size(327, 31);
             this.label4.TabIndex = 8;
-            this.label4.Text = "DÍA CON MÁS VENTAS";
+            this.label4.Text = "DÍAS CON MÁS VENTAS";
             // 
             // dtpFechaDesde
             // 

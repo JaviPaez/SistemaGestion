@@ -40,6 +40,14 @@ namespace Presentacion
             this.panel17 = new System.Windows.Forms.Panel();
             this.pbxSalir = new System.Windows.Forms.PictureBox();
             this.panelSubmenuReportes = new System.Windows.Forms.Panel();
+            this.subpanelRpt7 = new System.Windows.Forms.Panel();
+            this.btnRpt7 = new System.Windows.Forms.Button();
+            this.subpanelRpt6 = new System.Windows.Forms.Panel();
+            this.btnRpt6 = new System.Windows.Forms.Button();
+            this.subpanelRpt5 = new System.Windows.Forms.Panel();
+            this.btnRpt5 = new System.Windows.Forms.Button();
+            this.subpanelRpt4 = new System.Windows.Forms.Panel();
+            this.btnRpt4 = new System.Windows.Forms.Button();
             this.subpanelRpt3 = new System.Windows.Forms.Panel();
             this.btnRpt1 = new System.Windows.Forms.Button();
             this.btnRpt2 = new System.Windows.Forms.Button();
@@ -67,6 +75,7 @@ namespace Presentacion
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.pbxMaximizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
             this.PanelVertical.SuspendLayout();
             this.panelSubmenuPresupuestos.SuspendLayout();
@@ -78,6 +87,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -104,6 +114,7 @@ namespace Presentacion
             // PanelVertical
             // 
             this.PanelVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.PanelVertical.Controls.Add(this.pictureBox1);
             this.PanelVertical.Controls.Add(this.panelSubmenuPresupuestos);
             this.PanelVertical.Controls.Add(this.pbxSalir);
             this.PanelVertical.Controls.Add(this.panelSubmenuReportes);
@@ -207,6 +218,14 @@ namespace Presentacion
             // 
             // panelSubmenuReportes
             // 
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt7);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt7);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt6);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt6);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt5);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt5);
+            this.panelSubmenuReportes.Controls.Add(this.subpanelRpt4);
+            this.panelSubmenuReportes.Controls.Add(this.btnRpt4);
             this.panelSubmenuReportes.Controls.Add(this.subpanelRpt3);
             this.panelSubmenuReportes.Controls.Add(this.btnRpt1);
             this.panelSubmenuReportes.Controls.Add(this.btnRpt2);
@@ -215,9 +234,117 @@ namespace Presentacion
             this.panelSubmenuReportes.Controls.Add(this.subpanelRpt1);
             this.panelSubmenuReportes.Location = new System.Drawing.Point(57, 459);
             this.panelSubmenuReportes.Name = "panelSubmenuReportes";
-            this.panelSubmenuReportes.Size = new System.Drawing.Size(280, 82);
+            this.panelSubmenuReportes.Size = new System.Drawing.Size(280, 203);
             this.panelSubmenuReportes.TabIndex = 0;
             this.panelSubmenuReportes.Visible = false;
+            // 
+            // subpanelRpt7
+            // 
+            this.subpanelRpt7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt7.Location = new System.Drawing.Point(7, 147);
+            this.subpanelRpt7.Name = "subpanelRpt7";
+            this.subpanelRpt7.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt7.TabIndex = 25;
+            // 
+            // btnRpt7
+            // 
+            this.btnRpt7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt7.FlatAppearance.BorderSize = 0;
+            this.btnRpt7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt7.ForeColor = System.Drawing.Color.White;
+            this.btnRpt7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt7.Location = new System.Drawing.Point(19, 147);
+            this.btnRpt7.Name = "btnRpt7";
+            this.btnRpt7.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt7.TabIndex = 24;
+            this.btnRpt7.Text = "Estadísticas";
+            this.btnRpt7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt7.UseVisualStyleBackColor = false;
+            this.btnRpt7.Click += new System.EventHandler(this.btnRpt7_Click);
+            // 
+            // subpanelRpt6
+            // 
+            this.subpanelRpt6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt6.Location = new System.Drawing.Point(7, 124);
+            this.subpanelRpt6.Name = "subpanelRpt6";
+            this.subpanelRpt6.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt6.TabIndex = 23;
+            // 
+            // btnRpt6
+            // 
+            this.btnRpt6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt6.FlatAppearance.BorderSize = 0;
+            this.btnRpt6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt6.ForeColor = System.Drawing.Color.White;
+            this.btnRpt6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt6.Location = new System.Drawing.Point(19, 124);
+            this.btnRpt6.Name = "btnRpt6";
+            this.btnRpt6.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt6.TabIndex = 22;
+            this.btnRpt6.Text = "Estadísticas";
+            this.btnRpt6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt6.UseVisualStyleBackColor = false;
+            this.btnRpt6.Click += new System.EventHandler(this.btnRpt6_Click);
+            // 
+            // subpanelRpt5
+            // 
+            this.subpanelRpt5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt5.Location = new System.Drawing.Point(7, 101);
+            this.subpanelRpt5.Name = "subpanelRpt5";
+            this.subpanelRpt5.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt5.TabIndex = 21;
+            // 
+            // btnRpt5
+            // 
+            this.btnRpt5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt5.FlatAppearance.BorderSize = 0;
+            this.btnRpt5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt5.ForeColor = System.Drawing.Color.White;
+            this.btnRpt5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt5.Location = new System.Drawing.Point(19, 101);
+            this.btnRpt5.Name = "btnRpt5";
+            this.btnRpt5.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt5.TabIndex = 20;
+            this.btnRpt5.Text = "Estadísticas";
+            this.btnRpt5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt5.UseVisualStyleBackColor = false;
+            this.btnRpt5.Click += new System.EventHandler(this.btnRpt5_Click);
+            // 
+            // subpanelRpt4
+            // 
+            this.subpanelRpt4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.subpanelRpt4.Location = new System.Drawing.Point(7, 76);
+            this.subpanelRpt4.Name = "subpanelRpt4";
+            this.subpanelRpt4.Size = new System.Drawing.Size(10, 28);
+            this.subpanelRpt4.TabIndex = 19;
+            // 
+            // btnRpt4
+            // 
+            this.btnRpt4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnRpt4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRpt4.FlatAppearance.BorderSize = 0;
+            this.btnRpt4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnRpt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRpt4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpt4.ForeColor = System.Drawing.Color.White;
+            this.btnRpt4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt4.Location = new System.Drawing.Point(19, 76);
+            this.btnRpt4.Name = "btnRpt4";
+            this.btnRpt4.Size = new System.Drawing.Size(124, 28);
+            this.btnRpt4.TabIndex = 18;
+            this.btnRpt4.Text = "Estadísticas";
+            this.btnRpt4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRpt4.UseVisualStyleBackColor = false;
+            this.btnRpt4.Click += new System.EventHandler(this.btnRpt4_Click);
             // 
             // subpanelRpt3
             // 
@@ -244,7 +371,7 @@ namespace Presentacion
             this.btnRpt1.Text = "Ventas";
             this.btnRpt1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRpt1.UseVisualStyleBackColor = false;
-            this.btnRpt1.Click += new System.EventHandler(this.btnRptVenta_Click);
+            this.btnRpt1.Click += new System.EventHandler(this.btnRpt1_Click);
             // 
             // btnRpt2
             // 
@@ -263,7 +390,7 @@ namespace Presentacion
             this.btnRpt2.Text = "Pagos";
             this.btnRpt2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRpt2.UseVisualStyleBackColor = false;
-            this.btnRpt2.Click += new System.EventHandler(this.btnRptPagos_Click);
+            this.btnRpt2.Click += new System.EventHandler(this.btnRpt2_Click);
             // 
             // btnRpt3
             // 
@@ -282,7 +409,7 @@ namespace Presentacion
             this.btnRpt3.Text = "Estadísticas";
             this.btnRpt3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRpt3.UseVisualStyleBackColor = false;
-            this.btnRpt3.Click += new System.EventHandler(this.btnRptEstadisticas_Click);
+            this.btnRpt3.Click += new System.EventHandler(this.btnRpt3_Click);
             // 
             // subpanelRpt2
             // 
@@ -580,6 +707,19 @@ namespace Presentacion
             this.pbxCerrar.TabStop = false;
             this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 572);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,6 +732,7 @@ namespace Presentacion
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestión - Óptica Lara";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panelPrincipal.ResumeLayout(false);
@@ -606,6 +747,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -649,6 +791,15 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pbxMinimizar;
         private System.Windows.Forms.PictureBox pbxMaximizar;
         private System.Windows.Forms.PictureBox pbxCerrar;
+        private System.Windows.Forms.Panel subpanelRpt7;
+        private System.Windows.Forms.Button btnRpt7;
+        private System.Windows.Forms.Panel subpanelRpt6;
+        private System.Windows.Forms.Button btnRpt6;
+        private System.Windows.Forms.Panel subpanelRpt5;
+        private System.Windows.Forms.Button btnRpt5;
+        private System.Windows.Forms.Panel subpanelRpt4;
+        private System.Windows.Forms.Button btnRpt4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
