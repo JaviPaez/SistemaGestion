@@ -89,6 +89,25 @@ namespace CapaDatos
             //*****************************************************
         }
 
+        public DataTable ReporteDiaMasVentas(ReporteDiaMasVentas venta)
+        {
+            string listaVentas = "SP_ReporteDiaMasVentas";
+
+            //*****************************************************
+            var com = new SqlCommand(listaVentas, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.AddWithValue("@fecha1", venta.FechaDesde);
+            com.Parameters.AddWithValue("@fecha2", venta.FechaHasta);
+
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+
+            return dt;
+            //*****************************************************
+        }
+
         //DETALLE VENTA
         public bool GrabarDetalleVenta(DetalleVenta detalleVenta)
         {

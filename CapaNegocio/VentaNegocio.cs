@@ -28,5 +28,10 @@ namespace CapaNegocio
         {
             return ventaDatos.ReporteListaVentas(venta);
         }
+
+        public DataTable ReporteDiaMasVentas(ReporteDiaMasVentas venta)
+        {
+            return ventaDatos.ReporteDiaMasVentas(venta);
+        }
     }
 }

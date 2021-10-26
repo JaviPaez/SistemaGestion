@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Venta\ReporteDiaMasVentas.cs" />
     <Compile Include="Venta\ReporteListaVentas.cs" />
     <Compile Include="Venta\ReporteVenta.cs" />
     <Compile Include="Producto\Categoria.cs" />

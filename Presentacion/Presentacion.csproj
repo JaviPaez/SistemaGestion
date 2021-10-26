@@ -126,6 +126,12 @@
     <Compile Include="Formularios\frmRptCompVenta.Designer.cs">
       <DependentUpon>frmRptCompVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRptDiaMasVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptDiaMasVentas.Designer.cs">
+      <DependentUpon>frmRptDiaMasVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmRptListaCompVta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     <EmbeddedResource Include="Formularios\frmRptCompVenta.resx">
       <DependentUpon>frmRptCompVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptDiaMasVentas.resx">
+      <DependentUpon>frmRptDiaMasVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRptListaCompVta.resx">
       <DependentUpon>frmRptListaCompVta.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +251,7 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\GraficoPreciosHistoricos.rdlc" />
+    <EmbeddedResource Include="Reportes\DiaMasVentas.rdlc" />
     <EmbeddedResource Include="Reportes\ListaCompVta.rdlc" />
     <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <EmbeddedResource Include="Reportes\Presupuesto.rdlc" />
@@ -252,6 +262,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaEntidad.PrecioHistorico.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.ProductoLista.datasource" />
+    <None Include="Properties\DataSources\CapaEntidad.ReporteDiaMasVentas.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.ReporteListaVentas.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.ReporteVenta.datasource" />
     <None Include="Properties\DataSources\CapaEntidad.UsuarioLista.datasource" />
