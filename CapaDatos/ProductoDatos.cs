@@ -211,5 +211,24 @@ namespace CapaDatos
             return dt;
             //*****************************************************
         }
+
+        public DataTable ReporteProductoMasVendido(ReporteProductoMasVendido prod)
+        {
+            string sqlSP = "SP_ReporteProductoMasVendido";
+
+            //*****************************************************
+            var com = new SqlCommand(sqlSP, Conectar());
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.AddWithValue("@fecha1", prod.FechaDesde);
+            com.Parameters.AddWithValue("@fecha2", prod.FechaHasta);
+
+            SqlDataReader dr = com.ExecuteReader();
+            var dt = new DataTable();
+            dt.Load(dr);
+
+            return dt;
+            //*****************************************************
+        }
     }
 }

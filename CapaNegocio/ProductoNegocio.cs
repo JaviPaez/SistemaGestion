@@ -63,5 +63,10 @@ namespace CapaNegocio
         {
             return productoDatos.GraficarPreciosHistoricos(prod);
         }
+
+        public DataTable ReporteProductoMasVendido(ReporteProductoMasVendido prod)
+        {
+            return productoDatos.ReporteProductoMasVendido(prod);
+        }
     }
 }
