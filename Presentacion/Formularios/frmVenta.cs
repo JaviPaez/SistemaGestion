@@ -180,7 +180,7 @@ namespace Presentacion
             total = 0;
 
             dgvGrilla.Rows.Clear();
-            dgvProd.Rows.Clear();
+            dgvProd.DataSource = null;
         }
 
         //BOTON AGREGAR

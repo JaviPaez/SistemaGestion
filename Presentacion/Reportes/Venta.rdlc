@@ -789,7 +789,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>FACTURA</Value>
+                  <Value>="FACTURA Nº: " &amp; First(Fields!Nro.Value, "DSVenta")</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -1003,6 +1003,10 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
         <Field Name="Nombre">
           <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nro">
+          <DataField>Nro</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="PrecioUnitario">
           <DataField>PrecioUnitario</DataField>

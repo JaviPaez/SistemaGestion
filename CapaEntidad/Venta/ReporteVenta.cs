@@ -4,6 +4,7 @@ namespace CapaEntidad
 {
     public class ReporteVenta
     {
+        public int Nro { get; set; }
         public int Dni { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
