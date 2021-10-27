@@ -23,33 +23,42 @@ namespace Presentacion
             var usuario = new Usuario();
             if (respuesta == DialogResult.Yes)
             {
-                if (txtContraseña.Text == txtVerifContr.Text)
+                if (txtEmail.Text.Contains("@"))
                 {
-                    try
+                    if (txtContraseña.Text == txtVerifContr.Text)
                     {
-                        usuario.Contraseña = txtContraseña.Text;
-                        usuario.Dni = Convert.ToInt32(txtDni.Text);
-                        usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
-                        usuario.Apellido = txtApellido.Text;
-                        usuario.Nombre = txtNombre.Text;
-                        usuario.email = txtEmail.Text;
-
-                        var usuarioNegocio = new UsuarioNegocio();
-                        Boolean grabo = usuarioNegocio.GrabarUsuario(usuario);
-
-                        if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        else
+                        try
                         {
-                            MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
+                            usuario.Contraseña = txtContraseña.Text;
+                            usuario.Dni = Convert.ToInt32(txtDni.Text);
+                            usuario.IdRol = Convert.ToInt32(cboRol.SelectedValue);
+                            usuario.Apellido = txtApellido.Text;
+                            usuario.Nombre = txtNombre.Text;
+                            if (txtEmail.Text.Contains("@"))
+                            {
+                                usuario.email = txtEmail.Text;
+                            }
+                     
+                            //usuario.email = txtEmail.Text;
+
+                            var usuarioNegocio = new UsuarioNegocio();
+                            Boolean grabo = usuarioNegocio.GrabarUsuario(usuario);
+
+                            if (grabo == false) MessageBox.Show("Error en grabación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            else
+                            {
+                                MessageBox.Show("Grabación correcta", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en grabación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    else MessageBox.Show("La contraseña no coincide", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else MessageBox.Show("La contraseña no coincide", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else MessageBox.Show("El mail no contiene @", "Mail erróneo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

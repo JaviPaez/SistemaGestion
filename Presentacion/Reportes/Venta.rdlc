@@ -789,7 +789,7 @@ X5000 - Córdoba - Provincia de Córdoba</Value>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="TICKET Nº: " &amp; First(Fields!Nro.Value, "DSVenta")</Value>
+                  <Value>="COMPROBANTE Nº: " &amp; First(Fields!Nro.Value, "DSVenta")</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>

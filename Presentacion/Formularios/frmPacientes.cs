@@ -65,6 +65,7 @@ namespace Presentacion
                     mailPaciente.Dni = Convert.ToInt32(txtDni.Text);
                     mailPaciente.eMail = txtMail.Text;
 
+
                     //Direccion
                     direccPaciente.Dni = Convert.ToInt32(txtDni.Text);
                     if (cboProvincia.Text == "SELECCIONE" || cboProvincia.SelectedItem == null)
@@ -178,7 +179,7 @@ namespace Presentacion
                     if (modifico == false) MessageBox.Show("Error en modificación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
                     {
-                        MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                        MessageBox.Show("Modificación correcta", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         MostrarPacienteActual(Convert.ToInt32(txtDni.Text));
                     }
                 }
@@ -235,29 +236,29 @@ namespace Presentacion
         //CLICK EN CONTENIDO DE CELDA DGV
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                txtDni.Text = dgvGrilla.CurrentRow.Cells["D.N.I."].Value.ToString();
-                txtApellido.Text = dgvGrilla.CurrentRow.Cells["Apellidos"].Value.ToString();
-                txtNombre.Text = dgvGrilla.CurrentRow.Cells["Nombres"].Value.ToString();
-                dtpFecha.Value = Convert.ToDateTime(dgvGrilla.CurrentRow.Cells[3].Value);
-                cboObraSocial.Text = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
-                txtNroAfiliado.Text = dgvGrilla.CurrentRow.Cells[5].Value.ToString();
+            txtDni.Text = dgvGrilla.CurrentRow.Cells["D.N.I."].Value.ToString();
+            txtApellido.Text = dgvGrilla.CurrentRow.Cells["Apellidos"].Value.ToString();
+            txtNombre.Text = dgvGrilla.CurrentRow.Cells["Nombres"].Value.ToString();
+            dtpFecha.Value = Convert.ToDateTime(dgvGrilla.CurrentRow.Cells[3].Value);
+            cboObraSocial.Text = dgvGrilla.CurrentRow.Cells[4].Value.ToString();
+            txtNroAfiliado.Text = dgvGrilla.CurrentRow.Cells[5].Value.ToString();
 
-                //Telefono
-                txtTelefono.Text = dgvGrilla.CurrentRow.Cells[6].Value.ToString();
+            //Telefono
+            txtTelefono.Text = dgvGrilla.CurrentRow.Cells[6].Value.ToString();
 
-                //Mail
-                txtMail.Text = dgvGrilla.CurrentRow.Cells[7].Value.ToString();
+            //Mail
+            txtMail.Text = dgvGrilla.CurrentRow.Cells[7].Value.ToString();
 
-                //Direccion
-                cboProvincia.Text = dgvGrilla.CurrentRow.Cells[8].Value.ToString();
-                txtLocalidad.Text = dgvGrilla.CurrentRow.Cells[9].Value.ToString();
-                txtCalle.Text = dgvGrilla.CurrentRow.Cells[10].Value.ToString();
-                txtNro.Text = dgvGrilla.CurrentRow.Cells[11].Value.ToString();
-                txtPiso.Text = dgvGrilla.CurrentRow.Cells[12].Value.ToString();
-                txtDpto.Text = dgvGrilla.CurrentRow.Cells[13].Value.ToString();
-                txtManzana.Text = dgvGrilla.CurrentRow.Cells[14].Value.ToString();
-                txtLote.Text = dgvGrilla.CurrentRow.Cells[15].Value.ToString();
-                txtBarrio.Text = dgvGrilla.CurrentRow.Cells[16].Value.ToString();
+            //Direccion
+            cboProvincia.Text = dgvGrilla.CurrentRow.Cells[8].Value.ToString();
+            txtLocalidad.Text = dgvGrilla.CurrentRow.Cells[9].Value.ToString();
+            txtCalle.Text = dgvGrilla.CurrentRow.Cells[10].Value.ToString();
+            txtNro.Text = dgvGrilla.CurrentRow.Cells[11].Value.ToString();
+            txtPiso.Text = dgvGrilla.CurrentRow.Cells[12].Value.ToString();
+            txtDpto.Text = dgvGrilla.CurrentRow.Cells[13].Value.ToString();
+            txtManzana.Text = dgvGrilla.CurrentRow.Cells[14].Value.ToString();
+            txtLote.Text = dgvGrilla.CurrentRow.Cells[15].Value.ToString();
+            txtBarrio.Text = dgvGrilla.CurrentRow.Cells[16].Value.ToString();
         }
 
         //Armar grilla
@@ -293,7 +294,7 @@ namespace Presentacion
 
                 if (dt.Rows.Count != 0) dgvGrilla.DataSource = dt;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
